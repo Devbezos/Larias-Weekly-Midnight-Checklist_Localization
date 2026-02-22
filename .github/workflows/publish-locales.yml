@@ -1,0 +1,157 @@
+name: Publish Locales (on repo changes)
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Check hourly for new commits and/or interface bumps.
+    - cron: "0 * * * *"
+
+concurrency:
+  group: locales-publish-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    # Avoid looping when this workflow pushes a version-bump commit (push events).
+    # Scheduled runs should still execute.
+    if: github.event_name == 'schedule' || github.actor != 'github-actions[bot]'
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Update .toc Interface versions (latest 3)
+        shell: bash
+        run: |
+          set -euo pipefail
+          TOC="LariasWeeklyMidnightChecklist_Locales.toc"
+          python scripts/update_toc_interface.py --toc "$TOC" --count 3
+
+      - name: Commit + Tag + Push (only if repo changed since last release)
+        id: commitstep
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          TOC="LariasWeeklyMidnightChecklist_Locales.toc"
+
+          # Ensure stable releases never keep an ALPHA display name.
+          sed -i "s/^## Title:.*/## Title: Larias's Checklist: Localization/" "$TOC"
+
+          # Detect whether we have any new commits since the last release tag.
+          LAST_TAG=$(git describe --tags --abbrev=0 --match "v*" 2>/dev/null || true)
+          if [ -n "$LAST_TAG" ]; then
+            COMMITS_SINCE_TAG=$(git rev-list --count "$LAST_TAG"..HEAD)
+          else
+            COMMITS_SINCE_TAG=999999
+          fi
+
+          TOC_CHANGED=false
+          if ! git diff --quiet -- "$TOC"; then
+            TOC_CHANGED=true
+          fi
+
+          # Nothing to publish.
+          if [ "$COMMITS_SINCE_TAG" -eq 0 ] && [ "$TOC_CHANGED" = "false" ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "released=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Always bump addon version for a publish.
+          NEW_VERSION=$(python scripts/bump_toc_version.py --toc "$TOC")
+          TAG="v$NEW_VERSION"
+
+          git add "$TOC"
+          git commit -m "Auto-release locales ($TAG) [skip ci]" || true
+          git push
+
+          git tag -a "$TAG" -m "Release $TAG"
+          git push origin "$TAG"
+
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+          echo "released=true" >> "$GITHUB_OUTPUT"
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+
+      - name: Check packager config
+        id: pkgmeta
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [ ! -f .pkgmeta ]; then
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "reason=missing .pkgmeta" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          CF_ID=$(sed -n 's/^curse-project-id:[[:space:]]*//p' .pkgmeta | head -n 1 | tr -d '[:space:]' || true)
+          WAGO_ID=$(sed -n 's/^wago-id:[[:space:]]*//p' .pkgmeta | head -n 1 | tr -d '"[:space:]' || true)
+
+          if [ -z "$CF_ID" ]; then CF_ID=0; fi
+          if [ "$CF_ID" = "0" ] && [ -z "$WAGO_ID" ]; then
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "reason=project IDs not configured (.pkgmeta has curse-project-id: 0 and empty wago-id)" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          echo "ready=true" >> "$GITHUB_OUTPUT"
+          echo "reason=ok" >> "$GITHUB_OUTPUT"
+
+      - name: Package + Upload (CurseForge & Wago)
+        if: steps.commitstep.outputs.released == 'true' && steps.pkgmeta.outputs.ready == 'true'
+        uses: BigWigsMods/packager@v2.4.3
+        env:
+          CF_API_KEY: ${{ secrets.CF_API_KEY }}
+          WAGO_API_TOKEN: ${{ secrets.WAGO_API_TOKEN }}
+
+      - name: Notify Discord (release posted)
+        if: steps.commitstep.outputs.released == 'true' && success()
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          TAG: ${{ steps.commitstep.outputs.tag }}
+          REPO: ${{ github.repository }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [ -z "${DISCORD_WEBHOOK_URL:-}" ]; then
+            echo "DISCORD_WEBHOOK_URL not set; skipping Discord notification."
+            exit 0
+          fi
+
+          RELEASE_URL="https://github.com/${REPO}/releases/tag/${TAG}"
+
+          payload=$(cat <<EOF
+          {
+            "content": "🚀 **Larias's Checklist: Localization ${TAG}** is live!\n\n📦 GitHub: ${RELEASE_URL}\n🛠 Workflow: ${RUN_URL}"
+          }
+          EOF
+          )
+
+          curl -sS -H "Content-Type: application/json" \
+            -d "$payload" \
+            "$DISCORD_WEBHOOK_URL" || true
+
+      - name: Note (upload skipped)
+        if: steps.commitstep.outputs.released == 'true' && steps.pkgmeta.outputs.ready != 'true'
+        shell: bash
+        run: |
+          echo "Release tag created: ${{ steps.commitstep.outputs.tag }}"
+          echo "Upload skipped: ${{ steps.pkgmeta.outputs.reason }}"

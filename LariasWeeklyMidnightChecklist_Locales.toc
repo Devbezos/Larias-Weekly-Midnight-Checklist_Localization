@@ -1,0 +1,12 @@
+## Interface: 120001, 120000, 110207
+## Title: Larias's Checklist: Localization
+## Notes: Localization data for Larias's Checklist
+## Author: Larias
+## Version: 1.0.1
+
+Locales\esES.lua
+Locales\esES_Data.lua
+Locales\esMX.lua
+Locales\esMX_Data.lua
+Locales\frFR.lua
+Locales\frFR_Data.lua
