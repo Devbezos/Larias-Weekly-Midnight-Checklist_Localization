@@ -144,9 +144,17 @@ jobs:
 
           RELEASE_URL="https://github.com/${REPO}/releases/tag/${TAG}"
 
+          CF_ID=$(sed -n 's/^curse-project-id:[[:space:]]*//p' .pkgmeta | head -n 1 | tr -d '[:space:]' || true)
+          if [ -z "${CF_ID:-}" ]; then CF_ID=0; fi
+          CURSE_LINE=""
+          if [ "${CF_ID}" != "0" ]; then
+            CURSE_URL="https://www.curseforge.com/wow/addons/${CF_ID}"
+            CURSE_LINE="\n🔥 CurseForge: ${CURSE_URL}"
+          fi
+
           payload=$(cat <<EOF
           {
-            "content": "🧪 **Larias's Checklist: Localization ${TAG}** (ALPHA from \`${BRANCH}\`) is ready!\n\n📦 GitHub: ${RELEASE_URL}\n🛠 Workflow: ${RUN_URL}"
+            "content": "🧪 **Larias's Checklist: Localization ${TAG}** (ALPHA from \`${BRANCH}\`) is ready!\n\n📦 GitHub: ${RELEASE_URL}${CURSE_LINE}\n🛠 Workflow: ${RUN_URL}"
           }
           EOF
           )
