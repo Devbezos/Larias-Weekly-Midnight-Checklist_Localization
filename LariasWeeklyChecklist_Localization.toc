@@ -14,13 +14,7 @@ Locales\frFR.lua
 Locales\frFR_Data.lua
 Locales\itIT.lua
 Locales\itIT_Data.lua
-Locales\koKR.lua
-Locales\koKR_Data.lua
 Locales\ptBR.lua
 Locales\ptBR_Data.lua
 Locales\ruRU.lua
 Locales\ruRU_Data.lua
-Locales\zhCN.lua
-Locales\zhCN_Data.lua
-Locales\zhTW.lua
-Locales\zhTW_Data.lua
