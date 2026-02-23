@@ -5,8 +5,8 @@ on:
     inputs:
       target_branch:
         description: "Branch to deploy alpha from (e.g. main, feature/foo)"
-        required: true
-        default: "main"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -21,7 +21,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          ref: ${{ inputs.target_branch }}
+          ref: ${{ inputs.target_branch || github.ref_name }}
 
       - name: Check for differences
         id: diff
@@ -52,7 +52,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          ref: ${{ inputs.target_branch }}
+          ref: ${{ inputs.target_branch || github.ref_name }}
 
       - name: Get current version
         id: version
@@ -62,7 +62,7 @@ jobs:
           echo "current=$CURRENT_VERSION" >> $GITHUB_OUTPUT
 
           # Get branch name
-          BRANCH_NAME="${{ inputs.target_branch }}"
+          BRANCH_NAME="${{ inputs.target_branch || github.ref_name }}"
           echo "branch=$BRANCH_NAME" >> $GITHUB_OUTPUT
 
       - name: Calculate new version
@@ -135,6 +135,7 @@ jobs:
         if: success()
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          CF_API_KEY: ${{ secrets.CF_API_KEY }}
           TAG: v${{ steps.newversion.outputs.alpha }}
           REPO: ${{ github.repository }}
           BRANCH: ${{ steps.version.outputs.branch }}
@@ -148,7 +149,17 @@ jobs:
           if [ -z "${CF_ID:-}" ]; then CF_ID=0; fi
           CURSE_LINE=""
           if [ "${CF_ID}" != "0" ]; then
-            CURSE_URL="https://www.curseforge.com/wow/addons/${CF_ID}"
+            CURSE_URL=""
+            if [ -n "${CF_API_KEY:-}" ]; then
+              SLUG=$(curl -sS -H "x-api-key: ${CF_API_KEY}" "https://api.curseforge.com/v1/mods/${CF_ID}" \
+                | python3 -c "import sys,json; data=json.load(sys.stdin).get('data') or {}; print(data.get('slug',''))" 2>/dev/null || true)
+              if [ -n "${SLUG:-}" ]; then
+                CURSE_URL="https://www.curseforge.com/wow/addons/${SLUG}"
+              fi
+            fi
+            if [ -z "${CURSE_URL:-}" ]; then
+              CURSE_URL="https://www.curseforge.com/wow/search?search=${CF_ID}"
+            fi
             CURSE_LINE="\n🔥 CurseForge: ${CURSE_URL}"
           fi
 
