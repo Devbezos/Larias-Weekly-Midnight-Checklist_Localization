@@ -1,8 +1,8 @@
 ## Interface: 120001, 120000, 110207
-## Title: Larias's Checklist: Localization
+## Title: Larias's Checklist: Localization (ALPHA)
 ## Notes: Localization data for Larias's Checklist
 ## Author: Larias
-## Version: 1.0.1
+## Version: 1.0.2.1-alpha
 
 Locales\esES.lua
 Locales\esES_Data.lua
