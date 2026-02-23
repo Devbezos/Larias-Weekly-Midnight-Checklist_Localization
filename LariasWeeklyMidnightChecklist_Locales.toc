@@ -2,7 +2,7 @@
 ## Title: Larias's Checklist: Localization
 ## Notes: Localization data for Larias's Checklist
 ## Author: Larias
-## Version: 0.0.1
+## Version: 0.0.2
 
 Locales\esES.lua
 Locales\esES_Data.lua
