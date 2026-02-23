@@ -1,4 +1,4 @@
-name: Publish Locales (on repo changes)
+name: Deploy Stable (Locales)
 
 on:
   workflow_dispatch:

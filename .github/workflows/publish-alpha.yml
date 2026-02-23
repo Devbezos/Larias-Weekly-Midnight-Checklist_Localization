@@ -1,4 +1,4 @@
-name: Deploy Alpha Release (Locales)
+name: Deploy Alpha (Locales)
 
 on:
   workflow_dispatch:
