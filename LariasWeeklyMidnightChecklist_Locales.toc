@@ -2,7 +2,7 @@
 ## Title: Larias's Checklist: Localization (ALPHA)
 ## Notes: Localization data for Larias's Checklist
 ## Author: Larias
-## Version: 1.0.2.1-alpha
+## Version: 1.0.2.2-alpha
 
 Locales\esES.lua
 Locales\esES_Data.lua
