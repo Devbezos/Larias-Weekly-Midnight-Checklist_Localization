@@ -1,10 +1,16 @@
 package-as: LariasWeeklyMidnightChecklist_Locales
 
-# TODO: Fill these in once the Locales addon exists on each platform.
-# - CurseForge project ID is the numeric ID used by BigWigs packager.
-# - Wago ID is the short ID (e.g. mKOD5RGx).
 curse-project-id: 1469589
-wago-id: ""
+wago-id: "mNw78XNo"
+
+manual-changelog: CHANGELOG.md
+
+# Explicit game versions (Retail)
+# Pick the ones you actually want shown on CF.
+game-versions:
+  - 12.0.1
+  - 12.0.0
+  - 11.2.7
 
 # Keep packages clean.
 ignore:
