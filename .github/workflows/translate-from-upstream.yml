@@ -3,6 +3,10 @@ name: Translate From Upstream (Claude)
 on:
   workflow_dispatch:
     inputs:
+      mode:
+        description: "Run mode: 'agent' creates a PR for Copilot coding agent; 'claude' runs Anthropic translation"
+        required: false
+        default: "agent"
       upstream_repo:
         description: "Upstream repo (owner/name) that contains canonical enUS locale files"
         required: false
@@ -43,7 +47,11 @@ jobs:
       DEFAULT_UPSTREAM_REPO: Devbezos/Larias-Weekly-Midnight-Checklist
       DEFAULT_UPSTREAM_REF: main
 
+      # Default behavior for scheduled/push triggers.
+      DEFAULT_MODE: agent
+
       # workflow_dispatch inputs (empty string on non-dispatch events)
+      MODE_INPUT: ${{ github.event.inputs.mode }}
       UPSTREAM_REPO_INPUT: ${{ github.event.inputs.upstream_repo }}
       UPSTREAM_REF_INPUT: ${{ github.event.inputs.upstream_ref }}
       FORCE_INPUT: ${{ github.event.inputs.force }}
@@ -56,6 +64,23 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - name: Resolve run mode
+        id: mode
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          MODE_RAW="${MODE_INPUT:-${DEFAULT_MODE}}"
+          MODE=$(echo "${MODE_RAW}" | tr '[:upper:]' '[:lower:]')
+
+          if [ "${MODE}" != "agent" ] && [ "${MODE}" != "claude" ]; then
+            echo "Invalid mode: ${MODE_RAW}. Use 'agent' or 'claude'." >&2
+            exit 2
+          fi
+
+          echo "mode=${MODE}" >> "$GITHUB_OUTPUT"
+          echo "Mode: ${MODE}"
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -152,22 +177,45 @@ jobs:
           BASE_TAG: ${{ steps.shouldrun.outputs.base_tag }}
         run: |
           set -euo pipefail
-          mkdir -p .tmp
+          mkdir -p .upstream
 
-          cp upstream/Locales/enUS.lua .tmp/enUS_new.lua
-          cp upstream/Locales/enUS_Data.lua .tmp/enUS_new_Data.lua
+          cp upstream/Locales/enUS.lua .upstream/enUS_new.lua
+          cp upstream/Locales/enUS_Data.lua .upstream/enUS_new_Data.lua
 
           if [ -n "${BASE_TAG:-}" ]; then
-            (cd upstream && git show "${BASE_TAG}:Locales/enUS.lua" > "../.tmp/enUS_old.lua")
-            (cd upstream && git show "${BASE_TAG}:Locales/enUS_Data.lua" > "../.tmp/enUS_old_Data.lua")
+            (cd upstream && git show "${BASE_TAG}:Locales/enUS.lua" > "../.upstream/enUS_old.lua")
+            (cd upstream && git show "${BASE_TAG}:Locales/enUS_Data.lua" > "../.upstream/enUS_old_Data.lua")
           else
             # No baseline; treat "old" as empty so everything is considered new.
-            : > .tmp/enUS_old.lua
-            : > .tmp/enUS_old_Data.lua
+            : > .upstream/enUS_old.lua
+            : > .upstream/enUS_old_Data.lua
           fi
 
+      - name: Generate change report (agent handoff)
+        if: steps.shouldrun.outputs.should_run == 'true' && steps.mode.outputs.mode == 'agent'
+        shell: bash
+        env:
+          UPSTREAM_REPO: ${{ steps.upstream.outputs.repo }}
+          UPSTREAM_REF: ${{ steps.upstream.outputs.ref }}
+          UPSTREAM_SHA: ${{ steps.upstream.outputs.sha }}
+          BASE_TAG: ${{ steps.shouldrun.outputs.base_tag }}
+        run: |
+          set -euo pipefail
+
+          python scripts/translate_from_upstream_claude.py \
+            --context translation-context.json \
+            --old-enus .upstream/enUS_old.lua \
+            --new-enus .upstream/enUS_new.lua \
+            --old-enus-data .upstream/enUS_old_Data.lua \
+            --new-enus-data .upstream/enUS_new_Data.lua \
+            --locales-dir Locales \
+            --languages frFR \
+            --dry-run \
+            --report .upstream/change-report.md \
+            --report-format md
+
       - name: Install Python deps
-        if: steps.shouldrun.outputs.should_run == 'true'
+        if: steps.shouldrun.outputs.should_run == 'true' && steps.mode.outputs.mode == 'claude'
         shell: bash
         run: |
           set -euo pipefail
@@ -175,7 +223,7 @@ jobs:
           python -m pip install requests
 
       - name: Translate changed strings with Claude
-        if: steps.shouldrun.outputs.should_run == 'true'
+        if: steps.shouldrun.outputs.should_run == 'true' && steps.mode.outputs.mode == 'claude'
         shell: bash
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -194,15 +242,45 @@ jobs:
 
           python scripts/translate_from_upstream_claude.py \
             --context translation-context.json \
-            --old-enus .tmp/enUS_old.lua \
-            --new-enus .tmp/enUS_new.lua \
-            --old-enus-data .tmp/enUS_old_Data.lua \
-            --new-enus-data .tmp/enUS_new_Data.lua \
+            --old-enus .upstream/enUS_old.lua \
+            --new-enus .upstream/enUS_new.lua \
+            --old-enus-data .upstream/enUS_old_Data.lua \
+            --new-enus-data .upstream/enUS_new_Data.lua \
             --locales-dir Locales \
             --languages deDE esES esMX frFR itIT ptBR ruRU
 
-      - name: Create pull request (if changes)
+      - name: Cleanup upstream clone
         if: steps.shouldrun.outputs.should_run == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf upstream
+
+      - name: Create agent handoff pull request (if changes)
+        if: steps.shouldrun.outputs.should_run == 'true' && steps.mode.outputs.mode == 'agent'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: Upstream enUS change report [skip ci]
+          title: Upstream enUS changed (delegate translation to agent)
+          body: |
+            Upstream enUS locale sources changed; this PR includes snapshots and a change report.
+
+            Next step (no external API keys):
+            - Open this PR in GitHub, then use **Copilot coding agent** / **Delegate** to update translated locale files under `Locales/`.
+            - Use `.upstream/change-report.md` as the source-of-truth for what changed in English.
+
+            Metadata:
+            - Upstream: ${{ steps.upstream.outputs.repo }}@${{ steps.upstream.outputs.ref }} (${{ steps.upstream.outputs.sha }})
+            - Baseline tag: ${{ steps.shouldrun.outputs.base_tag || '<none>' }}
+            - Translation context: translation-context.json
+
+            Generated by `Translate From Upstream (Claude)` workflow in `agent` mode.
+          branch: auto/upstream-enus-change-report
+          delete-branch: true
+          signoff: false
+
+      - name: Create pull request (if changes)
+        if: steps.shouldrun.outputs.should_run == 'true' && steps.mode.outputs.mode == 'claude'
         uses: peter-evans/create-pull-request@v6
         with:
           commit-message: Auto-translate locales from upstream [skip ci]

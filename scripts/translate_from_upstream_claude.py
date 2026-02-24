@@ -10,9 +10,6 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Mapping, Sequence, Tuple
 
-import requests
-
-
 ANTHROPIC_API_URL = "https://api.anthropic.com/v1/messages"
 ANTHROPIC_VERSION = "2023-06-01"
 
@@ -22,6 +19,73 @@ class ChangedStrings:
     strings: Dict[str, str]
     dataset_titles: Dict[str, str]
     item_texts: Dict[str, str]
+
+
+def write_change_report(
+    *,
+    report_path: Path,
+    changed: ChangedStrings,
+    upstream_repo: str | None = None,
+    upstream_ref: str | None = None,
+    upstream_sha: str | None = None,
+    base_tag: str | None = None,
+    report_format: str = "md",
+) -> None:
+    report_path.parent.mkdir(parents=True, exist_ok=True)
+
+    meta = {
+        "upstream_repo": upstream_repo or "",
+        "upstream_ref": upstream_ref or "",
+        "upstream_sha": upstream_sha or "",
+        "base_tag": base_tag or "",
+        "counts": {
+            "ui_strings": len(changed.strings),
+            "dataset_titles": len(changed.dataset_titles),
+            "dataset_item_texts": len(changed.item_texts),
+        },
+        "ui_strings": changed.strings,
+        "dataset_titles": changed.dataset_titles,
+        "dataset_item_texts": changed.item_texts,
+    }
+
+    fmt = report_format.strip().lower()
+    if fmt == "json":
+        report_path.write_text(json.dumps(meta, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        return
+    if fmt != "md":
+        raise ValueError("--report-format must be 'md' or 'json'")
+
+    def _md_list(items: Mapping[str, str]) -> str:
+        if not items:
+            return "(none)\n"
+        lines: List[str] = []
+        for k in sorted(items.keys()):
+            # Use JSON string escaping so \n / quotes are unambiguous.
+            lines.append(f"- `{k}`: {json.dumps(items[k], ensure_ascii=False)}")
+        return "\n".join(lines) + "\n"
+
+    upstream_line = ""
+    if upstream_repo or upstream_ref or upstream_sha:
+        upstream_line = f"- Upstream: `{upstream_repo or ''}`@`{upstream_ref or ''}` (`{upstream_sha or ''}`)\n"
+
+    base_line = f"- Baseline tag: `{base_tag}`\n" if base_tag else "- Baseline tag: `<none>`\n"
+
+    out = (
+        "# Upstream enUS change report\n\n"
+        "This report lists English (enUS) strings that changed upstream.\n"
+        "Use it as the source-of-truth for updating translated locale files.\n\n"
+        f"{upstream_line}"
+        f"{base_line}"
+        "\n"
+        f"## UI strings changed ({len(changed.strings)})\n"
+        f"{_md_list(changed.strings)}\n"
+        f"## Dataset titles changed ({len(changed.dataset_titles)})\n"
+        f"{_md_list(changed.dataset_titles)}\n"
+        f"## Dataset item texts changed ({len(changed.item_texts)})\n"
+        f"{_md_list(changed.item_texts)}"
+    )
+
+    report_path.write_text(out, encoding="utf-8")
 
 
 def _read_text(path: Path) -> str:
@@ -149,6 +213,13 @@ def anthropic_translate_map(
 ) -> Dict[str, str]:
     """Translate a mapping of ids/keys->English strings. Returns mapping with same keys."""
 
+    try:
+        import requests  # type: ignore
+    except Exception as e:  # noqa: BLE001
+        raise RuntimeError(
+            "Missing dependency 'requests'. Install it (pip install requests) or run with --mock/--dry-run."
+        ) from e
+
     glossary_lines = "\n".join([f"- {k} -> {v}" for k, v in glossary.items()]) if glossary else "(none)"
     payload = {
         "model": model,
@@ -217,6 +288,12 @@ def anthropic_translate_map(
             time.sleep(sleep_s)
 
     raise RuntimeError(f"Translation failed after {max_retries} attempts") from last_error
+
+
+def mock_translate_map(items: Mapping[str, str], locale: str) -> Dict[str, str]:
+    # Deterministic placeholder translation for local testing.
+    # Keeps original content intact and appends a suffix to force a file change.
+    return {k: f"{v} (mock:{locale})" for k, v in items.items()}
 
 
 def update_strings_file(path: Path, updates: Mapping[str, str]) -> None:
@@ -306,17 +383,40 @@ def main(argv: Sequence[str]) -> int:
     parser.add_argument("--locales-dir", required=True, type=Path)
     parser.add_argument("--languages", nargs="+", required=True)
     parser.add_argument("--chunk-size", type=int, default=30)
+    parser.add_argument(
+        "--report",
+        type=Path,
+        default=None,
+        help="Write a change report (md or json) describing what changed in enUS.",
+    )
+    parser.add_argument(
+        "--report-format",
+        choices=["md", "json"],
+        default="md",
+        help="Format for --report output.",
+    )
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Do not translate or write files; print what would be translated.",
+    )
+    parser.add_argument(
+        "--mock",
+        action="store_true",
+        help="Use a deterministic mock translator (no API calls) and write results.",
+    )
     args = parser.parse_args(argv)
 
     api_key = os.environ.get("ANTHROPIC_API_KEY", "").strip()
-    if not api_key:
-        print("ANTHROPIC_API_KEY is not set", file=sys.stderr)
-        return 2
-
     model = os.environ.get("ANTHROPIC_MODEL", "claude-sonnet-4-6").strip()
-    if not model:
-        print("ANTHROPIC_MODEL is not set", file=sys.stderr)
-        return 2
+
+    if not args.dry_run and not args.mock:
+        if not api_key:
+            print("ANTHROPIC_API_KEY is not set", file=sys.stderr)
+            return 2
+        if not model:
+            print("ANTHROPIC_MODEL is not set", file=sys.stderr)
+            return 2
 
     # Tolerate a UTF-8 BOM if an editor/formatter added it.
     context_data = json.loads(args.context.read_text(encoding="utf-8-sig"))
@@ -331,6 +431,27 @@ def main(argv: Sequence[str]) -> int:
     changed = compute_changed_strings(old_enus, new_enus, old_data, new_data)
     if not changed.strings and not changed.dataset_titles and not changed.item_texts:
         print("No changed strings detected; nothing to translate.")
+        return 0
+
+    if args.report:
+        write_change_report(
+            report_path=args.report,
+            changed=changed,
+            upstream_repo=os.environ.get("UPSTREAM_REPO"),
+            upstream_ref=os.environ.get("UPSTREAM_REF"),
+            upstream_sha=os.environ.get("UPSTREAM_SHA"),
+            base_tag=os.environ.get("BASE_TAG"),
+            report_format=args.report_format,
+        )
+
+    if args.dry_run:
+        print("Dry run: would translate the following changes from enUS:")
+        print(f"- UI strings changed: {len(changed.strings)}")
+        print(f"- Dataset titles changed: {len(changed.dataset_titles)}")
+        print(f"- Dataset item texts changed: {len(changed.item_texts)}")
+        if changed.strings:
+            sample = list(changed.strings.keys())[:10]
+            print(f"  UI keys (sample): {', '.join(sample)}")
         return 0
 
     locales_dir: Path = args.locales_dir
@@ -354,14 +475,17 @@ def main(argv: Sequence[str]) -> int:
         if pending_strings:
             translated_strings: Dict[str, str] = {}
             for chunk in chunk_dict(pending_strings, args.chunk_size):
-                out = anthropic_translate_map(
-                    locale=locale,
-                    model=model,
-                    api_key=api_key,
-                    glossary=glossary,
-                    items=chunk,
-                    item_kind="ui_strings",
-                )
+                if args.mock:
+                    out = mock_translate_map(chunk, locale)
+                else:
+                    out = anthropic_translate_map(
+                        locale=locale,
+                        model=model,
+                        api_key=api_key,
+                        glossary=glossary,
+                        items=chunk,
+                        item_kind="ui_strings",
+                    )
                 # Validate format tokens for each string
                 for key, src in chunk.items():
                     validate_format_specs(src, out[key])
@@ -381,26 +505,32 @@ def main(argv: Sequence[str]) -> int:
 
         if pending_titles:
             for chunk in chunk_dict(pending_titles, args.chunk_size):
-                out = anthropic_translate_map(
-                    locale=locale,
-                    model=model,
-                    api_key=api_key,
-                    glossary=glossary,
-                    items=chunk,
-                    item_kind="dataset_titles",
-                )
+                if args.mock:
+                    out = mock_translate_map(chunk, locale)
+                else:
+                    out = anthropic_translate_map(
+                        locale=locale,
+                        model=model,
+                        api_key=api_key,
+                        glossary=glossary,
+                        items=chunk,
+                        item_kind="dataset_titles",
+                    )
                 translated_titles.update(out)
 
         if pending_items:
             for chunk in chunk_dict(pending_items, args.chunk_size):
-                out = anthropic_translate_map(
-                    locale=locale,
-                    model=model,
-                    api_key=api_key,
-                    glossary=glossary,
-                    items=chunk,
-                    item_kind="dataset_item_texts",
-                )
+                if args.mock:
+                    out = mock_translate_map(chunk, locale)
+                else:
+                    out = anthropic_translate_map(
+                        locale=locale,
+                        model=model,
+                        api_key=api_key,
+                        glossary=glossary,
+                        items=chunk,
+                        item_kind="dataset_item_texts",
+                    )
                 translated_items.update(out)
 
         if translated_titles or translated_items:
