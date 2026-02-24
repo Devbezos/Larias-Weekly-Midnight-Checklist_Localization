@@ -54,33 +54,38 @@ jobs:
           # Ensure stable releases never keep an ALPHA display name.
           sed -i "s/^## Title:.*/## Title: Larias's Weekly Checklist: Localization/" "$TOC"
 
-          # Detect whether we have any new commits since the last *stable* release tag.
+          # Ensure tags are available for diffing.
+          git fetch --tags --force
+
+          # Find the last *stable* release tag.
           # Important: ignore alpha tags (vX.Y.Z.W-alpha) and 4-part tags (vX.Y.Z.W),
           # otherwise stable can get stuck thinking nothing changed since the last alpha.
-          #
-          # Note: `git describe --match` uses glob patterns (not regex) and cannot anchor
-          # to end-of-string, so it can still match alpha tags. Instead, list tags and
-          # filter for exact vMAJOR.MINOR.PATCH.
           LAST_TAG=$(git tag --list 'v*' --sort=-version:refname | grep -E '^v[0-9]+\.[0-9]+\.[0-9]+$' | head -n 1 || true)
-          if [ -n "$LAST_TAG" ]; then
-            COMMITS_SINCE_TAG=$(git rev-list --count "$LAST_TAG"..HEAD)
-          else
-            COMMITS_SINCE_TAG=999999
-          fi
+          echo "Last stable tag: ${LAST_TAG:-<none>}"
 
-          echo "Last tag: ${LAST_TAG:-<none>}"
-          echo "Commits since tag: ${COMMITS_SINCE_TAG}"
+          # Release policy: deploy (tag + packager upload) only when the Locales/ folder
+          # has changed since the last stable tag.
+          LOCALES_CHANGED=false
+          if [ -n "${LAST_TAG:-}" ]; then
+            if ! git diff --quiet "${LAST_TAG}"..HEAD -- Locales/; then
+              LOCALES_CHANGED=true
+            fi
+          else
+            # No stable tags yet: allow the first release.
+            LOCALES_CHANGED=true
+          fi
 
           TOC_CHANGED=false
           if ! git diff --quiet -- "$TOC"; then
             TOC_CHANGED=true
           fi
 
+          echo "Locales changed since last stable tag: ${LOCALES_CHANGED}"
           echo "TOC changed (working tree): ${TOC_CHANGED}"
           echo "TOC Interface (after update): $(sed -n 's/^## Interface:[[:space:]]*//p' "$TOC" | head -n 1 | tr -d '[:space:]' || true)"
 
-          # Nothing to publish.
-          if [ "$COMMITS_SINCE_TAG" -eq 0 ] && [ "$TOC_CHANGED" = "false" ]; then
+          # Nothing to do (no new locales, no toc/interface updates).
+          if [ "$LOCALES_CHANGED" = "false" ] && [ "$TOC_CHANGED" = "false" ]; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "released=false" >> "$GITHUB_OUTPUT"
             exit 0
@@ -89,25 +94,69 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Always bump addon version for a publish.
-          NEW_VERSION=$(python scripts/bump_toc_version.py --toc "$TOC")
-          TAG="v$NEW_VERSION"
+          if [ "$LOCALES_CHANGED" = "true" ]; then
+            # Locales changed: bump addon version and publish a stable release.
+            NEW_VERSION=$(python scripts/bump_toc_version.py --toc "$TOC")
+            TAG="v$NEW_VERSION"
 
-          git add "$TOC"
-          git commit -m "Auto-release locales ($TAG) [skip ci]" || true
-          git push
+            git add "$TOC"
+            if ! git diff --cached --quiet; then
+              git commit -m "Auto-release locales ($TAG) [skip ci]"
+              git push
+            fi
 
-          git tag -a "$TAG" -m "Release $TAG"
-          git push origin "$TAG"
+            git tag -a "$TAG" -m "Release $TAG"
+            git push origin "$TAG"
 
-          echo "changed=true" >> "$GITHUB_OUTPUT"
-          echo "released=true" >> "$GITHUB_OUTPUT"
-          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "released=true" >> "$GITHUB_OUTPUT"
+            echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+          else
+            # Only toc/interface/title changed: commit it, but do not tag/upload.
+            git add "$TOC"
+            if ! git diff --cached --quiet; then
+              git commit -m "Auto-update toc (no release) [skip ci]"
+              git push
+              echo "changed=true" >> "$GITHUB_OUTPUT"
+            else
+              echo "changed=false" >> "$GITHUB_OUTPUT"
+            fi
+            echo "released=false" >> "$GITHUB_OUTPUT"
+          fi
 
-      - name: Create GitHub Release
+      - name: Package + Upload (CurseForge & Wago)
         if: steps.commitstep.outputs.released == 'true'
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: ${{ steps.commitstep.outputs.tag }}
-          name: ${{ steps.commitstep.outputs.tag }}
-          generate_release_notes: true
+        uses: BigWigsMods/packager@v2.4.3
+        env:
+          CF_API_KEY: ${{ secrets.CF_API_KEY }}
+          WAGO_API_TOKEN: ${{ secrets.WAGO_API_TOKEN }}
+
+      - name: Notify Discord (release posted)
+        if: steps.commitstep.outputs.released == 'true' && success()
+        shell: bash
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          TAG: ${{ steps.commitstep.outputs.tag }}
+          REPO: ${{ github.repository }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set -euo pipefail
+
+          if [ -z "${DISCORD_WEBHOOK_URL:-}" ]; then
+            echo "DISCORD_WEBHOOK_URL not set; skipping Discord notification."
+            exit 0
+          fi
+
+          RELEASE_URL="https://github.com/${REPO}/releases/tag/${TAG}"
+          MSG="🚀 **Larias's Weekly Checklist: Localization ${TAG}** is live!\n\n📦 GitHub: ${RELEASE_URL}\n🛠 Workflow: ${RUN_URL}"
+          export MSG
+
+          payload=$(python3 - <<'PY'
+          import json, os
+          print(json.dumps({"content": os.environ.get("MSG", "")}))
+          PY
+          )
+
+          curl -sS -H "Content-Type: application/json" \
+            -d "$payload" \
+            "$DISCORD_WEBHOOK_URL" || true
