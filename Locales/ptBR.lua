@@ -68,6 +68,7 @@ local STRINGS = {
 
     TAB_LIST = "Lista",
     TAB_OPTIONS = "Opções",
+    CHANGE_WEEK_BUTTON = "Mudar semana",
 
     SLASH_USAGE_TOGGLE = "Uso: /larias ou /lcl para mostrar/ocultar a lista",
     SLASH_USAGE_LOCALE = "Uso: /larias locale auto|enUS|deDE|esES|esMX|frFR|itIT|ptBR|ruRU",

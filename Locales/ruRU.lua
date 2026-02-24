@@ -69,6 +69,7 @@ local STRINGS = {
 
     TAB_LIST = "Список",
     TAB_OPTIONS = "Настройки",
+    CHANGE_WEEK_BUTTON = "Сменить неделю",
 
     SLASH_USAGE_TOGGLE = "Использование: /larias или /lcl для показа/скрытия списка",
     SLASH_USAGE_LOCALE = "Использование: /larias locale auto|enUS|deDE|esES|esMX|frFR|itIT|ptBR|ruRU",
