@@ -2,7 +2,7 @@
 ## Title: Larias's Weekly Checklist: Localization (ALPHA)
 ## Notes: Localization data for Larias's Weekly Checklist
 ## Author: Larias
-## Version: 0.0.7.1-alpha
+## Version: 1.0.0
 
 Locales\deDE.lua
 Locales\deDE_Data.lua
