@@ -1,5 +1,5 @@
 ## Interface: 120001, 120000, 110207
-## Title: Larias's Weekly Checklist: Localization (ALPHA)
+## Title: Larias's Weekly Checklist: Localization
 ## Notes: Localization data for Larias's Weekly Checklist
 ## Author: Larias
 ## Version: 1.0.0
