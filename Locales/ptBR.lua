@@ -29,7 +29,6 @@ local STRINGS = {
     OPTIONS_SHOW_CURRENCY = "Mostrar moeda",
 
     HIDE_COMPLETED_WEEKS = "Ocultar semanas concluídas",
-    OPTIONS_BUTTON = "Opções",
     RESET_BUTTON = "Redefinir",
     DONE_PREFIX = "[Feito] ",
 
@@ -62,12 +61,8 @@ local STRINGS = {
 
     TRACKING_CATALYST_LABEL = "Catalisador:",
 
-    TRACKING_CURRENCY_FALLBACK_PREFIX = "Moeda ",
-    -- NOTE: should match the lowercase substring found in Portuguese WoW crest currency names ("crista").
-    TRACKING_CREST_MATCH_SUBSTRING = "crista",
     TRACKING_INF = "INF",
 
-    MINIMAP_TOOLTIP_TEXT = "Clique esquerdo: mostrar/ocultar a lista",
     MINIMAP_TOOLTIP_LEFT_CLICK_TOGGLE = "Clique esquerdo: Mostrar/ocultar a lista",
     MINIMAP_TOOLTIP_RIGHT_CLICK_OPTIONS = "Clique direito: Opções",
 

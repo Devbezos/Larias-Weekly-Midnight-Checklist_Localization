@@ -29,7 +29,7 @@ local STRINGS = {
     OPTIONS_SHOW_CURRENCY = "Показать валюту",
 
     HIDE_COMPLETED_WEEKS = "Скрыть завершённые недели",
-    OPTIONS_BUTTON = "Настройки",
+
     RESET_BUTTON = "Сбросить",
     DONE_PREFIX = "[Готово] ",
 
@@ -62,13 +62,8 @@ local STRINGS = {
 
     TRACKING_CATALYST_LABEL = "Катализатор:",
 
-    TRACKING_CURRENCY_FALLBACK_PREFIX = "Валюта ",
-    -- NOTE: Lua's string.lower() does NOT lowercase Cyrillic, so this must match the exact
-    -- casing used by WoW's Russian client in crest currency names. Verify in-game if needed.
-    TRACKING_CREST_MATCH_SUBSTRING = "Гребень",
     TRACKING_INF = "INF",
 
-    MINIMAP_TOOLTIP_TEXT = "Левая кнопка: показать/скрыть список",
     MINIMAP_TOOLTIP_LEFT_CLICK_TOGGLE = "Левая кнопка: Показать/скрыть список",
     MINIMAP_TOOLTIP_RIGHT_CLICK_OPTIONS = "Правая кнопка: Настройки",
 

@@ -29,7 +29,6 @@ local STRINGS = {
     OPTIONS_SHOW_CURRENCY = "Afficher la monnaie",
 
     HIDE_COMPLETED_WEEKS = "Masquer les semaines complétées",
-    OPTIONS_BUTTON = "Options",
     RESET_BUTTON = "Réinitialiser",
     DONE_PREFIX = "[Fait] ",
 
@@ -62,12 +61,8 @@ local STRINGS = {
 
     TRACKING_CATALYST_LABEL = "Catalyseur :",
 
-    TRACKING_CURRENCY_FALLBACK_PREFIX = "Monnaie ",
-    -- NOTE: should match the lowercase substring found in French WoW crest currency names ("Écu").
-    TRACKING_CREST_MATCH_SUBSTRING = "Écu",
     TRACKING_INF = "INF",
 
-    MINIMAP_TOOLTIP_TEXT = "Clic gauche : afficher/masquer la liste",
     MINIMAP_TOOLTIP_LEFT_CLICK_TOGGLE = "Clic gauche : Afficher/masquer la liste",
     MINIMAP_TOOLTIP_RIGHT_CLICK_OPTIONS = "Clic droit : Options",
 

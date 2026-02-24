@@ -1,0 +1,10 @@
+﻿{
+    "_readme": "Verified WoW in-game terminology per locale, confirmed by native speakers or in-game inspection. Read this before editing any locale file. Do NOT assume dictionary translations are correct for WoW-specific terms.",
+    "frFR": {
+        "Delves": "Gouffres",
+        "Bountiful Delves": "Gouffres abondants",
+        "Crests": "Écus",
+        "Prey": "Traque",
+        "Great Vault": "Grand Coffre"
+    }
+}

@@ -30,7 +30,6 @@ local STRINGS = {
     OPTIONS_SHOW_CURRENCY = "Mostrar moneda",
 
     HIDE_COMPLETED_WEEKS = "Ocultar semanas completadas",
-    OPTIONS_BUTTON = "Opciones",
     RESET_BUTTON = "Reiniciar",
     DONE_PREFIX = "[Hecho] ",
 
@@ -63,10 +62,7 @@ local STRINGS = {
 
     TRACKING_CATALYST_LABEL = "Catalizador:",
 
-    TRACKING_CURRENCY_FALLBACK_PREFIX = "Moneda ",
-    TRACKING_CREST_MATCH_SUBSTRING = "cresta",
     TRACKING_INF = "INF",
-    MINIMAP_TOOLTIP_TEXT = "Clic izquierdo: mostrar/ocultar la lista",
 
     MINIMAP_TOOLTIP_LEFT_CLICK_TOGGLE = "Clic izquierdo: mostrar/ocultar la lista",
     MINIMAP_TOOLTIP_RIGHT_CLICK_OPTIONS = "Clic derecho: opciones",

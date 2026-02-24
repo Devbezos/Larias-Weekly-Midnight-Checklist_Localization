@@ -29,7 +29,6 @@ local STRINGS = {
     OPTIONS_SHOW_CURRENCY = "Währung anzeigen",
 
     HIDE_COMPLETED_WEEKS = "Abgeschlossene Wochen ausblenden",
-    OPTIONS_BUTTON = "Optionen",
     RESET_BUTTON = "Zurücksetzen",
     DONE_PREFIX = "[Fertig] ",
 
@@ -62,12 +61,8 @@ local STRINGS = {
 
     TRACKING_CATALYST_LABEL = "Katalysator:",
 
-    TRACKING_CURRENCY_FALLBACK_PREFIX = "Währung ",
-    -- NOTE: should match the lowercase substring found in German WoW crest currency names ("Zinne").
-    TRACKING_CREST_MATCH_SUBSTRING = "zinne",
     TRACKING_INF = "INF",
 
-    MINIMAP_TOOLTIP_TEXT = "Linksklick zum Ein-/Ausblenden der Checkliste",
     MINIMAP_TOOLTIP_LEFT_CLICK_TOGGLE = "Linksklick: Checkliste ein-/ausblenden",
     MINIMAP_TOOLTIP_RIGHT_CLICK_OPTIONS = "Rechtsklick: Optionen",
 
