@@ -102,6 +102,7 @@ local STRINGS = {
     ILVLREF_CREST_CHAMP        = "Camp",
     ILVLREF_CREST_HERO         = "Eroe",
     ILVLREF_CREST_MYTH         = "Dor",
+    ILVLREF_DO_NOT_USE_CRESTS_FMT = "NON USARE CRESTE %s",
 
     ILVLREF_DUNGEON_PRE_HEROIC = "Eroico pre-stagione",
     ILVLREF_DUNGEON_HEROIC     = "Eroico",
