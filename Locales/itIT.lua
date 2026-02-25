@@ -18,17 +18,18 @@ local L = reg.strings[LOCALE]
 local STRINGS = {
     DISPLAY_NAME = "Larias's Weekly Checklist",
 
-    UPDATE_AVAILABLE_TITLE = "Nuova versione disponibile",
     UPDATE_AVAILABLE_TEXT = "Nuova versione disponibile",
     UPDATE_AVAILABLE_FMT = "%s ha un aggiornamento disponibile.\n\nAggiorna l'addon all'ultima versione.",
 
     BUTTON_OK = "OK",
     BUTTON_CANCEL = "Annulla",
 
-    OPTIONS_SHOW_GREAT_VAULT = "Mostra Grande Volta",
-    OPTIONS_SHOW_CURRENCY = "Mostra valuta",
+    OPTIONS_HIDE_GREAT_VAULT = "Nascondi Grande Volta",
+    OPTIONS_HIDE_CURRENCY = "Nascondi valuta",
 
     HIDE_COMPLETED_WEEKS = "Nascondi settimane completate",
+    OPTIONS_HIDE_CHANGE_WEEK_BTN = "Nascondi pulsante Cambia settimana",
+    OPTIONS_HIDE_ILVL_REF_BTN = "Nascondi pulsante Rif. ilvl",
 
     RESET_BUTTON = "Reimposta",
     DONE_PREFIX = "[Fatto] ",
@@ -70,6 +71,49 @@ local STRINGS = {
     TAB_LIST = "Lista",
     TAB_OPTIONS = "Opzioni",
     CHANGE_WEEK_BUTTON = "Cambia settimana",
+    ILVLREF_BUTTON = "Rif. ilvl",
+
+    -- Item level reference popup
+    ILVLREF_WINDOW_TITLE  = "Riferimento livelli oggetto – Midnight Stagione 1",
+
+    ILVLREF_SEC_TRACKS    = "Percorsi di potenziamento  (20 creste per passo)",
+    ILVLREF_SEC_CRAFTED   = "Livelli degli oggetti artigianali",
+    ILVLREF_SEC_DUNGEONS  = "Livelli degli oggetti nei dungeon",
+    ILVLREF_SEC_RAID      = "Livelli oggetto appross. del raid di Midnight",
+    ILVLREF_SEC_DELVES    = "Livelli oggetto delle grotte generose",
+
+    ILVLREF_COL_ILVL         = "liv. ogg.",
+    ILVLREF_COL_TRACK        = "Percorsi potenziamento",
+    ILVLREF_COL_CREST_NEEDED = "Creste",
+    ILVLREF_COL_QUALITY      = "Qualità",
+    ILVLREF_COL_SOURCE       = "Fonte",
+    ILVLREF_COL_END_LOOT     = "Bottino finale",
+    ILVLREF_COL_GREAT_VAULT  = "Grande Volta",
+    ILVLREF_COL_DIFFICULTY   = "Difficoltà",
+    ILVLREF_COL_BOSS1        = "Inizio",
+    ILVLREF_COL_BOSS2        = "Metà",
+    ILVLREF_COL_BOSS3        = "Tardi",
+    ILVLREF_COL_BOSS4        = "Fine",
+    ILVLREF_COL_TIER         = "Livello",
+    ILVLREF_COL_MAP_DROP     = "Drop mappa",
+
+    ILVLREF_CREST_ADV          = "Avv",
+    ILVLREF_CREST_VET          = "Vet",
+    ILVLREF_CREST_CHAMP        = "Camp",
+    ILVLREF_CREST_HERO         = "Eroe",
+    ILVLREF_CREST_MYTH         = "Dor",
+
+    ILVLREF_DUNGEON_PRE_HEROIC = "Eroico pre-stagione",
+    ILVLREF_DUNGEON_HEROIC     = "Eroico",
+    ILVLREF_DUNGEON_PRE_MYTHIC = "Mitico pre-stagione",
+    ILVLREF_DUNGEON_MYTHIC     = "Mitico",
+
+    ILVLREF_RAID_LFR           = "LFR",
+    ILVLREF_RAID_NORMAL        = "Normale",
+    ILVLREF_RAID_HEROIC        = "Eroico",
+    ILVLREF_RAID_MYTHIC        = "Mitico",
+
+    ILVLREF_DELVE_TIER_FMT     = "T%d",
 
     SLASH_USAGE_TOGGLE = "Utilizzo: /larias o /lcl per mostrare/nascondere la lista",
     SLASH_USAGE_LOCALE = "Utilizzo: /larias locale auto|enUS|deDE|esES|esMX|frFR|itIT|ptBR|ruRU",

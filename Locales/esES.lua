@@ -18,17 +18,18 @@ local L = reg.strings[LOCALE]
 local STRINGS = {
     DISPLAY_NAME = "Larias's Weekly Checklist",
 
-    UPDATE_AVAILABLE_TITLE = "Nueva versión disponible",
     UPDATE_AVAILABLE_TEXT = "Nueva versión disponible",
     UPDATE_AVAILABLE_FMT = "%s tiene una actualización disponible.\n\nPor favor, actualiza el complemento a la versión más reciente.",
 
     BUTTON_OK = "Aceptar",
     BUTTON_CANCEL = "Cancelar",
 
-    OPTIONS_SHOW_GREAT_VAULT = "Mostrar Gran Cámara",
-    OPTIONS_SHOW_CURRENCY = "Mostrar moneda",
+    OPTIONS_HIDE_GREAT_VAULT = "Ocultar Gran Cámara",
+    OPTIONS_HIDE_CURRENCY = "Ocultar moneda",
 
     HIDE_COMPLETED_WEEKS = "Ocultar semanas completadas",
+    OPTIONS_HIDE_CHANGE_WEEK_BTN = "Ocultar botón Cambiar semana",
+    OPTIONS_HIDE_ILVL_REF_BTN = "Ocultar botón Refs. ilvl",
     RESET_BUTTON = "Reiniciar",
     DONE_PREFIX = "[Hecho] ",
 
@@ -69,6 +70,49 @@ local STRINGS = {
     TAB_LIST = "Lista",
     TAB_OPTIONS = "Opciones",
     CHANGE_WEEK_BUTTON = "Cambiar semana",
+    ILVLREF_BUTTON = "Refs. ilvl",
+
+    -- Item level reference popup
+    ILVLREF_WINDOW_TITLE  = "Referencia de nivel de objeto – Temporada 1 de Midnight",
+
+    ILVLREF_SEC_TRACKS    = "Rangos de mejora  (20 crestas por paso)",
+    ILVLREF_SEC_CRAFTED   = "Niveles de objeto fabricado",
+    ILVLREF_SEC_DUNGEONS  = "Niveles de objeto en mazmorra",
+    ILVLREF_SEC_RAID      = "Aprox. niveles de objeto en banda de Midnight",
+    ILVLREF_SEC_DELVES    = "Niveles de objeto en covacha fructífera",
+
+    ILVLREF_COL_ILVL         = "n. obj.",
+    ILVLREF_COL_TRACK        = "Rangos de mejora",
+    ILVLREF_COL_CREST_NEEDED = "Crestas",
+    ILVLREF_COL_QUALITY      = "Calidad",
+    ILVLREF_COL_SOURCE       = "Fuente",
+    ILVLREF_COL_END_LOOT     = "Botín final",
+    ILVLREF_COL_GREAT_VAULT  = "Gran Cámara",
+    ILVLREF_COL_DIFFICULTY   = "Dificultad",
+    ILVLREF_COL_BOSS1        = "Inicio",
+    ILVLREF_COL_BOSS2        = "Medio",
+    ILVLREF_COL_BOSS3        = "Final",
+    ILVLREF_COL_BOSS4        = "Fin",
+    ILVLREF_COL_TIER         = "Nivel",
+    ILVLREF_COL_MAP_DROP     = "Drop de mapa",
+
+    ILVLREF_CREST_ADV          = "Avent",
+    ILVLREF_CREST_VET          = "Vet",
+    ILVLREF_CREST_CHAMP        = "Cam",
+    ILVLREF_CREST_HERO         = "Héroe",
+    ILVLREF_CREST_MYTH         = "Dor",
+
+    ILVLREF_DUNGEON_PRE_HEROIC = "Heroico de pretemp.",
+    ILVLREF_DUNGEON_HEROIC     = "Heroico",
+    ILVLREF_DUNGEON_PRE_MYTHIC = "Mítico de pretemp.",
+    ILVLREF_DUNGEON_MYTHIC     = "Mítico",
+
+    ILVLREF_RAID_LFR           = "LFR",
+    ILVLREF_RAID_NORMAL        = "Normal",
+    ILVLREF_RAID_HEROIC        = "Heroico",
+    ILVLREF_RAID_MYTHIC        = "Mítico",
+
+    ILVLREF_DELVE_TIER_FMT     = "T%d",
 
     SLASH_USAGE_TOGGLE = "Uso: /larias o /lcl para mostrar/ocultar la lista",
     SLASH_USAGE_LOCALE = "Uso: /larias locale auto|enUS|deDE|esES|esMX|frFR|itIT|ptBR|ruRU",

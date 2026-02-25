@@ -18,17 +18,18 @@ local L = reg.strings[LOCALE]
 local STRINGS = {
     DISPLAY_NAME = "Larias's Weekly Checklist",
 
-    UPDATE_AVAILABLE_TITLE = "Доступна новая версия",
     UPDATE_AVAILABLE_TEXT = "Доступна новая версия",
     UPDATE_AVAILABLE_FMT = "%s имеет доступное обновление.\n\nПожалуйста, обновите аддон до последней версии.",
 
     BUTTON_OK = "ОК",
     BUTTON_CANCEL = "Отмена",
 
-    OPTIONS_SHOW_GREAT_VAULT = "Показать Великое хранилище",
-    OPTIONS_SHOW_CURRENCY = "Показать валюту",
+    OPTIONS_HIDE_GREAT_VAULT = "Скрыть Великое хранилище",
+    OPTIONS_HIDE_CURRENCY = "Скрыть валюту",
 
     HIDE_COMPLETED_WEEKS = "Скрыть завершённые недели",
+    OPTIONS_HIDE_CHANGE_WEEK_BTN = "Скрыть кнопку «Сменить неделю»",
+    OPTIONS_HIDE_ILVL_REF_BTN = "Скрыть кнопку «Реф. ilvl»",
 
     RESET_BUTTON = "Сбросить",
     DONE_PREFIX = "[Готово] ",
@@ -70,6 +71,49 @@ local STRINGS = {
     TAB_LIST = "Список",
     TAB_OPTIONS = "Настройки",
     CHANGE_WEEK_BUTTON = "Сменить неделю",
+    ILVLREF_BUTTON = "Реф. ilvl",
+
+    -- Item level reference popup
+    ILVLREF_WINDOW_TITLE  = "Midnight, сезон 1 — справочник уровней предметов",
+
+    ILVLREF_SEC_TRACKS    = "Пути улучшения  (20 гребней за шаг)",
+    ILVLREF_SEC_CRAFTED   = "Уровни созданных предметов",
+    ILVLREF_SEC_DUNGEONS  = "Уровни предметов в подземельях",
+    ILVLREF_SEC_RAID      = "Прибл. уровни предметов рейда Midnight",
+    ILVLREF_SEC_DELVES    = "Уровни предметов из щедрых руин",
+
+    ILVLREF_COL_ILVL         = "ур. пред.",
+    ILVLREF_COL_TRACK        = "Пути улучшения",
+    ILVLREF_COL_CREST_NEEDED = "Гребни",
+    ILVLREF_COL_QUALITY      = "Качество",
+    ILVLREF_COL_SOURCE       = "Источник",
+    ILVLREF_COL_END_LOOT     = "Конечные предметы",
+    ILVLREF_COL_GREAT_VAULT  = "Великое хранилище",
+    ILVLREF_COL_DIFFICULTY   = "Сложность",
+    ILVLREF_COL_BOSS1        = "Начало",
+    ILVLREF_COL_BOSS2        = "Середина",
+    ILVLREF_COL_BOSS3        = "Конец",
+    ILVLREF_COL_BOSS4        = "Финал",
+    ILVLREF_COL_TIER         = "Уровень",
+    ILVLREF_COL_MAP_DROP     = "Карта-дроп",
+
+    ILVLREF_CREST_ADV          = "Путеш",
+    ILVLREF_CREST_VET          = "Вет",
+    ILVLREF_CREST_CHAMP        = "Чемп",
+    ILVLREF_CREST_HERO         = "Герой",
+    ILVLREF_CREST_MYTH         = "Позол",
+
+    ILVLREF_DUNGEON_PRE_HEROIC = "Досезонный Героич.",
+    ILVLREF_DUNGEON_HEROIC     = "Героический",
+    ILVLREF_DUNGEON_PRE_MYTHIC = "Досезонный Эпич.",
+    ILVLREF_DUNGEON_MYTHIC     = "Эпический",
+
+    ILVLREF_RAID_LFR           = "LFR",
+    ILVLREF_RAID_NORMAL        = "Обычный",
+    ILVLREF_RAID_HEROIC        = "Героический",
+    ILVLREF_RAID_MYTHIC        = "Эпический",
+
+    ILVLREF_DELVE_TIER_FMT     = "У%d",
 
     SLASH_USAGE_TOGGLE = "Использование: /larias или /lcl для показа/скрытия списка",
     SLASH_USAGE_LOCALE = "Использование: /larias locale auto|enUS|deDE|esES|esMX|frFR|itIT|ptBR|ruRU",
