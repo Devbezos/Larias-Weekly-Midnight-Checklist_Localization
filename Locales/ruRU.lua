@@ -18,12 +18,15 @@ local L = reg.strings[LOCALE]
 local STRINGS = {
     DISPLAY_NAME = "Larias's Weekly Checklist",
 
+    -- Update popup
     UPDATE_AVAILABLE_TEXT = "Доступна новая версия",
     UPDATE_AVAILABLE_FMT = "%s имеет доступное обновление.\n\nПожалуйста, обновите аддон до последней версии.",
 
+    -- Shared buttons
     BUTTON_OK = "ОК",
     BUTTON_CANCEL = "Отмена",
 
+    -- Options tab
     OPTIONS_HIDE_GREAT_VAULT = "Скрыть Великий тайник",
     OPTIONS_HIDE_CURRENCY = "Скрыть валюту",
 
@@ -32,8 +35,11 @@ local STRINGS = {
     OPTIONS_HIDE_ILVL_REF_BTN = "Скрыть кнопку «Реф. ilvl»",
 
     RESET_BUTTON = "Сбросить",
+
+    -- List tab
     DONE_PREFIX = "[Готово] ",
 
+    -- Tracking panel
     TRACKING_GREAT_VAULT_TITLE = "Великий тайник",
     TRACKING_CURRENCY_TITLE = "Валюта",
     TRACKING_GV_RAID = "Рейд",
@@ -65,9 +71,11 @@ local STRINGS = {
 
     TRACKING_INF = "INF",
 
+    -- Minimap tooltip
     MINIMAP_TOOLTIP_LEFT_CLICK_TOGGLE = "Левая кнопка: Показать/скрыть список",
     MINIMAP_TOOLTIP_RIGHT_CLICK_OPTIONS = "Правая кнопка: Настройки",
 
+    -- Main window
     TAB_LIST = "Список",
     TAB_OPTIONS = "Настройки",
     CHANGE_WEEK_BUTTON = "Сменить неделю",
@@ -116,6 +124,7 @@ local STRINGS = {
 
     ILVLREF_DELVE_TIER_FMT     = "У%d",
 
+    -- Slash commands
     SLASH_USAGE_TOGGLE = "Использование: /larias или /lcl для показа/скрытия списка",
     SLASH_USAGE_LOCALE = "Использование: /larias locale auto|enUS|deDE|esES|esMX|frFR|itIT|ptBR|ruRU",
     SLASH_LOCALE_SET_FMT = "Язык установлен на %s (активный: %s)",

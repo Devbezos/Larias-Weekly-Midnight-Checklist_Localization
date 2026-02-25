@@ -18,12 +18,15 @@ local L = reg.strings[LOCALE]
 local STRINGS = {
     DISPLAY_NAME = "Larias's Weekly Checklist",
 
+    -- Update popup
     UPDATE_AVAILABLE_TEXT = "Nuova versione disponibile",
     UPDATE_AVAILABLE_FMT = "%s ha un aggiornamento disponibile.\n\nAggiorna l'addon all'ultima versione.",
 
+    -- Shared buttons
     BUTTON_OK = "OK",
     BUTTON_CANCEL = "Annulla",
 
+    -- Options tab
     OPTIONS_HIDE_GREAT_VAULT = "Nascondi Grande Forziere",
     OPTIONS_HIDE_CURRENCY = "Nascondi valuta",
 
@@ -32,8 +35,11 @@ local STRINGS = {
     OPTIONS_HIDE_ILVL_REF_BTN = "Nascondi pulsante Rif. ilvl",
 
     RESET_BUTTON = "Reimposta",
+
+    -- List tab
     DONE_PREFIX = "[Fatto] ",
 
+    -- Tracking panel
     TRACKING_GREAT_VAULT_TITLE = "Grande Forziere",
     TRACKING_CURRENCY_TITLE = "Valuta",
     TRACKING_GV_RAID = "Raid",
@@ -65,9 +71,11 @@ local STRINGS = {
 
     TRACKING_INF = "INF",
 
+    -- Minimap tooltip
     MINIMAP_TOOLTIP_LEFT_CLICK_TOGGLE = "Clic sinistro: Mostra/nascondi la lista",
     MINIMAP_TOOLTIP_RIGHT_CLICK_OPTIONS = "Clic destro: Opzioni",
 
+    -- Main window
     TAB_LIST = "Lista",
     TAB_OPTIONS = "Opzioni",
     CHANGE_WEEK_BUTTON = "Cambia settimana",
@@ -116,6 +124,7 @@ local STRINGS = {
 
     ILVLREF_DELVE_TIER_FMT     = "T%d",
 
+    -- Slash commands
     SLASH_USAGE_TOGGLE = "Utilizzo: /larias o /lcl per mostrare/nascondere la lista",
     SLASH_USAGE_LOCALE = "Utilizzo: /larias locale auto|enUS|deDE|esES|esMX|frFR|itIT|ptBR|ruRU",
     SLASH_LOCALE_SET_FMT = "Lingua impostata su %s (effettiva: %s)",
