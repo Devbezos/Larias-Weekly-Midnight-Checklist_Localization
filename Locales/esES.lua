@@ -61,7 +61,7 @@ local STRINGS = {
         [3341] = "Veterano",
         [3343] = "Campeón",
         [3345] = "Héroe",
-        [3347] = "Dorado",
+        [3347] = "Mito",
     },
     TRACKING_NO_ID = "Sin ID",
     TRACKING_TRADE_UP_SUFFIX = " Mejorar)",
@@ -108,7 +108,7 @@ local STRINGS = {
     ILVLREF_CREST_VET          = "Vet",
     ILVLREF_CREST_CHAMP        = "Cam",
     ILVLREF_CREST_HERO         = "Héroe",
-    ILVLREF_CREST_MYTH         = "Dor",
+    ILVLREF_CREST_MYTH         = "Mito",
     ILVLREF_DO_NOT_USE_CRESTS_FMT = "NO USAR BLASONES %s",
 
     ILVLREF_DUNGEON_PRE_HEROIC = "Heroico de pretemp.",

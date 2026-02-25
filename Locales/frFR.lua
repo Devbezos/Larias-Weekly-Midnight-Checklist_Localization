@@ -57,11 +57,11 @@ local STRINGS = {
     -- Optional: if present, crest labels are taken from this table instead of the game currency name.
     -- Keys are currency IDs; values should be display names (with or without a trailing ':').
     TRACKING_CREST_NAMES_BY_ID = {
-        [3383] = "Aventurier",
+        [3383] = "Aventure",
         [3341] = "Vétéran",
         [3343] = "Champion",
-        [3345] = "Héros",
-        [3347] = "Doré",
+        [3345] = "Héroïque",
+        [3347] = "Mythique",
     },
     TRACKING_NO_ID = "Aucun ID",
     TRACKING_TRADE_UP_SUFFIX = " Améliorer)",
@@ -108,8 +108,8 @@ local STRINGS = {
     ILVLREF_CREST_ADV          = "Avent",
     ILVLREF_CREST_VET          = "Vét",
     ILVLREF_CREST_CHAMP        = "Champ",
-    ILVLREF_CREST_HERO         = "Héros",
-    ILVLREF_CREST_MYTH         = "Doré",
+    ILVLREF_CREST_HERO         = "Héroïque",
+    ILVLREF_CREST_MYTH         = "Myth",
     ILVLREF_DO_NOT_USE_CRESTS_FMT = "NE PAS UTILISER D'ÉCUS %s",
 
     ILVLREF_DUNGEON_PRE_HEROIC = "Héroïque avant-saison",
