@@ -25,7 +25,7 @@
         "Delves": "Gouffres",
         "Bountiful Delves": "Gouffres abondants",
         "Crests": "Écus",
-        "Sparks": "Flux de mana d'aubastre",
+        "Sparks": "Étincelle de radiance",
         "Prey": "Traque",
         "Great Vault": "Grand Coffre",
         "Dungeon": "Donjon",
@@ -39,7 +39,18 @@
         },
         "_notes": {
             "Crests": "Singular: Écu. Plural: Écus. Tracker label: 'Écu:'. Full crest names: 'Écu de l'aube [tier]'. Note hero tier uses adjective form 'héroïque' (not 'de héros'), mythic uses 'mythique'.",
-            "Delves": "Singular and plural both 'Gouffres' in common usage (plural noun)."
+            "Delves": "Singular and plural both 'Gouffres' in common usage (plural noun).",
+            "Sparks": "Singular: Étincelle de radiance. Plural: Étincelles de radiance. Confirmed via MidnightObjectiveTracker reference (EN: 'Spark of Radiance'). Previous value 'Flux de mana d\'aubastre' was incorrect/from a different expansion.",
+            "Great Vault": "Official Blizzard FR in-game name is 'Grand Coffre'. Do NOT use 'Grande Chambre Forte' — that is a mistranslation used by at least one community addon (MidnightObjectiveTracker).",
+            "_typos_to_avoid": {
+                "Ecus": "WRONG — missing É accent. Always write 'Écus'.",
+                "Etincelle": "WRONG — missing É accent. Always write 'Étincelle'.",
+                "Heroique": "WRONG — missing ï tréma. Always write 'Héroïque'.",
+                "Veteran (unaccented)": "WRONG — missing accents. Always write 'Vétéran'.",
+                "Grande Chambre Forte": "WRONG term for Great Vault. Always write 'Grand Coffre'.",
+                "recemment": "WRONG — missing accents. Always write 'récemment'.",
+                "_source": "These typos were identified in MidnightObjectiveTracker.locales.lua (D:\\Battle.NET\\World Of Warcraft\\_retail_\\Interface\\AddOns\\MidnightObjectiveTracker) while cross-referencing translations."
+            }
         }
     },
 
