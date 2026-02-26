@@ -2,7 +2,7 @@
 ## Title: Larias's Weekly Checklist Localization (ALPHA)
 ## Notes: Localization data for Larias's Weekly Checklist
 ## Author: Larias
-## Version: 1.0.5.5-alpha
+## Version: 1.0.10
 ## IconTexture: Interface\AddOns\LariasWeeklyChecklist_Localization\Media\icon
 ## X-Wago-ID: mNw78XNo
 ## X-Curse-Project-ID: 1469589
