@@ -41,7 +41,12 @@ local STRINGS = {
     UI_SCALE_LABEL = "Scala UI",
     UI_SCALE_MIN_LABEL = "50%",
     UI_SCALE_MAX_LABEL = "150%",
-    OPTIONS_HIDE_SCALE_SLIDER = "Nascondi cursore di scala",
+    OPTIONS_HIDE_SCALE_SLIDER   = "Nascondi cursore di scala",
+    OPTIONS_HIDE_SLIDERS        = "Nascondi cursori",
+    OPTIONS_HIDE_OPACITY_SLIDER = "Nascondi cursore di opacità",
+    UI_OPACITY_LABEL            = "Opacità",
+    UI_OPACITY_MIN_LABEL        = "10%",
+    UI_OPACITY_MAX_LABEL        = "100%",
 
     -- List tab
     DONE_PREFIX = "[Fatto] ",
@@ -54,7 +59,7 @@ local STRINGS = {
     TRACKING_GV_WORLD    = "Mondo",
     TRACKING_NA = "N/D",
 
-    TRACKING_SPARKS_LABEL = "Scintille:",
+    TRACKING_SPARKS_LABEL = "Manaflusso di Albaluce:",
     TRACKING_DONE = "Fatto",
     TRACKING_NOT_DONE = "Non fatto",
 
@@ -87,6 +92,8 @@ local STRINGS = {
     -- Main window
     TAB_OPTIONS = "Opzioni",
     CHANGE_WEEK_BUTTON = "Cambia settimana",
+    CHAR_PICKER_BUTTON = "Cambia profilo",
+    CHAR_PICKER_TOOLTIP_REMOVE = "Per rimuovere un personaggio, usa il menu Opzioni.",
     ILVLREF_BUTTON = "Vedi livelli oggetto",
 
     -- Item level reference popup
@@ -125,7 +132,7 @@ local STRINGS = {
     ILVLREF_DUNGEON_PRE_MYTHIC = "Mitico pre-stagione",
     ILVLREF_DUNGEON_MYTHIC     = "Mitico",
 
-    ILVLREF_RAID_LFR           = "LFR",
+    ILVLREF_RAID_LFR           = "Ricerca delle incursioni",
     ILVLREF_RAID_NORMAL        = "Normale",
     ILVLREF_RAID_HEROIC        = "Eroico",
     ILVLREF_RAID_MYTHIC        = "Mitico",

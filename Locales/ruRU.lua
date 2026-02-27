@@ -28,7 +28,7 @@ local STRINGS = {
     BUTTON_CANCEL = "Отмена",
 
     -- Options tab
-    OPTIONS_HIDE_GREAT_VAULT = "Скрыть Великий сейф",
+    OPTIONS_HIDE_GREAT_VAULT = "Скрыть Великое хранилище",
     OPTIONS_HIDE_CURRENCY = "Скрыть валюту",
 
     HIDE_COMPLETED_WEEKS = "Скрыть завершённые недели",
@@ -41,13 +41,18 @@ local STRINGS = {
     UI_SCALE_LABEL = "Масштаб UI",
     UI_SCALE_MIN_LABEL = "50%",
     UI_SCALE_MAX_LABEL = "150%",
-    OPTIONS_HIDE_SCALE_SLIDER = "Скрыть ползунок масштаба",
+    OPTIONS_HIDE_SCALE_SLIDER   = "Скрыть ползунок масштаба",
+    OPTIONS_HIDE_SLIDERS        = "Скрыть ползунки",
+    OPTIONS_HIDE_OPACITY_SLIDER = "Скрыть ползунок прозрачности",
+    UI_OPACITY_LABEL            = "Прозрачность",
+    UI_OPACITY_MIN_LABEL        = "10%",
+    UI_OPACITY_MAX_LABEL        = "100%",
 
     -- List tab
     DONE_PREFIX = "[Готово] ",
 
     -- Tracking panel
-    TRACKING_GREAT_VAULT_TITLE = "Великий сейф",
+    TRACKING_GREAT_VAULT_TITLE = "Великое хранилище",
     TRACKING_CURRENCY_TITLE = "Валюта",
     TRACKING_GV_RAID = "Рейд",
     TRACKING_GV_DUNGEONS = "Подземелья",
@@ -87,6 +92,8 @@ local STRINGS = {
     -- Main window
     TAB_OPTIONS = "Настройки",
     CHANGE_WEEK_BUTTON = "Сменить неделю",
+    CHAR_PICKER_BUTTON = "Сменить профиль",
+    CHAR_PICKER_TOOLTIP_REMOVE = "Чтобы удалить персонажа, используйте меню настроек.",
     ILVLREF_BUTTON = "Уровни предметов",
 
     -- Item level reference popup
@@ -104,7 +111,7 @@ local STRINGS = {
     ILVLREF_COL_QUALITY      = "Качество",
     ILVLREF_COL_SOURCE       = "Источник",
     ILVLREF_COL_END_LOOT     = "Максимальный уровень",
-    ILVLREF_COL_GREAT_VAULT  = "Великий сейф",
+    ILVLREF_COL_GREAT_VAULT  = "Великое хранилище",
     ILVLREF_COL_DIFFICULTY   = "Сложность",
     ILVLREF_COL_BOSS1        = "Начало",
     ILVLREF_COL_BOSS2        = "Середина",
@@ -117,7 +124,7 @@ local STRINGS = {
     ILVLREF_CREST_VET          = "Ветеран",
     ILVLREF_CREST_CHAMP        = "Защитник",
     ILVLREF_CREST_HERO         = "Герой",
-    ILVLREF_CREST_MYTH         = "Легенда",
+    ILVLREF_CREST_MYTH         = "Эпохи",
     ILVLREF_DO_NOT_USE_CRESTS_FMT = "НЕ ИСПОЛЬЗОВАТЬ ГЕРБЫ %s",
 
     ILVLREF_DUNGEON_PRE_HEROIC = "До открытия Гер. рейда",

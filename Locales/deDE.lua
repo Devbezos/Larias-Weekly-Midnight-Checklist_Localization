@@ -41,7 +41,12 @@ local STRINGS = {
     UI_SCALE_LABEL = "UI-Skalierung",
     UI_SCALE_MIN_LABEL = "50%",
     UI_SCALE_MAX_LABEL = "150%",
-    OPTIONS_HIDE_SCALE_SLIDER = "Skalierungsregler ausblenden",
+    OPTIONS_HIDE_SCALE_SLIDER   = "Skalierungsregler ausblenden",
+    OPTIONS_HIDE_SLIDERS        = "Regler ausblenden",
+    OPTIONS_HIDE_OPACITY_SLIDER = "Deckkraftregler ausblenden",
+    UI_OPACITY_LABEL            = "Deckkraft",
+    UI_OPACITY_MIN_LABEL        = "10%",
+    UI_OPACITY_MAX_LABEL        = "100%",
 
     -- List tab
     DONE_PREFIX = "[Fertig] ",
@@ -54,7 +59,7 @@ local STRINGS = {
     TRACKING_GV_WORLD    = "Welt",
     TRACKING_NA = "N/A",
 
-    TRACKING_SPARKS_LABEL = "Funken:",
+    TRACKING_SPARKS_LABEL = "Morgenlichtmanaflux:",
     TRACKING_DONE = "Fertig",
     TRACKING_NOT_DONE = "Nicht fertig",
 
@@ -87,6 +92,8 @@ local STRINGS = {
     -- Main window
     TAB_OPTIONS = "Optionen",
     CHANGE_WEEK_BUTTON = "Woche wechseln",
+    CHAR_PICKER_BUTTON = "Profil wechseln",
+    CHAR_PICKER_TOOLTIP_REMOVE = "Um einen Charakter zu entfernen, verwende das Optionsmenü.",
     ILVLREF_BUTTON = "Gegenstandsstufen anzeigen",
 
     -- Item level reference popup
@@ -125,7 +132,7 @@ local STRINGS = {
     ILVLREF_DUNGEON_PRE_MYTHIC = "Vorjahres-Mythisch",
     ILVLREF_DUNGEON_MYTHIC     = "Mythisch",
 
-    ILVLREF_RAID_LFR           = "LFR",
+    ILVLREF_RAID_LFR           = "Schlachtzugsbrowser",
     ILVLREF_RAID_NORMAL        = "Normal",
     ILVLREF_RAID_HEROIC        = "Heroisch",
     ILVLREF_RAID_MYTHIC        = "Mythisch",
