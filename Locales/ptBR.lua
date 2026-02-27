@@ -41,7 +41,12 @@ local STRINGS = {
     UI_SCALE_LABEL = "Escala de UI",
     UI_SCALE_MIN_LABEL = "50%",
     UI_SCALE_MAX_LABEL = "150%",
-    OPTIONS_HIDE_SCALE_SLIDER = "Ocultar controle de escala",
+    OPTIONS_HIDE_SCALE_SLIDER   = "Ocultar controle de escala",
+    OPTIONS_HIDE_SLIDERS        = "Ocultar controles deslizantes",
+    OPTIONS_HIDE_OPACITY_SLIDER = "Ocultar controle de opacidade",
+    UI_OPACITY_LABEL            = "Opacidade",
+    UI_OPACITY_MIN_LABEL        = "10%",
+    UI_OPACITY_MAX_LABEL        = "100%",
 
     -- List tab
     DONE_PREFIX = "[Feito] ",
@@ -52,7 +57,7 @@ local STRINGS = {
     TRACKING_GV_RAID = "Raid",
     TRACKING_GV_DUNGEONS = "Masmorras",    TRACKING_GV_WORLD    = "Mundo",    TRACKING_NA = "N/D",
 
-    TRACKING_SPARKS_LABEL = "Fagulhas:",
+    TRACKING_SPARKS_LABEL = "Fluxo de Mana do Alvorecer:",
     TRACKING_DONE = "Feito",
     TRACKING_NOT_DONE = "Não feito",
 
@@ -85,6 +90,8 @@ local STRINGS = {
     -- Main window
     TAB_OPTIONS = "Opções",
     CHANGE_WEEK_BUTTON = "Mudar semana",
+    CHAR_PICKER_BUTTON = "Trocar perfil",
+    CHAR_PICKER_TOOLTIP_REMOVE = "Para remover um personagem, use o menu de Opções.",
     ILVLREF_BUTTON = "Ver níveis de item",
 
     -- Item level reference popup
@@ -123,7 +130,7 @@ local STRINGS = {
     ILVLREF_DUNGEON_PRE_MYTHIC = "Mítico pré-temp.",
     ILVLREF_DUNGEON_MYTHIC     = "Mítico",
 
-    ILVLREF_RAID_LFR           = "LFR",
+    ILVLREF_RAID_LFR           = "Localizador de Raides",
     ILVLREF_RAID_NORMAL        = "Normal",
     ILVLREF_RAID_HEROIC        = "Heróico",
     ILVLREF_RAID_MYTHIC        = "Mítico",

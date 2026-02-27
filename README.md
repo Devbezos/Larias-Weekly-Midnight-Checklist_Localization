@@ -2,6 +2,8 @@
 
 This repo is an **optional companion addon** that ships extra locales for **Larias's Weekly Checklist**.
 
+For full contribution guidelines including terminology rules, testing steps, and PR instructions, see [CONTRIBUTING.md](CONTRIBUTING.md).
+
 ## Add a locale (simple)
 
 You add **two files** by copying the main addon's enUS files and translating them.
