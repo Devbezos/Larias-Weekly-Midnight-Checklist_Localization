@@ -21,3 +21,5 @@ Locales\ptBR.lua
 Locales\ptBR_Data.lua
 Locales\ruRU.lua
 Locales\ruRU_Data.lua
+Locales\koKR.lua
+Locales\koKR_Data.lua
