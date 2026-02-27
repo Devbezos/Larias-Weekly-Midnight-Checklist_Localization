@@ -1,3 +1,8 @@
+## [2.0.7] (2026-02-27)
+- Add koKR locale and flesh out contribution docs (#14)
+- Updated locales: deDE esES esMX frFR itIT ptBR ruRU
+- Updated interface versions: 120001, 120000, 110207
+
 ## [2.0.6] (2026-02-27)
 - added koKR translation with fix (#13)
 - Updated locales: koKR
