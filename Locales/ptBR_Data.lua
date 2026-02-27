@@ -1,4 +1,4 @@
-﻿--[[
+--[[
 Portuguese-Brazil (ptBR) checklist data for Larias's Weekly Checklist
 
 NOTE: IDs are kept identical to the enUS dataset so completion tracking stays consistent
@@ -28,7 +28,7 @@ local DATASET = {
 
     {
         id = "early_access_feb_26_through_mar_2_pay_to_win",
-        title = "Acesso Antecipado – 26 fev. a 2 mar. – Pay to Win",
+        title = "Acesso Antecipado - 26 fev. a 2 mar. - Pay to Win",
         items = {
             { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Não gaste nenhum Brasão até receber instruções" },
             { id = "level_characters_warmode_on_to_90_dmf_opens_sunday_for_10_more_exp", text = "Suba personagens com Modo Guerra ativado ao nível 90 – a FLN abre no domingo com +10% de EXP" },
@@ -44,7 +44,7 @@ local DATASET = {
     },
     {
         id = "pre_season_week_1_march_3_m0_s",
-        title = "Pré-temporada Semana 1 – 3 de março – M0",
+        title = "Pré-temporada Semana 1 - 3 de março - M0",
         items = {
             { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Não gaste nenhum Brasão até receber instruções" },
             { id = "raise_the_singularity_renown_to_rank_7_for_1_6_champion_trinket", text = "Eleve o renome com A Singularidade ao grau 7 para o acessório campeão 1/6" },
@@ -64,7 +64,7 @@ local DATASET = {
     },
     {
         id = "pre_season_week_2_march_10_m0_s",
-        title = "Pré-temporada Semana 2 – 10 de março – M0",
+        title = "Pré-temporada Semana 2 - 10 de março - M0",
         items = {
             { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Não gaste nenhum Brasão até receber instruções" },
             { id = "if_not_completed_continue_to_raise_renown_for_champion_pieces", text = "Se não concluído, continue elevando o renome para peças campeã" },
@@ -82,7 +82,7 @@ local DATASET = {
     },
     {
         id = "season_1_week_1_mar_17_heroic_week",
-        title = "Semana 1 da Temporada 1 – 17 de março – Semana heróica",
+        title = "Semana 1 da Temporada 1 - 17 de março - Semana heróica",
         items = {
             { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Não gaste nenhum Brasão até receber instruções" },
             { id = "do_lfr_for_tier_pieces_check_guide_for_why", text = "Faça o LFR para peças de conjunto (veja o guia para entender o porquê)" },
@@ -98,7 +98,7 @@ local DATASET = {
     },
     {
         id = "week_2_mar_24_mythic_week_m_opens_take_off_work_giganerds",
-        title = "Semana 2 – 24 de março – Semana mítica, M+ abre, tirem férias nerds",
+        title = "Semana 2 - 24 de março - Semana mítica, M+ abre, tirem férias nerds",
         items = {
             { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Não gaste nenhum Brasão até receber instruções" },
             { id = "1h_crafted_note_check_guide_check_craft_path_info_very_important", text = "Nota sobre arma 1M criada, veja o guia, verifique o caminho de criação (MUITO IMPORTANTE!)" },
@@ -116,7 +116,7 @@ local DATASET = {
     },
     {
         id = "week_3_mar_31_final_raid_opens",
-        title = "Semana 3 – 31 de março – Raid final abre",
+        title = "Semana 3 - 31 de março - Raid final abre",
         items = {
             { id = "open_vault_272_myth_item_upgrade_after_crafting", text = "Abra o Grande Cofre (item mítico 272+) - melhore após criar" },
             { id = "craft_items_see_guide_for_2_paths_to_pick", text = "Crie itens – consulte o guia para 2 caminhos a escolher" },
@@ -131,7 +131,7 @@ local DATASET = {
     },
     {
         id = "week_4_apr_7",
-        title = "Semana 4 – 7 de abr.",
+        title = "Semana 4 - 7 de abr.",
         items = {
             { id = "open_vault_272_myth_item", text = "Abra o Grande Cofre (item mítico 272+)" },
             { id = "farm_10s_for_vault_crests", text = "Farme +10s para o Grande Cofre + Brasões" },
@@ -144,7 +144,7 @@ local DATASET = {
     },
     {
         id = "week_5_apr_14",
-        title = "Semana 5 – 14 de abr.",
+        title = "Semana 5 - 14 de abr.",
         items = {
             { id = "open_vault_272_myth_item", text = "Abra o Grande Cofre (item mítico 272+)" },
             { id = "farm_10s_for_vault_crests", text = "Farme +10s para o Grande Cofre + Brasões" },
@@ -157,7 +157,7 @@ local DATASET = {
     },
     {
         id = "week_6_apr_21_done_with_heroic_crests",
-        title = "Semana 6 – 21 de abr. – Terminados os Brasões Heróicos",
+        title = "Semana 6 - 21 de abr. - Terminados os Brasões Heróicos",
         items = {
             { id = "open_vault_272_myth_item", text = "Abra o Grande Cofre (item mítico 272+)" },
             { id = "farm_10s_for_vault_crests", text = "Farme +10s para o Grande Cofre + Brasões" },
@@ -170,7 +170,7 @@ local DATASET = {
     },
     {
         id = "week_7_apr_28",
-        title = "Semana 7 – 28 de abr.+",
+        title = "Semana 7 - 28 de abr.+",
         items = {
             { id = "do_not_craft_if_you_can_get_vault_items_higher_than_1_6", text = "Não crie se puder obter itens do Grande Cofre acima de 1/6" },
             { id = "upgrade_mythic_items_as_you_get_them_preferring_to_jump_them_to_289_for_the_4_jump", text = "Melhore itens míticos conforme os obtiver, preferindo pular para 289 pelo bônus de +4" },

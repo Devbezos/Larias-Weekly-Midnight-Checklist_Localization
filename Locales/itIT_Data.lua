@@ -28,7 +28,7 @@ local DATASET = {
 
     {
         id = "early_access_feb_26_through_mar_2_pay_to_win",
-        title = "Accesso anticipato – dal 26 feb. al 2 mar. – Pay to Win",
+        title = "Accesso anticipato - dal 26 feb. al 2 mar. - Pay to Win",
         items = {
             { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Non spendere nessun Emblema finché non ti viene detto" },
             { id = "level_characters_warmode_on_to_90_dmf_opens_sunday_for_10_more_exp", text = "Porta i personaggi in Modalità Guerra al livello 90 – la FLO apre domenica per +10% di esperienza" },
@@ -44,7 +44,7 @@ local DATASET = {
     },
     {
         id = "pre_season_week_1_march_3_m0_s",
-        title = "Pre-stagione settimana 1 – 3 marzo – M0",
+        title = "Pre-stagione settimana 1 - 3 marzo - M0",
         items = {
             { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Non spendere nessun Emblema finché non ti viene detto" },
             { id = "raise_the_singularity_renown_to_rank_7_for_1_6_champion_trinket", text = "Porta la reputazione con La Singolarità al grado 7 per il ciondolo campione 1/6" },
@@ -64,7 +64,7 @@ local DATASET = {
     },
     {
         id = "pre_season_week_2_march_10_m0_s",
-        title = "Pre-stagione settimana 2 – 10 marzo – M0",
+        title = "Pre-stagione settimana 2 - 10 marzo - M0",
         items = {
             { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Non spendere nessun Emblema finché non ti viene detto" },
             { id = "if_not_completed_continue_to_raise_renown_for_champion_pieces", text = "Se non completato, continua ad aumentare la reputazione per i pezzi campione" },
@@ -82,7 +82,7 @@ local DATASET = {
     },
     {
         id = "season_1_week_1_mar_17_heroic_week",
-        title = "Stagione 1 settimana 1 – 17 marzo – Settimana eroica",
+        title = "Stagione 1 settimana 1 - 17 marzo - Settimana eroica",
         items = {
             { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Non spendere nessun Emblema finché non ti viene detto" },
             { id = "do_lfr_for_tier_pieces_check_guide_for_why", text = "Fai il LFR per i pezzi tier (controlla la guida per sapere perché)" },
@@ -98,7 +98,7 @@ local DATASET = {
     },
     {
         id = "week_2_mar_24_mythic_week_m_opens_take_off_work_giganerds",
-        title = "Settimana 2 – 24 marzo – Settimana mitica, M+ apre, prendetevi ferie nerd",
+        title = "Settimana 2 - 24 marzo - Settimana mitica, M+ apre, prendetevi ferie nerd",
         items = {
             { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Non spendere nessun Emblema finché non ti viene detto" },
             { id = "1h_crafted_note_check_guide_check_craft_path_info_very_important", text = "Nota sull'arma 1M craftata, controlla la guida, verifica il percorso di crafting (MOLTO IMPORTANTE!)" },
@@ -116,7 +116,7 @@ local DATASET = {
     },
     {
         id = "week_3_mar_31_final_raid_opens",
-        title = "Settimana 3 – 31 marzo – Apre il raid finale",
+        title = "Settimana 3 - 31 marzo - Apre il raid finale",
         items = {
             { id = "open_vault_272_myth_item_upgrade_after_crafting", text = "Apri il Grande Forziere (oggetto mitico 272+) - potenzia dopo il crafting" },
             { id = "craft_items_see_guide_for_2_paths_to_pick", text = "Crea oggetti – consulta la guida per 2 percorsi da scegliere" },
@@ -131,7 +131,7 @@ local DATASET = {
     },
     {
         id = "week_4_apr_7",
-        title = "Settimana 4 – 7 apr.",
+        title = "Settimana 4 - 7 apr.",
         items = {
             { id = "open_vault_272_myth_item", text = "Apri il Grande Forziere (oggetto mitico 272+)" },
             { id = "farm_10s_for_vault_crests", text = "Farma i +10 per il Grande Forziere + emblemi" },
@@ -144,7 +144,7 @@ local DATASET = {
     },
     {
         id = "week_5_apr_14",
-        title = "Settimana 5 – 14 apr.",
+        title = "Settimana 5 - 14 apr.",
         items = {
             { id = "open_vault_272_myth_item", text = "Apri il Grande Forziere (oggetto mitico 272+)" },
             { id = "farm_10s_for_vault_crests", text = "Farma i +10 per il Grande Forziere + emblemi" },
@@ -157,7 +157,7 @@ local DATASET = {
     },
     {
         id = "week_6_apr_21_done_with_heroic_crests",
-        title = "Settimana 6 – 21 apr. – Finiti gli emblemi eroici",
+        title = "Settimana 6 - 21 apr. - Finiti gli emblemi eroici",
         items = {
             { id = "open_vault_272_myth_item", text = "Apri il Grande Forziere (oggetto mitico 272+)" },
             { id = "farm_10s_for_vault_crests", text = "Farma i +10 per il Grande Forziere + emblemi" },
@@ -170,7 +170,7 @@ local DATASET = {
     },
     {
         id = "week_7_apr_28",
-        title = "Settimana 7 – 28 apr.+",
+        title = "Settimana 7 - 28 apr.+",
         items = {
             { id = "do_not_craft_if_you_can_get_vault_items_higher_than_1_6", text = "Non craftare se puoi ottenere oggetti dal Grande Forziere superiori a 1/6" },
             { id = "upgrade_mythic_items_as_you_get_them_preferring_to_jump_them_to_289_for_the_4_jump", text = "Potenzia gli oggetti mitici man mano che li ottieni, preferendo il salto a 289 per il +4" },

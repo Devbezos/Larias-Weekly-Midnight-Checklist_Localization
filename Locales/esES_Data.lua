@@ -28,7 +28,7 @@ local DATASET = {
 
     {
         id = "early_access_feb_26_through_mar_2_pay_to_win",
-        title = "Acceso anticipado – 26 feb. al 2 mar. – Paga para ganar",
+        title = "Acceso anticipado - 26 feb. al 2 mar. - Paga para ganar",
         items = {
             { id = "do_not_spend_any_crests_until_told_to_do_so", text = "No gastes ningún Blasón hasta que se indique" },
             { id = "level_characters_warmode_on_to_90_dmf_opens_sunday_for_10_more_exp", text = "Sube personajes en Modo de Guerra a nivel 90 – la FLN abre el domingo para +10 % de exp." },
@@ -44,7 +44,7 @@ local DATASET = {
     },
     {
         id = "pre_season_week_1_march_3_m0_s",
-        title = "Pretemporada semana 1 – 3 de marzo – M0",
+        title = "Pretemporada semana 1 - 3 de marzo - M0",
         items = {
             { id = "do_not_spend_any_crests_until_told_to_do_so", text = "No gastes ningún Blasón hasta que se indique" },
             { id = "raise_the_singularity_renown_to_rank_7_for_1_6_champion_trinket", text = "Sube la reputación de La Singularidad a rango 7 para abalorio de campeón 1/6" },
@@ -64,7 +64,7 @@ local DATASET = {
     },
     {
         id = "pre_season_week_2_march_10_m0_s",
-        title = "Pretemporada semana 2 – 10 de marzo – M0",
+        title = "Pretemporada semana 2 - 10 de marzo - M0",
         items = {
             { id = "do_not_spend_any_crests_until_told_to_do_so", text = "No gastes ningún Blasón hasta que se indique" },
             { id = "if_not_completed_continue_to_raise_renown_for_champion_pieces", text = "Si no está completo, continúa subiendo reputación para piezas de campeón" },
@@ -82,7 +82,7 @@ local DATASET = {
     },
     {
         id = "season_1_week_1_mar_17_heroic_week",
-        title = "Temporada 1 semana 1 – 17 de marzo – Semana heroica",
+        title = "Temporada 1 semana 1 - 17 de marzo - Semana heroica",
         items = {
             { id = "do_not_spend_any_crests_until_told_to_do_so", text = "No gastes ningún Blasón hasta que se indique" },
             { id = "do_lfr_for_tier_pieces_check_guide_for_why", text = "Haz LFR para piezas de conjunto (consulta la guía para saber por qué)" },
@@ -98,7 +98,7 @@ local DATASET = {
     },
     {
         id = "week_2_mar_24_mythic_week_m_opens_take_off_work_giganerds",
-        title = "Semana 2 – 24 de marzo – Semana mítica, M+ abre, pedid vacaciones frikis",
+        title = "Semana 2 - 24 de marzo - Semana mítica, M+ abre, pedid vacaciones frikis",
         items = {
             { id = "do_not_spend_any_crests_until_told_to_do_so", text = "No gastes ningún Blasón hasta que se indique" },
             { id = "1h_crafted_note_check_guide_check_craft_path_info_very_important", text = "Nota arma fabricada 1M, consulta la guía, verifica la ruta de fabricación (¡MUY IMPORTANTE!)" },
@@ -116,7 +116,7 @@ local DATASET = {
     },
     {
         id = "week_3_mar_31_final_raid_opens",
-        title = "Semana 3 – 31 de marzo – Abre la banda final",
+        title = "Semana 3 - 31 de marzo - Abre la banda final",
         items = {
             { id = "open_vault_272_myth_item_upgrade_after_crafting", text = "Abre la Gran Cámara (objeto mítico 272+) – mejora tras fabricar" },
             { id = "craft_items_see_guide_for_2_paths_to_pick", text = "Fabrica objetos – consulta la guía para 2 rutas a elegir" },
@@ -131,7 +131,7 @@ local DATASET = {
     },
     {
         id = "week_4_apr_7",
-        title = "Semana 4 – 7 de abril",
+        title = "Semana 4 - 7 de abril",
         items = {
             { id = "open_vault_272_myth_item", text = "Abre la Gran Cámara (objeto mítico 272+)" },
             { id = "farm_10s_for_vault_crests", text = "Farmea +10s para Gran Cámara + blasones" },
@@ -144,7 +144,7 @@ local DATASET = {
     },
     {
         id = "week_5_apr_14",
-        title = "Semana 5 – 14 de abril",
+        title = "Semana 5 - 14 de abril",
         items = {
             { id = "open_vault_272_myth_item", text = "Abre la Gran Cámara (objeto mítico 272+)" },
             { id = "farm_10s_for_vault_crests", text = "Farmea +10s para Gran Cámara + blasones" },
@@ -157,7 +157,7 @@ local DATASET = {
     },
     {
         id = "week_6_apr_21_done_with_heroic_crests",
-        title = "Semana 6 – 21 de abril – Blasones heroicos terminados",
+        title = "Semana 6 - 21 de abril - Blasones heroicos terminados",
         items = {
             { id = "open_vault_272_myth_item", text = "Abre la Gran Cámara (objeto mítico 272+)" },
             { id = "farm_10s_for_vault_crests", text = "Farmea +10s para Gran Cámara + blasones" },
@@ -170,7 +170,7 @@ local DATASET = {
     },
     {
         id = "week_7_apr_28",
-        title = "Semana 7 – 28 de abril+",
+        title = "Semana 7 - 28 de abril+",
         items = {
             { id = "do_not_craft_if_you_can_get_vault_items_higher_than_1_6", text = "No fabriques si puedes obtener objetos de la Gran Cámara superiores a 1/6" },
             { id = "upgrade_mythic_items_as_you_get_them_preferring_to_jump_them_to_289_for_the_4_jump", text = "Mejora los objetos míticos conforme los consigas, priorizando el salto a 289 para el +4" },

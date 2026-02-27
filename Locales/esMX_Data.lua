@@ -1,4 +1,4 @@
-﻿--[[
+--[[
 Spanish (esMX) checklist data for Larias's Weekly Checklist
 
 NOTE: IDs are kept identical to the enUS dataset so completion tracking stays consistent
@@ -28,7 +28,7 @@ local DATASET = {
 
     {
         id = "early_access_feb_26_through_mar_2_pay_to_win",
-        title = "Acceso anticipado – 26 feb. al 2 mar. – Paga para ganar",
+        title = "Acceso anticipado - 26 feb. al 2 mar. - Paga para ganar",
         items = {
             { id = "do_not_spend_any_crests_until_told_to_do_so", text = "No gastes ninguna Crestalborada hasta que se indique" },
             { id = "level_characters_warmode_on_to_90_dmf_opens_sunday_for_10_more_exp", text = "Sube personajes en Modo de Guerra a nivel 90 – la FLN abre el domingo para +10 % de exp." },
@@ -44,7 +44,7 @@ local DATASET = {
     },
     {
         id = "pre_season_week_1_march_3_m0_s",
-        title = "Pretemporada semana 1 – 3 de marzo – M0",
+        title = "Pretemporada semana 1 - 3 de marzo - M0",
         items = {
             { id = "do_not_spend_any_crests_until_told_to_do_so", text = "No gastes ninguna Crestalborada hasta que se indique" },
             { id = "raise_the_singularity_renown_to_rank_7_for_1_6_champion_trinket", text = "Sube la reputación de La Singularidad a rango 7 para abalorio de campeón 1/6" },

@@ -28,7 +28,7 @@ local DATASET = {
 
     {
         id = "early_access_feb_26_through_mar_2_pay_to_win",
-        title = "Früher Zugang – 26. Feb. bis 2. März – Pay to Win",
+        title = "Früher Zugang - 26. Feb. bis 2. März - Pay to Win",
         items = {
             { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Keine Wappen ausgeben, bis es angewiesen wird" },
             { id = "level_characters_warmode_on_to_90_dmf_opens_sunday_for_10_more_exp", text = "Charaktere im Kriegsmodus auf Level 90 bringen – JdD öffnet Sonntag für +10 % XP" },
@@ -44,7 +44,7 @@ local DATASET = {
     },
     {
         id = "pre_season_week_1_march_3_m0_s",
-        title = "Vorsaison Woche 1 – 3. März – M0s",
+        title = "Vorsaison Woche 1 - 3. März - M0s",
         items = {
             { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Keine Wappen ausgeben, bis es angewiesen wird" },
             { id = "raise_the_singularity_renown_to_rank_7_for_1_6_champion_trinket", text = "Ansehen bei 'Die Singularität' auf Rang 7 erhöhen für 1/6-Champion-Schmuckstück" },
@@ -64,7 +64,7 @@ local DATASET = {
     },
     {
         id = "pre_season_week_2_march_10_m0_s",
-        title = "Vorsaison Woche 2 – 10. März – M0s",
+        title = "Vorsaison Woche 2 - 10. März - M0s",
         items = {
             { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Keine Wappen ausgeben, bis es angewiesen wird" },
             { id = "if_not_completed_continue_to_raise_renown_for_champion_pieces", text = "Falls nicht abgeschlossen: weiter Ansehen für Champion-Teile erhöhen" },
@@ -82,7 +82,7 @@ local DATASET = {
     },
     {
         id = "season_1_week_1_mar_17_heroic_week",
-        title = "Saison 1 Woche 1 – 17. März – Heroisch-Woche",
+        title = "Saison 1 Woche 1 - 17. März - Heroisch-Woche",
         items = {
             { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Keine Wappen ausgeben, bis es angewiesen wird" },
             { id = "do_lfr_for_tier_pieces_check_guide_for_why", text = "LFR für Tier-Teile machen (Guide lesen warum)" },
@@ -98,7 +98,7 @@ local DATASET = {
     },
     {
         id = "week_2_mar_24_mythic_week_m_opens_take_off_work_giganerds",
-        title = "Woche 2 – 24. März – Mythisch-Woche, M+ öffnet, nehmt Urlaub Nerds",
+        title = "Woche 2 - 24. März - Mythisch-Woche, M+ öffnet, nehmt Urlaub Nerds",
         items = {
             { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Keine Wappen ausgeben, bis es angewiesen wird" },
             { id = "1h_crafted_note_check_guide_check_craft_path_info_very_important", text = "1H-Craft-Hinweis, Guide lesen, Craftpfad-Info prüfen (SEHR WICHTIG!)" },
@@ -116,7 +116,7 @@ local DATASET = {
     },
     {
         id = "week_3_mar_31_final_raid_opens",
-        title = "Woche 3 – 31. März – Letzter Schlachtzug öffnet",
+        title = "Woche 3 - 31. März - Letzter Schlachtzug öffnet",
         items = {
             { id = "open_vault_272_myth_item_upgrade_after_crafting", text = "Große Schatzkammer öffnen (272+ Mythisch-Item) – nach dem Craften aufwerten" },
             { id = "craft_items_see_guide_for_2_paths_to_pick", text = "Items craften – Guide für 2 auswählbare Pfade lesen" },
@@ -131,7 +131,7 @@ local DATASET = {
     },
     {
         id = "week_4_apr_7",
-        title = "Woche 4 – 7. Apr.",
+        title = "Woche 4 - 7. Apr.",
         items = {
             { id = "open_vault_272_myth_item", text = "Große Schatzkammer öffnen (272+ Mythisch-Item)" },
             { id = "farm_10s_for_vault_crests", text = "+10er farmen für Große Schatzkammer + Wappen" },
@@ -144,7 +144,7 @@ local DATASET = {
     },
     {
         id = "week_5_apr_14",
-        title = "Woche 5 – 14. Apr.",
+        title = "Woche 5 - 14. Apr.",
         items = {
             { id = "open_vault_272_myth_item", text = "Große Schatzkammer öffnen (272+ Mythisch-Item)" },
             { id = "farm_10s_for_vault_crests", text = "+10er farmen für Große Schatzkammer + Wappen" },
@@ -157,7 +157,7 @@ local DATASET = {
     },
     {
         id = "week_6_apr_21_done_with_heroic_crests",
-        title = "Woche 6 – 21. Apr. – Fertig mit Heroisch-Wappen",
+        title = "Woche 6 - 21. Apr. - Fertig mit Heroisch-Wappen",
         items = {
             { id = "open_vault_272_myth_item", text = "Große Schatzkammer öffnen (272+ Mythisch-Item)" },
             { id = "farm_10s_for_vault_crests", text = "+10er farmen für Große Schatzkammer + Wappen" },
@@ -170,7 +170,7 @@ local DATASET = {
     },
     {
         id = "week_7_apr_28",
-        title = "Woche 7 – 28. Apr.+",
+        title = "Woche 7 - 28. Apr.+",
         items = {
             { id = "do_not_craft_if_you_can_get_vault_items_higher_than_1_6", text = "Nicht craften wenn Items der Großen Schatzkammer besser als 1/6 möglich" },
             { id = "upgrade_mythic_items_as_you_get_them_preferring_to_jump_them_to_289_for_the_4_jump", text = "Mythisch-Items sofort aufwerten, bevorzugt auf 289 für den +4-Sprung" },

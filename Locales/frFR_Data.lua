@@ -1,4 +1,4 @@
-﻿--[[
+--[[
 French (frFR) checklist data for Larias's Weekly Checklist
 
 NOTE: IDs are kept identical to the enUS dataset so completion tracking stays consistent
@@ -28,7 +28,7 @@ local DATASET = {
 
     {
         id = "early_access_feb_26_through_mar_2_pay_to_win",
-        title = "Accès anticipé – 26 fév. au 2 mars – Pay to Win",
+        title = "Accès anticipé - 26 fév. au 2 mars - Pay to Win",
         items = {
             { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Ne dépensez aucun Écu avant d'en recevoir l'instruction" },
             { id = "level_characters_warmode_on_to_90_dmf_opens_sunday_for_10_more_exp", text = "Montez vos personnages en Mode Guerre au niveau 90 – la FLN ouvre dimanche pour +10 % d'XP" },
@@ -44,7 +44,7 @@ local DATASET = {
     },
     {
         id = "pre_season_week_1_march_3_m0_s",
-        title = "Pré-saison semaine 1 – 3 mars – M0",
+        title = "Pré-saison semaine 1 - 3 mars - M0",
         items = {
             { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Ne dépensez aucun Écu avant d'en recevoir l'instruction" },
             { id = "raise_the_singularity_renown_to_rank_7_for_1_6_champion_trinket", text = "Montez la renommée de La Singularité au rang 7 pour une babiole champion 1/6" },
@@ -64,7 +64,7 @@ local DATASET = {
     },
     {
         id = "pre_season_week_2_march_10_m0_s",
-        title = "Pré-saison semaine 2 – 10 mars – M0",
+        title = "Pré-saison semaine 2 - 10 mars - M0",
         items = {
             { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Ne dépensez aucun Écu avant d'en recevoir l'instruction" },
             { id = "if_not_completed_continue_to_raise_renown_for_champion_pieces", text = "Si pas terminé, continuez à augmenter la renommée pour les pièces champion" },
@@ -82,7 +82,7 @@ local DATASET = {
     },
     {
         id = "season_1_week_1_mar_17_heroic_week",
-        title = "Saison 1 semaine 1 – 17 mars – Semaine héroïque",
+        title = "Saison 1 semaine 1 - 17 mars - Semaine héroïque",
         items = {
             { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Ne dépensez aucun Écu avant d'en recevoir l'instruction" },
             { id = "do_lfr_for_tier_pieces_check_guide_for_why", text = "Faites le LFR pour les pièces de palier (consultez le guide pour savoir pourquoi)" },
@@ -98,7 +98,7 @@ local DATASET = {
     },
     {
         id = "week_2_mar_24_mythic_week_m_opens_take_off_work_giganerds",
-        title = "Semaine 2 – 24 mars – Semaine mythique, M+ ouvre, prenez des congés les nerds",
+        title = "Semaine 2 - 24 mars - Semaine mythique, M+ ouvre, prenez des congés les nerds",
         items = {
             { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Ne dépensez aucun Écu avant d'en recevoir l'instruction" },
             { id = "1h_crafted_note_check_guide_check_craft_path_info_very_important", text = "Note arme fabriquée 1M, consultez le guide, vérifiez le chemin de fabrication (TRÈS IMPORTANT !)" },
@@ -116,7 +116,7 @@ local DATASET = {
     },
     {
         id = "week_3_mar_31_final_raid_opens",
-        title = "Semaine 3 – 31 mars – Le raid final ouvre",
+        title = "Semaine 3 - 31 mars - Le raid final ouvre",
         items = {
             { id = "open_vault_272_myth_item_upgrade_after_crafting", text = "Ouvrez la Grande Chambre Forte (objet mythique 272+) – améliorez après fabrication" },
             { id = "craft_items_see_guide_for_2_paths_to_pick", text = "Fabriquez des objets – consultez le guide pour 2 choix de parcours" },
@@ -131,7 +131,7 @@ local DATASET = {
     },
     {
         id = "week_4_apr_7",
-        title = "Semaine 4 – 7 avr.",
+        title = "Semaine 4 - 7 avr.",
         items = {
             { id = "open_vault_272_myth_item", text = "Ouvrez la Grande Chambre Forte (objet mythique 272+)" },
             { id = "farm_10s_for_vault_crests", text = "Farmez les +10 pour la Grande Chambre Forte + Écus" },
@@ -144,7 +144,7 @@ local DATASET = {
     },
     {
         id = "week_5_apr_14",
-        title = "Semaine 5 – 14 avr.",
+        title = "Semaine 5 - 14 avr.",
         items = {
             { id = "open_vault_272_myth_item", text = "Ouvrez la Grande Chambre Forte (objet mythique 272+)" },
             { id = "farm_10s_for_vault_crests", text = "Farmez les +10 pour la Grande Chambre Forte + Écus" },
@@ -157,7 +157,7 @@ local DATASET = {
     },
     {
         id = "week_6_apr_21_done_with_heroic_crests",
-        title = "Semaine 6 – 21 avr. – Écus héroïques épuisés",
+        title = "Semaine 6 - 21 avr. - Écus héroïques épuisés",
         items = {
             { id = "open_vault_272_myth_item", text = "Ouvrez la Grande Chambre Forte (objet mythique 272+)" },
             { id = "farm_10s_for_vault_crests", text = "Farmez les +10 pour la Grande Chambre Forte + Écus" },
@@ -170,7 +170,7 @@ local DATASET = {
     },
     {
         id = "week_7_apr_28",
-        title = "Semaine 7 – 28 avr.+",
+        title = "Semaine 7 - 28 avr.+",
         items = {
             { id = "do_not_craft_if_you_can_get_vault_items_higher_than_1_6", text = "Ne fabriquez pas si vous pouvez obtenir des objets de la Grande Chambre Forte supérieurs à 1/6" },
             { id = "upgrade_mythic_items_as_you_get_them_preferring_to_jump_them_to_289_for_the_4_jump", text = "Améliorez les objets mythiques au fur et à mesure, en privilégiant le saut à 289 pour le bonus +4" },

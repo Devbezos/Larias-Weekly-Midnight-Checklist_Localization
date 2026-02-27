@@ -12,7 +12,8 @@
   "_format_rules": {
     "CRITICAL_no_unicode_escapes_in_lua": "Lua does NOT support \\uXXXX unicode escape sequences. ALWAYS write literal UTF-8 characters in .lua files. NEVER write \\u0420-style escapes — write the actual character (e.g. Р, not \\u0420). Applies to every string, title, and text field in every *_Data.lua file.",
     "utf8_files": "All .lua files must be saved as UTF-8. Accented Latin (e.g. ã, ö, é), Cyrillic, and all other non-ASCII characters must be written as literal characters, not escaped.",
-    "json_vs_lua": "\\uXXXX escapes are valid inside this .json context file, but are INVALID in Lua. Never copy JSON-escaped text into .lua files without decoding it first."
+    "json_vs_lua": "\\uXXXX escapes are valid inside this .json context file, but are INVALID in Lua. Never copy JSON-escaped text into .lua files without decoding it first.",
+    "title_hyphens": "ALWAYS use an ASCII hyphen-minus ' - ' (U+002D) surrounded by spaces in title strings. NEVER use an en-dash '\u2013' (U+2013) or em-dash '\u2014' (U+2014). Example: 'Week 1 - March 3' NOT 'Week 1 \u2013 March 3'. This applies to every title = field in every *_Data.lua file."
   },
 
   "enUS": {

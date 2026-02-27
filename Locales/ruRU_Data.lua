@@ -1,4 +1,4 @@
-﻿--[[
+--[[
 Russian (ruRU) checklist data for Larias's Weekly Checklist
 
 NOTE: IDs are kept identical to the enUS dataset so completion tracking stays consistent
@@ -28,7 +28,7 @@ local DATASET = {
 
     {
         id = "early_access_feb_26_through_mar_2_pay_to_win",
-        title = "Ранний доступ — 26 фев. — 2 мар. — Pay to Win",
+        title = "Ранний доступ - 26 фев. - 2 мар. - Pay to Win",
         items = {
             { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Не тратьте Гербы до получения указаний" },
             { id = "level_characters_warmode_on_to_90_dmf_opens_sunday_for_10_more_exp", text = "Прокачайте персонажей в режиме войны до 90 — ЯН открывается в воскресенье (+10% опыта)" },
@@ -44,7 +44,7 @@ local DATASET = {
     },
     {
         id = "pre_season_week_1_march_3_m0_s",
-        title = "Предсезон неделя 1 — 3 марта — M0",
+        title = "Предсезон неделя 1 - 3 марта - M0",
         items = {
             { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Не тратьте Гербы до получения указаний" },
             { id = "raise_the_singularity_renown_to_rank_7_for_1_6_champion_trinket", text = "Повысьте репутацию С Сингулярностью до 7 ранга для тринкета чемпиона 1/6" },
@@ -64,7 +64,7 @@ local DATASET = {
     },
     {
         id = "pre_season_week_2_march_10_m0_s",
-        title = "Предсезон неделя 2 — 10 марта — M0",
+        title = "Предсезон неделя 2 - 10 марта - M0",
         items = {
             { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Не тратьте Гербы до получения указаний" },
             { id = "if_not_completed_continue_to_raise_renown_for_champion_pieces", text = "Если не завершено, продолжайте повышать репутацию для предметов чемпиона" },
@@ -82,7 +82,7 @@ local DATASET = {
     },
     {
         id = "season_1_week_1_mar_17_heroic_week",
-        title = "Сезон 1 неделя 1 — 17 марта — Героическая неделя",
+        title = "Сезон 1 неделя 1 - 17 марта - Героическая неделя",
         items = {
             { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Не тратьте Гербы до получения указаний" },
             { id = "do_lfr_for_tier_pieces_check_guide_for_why", text = "Проходите Поиск рейда для тировых предметов (см. руководство — почему)" },
@@ -98,7 +98,7 @@ local DATASET = {
     },
     {
         id = "week_2_mar_24_mythic_week_m_opens_take_off_work_giganerds",
-        title = "Неделя 2 — 24 марта — Мифическая неделя, М+ открывается, берите выходные нерды",
+        title = "Неделя 2 - 24 марта - Мифическая неделя, М+ открывается, берите выходные нерды",
         items = {
             { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Не тратьте Гербы до получения указаний" },
             { id = "1h_crafted_note_check_guide_check_craft_path_info_very_important", text = "Заметка об одноручном созданном оружии, артефакте. путь создания (ОЧЕНЬ ВАЖНО!)" },
@@ -116,7 +116,7 @@ local DATASET = {
     },
     {
         id = "week_3_mar_31_final_raid_opens",
-        title = "Неделя 3 — 31 марта — Открывается финальный рейд",
+        title = "Неделя 3 - 31 марта - Открывается финальный рейд",
         items = {
             { id = "open_vault_272_myth_item_upgrade_after_crafting", text = "Откройте Великое хранилище (мифический предмет 272+) — улучшайте после создания" },
             { id = "craft_items_see_guide_for_2_paths_to_pick", text = "Создайте предметы — см. руководство: 2 пути на выбор" },
@@ -131,7 +131,7 @@ local DATASET = {
     },
     {
         id = "week_4_apr_7",
-        title = "Неделя 4 — 7 апр.",
+        title = "Неделя 4 - 7 апр.",
         items = {
             { id = "open_vault_272_myth_item", text = "Откройте Великое хранилище (мифический предмет 272+)" },
             { id = "farm_10s_for_vault_crests", text = "Фармите +10 для Великого хранилища + Гербы" },
@@ -144,7 +144,7 @@ local DATASET = {
     },
     {
         id = "week_5_apr_14",
-        title = "Неделя 5 — 14 апр.",
+        title = "Неделя 5 - 14 апр.",
         items = {
             { id = "open_vault_272_myth_item", text = "Откройте Великое хранилище (мифический предмет 272+)" },
             { id = "farm_10s_for_vault_crests", text = "Фармите +10 для Великого хранилища + Гербы" },
@@ -157,7 +157,7 @@ local DATASET = {
     },
     {
         id = "week_6_apr_21_done_with_heroic_crests",
-        title = "Неделя 6 — 21 апр. — Героические Гербы исчерпаны",
+        title = "Неделя 6 - 21 апр. - Героические Гербы исчерпаны",
         items = {
             { id = "open_vault_272_myth_item", text = "Откройте Великое хранилище (мифический предмет 272+)" },
             { id = "farm_10s_for_vault_crests", text = "Фармите +10 для Великого хранилища + Гербы" },
@@ -170,7 +170,7 @@ local DATASET = {
     },
     {
         id = "week_7_apr_28",
-        title = "Неделя 7 — 28 апр.+",
+        title = "Неделя 7 - 28 апр.+",
         items = {
             { id = "do_not_craft_if_you_can_get_vault_items_higher_than_1_6", text = "Не создавайте, если можете получить предметы хранилища выше 1/6" },
             { id = "upgrade_mythic_items_as_you_get_them_preferring_to_jump_them_to_289_for_the_4_jump", text = "Улучшайте мифические предметы по мере получения, предпочитая прыжок до 289 (+4)" },
