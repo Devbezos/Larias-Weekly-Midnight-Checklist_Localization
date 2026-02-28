@@ -1,3 +1,19 @@
+## [2.1.2] (2026-02-28)
+- feat: read MAIN_ADDON_PATH from .env for local enUS path resolution
+- feat: auto-load .env for local API key; add .env to gitignore
+- feat: display before/after for each translated entry
+- refactor: consolidate locale files into lowercase locales/ directory
+- fix: correct Locales path casing for Linux runner
+- fix: use ADDON_REPO_TOKEN PAT for private main repo checkout
+- feat: add auto_translate.py string locale translation script
+- fix: dry-run calls API and writes files, only skips commit
+- chore: allow auto_translate*.py scripts in gitignore
+- feat: add auto_translate_data.py for _Data.lua translation
+- feat: add auto-translate workflow for string and data files
+- docs: add verified esES term for Eversong Woods
+- Updated locales: deDE esES esMX frFR itIT koKR ptBR ruRU
+- Updated interface versions: 120001, 120000, 110207
+
 ## [2.1.1] (2026-02-28)
 - Fix stale IDs across all locale data files
 - Updated locales: deDE esES esMX frFR itIT koKR ptBR ruRU
