@@ -59,7 +59,7 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
-          ARGS="--enus _main-addon/locales/enUS.lua --model ${{ inputs.model || 'claude-sonnet-4-5' }}"
+          ARGS="--enus _main-addon/Locales/enUS.lua --model ${{ inputs.model || 'claude-sonnet-4-5' }}"
           if [ -n "${{ inputs.locale }}" ]; then
             ARGS="$ARGS --locale ${{ inputs.locale }}"
           fi
@@ -70,7 +70,7 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
-          ARGS="--enus _main-addon/locales/enUS_Data.lua --model ${{ inputs.model || 'claude-sonnet-4-5' }}"
+          ARGS="--enus _main-addon/Locales/enUS_Data.lua --model ${{ inputs.model || 'claude-sonnet-4-5' }}"
           if [ -n "${{ inputs.locale }}" ]; then
             ARGS="$ARGS --locale ${{ inputs.locale }}"
           fi
