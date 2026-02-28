@@ -226,7 +226,12 @@ def translate_locale(locale_code: str, enus: dict, context: dict, client, args) 
 
     updated = apply_translations(file_text, translations, enus)
     lua_path.write_text(updated, encoding="utf-8")
-    print(f"  [{locale_code}] ✓ Applied {len(translations)} translation(s).")
+    print(f"  [{locale_code}] ✓ Applied {len(translations)} translation(s):")
+    for iid, new_text in sorted(translations.items()):
+        old_text = existing.get(iid, (None, enus.get(iid, (None, "?"))[1]))[1]
+        print(f"    {iid}")
+        print(f"      - {old_text[:100]}")
+        print(f"      + {new_text[:100]}")
     return len(translations)
 
 

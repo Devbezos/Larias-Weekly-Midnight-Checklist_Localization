@@ -197,7 +197,17 @@ def translate_locale(locale_code: str, enus: dict, context: dict, client, args) 
 
     updated = insert_keys(file_text, new_lines)
     lua_path.write_text(updated, encoding="utf-8")
-    print(f"  [{locale_code}] ✓ Wrote {len(new_lines)} translated line(s).")
+    print(f"  [{locale_code}] ✓ Wrote {len(new_lines)} translated line(s):")
+    for line in new_lines:
+        m = re.match(r'L\["([^"]+)"\]\s*=\s*"(.*)"', line)
+        if m:
+            key, new_text = m.group(1), m.group(2)
+            old_text = missing.get(key, "?")
+            print(f"    {key}")
+            print(f"      - {old_text[:100]}")
+            print(f"      + {new_text[:100]}")
+        else:
+            print(f"    {line[:120]}")
     return len(new_lines)
 
 
