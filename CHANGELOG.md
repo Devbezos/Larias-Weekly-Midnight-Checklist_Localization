@@ -1,3 +1,8 @@
+## [2.1.0] (2026-02-28)
+- Feature/20260227/auto translations (#15)
+- Updated locales: deDE esES esMX frFR itIT koKR ptBR ruRU
+- Updated interface versions: 120001, 120000, 110207
+
 ## [2.0.10] (2026-02-27)
 - Updated interface versions: 120001, 120000, 110207
 
