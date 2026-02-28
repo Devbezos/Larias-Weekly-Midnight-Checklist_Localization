@@ -84,7 +84,7 @@ jobs:
 
           LOCALES_CHANGED=false
           if [ -n "${LAST_TAG:-}" ]; then
-            if ! git diff --quiet "${LAST_TAG}"..HEAD -- Locales/; then
+            if ! git diff --quiet "${LAST_TAG}"..HEAD -- locales/; then
               LOCALES_CHANGED=true
             fi
           else
@@ -143,8 +143,8 @@ jobs:
           IFACE_LINE=$(sed -n 's/^## Interface:[[:space:]]*//p' "$TOC" | head -n 1 | tr -d '\n')
           CHANGED_LOCALES=""
           if [ -n "${PREV_STABLE:-}" ]; then
-            CHANGED_LOCALES=$(git diff --name-only "${PREV_STABLE}"..HEAD -- Locales/ \
-              | sed -E 's|Locales/||;s|_Data\.lua||;s|\.lua||' \
+            CHANGED_LOCALES=$(git diff --name-only "${PREV_STABLE}"..HEAD -- locales/ \
+              | sed -E 's|locales/||;s|_Data\.lua||;s|\.lua||' \
               | sort -u | tr '\n' ' ' | sed 's/ $//' || true)
           fi
           {

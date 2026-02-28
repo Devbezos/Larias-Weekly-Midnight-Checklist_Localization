@@ -32,13 +32,11 @@ SCRIPT_DIR   = pathlib.Path(__file__).resolve().parent
 REPO_ROOT    = SCRIPT_DIR.parent
 CONTEXT_FILE = REPO_ROOT / "translation-context.json"
 
-# Detect actual case of the Locales dir (capital on Linux CI, lowercase on Windows)
-_locales_candidates = [REPO_ROOT / "Locales", REPO_ROOT / "locales"]
-LOCALES_DIR = next((p for p in _locales_candidates if p.exists()), _locales_candidates[0])
+LOCALES_DIR = REPO_ROOT / "locales"
 
 # Default: sibling repo layout. Override with --enus in CI.
 ENUS_DATA_FILE = (
-    REPO_ROOT.parent / "Larias-Weekly-Midnight-Checklist" / "locales" / "enUS_Data.lua"
+    REPO_ROOT.parent / "Larias-Weekly-Midnight-Checklist" / "Locales" / "enUS_Data.lua"
 )
 
 SUPPORTED_LOCALES = ["deDE", "esES", "esMX", "frFR", "itIT", "koKR", "ptBR", "ruRU"]

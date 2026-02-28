@@ -67,15 +67,15 @@ jobs:
           echo "tag=v$ALPHA_VERSION"   >> "$GITHUB_OUTPUT"
           echo "branch=$BRANCH_NAME"   >> "$GITHUB_OUTPUT"
 
-          # Skip if no Locales/ changes since the last tag (any alpha or stable).
+          # Skip if no locales/ changes since the last tag (any alpha or stable).
           # workflow_dispatch always proceeds regardless.
           SKIP=false
           if [ "${{ github.event_name }}" != "workflow_dispatch" ]; then
             LAST_ANY=$(git tag --list 'v*' --sort=-v:refname \
               | grep -E '^v[0-9]+\.[0-9]+\.[0-9]+(\.[0-9]+-alpha)?$' | head -n 1 || true)
             if [ -n "${LAST_ANY:-}" ]; then
-              if git diff --quiet "${LAST_ANY}"..HEAD -- Locales/; then
-                echo "No Locales/ changes since ${LAST_ANY}; skipping alpha release."
+              if git diff --quiet "${LAST_ANY}"..HEAD -- locales/; then
+                echo "No locales/ changes since ${LAST_ANY}; skipping alpha release."
                 SKIP=true
               fi
             fi

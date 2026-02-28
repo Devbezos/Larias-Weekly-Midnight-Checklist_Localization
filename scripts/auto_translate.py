@@ -35,7 +35,7 @@ LOCALES_DIR  = REPO_ROOT / "locales"
 CONTEXT_FILE = REPO_ROOT / "translation-context.json"
 
 # enUS.lua lives in the sibling main repo
-ENUS_FILE = REPO_ROOT.parent / "Larias-Weekly-Midnight-Checklist" / "locales" / "enUS.lua"
+ENUS_FILE = REPO_ROOT.parent / "Larias-Weekly-Midnight-Checklist" / "Locales" / "enUS.lua"
 
 SUPPORTED_LOCALES = ["deDE", "esES", "esMX", "frFR", "itIT", "koKR", "ptBR", "ruRU"]
 
