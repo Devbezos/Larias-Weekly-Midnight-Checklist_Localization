@@ -33,7 +33,7 @@ local STRINGS = {
 
     HIDE_COMPLETED_WEEKS = "Masquer les semaines complétées",
     OPTIONS_HIDE_CHANGE_WEEK_BTN = "Masquer le bouton Changer de semaine",
-    OPTIONS_HIDE_ILVL_REF_BTN = "Masquer le bouton Niveaux d'objet",
+    OPTIONS_HIDE_ILVL_REF_BTN = "Masquer la fenêtre pop-up des Niveaux d'objet",
     OPTIONS_HIDE_CHAR_SELECT = "Masquer la sélection de personnage",
     OPTIONS_HIDDEN_CHARS_TITLE = "Personnages masqués :",
     OPTIONS_HIDDEN_CHARS_NONE = "Aucun",
@@ -41,15 +41,29 @@ local STRINGS = {
     UI_SCALE_LABEL = "Échelle UI",
     UI_SCALE_MIN_LABEL = "50%",
     UI_SCALE_MAX_LABEL = "150%",
-    OPTIONS_HIDE_SCALE_SLIDER   = "Masquer le curseur de mise \u00e0 l'\u00e9chelle",
+    OPTIONS_HIDE_SCALE_SLIDER   = "Masquer le curseur de mise à l'échelle",
     OPTIONS_HIDE_SLIDERS        = "Masquer les curseurs",
-    OPTIONS_HIDE_OPACITY_SLIDER = "Masquer le curseur d'opacit\u00e9",
-    UI_OPACITY_LABEL            = "Opacit\u00e9",
+    OPTIONS_HIDE_OPACITY_SLIDER = "Masquer le curseur d'opacité",
+    OPTIONS_HIDE_UPDATE_NOTICE  = "Masquer les avertissements de mise à jour", -- ⚠️ UNVERIFIED
+    OPTIONS_HIDE_MINIMAP_BTN    = "Masquer l'icône du Minimap", -- ⚠️ UNVERIFIED
+    -- Color picker swatch labels (gear popup)
+    COLOR_PICKER_BG             = "Fond", -- ⚠️ UNVERIFIED
+    COLOR_PICKER_TEXT           = "Texte", -- ⚠️ UNVERIFIED
+    COLOR_PICKER_HDR            = "En-tête", -- ⚠️ UNVERIFIED
+    -- Status banner
+    STATUS_UPDATE_AVAILABLE_FMT = "Mise à jour disponible ! Vous avez %s, la plus récente est %s.", -- ⚠️ UNVERIFIED
+    STATUS_NO_TRANSLATION_FMT   = "Aucune traduction disponible pour %s. Envisagez de contribuer !", -- ⚠️ UNVERIFIED
+    STATUS_TRANSLATION_NOTICE   = "L'anglais est la langue la plus récente. Votre liste peut être légèrement obsolète.", -- ⚠️ UNVERIFIED
+    UI_OPACITY_LABEL            = "Opacité",
     UI_OPACITY_MIN_LABEL        = "10%",
     UI_OPACITY_MAX_LABEL        = "100%",
 
     -- List tab
     DONE_PREFIX = "[Fait] ",
+
+    -- Tracking panel header tooltips
+    TOOLTIP_OPEN_GREAT_VAULT  = "Cliquez pour ouvrir la Grande Chambre Forte", -- ⚠️ UNVERIFIED
+    TOOLTIP_OPEN_CURRENCIES   = "Cliquez pour ouvrir le panneau de monnaie", -- ⚠️ UNVERIFIED
 
     -- Tracking panel
     TRACKING_GREAT_VAULT_TITLE = "Grande Chambre Forte",
@@ -147,6 +161,7 @@ local STRINGS = {
     SLASH_USAGE_TOGGLE = "Utilisation : /larias ou /lcl pour afficher/masquer la liste",
     SLASH_USAGE_LOCALE = "Utilisation : /larias locale auto|enUS|deDE|esES|esMX|frFR|itIT|ptBR|ruRU",
     SLASH_LOCALE_SET_FMT = "Langue définie sur %s (effective : %s)",
+    SLASH_LOCALE_NOT_FOUND = "Langue inconnue '%s'. Disponibles : auto|%s", -- ⚠️ UNVERIFIED
 }
 
 for key, value in pairs(STRINGS) do

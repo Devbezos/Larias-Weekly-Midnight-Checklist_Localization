@@ -23,39 +23,43 @@ if type(reg.data) ~= "table" then reg.data = {} end
 --   Événement d'abondance (Abundance Event), Légendes des Haranir (Legends of the Haranir),
 --   Harandar, Assaut de Stormarion (Stormarion Assault), Tempête du néant (Voidstorm),
 --   La Singularité (The Singularity), Pierre runique fissurée (Cracked Keystone),
---   clés de coffre (Coffer keys)
+--   clés de coffre (Coffer keys),
+--   XP reposée (Rested XP) ⚠️ NOUVEAU NON VÉRIFIÉ,
+--   trésors de chaque région (regional treasures – nouvelle mécanique Midnight) ⚠️ NOUVEAU NON VÉRIFIÉ,
+--   Gouffre abondant (Bountiful Delve) ⚠️ VÉRIFIER LE TERME EN JEU
 local DATASET = {
 
     {
         id = "early_access_feb_26_through_mar_2_pay_to_win",
         title = "Accès anticipé - 26 fév. au 2 mars - Pay to Win",
         items = {
-            { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Ne dépensez aucun Écu avant d'en recevoir l'instruction" },
-            { id = "level_characters_warmode_on_to_90_dmf_opens_sunday_for_10_more_exp", text = "Montez vos personnages en Mode Guerre au niveau 90 – la FLN ouvre dimanche pour +10 % d'XP" },
-            { id = "if_available_complete_the_weekly_saltheril_s_soiree_in_eversong_woods_with_the_dmf_buff", text = "Si disponible, complétez la Soirée de Saltheril hebdo dans les Bois des Chants éternels avec le buff FLN." },
-            { id = "if_available_complete_the_weekly_abundance_event_in_zul_aman_with_the_dmf_buff", text = "Si disponible, complétez l'Événement d'abondance hebdo dans Zul'Aman avec le buff FLN." },
-            { id = "if_available_complete_the_weekly_legends_of_the_haranir_event_in_harandar_with_the_dmf_buff", text = "Si disponible, complétez l'événement Légendes des Haranir hebdo à Harandar avec le buff FLN." },
-            { id = "if_available_complete_the_weekly_stormarion_assault_in_the_voidstorm_with_the_dmf_buff", text = "Si disponible, complétez l'Assaut de Stormarion hebdo dans la Tempête du néant avec le buff FLN." },
-            { id = "optional_kill_each_rare_once_in_each_zone_for_renown_these_are_a_weekly_lockout_for_each_rare", text = "(Optionnel) Tuez chaque créature rare une fois par zone pour de la renommée. Chaque rare a un blocage hebdomadaire." },
+            { id = "log_on_to_each_character_you_plan_on_leveling_so_they_start_accumulating_rested_xp", text = "Connectez-vous sur chaque personnage que vous prévoyez de monter pour qu'ils commencent à accumuler de l'XP reposée." }, -- ⚠️ UNVERIFIED: XP reposée (Rested XP)
+            { id = "level_characters_warmode_on_to_90_dmf_opens_sunday_for_10_more_exp", text = "Montez vos personnages en Mode Guerre au niveau 90 – la FLN ouvre dimanche pour +10 % d'XP. NE DONNE PLUS DE RENOM" },
+            { id = "if_available_complete_the_weekly_saltheril_s_soiree_in_eversong_woods_with_the_dmf_buff", text = "Si disponible, complétez la Soirée de Saltheril hebdo dans les Bois des Chants éternels." },
+            { id = "if_available_complete_the_weekly_abundance_event_in_zul_aman_with_the_dmf_buff", text = "Si disponible, complétez l'Événement d'abondance hebdo dans Zul'Aman." },
+            { id = "if_available_complete_the_weekly_legends_of_the_haranir_event_in_harandar_with_the_dmf_buff", text = "Si disponible, complétez l'événement Légendes des Haranir hebdo à Harandar." },
+            { id = "if_available_complete_the_weekly_stormarion_assault_in_the_voidstorm_with_the_dmf_buff", text = "Si disponible, complétez l'Assaut de Stormarion hebdo dans la Tempête du néant." },
+            { id = "optional_with_dmf_buff_kill_each_rare_once_in_each_zone_for_renown_these_are_a_weekly_lockout_for_each_rare", text = "(Optionnel) Tuez chaque créature rare une fois par zone pour de la renommée. Chaque rare a un blocage hebdomadaire." },
+            { id = "with_dmf_buff_hunt_down_each_region_s_treasures_for_free_renown_see_doc_for_guide", text = "Cherchez les trésors de chaque région pour de la renommée gratuite. Voir doc pour le guide." }, -- ⚠️ UNVERIFIED: trésors de chaque région (Midnight regional treasures)
             { id = "complete_4x_prey_on_normal_difficulty_for_veteran_gear", text = "Complétez 4 fois la Traque en difficulté normale pour de l'équipement vétéran." },
-            { id = "once_dmf_opens_complete_side_quest_chains_for_renown_can_be_done_on_alts_to_level_at_same_time", text = "À l'ouverture de la FLN, complétez les chaînes de quêtes secondaires pour la renommée. (Peut être fait sur les alts en levant en même temps)" },
-            { id = "unlikely_see_doc_for_info_complete_a_world_tour_of_m0_s_after_full_release_but_before_your_region_s_reset", text = "(Peu probable, voir doc) Effectuez un tour du monde des M0 après le lancement complet, avant la réinitialisation de votre région" },
+            { id = "once_dmf_opens_complete_side_quest_chains_for_renown_can_be_done_on_alts_to_level_at_same_time", text = "Complétez les chaînes de quêtes secondaires pour la renommée. (Peut être fait sur les alts en levant en même temps). NOUVEAU : LA FOIRE DE LA LUNE NOIRE NE DONNE PLUS DE BONUS DE RENOM !" },
         },
     },
     {
         id = "pre_season_week_1_march_3_m0_s",
         title = "Pré-saison semaine 1 - 3 mars - M0",
         items = {
-            { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Ne dépensez aucun Écu avant d'en recevoir l'instruction" },
-            { id = "raise_the_singularity_renown_to_rank_7_for_1_6_champion_trinket", text = "Montez la renommée de La Singularité au rang 7 pour une babiole champion 1/6" },
+                        { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Ne dépensez aucun Écu avant d'en recevoir l'instruction" },
+{ id = "raise_the_singularity_renown_to_rank_7_for_1_6_champion_trinket", text = "Montez la renommée de La Singularité au rang 7 pour une babiole champion 1/6" },
             { id = "raise_hara_ti_renown_to_rank_8_for_1_6_champion_belt", text = "Montez la renommée de Hara'ti au rang 8 pour une ceinture champion 1/6" },
             { id = "raise_silvermoon_renown_to_rank_9_for_1_6_champion_helm", text = "Montez la renommée de Lune-d'Argent au rang 9 pour un casque champion 1/6" },
             { id = "raise_amani_tribe_renown_to_rank_9_for_1_6_champion_necklace", text = "Montez la renommée de la tribu Amani au rang 9 pour un collier champion 1/6" },
-            { id = "complete_the_weekly_saltheril_s_soiree_in_eversong_woods_with_the_dmf_buff", text = "Complétez la Soirée de Saltheril hebdo dans les Bois des Chants éternels avec le buff FLN." },
-            { id = "complete_the_weekly_abundance_event_in_zul_aman_with_the_dmf_buff", text = "Complétez l'Événement d'abondance hebdo dans Zul'Aman avec le buff FLN." },
-            { id = "complete_the_weekly_legends_of_the_haranir_event_in_harandar_with_the_dmf_buff", text = "Complétez l'événement Légendes des Haranir hebdo à Harandar avec le buff FLN." },
-            { id = "complete_the_weekly_stormarion_assault_in_the_voidstorm_with_the_dmf_buff", text = "Complétez l'Assaut de Stormarion hebdo dans la Tempête du néant avec le buff FLN." },
+            { id = "complete_the_weekly_saltheril_s_soiree_in_eversong_woods_with_the_dmf_buff", text = "Complétez la Soirée de Saltheril hebdo dans les Bois des Chants éternels." },
+            { id = "complete_the_weekly_abundance_event_in_zul_aman_with_the_dmf_buff", text = "Complétez l'Événement d'abondance hebdo dans Zul'Aman." },
+            { id = "complete_the_weekly_legends_of_the_haranir_event_in_harandar_with_the_dmf_buff", text = "Complétez l'événement Légendes des Haranir hebdo à Harandar." },
+            { id = "complete_the_weekly_stormarion_assault_in_the_voidstorm_with_the_dmf_buff", text = "Complétez l'Assaut de Stormarion hebdo dans la Tempête du néant." },
             { id = "optional_kill_each_rare_once_in_each_zone_for_renown_these_are_a_weekly_lockout_for_each_rare", text = "(Optionnel) Tuez chaque rare une fois par zone pour de la renommée. Blocage hebdomadaire par rare." },
+            { id = "if_not_done_with_dmf_buff_hunt_down_each_region_s_treasures_for_free_renown_see_doc_for_guide", text = "Si pas encore fait, cherchez les trésors de chaque région pour de la renommée gratuite. Voir doc pour le guide." }, -- ⚠️ UNVERIFIED: trésors de chaque région (Midnight regional treasures)
             { id = "unlock_delves_through_tier_8_11_if_available", text = "Débloquez les Gouffres jusqu'au niveau 8 (11 si disponible)" },
             { id = "optional_complete_4x_normal_prey_for_adventurer_gear_and_renown", text = "(Optionnel) Complétez 4 fois la Traque normale pour équipement aventure et renommée." },
             { id = "complete_4x_hard_prey_for_veteran_gear_and_renown", text = "Complétez 4 fois la Traque difficile pour équipement vétéran et renommée." },
@@ -105,7 +109,7 @@ local DATASET = {
             { id = "do_lfr_for_tier_pieces_check_guide_for_why", text = "Faites le LFR pour les pièces de palier (consultez le guide pour savoir pourquoi)" },
             { id = "optional_kill_world_boss_for_champ_2_6_250_ilvl_item", text = "(Optionnel) Tuez le boss mondial pour un objet champion 2/6 niv. 250" },
             { id = "optional_complete_4x_nightmare_prey_for_champion_gear_and_renown", text = "(Optionnel) Complétez 4 fois la Traque de cauchemar pour équipement champion et renommée." },
-            { id = "do_at_least_one_t11_to_get_cracked_keystone_quest", text = "Faites au moins un T11 pour obtenir la quête de la Pierre runique fissurée" },
+            { id = "do_at_least_one_t11_bountiful_delve_to_get_cracked_keystone_quest", text = "Faites au moins un Gouffre abondant T11 pour obtenir la quête de la Pierre runique fissurée" }, -- ⚠️ UNVERIFIED: Gouffre abondant (Bountiful Delve)
             { id = "continue_to_spend_all_adventurer_veteran_and_champion_crests_upgrading_anything", text = "Continuez à dépenser tous les Écus d'aventure, de vétéran et de champion pour tout améliorer" },
             { id = "farm_10s_for_266_gear_in_every_slot", text = "Farmez les +10 pour l'équipement niv. 266 dans chaque emplacement" },
             { id = "before_mythic_raid_upgrade_11x_3_6_hero_items_once_each", text = "Avant le raid mythique : améliorez 11 objets héroïques 3/6 une fois chacun" },

@@ -23,39 +23,43 @@ if type(reg.data) ~= "table" then reg.data = {} end
 --   Evento dell'abbondanza (Abundance Event), Leggende degli Haranir (Legends of the Haranir),
 --   Harandar, Assalto di Stormarion (Stormarion Assault), Tempesta del Vuoto (Voidstorm),
 --   La Singolarità (The Singularity), Pietra Runica Incrinata (Cracked Keystone),
---   chiavi della cassa (Coffer keys)
+--   chiavi della cassa (Coffer keys),
+--   EP di riposo (Rested XP) ⚠️ NUOVO NON VERIFICATO,
+--   tesori di ogni regione (regional treasures – nuova meccanica Midnight) ⚠️ NUOVO NON VERIFICATO,
+--   Scorribanda generosa (Bountiful Delve) ⚠️ VERIFICARE IL TERMINE IN GIOCO
 local DATASET = {
 
     {
         id = "early_access_feb_26_through_mar_2_pay_to_win",
         title = "Accesso anticipato - dal 26 feb. al 2 mar. - Pay to Win",
         items = {
-            { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Non spendere nessun Emblema finché non ti viene detto" },
-            { id = "level_characters_warmode_on_to_90_dmf_opens_sunday_for_10_more_exp", text = "Porta i personaggi in Modalità Guerra al livello 90 – la FLO apre domenica per +10% di esperienza" },
-            { id = "if_available_complete_the_weekly_saltheril_s_soiree_in_eversong_woods_with_the_dmf_buff", text = "Se disponibile, completa la Serata di Saltheril settimanale nel Bosco dei Canti Eterni con il bonus FLO." },
-            { id = "if_available_complete_the_weekly_abundance_event_in_zul_aman_with_the_dmf_buff", text = "Se disponibile, completa l'Evento dell'abbondanza settimanale a Zul'Aman con il bonus FLO." },
-            { id = "if_available_complete_the_weekly_legends_of_the_haranir_event_in_harandar_with_the_dmf_buff", text = "Se disponibile, completa l'evento Leggende degli Haranir settimanale a Harandar con il bonus FLO." },
-            { id = "if_available_complete_the_weekly_stormarion_assault_in_the_voidstorm_with_the_dmf_buff", text = "Se disponibile, completa l'Assalto di Stormarion settimanale nella Tempesta del Vuoto con il bonus FLO." },
-            { id = "optional_kill_each_rare_once_in_each_zone_for_renown_these_are_a_weekly_lockout_for_each_rare", text = "(Facoltativo) Uccidi ogni raro una volta per zona per reputazione. Ogni raro ha un limite settimanale." },
+            { id = "log_on_to_each_character_you_plan_on_leveling_so_they_start_accumulating_rested_xp", text = "Accedi a ogni personaggio che intendi livellare in modo che inizi ad accumulare EP di riposo." }, -- ⚠️ UNVERIFIED: EP di riposo (Rested XP)
+            { id = "level_characters_warmode_on_to_90_dmf_opens_sunday_for_10_more_exp", text = "Porta i personaggi in Modalità Guerra al livello 90 – la FLO apre domenica per +10% di esperienza. NON DÀ PIÙ REPUTAZIONE" },
+            { id = "if_available_complete_the_weekly_saltheril_s_soiree_in_eversong_woods_with_the_dmf_buff", text = "Se disponibile, completa la Serata di Saltheril settimanale nel Bosco dei Canti Eterni." },
+            { id = "if_available_complete_the_weekly_abundance_event_in_zul_aman_with_the_dmf_buff", text = "Se disponibile, completa l'Evento dell'abbondanza settimanale a Zul'Aman." },
+            { id = "if_available_complete_the_weekly_legends_of_the_haranir_event_in_harandar_with_the_dmf_buff", text = "Se disponibile, completa l'evento Leggende degli Haranir settimanale a Harandar." },
+            { id = "if_available_complete_the_weekly_stormarion_assault_in_the_voidstorm_with_the_dmf_buff", text = "Se disponibile, completa l'Assalto di Stormarion settimanale nella Tempesta del Vuoto." },
+            { id = "optional_with_dmf_buff_kill_each_rare_once_in_each_zone_for_renown_these_are_a_weekly_lockout_for_each_rare", text = "(Facoltativo) Uccidi ogni raro una volta per zona per reputazione. Ogni raro ha un limite settimanale." },
+            { id = "with_dmf_buff_hunt_down_each_region_s_treasures_for_free_renown_see_doc_for_guide", text = "Cerca i tesori di ogni regione per reputazione gratuita. Vedi doc per la guida." }, -- ⚠️ UNVERIFIED: tesori di ogni regione (Midnight regional treasures)
             { id = "complete_4x_prey_on_normal_difficulty_for_veteran_gear", text = "Completa 4 volte la Preda in difficoltà normale per equipaggiamento veterano." },
-            { id = "once_dmf_opens_complete_side_quest_chains_for_renown_can_be_done_on_alts_to_level_at_same_time", text = "All'apertura della FLO, completa le catene di missioni secondarie per la reputazione. (Può essere fatto sugli alt mentre si livella)" },
-            { id = "unlikely_see_doc_for_info_complete_a_world_tour_of_m0_s_after_full_release_but_before_your_region_s_reset", text = "(Poco probabile, vedi doc) Completa un tour mondiale degli M0 dopo il rilascio, prima del reset della tua regione" },
+            { id = "once_dmf_opens_complete_side_quest_chains_for_renown_can_be_done_on_alts_to_level_at_same_time", text = "Completa le catene di missioni secondarie per la reputazione. (Può essere fatto sugli alt mentre si livella). NOVITÀ: LA FIERA DI LUNOSCURA NON DÀ PIÙ IL BONUS REPUTAZIONE!" },
         },
     },
     {
         id = "pre_season_week_1_march_3_m0_s",
         title = "Pre-stagione settimana 1 - 3 marzo - M0",
         items = {
-            { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Non spendere nessun Emblema finché non ti viene detto" },
-            { id = "raise_the_singularity_renown_to_rank_7_for_1_6_champion_trinket", text = "Porta la reputazione con La Singolarità al grado 7 per il ciondolo campione 1/6" },
+                        { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Non spendere nessun Emblema finché non ti viene detto" },
+{ id = "raise_the_singularity_renown_to_rank_7_for_1_6_champion_trinket", text = "Porta la reputazione con La Singolarità al grado 7 per il ciondolo campione 1/6" },
             { id = "raise_hara_ti_renown_to_rank_8_for_1_6_champion_belt", text = "Porta la reputazione con Hara'ti al grado 8 per la cintura campione 1/6" },
             { id = "raise_silvermoon_renown_to_rank_9_for_1_6_champion_helm", text = "Porta la reputazione con Lunargento al grado 9 per l'elmo campione 1/6" },
             { id = "raise_amani_tribe_renown_to_rank_9_for_1_6_champion_necklace", text = "Porta la reputazione con la Tribù Amani al grado 9 per la collana campione 1/6" },
-            { id = "complete_the_weekly_saltheril_s_soiree_in_eversong_woods_with_the_dmf_buff", text = "Completa la Serata di Saltheril settimanale nel Bosco dei Canti Eterni con il bonus FLO." },
-            { id = "complete_the_weekly_abundance_event_in_zul_aman_with_the_dmf_buff", text = "Completa l'Evento dell'abbondanza settimanale a Zul'Aman con il bonus FLO." },
-            { id = "complete_the_weekly_legends_of_the_haranir_event_in_harandar_with_the_dmf_buff", text = "Completa l'evento Leggende degli Haranir settimanale a Harandar con il bonus FLO." },
-            { id = "complete_the_weekly_stormarion_assault_in_the_voidstorm_with_the_dmf_buff", text = "Completa l'Assalto di Stormarion settimanale nella Tempesta del Vuoto con il bonus FLO." },
+            { id = "complete_the_weekly_saltheril_s_soiree_in_eversong_woods_with_the_dmf_buff", text = "Completa la Serata di Saltheril settimanale nel Bosco dei Canti Eterni." },
+            { id = "complete_the_weekly_abundance_event_in_zul_aman_with_the_dmf_buff", text = "Completa l'Evento dell'abbondanza settimanale a Zul'Aman." },
+            { id = "complete_the_weekly_legends_of_the_haranir_event_in_harandar_with_the_dmf_buff", text = "Completa l'evento Leggende degli Haranir settimanale a Harandar." },
+            { id = "complete_the_weekly_stormarion_assault_in_the_voidstorm_with_the_dmf_buff", text = "Completa l'Assalto di Stormarion settimanale nella Tempesta del Vuoto." },
             { id = "optional_kill_each_rare_once_in_each_zone_for_renown_these_are_a_weekly_lockout_for_each_rare", text = "(Facoltativo) Uccidi ogni raro una volta per zona per reputazione. Ogni raro ha un limite settimanale." },
+            { id = "if_not_done_with_dmf_buff_hunt_down_each_region_s_treasures_for_free_renown_see_doc_for_guide", text = "Se non ancora fatto, cerca i tesori di ogni regione per reputazione gratuita. Vedi doc per la guida." }, -- ⚠️ UNVERIFIED: tesori di ogni regione (Midnight regional treasures)
             { id = "unlock_delves_through_tier_8_11_if_available", text = "Sblocca le Scorribande fino al livello 8 (11 se disponibile)" },
             { id = "optional_complete_4x_normal_prey_for_adventurer_gear_and_renown", text = "(Facoltativo) Completa 4 volte la Preda normale per equipaggiamento esploratore e reputazione." },
             { id = "complete_4x_hard_prey_for_veteran_gear_and_renown", text = "Completa 4 volte la Preda difficile per equipaggiamento veterano e reputazione." },
@@ -105,7 +109,7 @@ local DATASET = {
             { id = "do_lfr_for_tier_pieces_check_guide_for_why", text = "Fai il LFR per i pezzi tier (controlla la guida per sapere perché)" },
             { id = "optional_kill_world_boss_for_champ_2_6_250_ilvl_item", text = "(Facoltativo) Uccidi il boss mondiale per un oggetto campione 2/6 livello 250" },
             { id = "optional_complete_4x_nightmare_prey_for_champion_gear_and_renown", text = "(Facoltativo) Completa 4 volte la Preda da Incubo per equipaggiamento campione e reputazione." },
-            { id = "do_at_least_one_t11_to_get_cracked_keystone_quest", text = "Fai almeno un livello 11 per ottenere la missione della Pietra Runica Incrinata" },
+            { id = "do_at_least_one_t11_bountiful_delve_to_get_cracked_keystone_quest", text = "Fai almeno una Scorribanda generosa di livello 11 per ottenere la missione della Pietra Runica Incrinata" }, -- ⚠️ UNVERIFIED: Scorribanda generosa (Bountiful Delve)
             { id = "continue_to_spend_all_adventurer_veteran_and_champion_crests_upgrading_anything", text = "Continua a spendere tutti gli Emblemi esploratore, veterano e campione potenziando tutto" },
             { id = "farm_10s_for_266_gear_in_every_slot", text = "Farma i +10 per equipaggiamento liv. 266 in ogni slot" },
             { id = "before_mythic_raid_upgrade_11x_3_6_hero_items_once_each", text = "Prima del raid mitico: potenzia 11 oggetti eroe 3/6 una volta ciascuno" },

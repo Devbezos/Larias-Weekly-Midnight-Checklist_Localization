@@ -33,7 +33,7 @@ local STRINGS = {
 
     HIDE_COMPLETED_WEEKS = "Скрыть завершённые недели",
     OPTIONS_HIDE_CHANGE_WEEK_BTN = "Скрыть кнопку «Сменить неделю»",
-    OPTIONS_HIDE_ILVL_REF_BTN = "Скрыть кнопку «Уровни предметов»",
+    OPTIONS_HIDE_ILVL_REF_BTN = "Скрыть всплывающее окно уровней предметов",
     OPTIONS_HIDE_CHAR_SELECT = "Скрыть выбор персонажа",
     OPTIONS_HIDDEN_CHARS_TITLE = "Скрытые персонажи:",
     OPTIONS_HIDDEN_CHARS_NONE = "Нет",
@@ -44,12 +44,26 @@ local STRINGS = {
     OPTIONS_HIDE_SCALE_SLIDER   = "Скрыть ползунок масштаба",
     OPTIONS_HIDE_SLIDERS        = "Скрыть ползунки",
     OPTIONS_HIDE_OPACITY_SLIDER = "Скрыть ползунок прозрачности",
+    OPTIONS_HIDE_UPDATE_NOTICE  = "Скрыть предупреждения об обновлениях", -- ⚠️ UNVERIFIED
+    OPTIONS_HIDE_MINIMAP_BTN    = "Скрыть кнопку миникарты", -- ⚠️ UNVERIFIED
+    -- Color picker swatch labels (gear popup)
+    COLOR_PICKER_BG             = "Фон", -- ⚠️ UNVERIFIED
+    COLOR_PICKER_TEXT           = "Текст", -- ⚠️ UNVERIFIED
+    COLOR_PICKER_HDR            = "Заголовок", -- ⚠️ UNVERIFIED
+    -- Status banner
+    STATUS_UPDATE_AVAILABLE_FMT = "Доступно обновление! У вас %s, новейшая версия — %s.", -- ⚠️ UNVERIFIED
+    STATUS_NO_TRANSLATION_FMT   = "Перевод для %s недоступен. Рассмотрите возможность внести вклад!", -- ⚠️ UNVERIFIED
+    STATUS_TRANSLATION_NOTICE   = "Английский язык наиболее актуален. Ваш список может немного устареть.", -- ⚠️ UNVERIFIED
     UI_OPACITY_LABEL            = "Прозрачность",
     UI_OPACITY_MIN_LABEL        = "10%",
     UI_OPACITY_MAX_LABEL        = "100%",
 
     -- List tab
     DONE_PREFIX = "[Готово] ",
+
+    -- Tracking panel header tooltips
+    TOOLTIP_OPEN_GREAT_VAULT  = "Нажмите, чтобы открыть Великое хранилище", -- ⚠️ UNVERIFIED
+    TOOLTIP_OPEN_CURRENCIES   = "Нажмите, чтобы открыть панель валюты", -- ⚠️ UNVERIFIED
 
     -- Tracking panel
     TRACKING_GREAT_VAULT_TITLE = "Великое хранилище",
@@ -144,6 +158,7 @@ local STRINGS = {
     SLASH_USAGE_TOGGLE = "Использование: /larias или /lcl для показа/скрытия списка",
     SLASH_USAGE_LOCALE = "Использование: /larias locale auto|enUS|deDE|esES|esMX|frFR|itIT|ptBR|ruRU",
     SLASH_LOCALE_SET_FMT = "Язык установлен на %s (активный: %s)",
+    SLASH_LOCALE_NOT_FOUND = "Неизвестный язык '%s'. Доступны: auto|%s", -- ⚠️ UNVERIFIED
 }
 
 for key, value in pairs(STRINGS) do

@@ -33,7 +33,7 @@ local STRINGS = {
 
     HIDE_COMPLETED_WEEKS = "Abgeschlossene Wochen ausblenden",
     OPTIONS_HIDE_CHANGE_WEEK_BTN = "Schaltfläche 'Woche wechseln' ausblenden",
-    OPTIONS_HIDE_ILVL_REF_BTN = "Schaltfläche 'Gegenstandsstufen' ausblenden",
+    OPTIONS_HIDE_ILVL_REF_BTN = "Gegenstandsstufen-Popup ausblenden",
     OPTIONS_HIDE_CHAR_SELECT = "Charakterauswahl ausblenden",
     OPTIONS_HIDDEN_CHARS_TITLE = "Versteckte Charaktere:",
     OPTIONS_HIDDEN_CHARS_NONE = "Keine",
@@ -44,12 +44,26 @@ local STRINGS = {
     OPTIONS_HIDE_SCALE_SLIDER   = "Skalierungsregler ausblenden",
     OPTIONS_HIDE_SLIDERS        = "Regler ausblenden",
     OPTIONS_HIDE_OPACITY_SLIDER = "Deckkraftregler ausblenden",
+    OPTIONS_HIDE_UPDATE_NOTICE  = "Update-Warnungen ausblenden", -- ⚠️ UNVERIFIED
+    OPTIONS_HIDE_MINIMAP_BTN    = "Minimap-Symbol ausblenden", -- ⚠️ UNVERIFIED
+    -- Color picker swatch labels (gear popup)
+    COLOR_PICKER_BG             = "Hintergrund", -- ⚠️ UNVERIFIED
+    COLOR_PICKER_TEXT           = "Text", -- ⚠️ UNVERIFIED
+    COLOR_PICKER_HDR            = "Kopfzeile", -- ⚠️ UNVERIFIED
+    -- Status banner
+    STATUS_UPDATE_AVAILABLE_FMT = "Update verfügbar! Du hast %s, neueste Version ist %s.", -- ⚠️ UNVERIFIED
+    STATUS_NO_TRANSLATION_FMT   = "Keine Übersetzung für %s verfügbar. Trage gerne bei!", -- ⚠️ UNVERIFIED
+    STATUS_TRANSLATION_NOTICE   = "Englisch ist die aktuellste Sprache. Deine Checkliste könnte leicht veraltet sein.", -- ⚠️ UNVERIFIED
     UI_OPACITY_LABEL            = "Deckkraft",
     UI_OPACITY_MIN_LABEL        = "10%",
     UI_OPACITY_MAX_LABEL        = "100%",
 
     -- List tab
     DONE_PREFIX = "[Fertig] ",
+
+    -- Tracking panel header tooltips
+    TOOLTIP_OPEN_GREAT_VAULT  = "Klicken, um die Große Schatzkammer zu öffnen", -- ⚠️ UNVERIFIED
+    TOOLTIP_OPEN_CURRENCIES   = "Klicken, um das Währungspanel zu öffnen", -- ⚠️ UNVERIFIED
 
     -- Tracking panel
     TRACKING_GREAT_VAULT_TITLE = "Große Schatzkammer",
@@ -146,6 +160,7 @@ local STRINGS = {
     SLASH_USAGE_TOGGLE = "Verwendung: /larias oder /lcl zum Ein-/Ausblenden",
     SLASH_USAGE_LOCALE = "Verwendung: /larias locale auto|enUS|deDE|esES|esMX|frFR|itIT|ptBR|ruRU",
     SLASH_LOCALE_SET_FMT = "Sprache gesetzt auf %s (aktiv: %s)",
+    SLASH_LOCALE_NOT_FOUND = "Unbekannte Sprache '%s'. Verfügbar: auto|%s", -- ⚠️ UNVERIFIED
 }
 
 for key, value in pairs(STRINGS) do

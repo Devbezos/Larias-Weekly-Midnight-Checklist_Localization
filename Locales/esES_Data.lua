@@ -23,23 +23,24 @@ if type(reg.data) ~= "table" then reg.data = {} end
 --   Evento de la abundancia (Abundance Event), Leyendas de los Haranir (Legends of the Haranir),
 --   Harandar, Asalto de Stormarion (Stormarion Assault), Tormenta del vacío (Voidstorm),
 --   La Singularidad (The Singularity), Piedra de Runas resquebrajada (Cracked Keystone),
---   llaves de cofre (Coffer keys)
+--   llaves de cofre (Coffer keys), EXP de descanso (Rested XP),
+--   tesoros de la región (regional treasures – nueva mecánica Midnight)
 local DATASET = {
 
     {
         id = "early_access_feb_26_through_mar_2_pay_to_win",
         title = "Acceso anticipado - 26 feb. al 2 mar. - Paga para ganar",
         items = {
-            { id = "do_not_spend_any_crests_until_told_to_do_so", text = "No gastes ningún Blasón hasta que se indique" },
-            { id = "level_characters_warmode_on_to_90_dmf_opens_sunday_for_10_more_exp", text = "Sube personajes en Modo de Guerra a nivel 90 – la FLN abre el domingo para +10 % de exp." },
-            { id = "if_available_complete_the_weekly_saltheril_s_soiree_in_eversong_woods_with_the_dmf_buff", text = "Si disponible, completa la Velada de Saltheril semanal en el Bosque Cantarín con el bonus FLN." },
-            { id = "if_available_complete_the_weekly_abundance_event_in_zul_aman_with_the_dmf_buff", text = "Si disponible, completa el Evento de la abundancia semanal en Zul'Aman con el bonus FLN." },
-            { id = "if_available_complete_the_weekly_legends_of_the_haranir_event_in_harandar_with_the_dmf_buff", text = "Si disponible, completa el evento Leyendas de los Haranir semanal en Harandar con el bonus FLN." },
-            { id = "if_available_complete_the_weekly_stormarion_assault_in_the_voidstorm_with_the_dmf_buff", text = "Si disponible, completa el Asalto de Stormarion semanal en la Tormenta del vacío con el bonus FLN." },
-            { id = "optional_kill_each_rare_once_in_each_zone_for_renown_these_are_a_weekly_lockout_for_each_rare", text = "(Opcional) Mata cada élite raro una vez en cada zona para reputación. Tienen un bloqueo semanal por raro." },
+            { id = "log_on_to_each_character_you_plan_on_leveling_so_they_start_accumulating_rested_xp", text = "Inicia sesión en cada personaje que planeas subir de nivel para que empiecen a acumular EXP de descanso." }, -- ⚠️ UNVERIFIED: EXP de descanso (Rested XP)
+            { id = "level_characters_warmode_on_to_90_dmf_opens_sunday_for_10_more_exp", text = "Sube personajes en Modo de Guerra a nivel 90 – la FLN abre el domingo para +10 % de exp. YA NO DA REPUTACIÓN" },
+            { id = "if_available_complete_the_weekly_saltheril_s_soiree_in_eversong_woods_with_the_dmf_buff", text = "Si disponible, completa la Velada de Saltheril semanal en el Bosque Cantarín." },
+            { id = "if_available_complete_the_weekly_abundance_event_in_zul_aman_with_the_dmf_buff", text = "Si disponible, completa el Evento de la abundancia semanal en Zul'Aman." },
+            { id = "if_available_complete_the_weekly_legends_of_the_haranir_event_in_harandar_with_the_dmf_buff", text = "Si disponible, completa el evento Leyendas de los Haranir semanal en Harandar." },
+            { id = "if_available_complete_the_weekly_stormarion_assault_in_the_voidstorm_with_the_dmf_buff", text = "Si disponible, completa el Asalto de Stormarion semanal en la Tormenta del vacío." },
+            { id = "optional_with_dmf_buff_kill_each_rare_once_in_each_zone_for_renown_these_are_a_weekly_lockout_for_each_rare", text = "(Opcional) Mata cada élite raro una vez en cada zona para reputación. Tienen un bloqueo semanal por raro." },
+            { id = "with_dmf_buff_hunt_down_each_region_s_treasures_for_free_renown_see_doc_for_guide", text = "Busca los tesoros de cada región para reputación gratuita. Ver documento para la guía." }, -- ⚠️ UNVERIFIED: tesoros de región Midnight
             { id = "complete_4x_prey_on_normal_difficulty_for_veteran_gear", text = "Completa 4 veces la Presa en dificultad normal para equipo de veterano." },
-            { id = "once_dmf_opens_complete_side_quest_chains_for_renown_can_be_done_on_alts_to_level_at_same_time", text = "Al abrir la FLN, completa cadenas de misiones secundarias para reputación. (Se puede hacer en alts mientras subes de nivel)" },
-            { id = "unlikely_see_doc_for_info_complete_a_world_tour_of_m0_s_after_full_release_but_before_your_region_s_reset", text = "(Poco probable, ver doc) Completa un tour mundial de M0 tras el lanzamiento completo, antes del reinicio de tu región" },
+            { id = "once_dmf_opens_complete_side_quest_chains_for_renown_can_be_done_on_alts_to_level_at_same_time", text = "Completa cadenas de misiones secundarias para reputación. (Se puede hacer en alts mientras subes de nivel). NUEVO: ¡LA FERIA DE LA LUNA NEGRA YA NO DA BONUS DE REPUTACIÓN!" },
         },
     },
     {
@@ -51,11 +52,12 @@ local DATASET = {
             { id = "raise_hara_ti_renown_to_rank_8_for_1_6_champion_belt", text = "Sube la reputación de Hara'ti a rango 8 para cinturón de campeón 1/6" },
             { id = "raise_silvermoon_renown_to_rank_9_for_1_6_champion_helm", text = "Sube la reputación de Lunargenta a rango 9 para yelmo de campeón 1/6" },
             { id = "raise_amani_tribe_renown_to_rank_9_for_1_6_champion_necklace", text = "Sube la reputación de la Tribu Amani a rango 9 para collar de campeón 1/6" },
-            { id = "complete_the_weekly_saltheril_s_soiree_in_eversong_woods_with_the_dmf_buff", text = "Completa la Velada de Saltheril semanal en el Bosque Cantarín con el bonus FLN." },
-            { id = "complete_the_weekly_abundance_event_in_zul_aman_with_the_dmf_buff", text = "Completa el Evento de la abundancia semanal en Zul'Aman con el bonus FLN." },
-            { id = "complete_the_weekly_legends_of_the_haranir_event_in_harandar_with_the_dmf_buff", text = "Completa el evento Leyendas de los Haranir semanal en Harandar con el bonus FLN." },
-            { id = "complete_the_weekly_stormarion_assault_in_the_voidstorm_with_the_dmf_buff", text = "Completa el Asalto de Stormarion semanal en la Tormenta del vacío con el bonus FLN." },
+            { id = "complete_the_weekly_saltheril_s_soiree_in_eversong_woods_with_the_dmf_buff", text = "Completa la Velada de Saltheril semanal en el Bosque Cantarín." },
+            { id = "complete_the_weekly_abundance_event_in_zul_aman_with_the_dmf_buff", text = "Completa el Evento de la abundancia semanal en Zul'Aman." },
+            { id = "complete_the_weekly_legends_of_the_haranir_event_in_harandar_with_the_dmf_buff", text = "Completa el evento Leyendas de los Haranir semanal en Harandar." },
+            { id = "complete_the_weekly_stormarion_assault_in_the_voidstorm_with_the_dmf_buff", text = "Completa el Asalto de Stormarion semanal en la Tormenta del vacío." },
             { id = "optional_kill_each_rare_once_in_each_zone_for_renown_these_are_a_weekly_lockout_for_each_rare", text = "(Opcional) Mata cada élite raro una vez por zona para reputación. Tienen un bloqueo semanal por raro." },
+            { id = "if_not_done_with_dmf_buff_hunt_down_each_region_s_treasures_for_free_renown_see_doc_for_guide", text = "Si no se ha hecho, busca los tesoros de cada región para reputación gratuita. Ver documento para la guía." }, -- ⚠️ UNVERIFIED: tesoros de región Midnight
             { id = "unlock_delves_through_tier_8_11_if_available", text = "Desbloquea Profundidades hasta nivel 8 (11 si está disponible)" },
             { id = "optional_complete_4x_normal_prey_for_adventurer_gear_and_renown", text = "(Opcional) Completa 4 veces la Presa normal para equipo de aventurero y reputación." },
             { id = "complete_4x_hard_prey_for_veteran_gear_and_renown", text = "Completa 4 veces la Presa difícil para equipo de veterano y reputación." },
@@ -105,7 +107,7 @@ local DATASET = {
             { id = "do_lfr_for_tier_pieces_check_guide_for_why", text = "Haz LFR para piezas de conjunto (consulta la guía para saber por qué)" },
             { id = "optional_kill_world_boss_for_champ_2_6_250_ilvl_item", text = "(Opcional) Mata al jefe del mundo para objeto campeón 2/6 nivel 250" },
             { id = "optional_complete_4x_nightmare_prey_for_champion_gear_and_renown", text = "(Opcional) Completa 4 veces la Presa de pesadilla para equipo de campeón y reputación." },
-            { id = "do_at_least_one_t11_to_get_cracked_keystone_quest", text = "Haz al menos un T11 para obtener la misión de la Piedra de Runas resquebrajada" },
+            { id = "do_at_least_one_t11_bountiful_delve_to_get_cracked_keystone_quest", text = "Haz al menos una Profundidad abundante T11 para obtener la misión de la Piedra de Runas resquebrajada" }, -- ⚠️ UNVERIFIED: Profundidad abundante (Bountiful Delve)
             { id = "continue_to_spend_all_adventurer_veteran_and_champion_crests_upgrading_anything", text = "Continúa gastando todos los blasones de aventurero, veterano y campeón mejorándolo todo" },
             { id = "farm_10s_for_266_gear_in_every_slot", text = "Farmea +10s para equipo niv. 266 en cada hueco" },
             { id = "before_mythic_raid_upgrade_11x_3_6_hero_items_once_each", text = "Antes de la banda mítica: mejora 11 objetos héroe 3/6 una vez cada uno" },

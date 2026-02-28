@@ -33,17 +33,43 @@ local STRINGS = {
 
     HIDE_COMPLETED_WEEKS = "완료된 주 숨기기",
     OPTIONS_HIDE_CHANGE_WEEK_BTN = "주 변경 버튼 숨기기",
-    OPTIONS_HIDE_ILVL_REF_BTN = "아이템 레벨 참조 표 버튼 숨기기",
+    OPTIONS_HIDE_ILVL_REF_BTN = "아이템 레벨 팝업 숨기기",
+    OPTIONS_HIDE_CHAR_SELECT = "캐릭터 선택 숨기기",
+    OPTIONS_HIDDEN_CHARS_TITLE = "숨겨진 캐릭터:",
+    OPTIONS_HIDDEN_CHARS_NONE = "없음",
     RESET_BUTTON = "목록 초기화",
+    UI_SCALE_LABEL       = "크기",
+    UI_SCALE_MIN_LABEL   = "50%",
+    UI_SCALE_MAX_LABEL   = "150%",
+    OPTIONS_HIDE_SCALE_SLIDER   = "크기 슬라이더 숨기기",
+    OPTIONS_HIDE_SLIDERS        = "슬라이더 숨기기", -- ⚠️ UNVERIFIED
+    OPTIONS_HIDE_OPACITY_SLIDER = "불투명도 슬라이더 숨기기", -- ⚠️ UNVERIFIED
+    OPTIONS_HIDE_UPDATE_NOTICE  = "업데이트 경고 숨기기", -- ⚠️ UNVERIFIED
+    OPTIONS_HIDE_MINIMAP_BTN    = "미니맵 버튼 숨기기", -- ⚠️ UNVERIFIED
+    -- Color picker swatch labels (gear popup)
+    COLOR_PICKER_BG             = "배경", -- ⚠️ UNVERIFIED
+    COLOR_PICKER_TEXT           = "텍스트", -- ⚠️ UNVERIFIED
+    COLOR_PICKER_HDR            = "헤더", -- ⚠️ UNVERIFIED
 
-    -- List tab
+    -- Status banner
+    STATUS_UPDATE_AVAILABLE_FMT = "업데이트 가능합니다! 현재 버전: %s, 최신 버전: %s.", -- ⚠️ UNVERIFIED
+    STATUS_NO_TRANSLATION_FMT   = "%s에 대한 번역이 없습니다. 기여를 고려해 주세요!", -- ⚠️ UNVERIFIED
+    STATUS_TRANSLATION_NOTICE   = "영어가 가장 최신 언어입니다. 체크리스트가 약간 구버전일 수 있습니다.", -- ⚠️ UNVERIFIED
+    UI_OPACITY_LABEL            = "불투명도", -- ⚠️ UNVERIFIED
+    UI_OPACITY_MIN_LABEL        = "10%",
+    UI_OPACITY_MAX_LABEL        = "100%",
     DONE_PREFIX = "[완료] ",
+
+    -- Tracking panel header tooltips
+    TOOLTIP_OPEN_GREAT_VAULT  = "위대한 금고 열기", -- ⚠️ UNVERIFIED
+    TOOLTIP_OPEN_CURRENCIES   = "화폐 패널 열기", -- ⚠️ UNVERIFIED
 
     -- Tracking panel
     TRACKING_GREAT_VAULT_TITLE = "위대한 금고",
     TRACKING_CURRENCY_TITLE = "화폐",
     TRACKING_GV_RAID = "레이드",
     TRACKING_GV_DUNGEONS = "던전",
+    TRACKING_GV_WORLD    = "월드", -- ⚠️ UNVERIFIED: World boss tracking term
     TRACKING_NA = "없음",
 
     TRACKING_SPARKS_LABEL = "불꽃:",
@@ -74,11 +100,14 @@ local STRINGS = {
 	-- Minimap tooltip
 	MINIMAP_TOOLTIP_LEFT_CLICK_TOGGLE = "좌클릭: 체크리스트 ON/OFF",
 	MINIMAP_TOOLTIP_RIGHT_CLICK_OPTIONS = "우클릭: 설정",
+	MINIMAP_TOOLTIP_MIDDLE_CLICK_ILVL = "휴맨 클릭: 아이템 레벨 참조",
 
 	-- Main window
 	TAB_LIST = "목록",
 	TAB_OPTIONS = "설정",
 	CHANGE_WEEK_BUTTON = "주 변경",
+	CHAR_PICKER_BUTTON = "프로필 변경", -- ⚠️ UNVERIFIED
+	CHAR_PICKER_TOOLTIP_REMOVE = "캐릭터를 제거하려면 설정 메뉴를 사용하세요.", -- ⚠️ UNVERIFIED
 	ILVLREF_BUTTON = "아이템 레벨 참조 표",
 
 	-- Item level reference popup
@@ -124,10 +153,14 @@ local STRINGS = {
 
 	ILVLREF_DELVE_TIER_FMT     = "%d단",
 
+	ILVLREF_TOGGLE_EXPAND = "펼치기",
+	ILVLREF_TOGGLE_SHRINK = "접기",
+
 	-- Slash commands
 	SLASH_USAGE_TOGGLE = "사용법: /larias 혹은 /lcl 를 입력하여 체크리스트를 켜거나 끄세요.",
 	SLASH_USAGE_LOCALE = "사용법: /larias locale auto|enUS|deDE|esES|esMX|frFR|itIT|ptBR|ruRU|koKR",
 	SLASH_LOCALE_SET_FMT = "언어가 %s로 할당 되었습니다. (effective: %s)",
+	SLASH_LOCALE_NOT_FOUND = "알 수 없는 언어 '%s'. 사용 가능: auto|%s", -- ⚠️ UNVERIFIED
 }
 
 for key, value in pairs(STRINGS) do

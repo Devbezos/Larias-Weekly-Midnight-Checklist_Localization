@@ -1,19 +1,6 @@
 name: Deploy Alpha
 
 on:
-  push:
-    paths:
-      - 'Locales/**'
-      - '*.toc'
-    branches-ignore:
-      # Auto-deploy alphas only from NON long-lived branches.
-      - main
-      - develop
-      - release/**
-      - hotfix/**
-    tags-ignore:
-      # Prevent the bot's own tag push from re-triggering this workflow.
-      - '**'
   workflow_dispatch:
     inputs:
       target_branch:

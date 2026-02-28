@@ -23,23 +23,24 @@ if type(reg.data) ~= "table" then reg.data = {} end
 --   Überfluss-Ereignis (Abundance Event), Legenden der Haranir,
 --   Harandar, Sturmarion-Angriff (Stormarion Assault),
 --   Nichtsturm (Voidstorm), Die Singularität (The Singularity),
---   Zerbrochener Schlussstein (Cracked Keystone), Truhen-Schlüssel (Coffer keys)
+--   Zerbrochener Schlussstein (Cracked Keystone), Truhen-Schlüssel (Coffer keys),
+--   ausgeruhte EP (Rested XP), Regionsschätze (regional treasures – new Midnight mechanic)
 local DATASET = {
 
     {
         id = "early_access_feb_26_through_mar_2_pay_to_win",
         title = "Früher Zugang - 26. Feb. bis 2. März - Pay to Win",
         items = {
-            { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Keine Wappen ausgeben, bis es angewiesen wird" },
-            { id = "level_characters_warmode_on_to_90_dmf_opens_sunday_for_10_more_exp", text = "Charaktere im Kriegsmodus auf Level 90 bringen – JdD öffnet Sonntag für +10 % XP" },
-            { id = "if_available_complete_the_weekly_saltheril_s_soiree_in_eversong_woods_with_the_dmf_buff", text = "Falls verfügbar: Wöchentliches Saltheril-Fest im Immergrünen Wald mit JdD-Buff abschließen." },
-            { id = "if_available_complete_the_weekly_abundance_event_in_zul_aman_with_the_dmf_buff", text = "Falls verfügbar: Wöchentliches Überfluss-Ereignis in Zul'Aman mit JdD-Buff abschließen." },
-            { id = "if_available_complete_the_weekly_legends_of_the_haranir_event_in_harandar_with_the_dmf_buff", text = "Falls verfügbar: Wöchentliches Legenden der Haranir-Ereignis in Harandar mit JdD-Buff abschließen." },
-            { id = "if_available_complete_the_weekly_stormarion_assault_in_the_voidstorm_with_the_dmf_buff", text = "Falls verfügbar: Wöchentlichen Sturmarion-Angriff im Nichtsturm mit JdD-Buff abschließen." },
-            { id = "optional_kill_each_rare_once_in_each_zone_for_renown_these_are_a_weekly_lockout_for_each_rare", text = "(Optional) Jeden seltenen Gegner einmal pro Zone für Ansehen töten. Wöchentlicher Lockout pro Seltenem." },
+            { id = "log_on_to_each_character_you_plan_on_leveling_so_they_start_accumulating_rested_xp", text = "Mit jedem Charakter einloggen, den du leveln möchtest, damit er mit dem Ansammeln ausgeruhter EP beginnt." }, -- ⚠️ UNVERIFIED: ausgeruhte EP (Rested XP)
+            { id = "level_characters_warmode_on_to_90_dmf_opens_sunday_for_10_more_exp", text = "Charaktere im Kriegsmodus auf Level 90 bringen – JdD öffnet Sonntag für +10 % XP. GIBT KEIN ANSEHEN MEHR" },
+            { id = "if_available_complete_the_weekly_saltheril_s_soiree_in_eversong_woods_with_the_dmf_buff", text = "Falls verfügbar: Wöchentliches Saltheril-Fest im Immergrünen Wald abschließen." },
+            { id = "if_available_complete_the_weekly_abundance_event_in_zul_aman_with_the_dmf_buff", text = "Falls verfügbar: Wöchentliches Überfluss-Ereignis in Zul'Aman abschließen." },
+            { id = "if_available_complete_the_weekly_legends_of_the_haranir_event_in_harandar_with_the_dmf_buff", text = "Falls verfügbar: Wöchentliches Legenden der Haranir-Ereignis in Harandar abschließen." },
+            { id = "if_available_complete_the_weekly_stormarion_assault_in_the_voidstorm_with_the_dmf_buff", text = "Falls verfügbar: Wöchentlichen Sturmarion-Angriff im Nichtsturm abschließen." },
+            { id = "optional_with_dmf_buff_kill_each_rare_once_in_each_zone_for_renown_these_are_a_weekly_lockout_for_each_rare", text = "(Optional) Jeden seltenen Gegner einmal pro Zone für Ansehen töten. Wöchentlicher Lockout pro Seltenem." },
+            { id = "with_dmf_buff_hunt_down_each_region_s_treasures_for_free_renown_see_doc_for_guide", text = "Schätze jeder Region für kostenloses Ansehen aufspüren. Dokument für Guide lesen." }, -- ⚠️ UNVERIFIED: Midnight Regionsschätze
             { id = "complete_4x_prey_on_normal_difficulty_for_veteran_gear", text = "4x Beute auf Normaler Schwierigkeit für Veteran-Ausrüstung abschließen." },
-            { id = "once_dmf_opens_complete_side_quest_chains_for_renown_can_be_done_on_alts_to_level_at_same_time", text = "Ab JdD-Öffnung: Nebenquestketten für Ansehen abschließen. (Kann auf Alts gleichzeitig beim Leveln erledigt werden)" },
-            { id = "unlikely_see_doc_for_info_complete_a_world_tour_of_m0_s_after_full_release_but_before_your_region_s_reset", text = "(Unwahrscheinlich, Dokument für Infos) Welttour der M0s nach dem vollständigen Release, aber vor dem Wochen-Reset deiner Region" },
+            { id = "once_dmf_opens_complete_side_quest_chains_for_renown_can_be_done_on_alts_to_level_at_same_time", text = "Nebenquestketten für Ansehen abschließen. (Kann auf Alts gleichzeitig beim Leveln erledigt werden). NEU: DER JAHRMARKT DES DUNKELMONDES GEWÄHRT KEINEN ANSEHEN-BUFF MEHR!" },
         },
     },
     {
@@ -51,11 +52,12 @@ local DATASET = {
             { id = "raise_hara_ti_renown_to_rank_8_for_1_6_champion_belt", text = "Ansehen bei Hara'ti auf Rang 8 erhöhen für 1/6-Champion-Gürtel" },
             { id = "raise_silvermoon_renown_to_rank_9_for_1_6_champion_helm", text = "Ansehen bei Silbermond auf Rang 9 erhöhen für 1/6-Champion-Helm" },
             { id = "raise_amani_tribe_renown_to_rank_9_for_1_6_champion_necklace", text = "Ansehen beim Amani-Stamm auf Rang 9 erhöhen für 1/6-Champion-Halskette" },
-            { id = "complete_the_weekly_saltheril_s_soiree_in_eversong_woods_with_the_dmf_buff", text = "Wöchentliches Saltheril-Fest im Immergrünen Wald mit JdD-Buff abschließen." },
-            { id = "complete_the_weekly_abundance_event_in_zul_aman_with_the_dmf_buff", text = "Wöchentliches Überfluss-Ereignis in Zul'Aman mit JdD-Buff abschließen." },
-            { id = "complete_the_weekly_legends_of_the_haranir_event_in_harandar_with_the_dmf_buff", text = "Wöchentliches Legenden der Haranir-Ereignis in Harandar mit JdD-Buff abschließen." },
-            { id = "complete_the_weekly_stormarion_assault_in_the_voidstorm_with_the_dmf_buff", text = "Wöchentlichen Sturmarion-Angriff im Nichtsturm mit JdD-Buff abschließen." },
+            { id = "complete_the_weekly_saltheril_s_soiree_in_eversong_woods_with_the_dmf_buff", text = "Wöchentliches Saltheril-Fest im Immergrünen Wald abschließen." },
+            { id = "complete_the_weekly_abundance_event_in_zul_aman_with_the_dmf_buff", text = "Wöchentliches Überfluss-Ereignis in Zul'Aman abschließen." },
+            { id = "complete_the_weekly_legends_of_the_haranir_event_in_harandar_with_the_dmf_buff", text = "Wöchentliches Legenden der Haranir-Ereignis in Harandar abschließen." },
+            { id = "complete_the_weekly_stormarion_assault_in_the_voidstorm_with_the_dmf_buff", text = "Wöchentlichen Sturmarion-Angriff im Nichtsturm abschließen." },
             { id = "optional_kill_each_rare_once_in_each_zone_for_renown_these_are_a_weekly_lockout_for_each_rare", text = "(Optional) Jeden seltenen Gegner einmal pro Zone für Ansehen töten. Wöchentlicher Lockout pro Seltenem." },
+            { id = "if_not_done_with_dmf_buff_hunt_down_each_region_s_treasures_for_free_renown_see_doc_for_guide", text = "Falls noch nicht erledigt, Schätze jeder Region für kostenloses Ansehen aufspüren. Dokument für Guide lesen." }, -- ⚠️ UNVERIFIED: Midnight Regionsschätze
             { id = "unlock_delves_through_tier_8_11_if_available", text = "Tiefen bis Stufe 8 freischalten (11 falls verfügbar)" },
             { id = "optional_complete_4x_normal_prey_for_adventurer_gear_and_renown", text = "(Optional) 4x Normale Beute für Abenteurer-Ausrüstung und Ansehen abschließen." },
             { id = "complete_4x_hard_prey_for_veteran_gear_and_renown", text = "4x Schwere Beute für Veteran-Ausrüstung und Ansehen abschließen." },
@@ -105,7 +107,7 @@ local DATASET = {
             { id = "do_lfr_for_tier_pieces_check_guide_for_why", text = "LFR für Tier-Teile machen (Guide lesen warum)" },
             { id = "optional_kill_world_boss_for_champ_2_6_250_ilvl_item", text = "(Optional) Weltboss töten für Champion 2/6 250-Gs-Item" },
             { id = "optional_complete_4x_nightmare_prey_for_champion_gear_and_renown", text = "(Optional) 4x Albtraum-Beute für Champion-Ausrüstung und Ansehen abschließen." },
-            { id = "do_at_least_one_t11_to_get_cracked_keystone_quest", text = "Mindestens einen T11 für den Zerbrochener-Schlussstein-Quest machen" },
+            { id = "do_at_least_one_t11_bountiful_delve_to_get_cracked_keystone_quest", text = "Mindestens eine T11-Üppige Tiefe für den Zerbrochener-Schlussstein-Quest machen" }, -- ⚠️ UNVERIFIED: Bountiful Delve term
             { id = "continue_to_spend_all_adventurer_veteran_and_champion_crests_upgrading_anything", text = "Weiterhin alle Abenteurer-, Veteran- und Champion-Wappen für Upgrades ausgeben" },
             { id = "farm_10s_for_266_gear_in_every_slot", text = "+10er farmen für 266-Ausrüstung in jedem Slot" },
             { id = "before_mythic_raid_upgrade_11x_3_6_hero_items_once_each", text = "Vor dem Mythisch-Schlachtzug: 11x 3/6-Heldenteile je einmal aufwerten" },

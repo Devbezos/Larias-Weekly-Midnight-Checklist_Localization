@@ -33,7 +33,7 @@ local STRINGS = {
 
     HIDE_COMPLETED_WEEKS = "Ocultar semanas completadas",
     OPTIONS_HIDE_CHANGE_WEEK_BTN = "Ocultar botón Cambiar semana",
-    OPTIONS_HIDE_ILVL_REF_BTN = "Ocultar botón Niveles de objeto",
+    OPTIONS_HIDE_ILVL_REF_BTN = "Ocultar ventana emergente de Niveles de objeto",
     OPTIONS_HIDE_CHAR_SELECT = "Ocultar selección de personaje",
     OPTIONS_HIDDEN_CHARS_TITLE = "Personajes ocultos:",
     OPTIONS_HIDDEN_CHARS_NONE = "Ninguno",
@@ -44,12 +44,26 @@ local STRINGS = {
     OPTIONS_HIDE_SCALE_SLIDER   = "Ocultar control de escala",
     OPTIONS_HIDE_SLIDERS        = "Ocultar controles deslizantes",
     OPTIONS_HIDE_OPACITY_SLIDER = "Ocultar control de opacidad",
+    OPTIONS_HIDE_UPDATE_NOTICE  = "Ocultar advertencias de actualización", -- ⚠️ UNVERIFIED
+    OPTIONS_HIDE_MINIMAP_BTN    = "Ocultar botón del minimapa", -- ⚠️ UNVERIFIED
+    -- Color picker swatch labels (gear popup)
+    COLOR_PICKER_BG             = "Fondo", -- ⚠️ UNVERIFIED
+    COLOR_PICKER_TEXT           = "Texto", -- ⚠️ UNVERIFIED
+    COLOR_PICKER_HDR            = "Encabezado", -- ⚠️ UNVERIFIED
+    -- Status banner
+    STATUS_UPDATE_AVAILABLE_FMT = "¡Actualización disponible! Tienes %s, la más reciente es %s.", -- ⚠️ UNVERIFIED
+    STATUS_NO_TRANSLATION_FMT   = "No hay traducción disponible para %s. ¡Considera contribuir!", -- ⚠️ UNVERIFIED
+    STATUS_TRANSLATION_NOTICE   = "El inglés es el idioma más actualizado. Tu lista puede estar ligeramente desactualizada.", -- ⚠️ UNVERIFIED
     UI_OPACITY_LABEL            = "Opacidad",
     UI_OPACITY_MIN_LABEL        = "10%",
     UI_OPACITY_MAX_LABEL        = "100%",
 
     -- List tab
     DONE_PREFIX = "[Hecho] ",
+
+    -- Tracking panel header tooltips
+    TOOLTIP_OPEN_GREAT_VAULT  = "Haz clic para abrir la Gran Cámara", -- ⚠️ UNVERIFIED
+    TOOLTIP_OPEN_CURRENCIES   = "Haz clic para abrir el panel de moneda", -- ⚠️ UNVERIFIED
 
     -- Tracking panel
     TRACKING_GREAT_VAULT_TITLE = "Gran Cámara",
@@ -147,6 +161,7 @@ local STRINGS = {
 
     SLASH_USAGE_LOCALE = "Uso: /larias locale auto|enUS|deDE|esES|esMX|frFR|itIT|ptBR|ruRU",
     SLASH_LOCALE_SET_FMT = "Idioma configurado a %s (efectivo: %s)",
+    SLASH_LOCALE_NOT_FOUND = "Idioma desconocido '%s'. Disponible: auto|%s", -- ⚠️ UNVERIFIED
 }
 
 for key, value in pairs(STRINGS) do

@@ -33,7 +33,7 @@ local STRINGS = {
 
     HIDE_COMPLETED_WEEKS = "Ocultar semanas concluídas",
     OPTIONS_HIDE_CHANGE_WEEK_BTN = "Ocultar botão Mudar semana",
-    OPTIONS_HIDE_ILVL_REF_BTN = "Ocultar botão Níveis de item",
+    OPTIONS_HIDE_ILVL_REF_BTN = "Ocultar pop-up de Níveis de item",
     OPTIONS_HIDE_CHAR_SELECT = "Ocultar seleção de personagem",
     OPTIONS_HIDDEN_CHARS_TITLE = "Personagens ocultos:",
     OPTIONS_HIDDEN_CHARS_NONE = "Nenhum",
@@ -44,6 +44,16 @@ local STRINGS = {
     OPTIONS_HIDE_SCALE_SLIDER   = "Ocultar controle de escala",
     OPTIONS_HIDE_SLIDERS        = "Ocultar controles deslizantes",
     OPTIONS_HIDE_OPACITY_SLIDER = "Ocultar controle de opacidade",
+    OPTIONS_HIDE_UPDATE_NOTICE  = "Ocultar alertas de atualização", -- ⚠️ UNVERIFIED
+    OPTIONS_HIDE_MINIMAP_BTN    = "Ocultar botão do minimapa", -- ⚠️ UNVERIFIED
+    -- Color picker swatch labels (gear popup)
+    COLOR_PICKER_BG             = "Fundo", -- ⚠️ UNVERIFIED
+    COLOR_PICKER_TEXT           = "Texto", -- ⚠️ UNVERIFIED
+    COLOR_PICKER_HDR            = "Cabeçalho", -- ⚠️ UNVERIFIED
+    -- Status banner
+    STATUS_UPDATE_AVAILABLE_FMT = "Atualização disponível! Você tem %s, a mais recente é %s.", -- ⚠️ UNVERIFIED
+    STATUS_NO_TRANSLATION_FMT   = "Nenhuma tradução disponível para %s. Considere contribuir!", -- ⚠️ UNVERIFIED
+    STATUS_TRANSLATION_NOTICE   = "O inglês é o idioma mais atualizado. Sua lista pode estar ligeiramente desatualizada.", -- ⚠️ UNVERIFIED
     UI_OPACITY_LABEL            = "Opacidade",
     UI_OPACITY_MIN_LABEL        = "10%",
     UI_OPACITY_MAX_LABEL        = "100%",
@@ -51,11 +61,17 @@ local STRINGS = {
     -- List tab
     DONE_PREFIX = "[Feito] ",
 
+    -- Tracking panel header tooltips
+    TOOLTIP_OPEN_GREAT_VAULT  = "Clique para abrir o Grande Cofre", -- ⚠️ UNVERIFIED
+    TOOLTIP_OPEN_CURRENCIES   = "Clique para abrir o painel de moeda", -- ⚠️ UNVERIFIED
+
     -- Tracking panel
     TRACKING_GREAT_VAULT_TITLE = "Grande Cofre",
     TRACKING_CURRENCY_TITLE = "Moeda",
     TRACKING_GV_RAID = "Raid",
-    TRACKING_GV_DUNGEONS = "Masmorras",    TRACKING_GV_WORLD    = "Mundo",    TRACKING_NA = "N/D",
+    TRACKING_GV_DUNGEONS = "Masmorras",
+    TRACKING_GV_WORLD    = "Mundo",
+    TRACKING_NA          = "N/D",
 
     TRACKING_SPARKS_LABEL = "Fluxo de Mana do Alvorecer:",
     TRACKING_DONE = "Feito",
@@ -101,7 +117,7 @@ local STRINGS = {
     ILVLREF_SEC_CRAFTED   = "Níveis de item criado",
     ILVLREF_SEC_DUNGEONS  = "Níveis de item de masmorra",
     ILVLREF_SEC_RAID      = "Aprox. níveis de item de raid de Midnight",
-    ILVLREF_SEC_DELVES    = "Níveis de item de profundezas abundantes",
+    ILVLREF_SEC_DELVES    = "Níveis de item de imersões abundantes",
 
     ILVLREF_COL_ILVL         = "n. item",
     ILVLREF_COL_TRACK        = "Trilhas de melhoria",
@@ -144,6 +160,7 @@ local STRINGS = {
     SLASH_USAGE_TOGGLE = "Uso: /larias ou /lcl para mostrar/ocultar a lista",
     SLASH_USAGE_LOCALE = "Uso: /larias locale auto|enUS|deDE|esES|esMX|frFR|itIT|ptBR|ruRU",
     SLASH_LOCALE_SET_FMT = "Idioma definido para %s (efetivo: %s)",
+    SLASH_LOCALE_NOT_FOUND = "Idioma desconhecido '%s'. Disponível: auto|%s", -- ⚠️ UNVERIFIED
 }
 
 for key, value in pairs(STRINGS) do

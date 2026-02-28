@@ -33,7 +33,7 @@ local STRINGS = {
 
     HIDE_COMPLETED_WEEKS = "Nascondi settimane completate",
     OPTIONS_HIDE_CHANGE_WEEK_BTN = "Nascondi pulsante Cambia settimana",
-    OPTIONS_HIDE_ILVL_REF_BTN = "Nascondi pulsante Livelli oggetto",
+    OPTIONS_HIDE_ILVL_REF_BTN = "Nascondi il popup dei Livelli degli oggetti",
     OPTIONS_HIDE_CHAR_SELECT = "Nascondi selezione personaggio",
     OPTIONS_HIDDEN_CHARS_TITLE = "Personaggi nascosti:",
     OPTIONS_HIDDEN_CHARS_NONE = "Nessuno",
@@ -44,12 +44,26 @@ local STRINGS = {
     OPTIONS_HIDE_SCALE_SLIDER   = "Nascondi cursore di scala",
     OPTIONS_HIDE_SLIDERS        = "Nascondi cursori",
     OPTIONS_HIDE_OPACITY_SLIDER = "Nascondi cursore di opacità",
+    OPTIONS_HIDE_UPDATE_NOTICE  = "Nascondi avvertimenti di aggiornamento", -- ⚠️ UNVERIFIED
+    OPTIONS_HIDE_MINIMAP_BTN    = "Nascondi pulsante minimappa", -- ⚠️ UNVERIFIED
+    -- Color picker swatch labels (gear popup)
+    COLOR_PICKER_BG             = "Sfondo", -- ⚠️ UNVERIFIED
+    COLOR_PICKER_TEXT           = "Testo", -- ⚠️ UNVERIFIED
+    COLOR_PICKER_HDR            = "Intestazione", -- ⚠️ UNVERIFIED
+    -- Status banner
+    STATUS_UPDATE_AVAILABLE_FMT = "Aggiornamento disponibile! Hai %s, il più recente è %s.", -- ⚠️ UNVERIFIED
+    STATUS_NO_TRANSLATION_FMT   = "Nessuna traduzione disponibile per %s. Considera di contribuire!", -- ⚠️ UNVERIFIED
+    STATUS_TRANSLATION_NOTICE   = "L'inglese è la lingua più aggiornata. La tua lista potrebbe essere leggermente obsoleta.", -- ⚠️ UNVERIFIED
     UI_OPACITY_LABEL            = "Opacità",
     UI_OPACITY_MIN_LABEL        = "10%",
     UI_OPACITY_MAX_LABEL        = "100%",
 
     -- List tab
     DONE_PREFIX = "[Fatto] ",
+
+    -- Tracking panel header tooltips
+    TOOLTIP_OPEN_GREAT_VAULT  = "Clicca per aprire il Grande Forziere", -- ⚠️ UNVERIFIED
+    TOOLTIP_OPEN_CURRENCIES   = "Clicca per aprire il pannello valuta", -- ⚠️ UNVERIFIED
 
     -- Tracking panel
     TRACKING_GREAT_VAULT_TITLE = "Grande Forziere",
@@ -103,7 +117,7 @@ local STRINGS = {
     ILVLREF_SEC_CRAFTED   = "Livelli degli oggetti artigianali",
     ILVLREF_SEC_DUNGEONS  = "Livelli degli oggetti nei dungeon",
     ILVLREF_SEC_RAID      = "Livelli oggetto appross. del raid di Midnight",
-    ILVLREF_SEC_DELVES    = "Livelli oggetto delle profondità rigogliose",
+    ILVLREF_SEC_DELVES    = "Livelli oggetto delle scorribande generose",
 
     ILVLREF_COL_ILVL         = "liv. ogg.",
     ILVLREF_COL_TRACK        = "Percorsi potenziamento",
@@ -146,6 +160,7 @@ local STRINGS = {
     SLASH_USAGE_TOGGLE = "Utilizzo: /larias o /lcl per mostrare/nascondere la lista",
     SLASH_USAGE_LOCALE = "Utilizzo: /larias locale auto|enUS|deDE|esES|esMX|frFR|itIT|ptBR|ruRU",
     SLASH_LOCALE_SET_FMT = "Lingua impostata su %s (effettiva: %s)",
+    SLASH_LOCALE_NOT_FOUND = "Lingua sconosciuta '%s'. Disponibili: auto|%s", -- ⚠️ UNVERIFIED
 }
 
 for key, value in pairs(STRINGS) do

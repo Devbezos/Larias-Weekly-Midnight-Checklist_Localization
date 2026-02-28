@@ -23,39 +23,43 @@ if type(reg.data) ~= "table" then reg.data = {} end
 --   Событие «Изобилие» (Abundance Event), Легенды Харанир (Legends of the Haranir),
 --   Харандар (Harandar), Штурм Шторммариона (Stormarion Assault),
 --   Пустотная буря (Voidstorm), Сингулярность (The Singularity),
---   Задание «Треснувший Камень» (Cracked Keystone Quest), ключи от сундука (Coffer keys)
+--   Задание «Треснувший Камень» (Cracked Keystone Quest), ключи от сундука (Coffer keys),
+--   опыт отдыха (Rested XP) ⚠️ НОВОЕ НЕПРОВЕРЕНО,
+--   сокровища регионов (regional treasures – новая механика Midnight) ⚠️ НОВОЕ НЕПРОВЕРЕНО,
+--   Многообещающая вылазка (Bountiful Delve) ⚠️ ПРОВЕРИТЬ ТЕРМИН В ИГРЕ
 local DATASET = {
 
     {
         id = "early_access_feb_26_through_mar_2_pay_to_win",
         title = "Ранний доступ - 26 фев. - 2 мар. - Pay to Win",
         items = {
-            { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Не тратьте Гербы до получения указаний" },
-            { id = "level_characters_warmode_on_to_90_dmf_opens_sunday_for_10_more_exp", text = "Прокачайте персонажей в режиме войны до 90 — ЯН открывается в воскресенье (+10% опыта)" },
-            { id = "if_available_complete_the_weekly_saltheril_s_soiree_in_eversong_woods_with_the_dmf_buff", text = "Если доступно, выполните еженедельный вечер Сальтериля в Лесу Вечной Песни с бонусом ЯН." },
-            { id = "if_available_complete_the_weekly_abundance_event_in_zul_aman_with_the_dmf_buff", text = "Если доступно, выполните еженедельное мероприятие Эбундансия в Зул’Амане с бонусом ЯН." },
-            { id = "if_available_complete_the_weekly_legends_of_the_haranir_event_in_harandar_with_the_dmf_buff", text = "Если доступно, выполните еженедельное мероприятие Легенды Харанир в Харандаре с бонусом ЯН." },
-            { id = "if_available_complete_the_weekly_stormarion_assault_in_the_voidstorm_with_the_dmf_buff", text = "Если доступно, выполните еженедельный штурм Тайфуносца в Буре Пустоты с бонусом ЯН." },
-            { id = "optional_kill_each_rare_once_in_each_zone_for_renown_these_are_a_weekly_lockout_for_each_rare", text = "(Необяз.) Убивайте каждого редкого по одному разу в каждой зоне для репутации. У каждого редкого недельный кулдаўн." },
+            { id = "log_on_to_each_character_you_plan_on_leveling_so_they_start_accumulating_rested_xp", text = "Войдите на каждого персонажа, которого планируете качать, чтобы начать накапливать опыт отдыха." }, -- ⚠️ UNVERIFIED: опыт отдыха (Rested XP)
+            { id = "level_characters_warmode_on_to_90_dmf_opens_sunday_for_10_more_exp", text = "Прокачайте персонажей в режиме войны до 90 — ЯН открывается в воскресенье (+10% опыта). БОЛЬШЕ НЕ ДАЁТ РЕПУТАЦИЮ" },
+            { id = "if_available_complete_the_weekly_saltheril_s_soiree_in_eversong_woods_with_the_dmf_buff", text = "Если доступно, выполните еженедельный вечер Сальтериля в Лесу Вечной Песни." },
+            { id = "if_available_complete_the_weekly_abundance_event_in_zul_aman_with_the_dmf_buff", text = "Если доступно, выполните еженедельное мероприятие Эбундансия в Зул'Амане." },
+            { id = "if_available_complete_the_weekly_legends_of_the_haranir_event_in_harandar_with_the_dmf_buff", text = "Если доступно, выполните еженедельное мероприятие Легенды Харанир в Харандаре." },
+            { id = "if_available_complete_the_weekly_stormarion_assault_in_the_voidstorm_with_the_dmf_buff", text = "Если доступно, выполните еженедельный штурм Тайфуносца в Буре Пустоты." },
+            { id = "optional_with_dmf_buff_kill_each_rare_once_in_each_zone_for_renown_these_are_a_weekly_lockout_for_each_rare", text = "(Необяз.) Убивайте каждого редкого по одному разу в каждой зоне для репутации. У каждого редкого недельный кулдаун." },
+            { id = "with_dmf_buff_hunt_down_each_region_s_treasures_for_free_renown_see_doc_for_guide", text = "Ищите сокровища каждого региона для бесплатной репутации. Гайд в документе." }, -- ⚠️ UNVERIFIED: сокровища регионов (Midnight regional treasures)
             { id = "complete_4x_prey_on_normal_difficulty_for_veteran_gear", text = "Выполните Охоту 4 раза на обычной сложности для получения снаряжения ветерана." },
-            { id = "once_dmf_opens_complete_side_quest_chains_for_renown_can_be_done_on_alts_to_level_at_same_time", text = "После открытия ЯН выполняйте побочные цепочки заданий для репутации. (Можно на алтах параллельно с прокачкой)" },
-            { id = "unlikely_see_doc_for_info_complete_a_world_tour_of_m0_s_after_full_release_but_before_your_region_s_reset", text = "(Маловероятно, см. док.) Пройдите мировой тур по M0 после выхода, до сброса вашего региона" },
+            { id = "once_dmf_opens_complete_side_quest_chains_for_renown_can_be_done_on_alts_to_level_at_same_time", text = "Выполняйте побочные цепочки заданий для репутации. (Можно на алтах параллельно с прокачкой). НОВОСТЬ: ЯРМАРКА НОВОЛУНИЯ БОЛЬШЕ НЕ ДАЁТ БОНУС РЕПУТАЦИИ!" },
         },
     },
     {
         id = "pre_season_week_1_march_3_m0_s",
         title = "Предсезон неделя 1 - 3 марта - M0",
         items = {
-            { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Не тратьте Гербы до получения указаний" },
-            { id = "raise_the_singularity_renown_to_rank_7_for_1_6_champion_trinket", text = "Повысьте репутацию С Сингулярностью до 7 ранга для тринкета чемпиона 1/6" },
+                        { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Не тратьте Гербы до получения указаний" },
+{ id = "raise_the_singularity_renown_to_rank_7_for_1_6_champion_trinket", text = "Повысьте репутацию С Сингулярностью до 7 ранга для тринкета чемпиона 1/6" },
             { id = "raise_hara_ti_renown_to_rank_8_for_1_6_champion_belt", text = "Повысьте репутацию с Хара'ти до 8 ранга для пояса чемпиона 1/6" },
             { id = "raise_silvermoon_renown_to_rank_9_for_1_6_champion_helm", text = "Повысьте репутацию с Двором Луносвета до 9 ранга для шлема чемпиона 1/6" },
             { id = "raise_amani_tribe_renown_to_rank_9_for_1_6_champion_necklace", text = "Повысьте репутацию с Племенем Амани до 9 ранга для ожерелья чемпиона 1/6" },
-            { id = "complete_the_weekly_saltheril_s_soiree_in_eversong_woods_with_the_dmf_buff", text = "Выполните еженедельный вечер Сальтериля в Лесу Вечной Песни с бонусом ЯН." },
-            { id = "complete_the_weekly_abundance_event_in_zul_aman_with_the_dmf_buff", text = "Выполните еженедельное мероприятие Эбундансия в Зул’Амане с бонусом ЯН." },
-            { id = "complete_the_weekly_legends_of_the_haranir_event_in_harandar_with_the_dmf_buff", text = "Выполните еженедельное мероприятие Легенды Харанир в Харандаре с бонусом ЯН." },
-            { id = "complete_the_weekly_stormarion_assault_in_the_voidstorm_with_the_dmf_buff", text = "Выполните еженедельный штурм Тайфуносца в Буре Пустоты с бонусом ЯН." },
-            { id = "optional_kill_each_rare_once_in_each_zone_for_renown_these_are_a_weekly_lockout_for_each_rare", text = "(Необяз.) Убивайте каждого редкого по одному разу в каждой зоне для репутации. У каждого редкого недельный кулдаўн." },
+            { id = "complete_the_weekly_saltheril_s_soiree_in_eversong_woods_with_the_dmf_buff", text = "Выполните еженедельный вечер Сальтериля в Лесу Вечной Песни." },
+            { id = "complete_the_weekly_abundance_event_in_zul_aman_with_the_dmf_buff", text = "Выполните еженедельное мероприятие Эбундансия в Зул'Амане." },
+            { id = "complete_the_weekly_legends_of_the_haranir_event_in_harandar_with_the_dmf_buff", text = "Выполните еженедельное мероприятие Легенды Харанир в Харандаре." },
+            { id = "complete_the_weekly_stormarion_assault_in_the_voidstorm_with_the_dmf_buff", text = "Выполните еженедельный штурм Тайфуносца в Буре Пустоты." },
+            { id = "optional_kill_each_rare_once_in_each_zone_for_renown_these_are_a_weekly_lockout_for_each_rare", text = "(Необяз.) Убивайте каждого редкого по одному разу в каждой зоне для репутации. У каждого редкого недельный кулдаун." },
+            { id = "if_not_done_with_dmf_buff_hunt_down_each_region_s_treasures_for_free_renown_see_doc_for_guide", text = "Если ещё не сделано, ищите сокровища каждого региона для бесплатной репутации. Гайд в документе." }, -- ⚠️ UNVERIFIED: сокровища регионов (Midnight regional treasures)
             { id = "unlock_delves_through_tier_8_11_if_available", text = "Откройте Вылазки до уровня Ь8 (или Ь11, если доступно)" },
             { id = "optional_complete_4x_normal_prey_for_adventurer_gear_and_renown", text = "(Необяз.) Выполните Охоту 4 раза на обычной сложности для снаряжения авантюриста и репутации." },
             { id = "complete_4x_hard_prey_for_veteran_gear_and_renown", text = "Выполните Охоту 4 раза на сложной сложности для снаряжения ветерана и репутации." },
@@ -105,7 +109,7 @@ local DATASET = {
             { id = "do_lfr_for_tier_pieces_check_guide_for_why", text = "Проходите Поиск рейда для тировых предметов (см. руководство — почему)" },
             { id = "optional_kill_world_boss_for_champ_2_6_250_ilvl_item", text = "(Необяз.) Убейте мирового босса для предмета чемпиона 2/6 уровня 250" },
             { id = "optional_complete_4x_nightmare_prey_for_champion_gear_and_renown", text = "(Необяз.) Выполните Охоту 4 раза на сложности Кошмар для снаряжения чемпиона и репутации." },
-            { id = "do_at_least_one_t11_to_get_cracked_keystone_quest", text = "Пройдите хотя бы одну вылазку Ь11 для получения задания „Треснутший зенитный камень“" },
+            { id = "do_at_least_one_t11_bountiful_delve_to_get_cracked_keystone_quest", text = "Пройдите хотя бы одну Многообещающую вылазку Ь11 для получения задания «Треснувший Камень»" }, -- ⚠️ UNVERIFIED: Многообещающая вылазка (Bountiful Delve)
             { id = "continue_to_spend_all_adventurer_veteran_and_champion_crests_upgrading_anything", text = "Продолжайте тратить Эгиды авантюриста, ветерана и чемпиона, улучшая всё подряд" },
             { id = "farm_10s_for_266_gear_in_every_slot", text = "Фармите +10 для снаряжения уровня 266 в каждый слот" },
             { id = "before_mythic_raid_upgrade_11x_3_6_hero_items_once_each", text = "До мифического рейда: улучшите 11 предметов 3/6 класса Героя по одному разу каждый" },

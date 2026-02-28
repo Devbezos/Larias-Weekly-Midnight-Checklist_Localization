@@ -2,24 +2,28 @@
 ## Title: Larias's Weekly Checklist: Localization
 ## Notes: Localization data for Larias's Weekly Checklist
 ## Author: Larias
-## Version: 2.0.11
-## IconTexture: Interface\AddOns\LariasWeeklyChecklist_Localization\Media\icon
+## Version: 2.1.0
+## IconTexture: Interface\AddOns\LariasWeeklyChecklist_Localization\assets\icon
 ## X-Wago-ID: mNw78XNo
 ## X-Curse-Project-ID: 1469589
 
-Locales\deDE.lua
-Locales\deDE_Data.lua
-Locales\esES.lua
-Locales\esES_Data.lua
-Locales\esMX.lua
-Locales\esMX_Data.lua
-Locales\frFR.lua
-Locales\frFR_Data.lua
-Locales\itIT.lua
-Locales\itIT_Data.lua
-Locales\ptBR.lua
-Locales\ptBR_Data.lua
-Locales\ruRU.lua
-Locales\ruRU_Data.lua
-Locales\koKR.lua
-Locales\koKR_Data.lua
+# Must be first: detects dev builds and sets LARIASWEEKLYCHECKLIST_LOAD_ALL_LOCALES
+# before any locale guard (if GetLocale() ~= X and not ...) is evaluated.
+locales\init.lua
+
+locales\deDE.lua
+locales\deDE_Data.lua
+locales\esES.lua
+locales\esES_Data.lua
+locales\esMX.lua
+locales\esMX_Data.lua
+locales\frFR.lua
+locales\frFR_Data.lua
+locales\itIT.lua
+locales\itIT_Data.lua
+locales\ptBR.lua
+locales\ptBR_Data.lua
+locales\ruRU.lua
+locales\ruRU_Data.lua
+locales\koKR.lua
+locales\koKR_Data.lua

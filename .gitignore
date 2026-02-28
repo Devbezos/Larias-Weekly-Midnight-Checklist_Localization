@@ -1,5 +1,6 @@
 
 scripts/deploy_to_wow.ps1
+scripts/*.py
 
 __pycache__/
 *.pyc
