@@ -43,10 +43,7 @@ jobs:
         with:
           repository: Devbezos/Larias-Weekly-Checklist
           path: _main-addon
-          # Uses the default GITHUB_TOKEN – works as long as both repos are
-          # under the same account. If the main repo is private, add a PAT
-          # secret (e.g. ADDON_REPO_TOKEN) and reference it here instead.
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.ADDON_REPO_TOKEN }}
 
       # ── 3. Python ───────────────────────────────────────────────────────────
       - name: Set up Python
