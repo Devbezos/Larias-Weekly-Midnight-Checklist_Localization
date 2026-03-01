@@ -1,7 +1,7 @@
 --[[
 Russian (ruRU) strings for Larias's Weekly Checklist
+-- Always loaded so the locale-override feature works regardless of client language.
 ]]
-if GetLocale() ~= "ruRU" and not _G["LARIASWEEKLYCHECKLIST_LOAD_ALL_LOCALES"] then return end
 
 local LOCALE = "ruRU"
 local LOCALE_REGISTRY_KEY = "LARIASWEEKLYCHECKLIST_LOCALE_REGISTRY"
@@ -31,7 +31,8 @@ local STRINGS = {
     OPTIONS_HIDE_GREAT_VAULT = "Скрыть Великое хранилище",
     OPTIONS_HIDE_CURRENCY = "Скрыть валюту",
 
-    HIDE_COMPLETED_WEEKS = "Скрыть завершённые недели",
+    OPTIONS_HIDE_COMPLETED_TASKS = "Скрыть завершённые задания", -- ⚠️ UNVERIFIED
+    HIDE_FINISHED_WEEKS = "Скрыть завершённые недели",
     OPTIONS_HIDE_CHANGE_WEEK_BTN = "Скрыть кнопку «Сменить неделю»",
     OPTIONS_HIDE_ILVL_REF_BTN = "Скрыть всплывающее окно уровней предметов",
     OPTIONS_HIDE_CHAR_SELECT = "Скрыть выбор персонажа",
@@ -45,6 +46,7 @@ local STRINGS = {
     OPTIONS_HIDE_SLIDERS        = "Скрыть ползунки",
     OPTIONS_HIDE_OPACITY_SLIDER = "Скрыть ползунок прозрачности",
     OPTIONS_HIDE_UPDATE_NOTICE  = "Скрыть предупреждения об обновлениях", -- ⚠️ UNVERIFIED
+    OPTIONS_DISABLE_UPGRADE_WARN = "Отключить предупреждения об улучшении", -- ⚠️ UNVERIFIED
     OPTIONS_HIDE_MINIMAP_BTN    = "Скрыть кнопку миникарты", -- ⚠️ UNVERIFIED
     -- Color picker swatch labels (gear popup)
     COLOR_PICKER_BG             = "Фон", -- ⚠️ UNVERIFIED
@@ -155,9 +157,6 @@ local STRINGS = {
     ILVLREF_TOGGLE_SHRINK = "Свернуть",
     -- Slash commands
     SLASH_USAGE_TOGGLE = "Использование: /larias или /lcl для показа/скрытия списка",
-    SLASH_USAGE_LOCALE = "Использование: /larias locale auto|enUS|deDE|esES|esMX|frFR|itIT|ptBR|ruRU",
-    SLASH_LOCALE_SET_FMT = "Язык установлен на %s (активный: %s)",
-    SLASH_LOCALE_NOT_FOUND = "Неизвестный язык '%s'. Доступны: auto|%s", -- ⚠️ UNVERIFIED
 }
 
 for key, value in pairs(STRINGS) do

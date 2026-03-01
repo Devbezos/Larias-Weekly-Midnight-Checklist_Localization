@@ -1,7 +1,7 @@
 --[[
 Korean Korea (koKR) strings for Larias's Weekly Checklist
+-- Always loaded so the locale-override feature works regardless of client language.
 ]]
-if GetLocale() ~= "koKR" and not _G["LARIASWEEKLYCHECKLIST_LOAD_ALL_LOCALES"] then return end
 
 local LOCALE = "koKR"
 local LOCALE_REGISTRY_KEY = "LARIASWEEKLYCHECKLIST_LOCALE_REGISTRY"
@@ -31,7 +31,8 @@ local STRINGS = {
     OPTIONS_HIDE_GREAT_VAULT = "위대한 금고 숨기기",
     OPTIONS_HIDE_CURRENCY = "화폐 숨기기",
 
-    HIDE_COMPLETED_WEEKS = "완료된 주 숨기기",
+    OPTIONS_HIDE_COMPLETED_TASKS = "완료된 작업 숨기기", -- ⚠️ UNVERIFIED
+    HIDE_FINISHED_WEEKS = "완료된 주 숨기기",
     OPTIONS_HIDE_CHANGE_WEEK_BTN = "주 변경 버튼 숨기기",
     OPTIONS_HIDE_ILVL_REF_BTN = "아이템 레벨 팝업 숨기기",
     OPTIONS_HIDDEN_CHARS_TITLE = "숨겨진 캐릭터:",
@@ -44,6 +45,7 @@ local STRINGS = {
     OPTIONS_HIDE_SLIDERS        = "슬라이더 숨기기", -- ⚠️ UNVERIFIED
     OPTIONS_HIDE_OPACITY_SLIDER = "불투명도 슬라이더 숨기기", -- ⚠️ UNVERIFIED
     OPTIONS_HIDE_UPDATE_NOTICE  = "업데이트 경고 숨기기", -- ⚠️ UNVERIFIED
+    OPTIONS_DISABLE_UPGRADE_WARN = "업그레이드 경고 비활성화", -- ⚠️ UNVERIFIED
     OPTIONS_HIDE_MINIMAP_BTN    = "미니맵 버튼 숨기기", -- ⚠️ UNVERIFIED
     -- Color picker swatch labels (gear popup)
     COLOR_PICKER_BG             = "배경", -- ⚠️ UNVERIFIED
@@ -156,9 +158,7 @@ local STRINGS = {
 
 	-- Slash commands
 	SLASH_USAGE_TOGGLE = "사용법: /larias 혹은 /lcl 를 입력하여 체크리스트를 켜거나 끄세요.",
-	SLASH_USAGE_LOCALE = "사용법: /larias locale auto|enUS|deDE|esES|esMX|frFR|itIT|ptBR|ruRU|koKR",
-	SLASH_LOCALE_SET_FMT = "언어가 %s로 할당 되었습니다. (effective: %s)",
-	SLASH_LOCALE_NOT_FOUND = "알 수 없는 언어 '%s'. 사용 가능: auto|%s", -- ⚠️ UNVERIFIED
+
 }
 
 for key, value in pairs(STRINGS) do

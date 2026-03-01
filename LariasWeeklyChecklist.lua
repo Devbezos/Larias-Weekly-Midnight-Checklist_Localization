@@ -7,16 +7,6 @@
 -- Design goal: keep runtime behavior event-driven and avoid per-frame work.
 local addonName = ...
 
--- On dev/pre-release builds (version contains "-", e.g. "2.1.0-alpha", "2.0.6-1"),
--- automatically enable all locales for this session so every translation can be
--- tested without changing the WoW client language.
-do
-    local ver = (GetAddOnMetadata and GetAddOnMetadata(addonName, "Version")) or ""
-    if ver:find("%-") then
-        _G["LARIASWEEKLYCHECKLIST_LOAD_ALL_LOCALES"] = true
-    end
-end
-
 -- NOTE: AceComm-3.0 and AceBucket-3.0 are intentionally NOT listed here.
 -- Embedding them at NewAddon time causes a hard Lua error if the library is
 -- missing or overshadowed by another addon's Ace3 build that omits them,
@@ -271,9 +261,7 @@ function Addon:ShouldShowLocalizationCompanionHint()
     return true
 end
 
--- Session-only locale override set by slash command.
--- This intentionally does NOT persist across /reload or relog.
--- Addon._sessionLocaleOverride is set by the /larias locale command.
+-- Addon._sessionLocaleOverride is set by SetLocaleOverride.
 
 -- Default values applied to each character's data block on first access.
 -- Keys with false/nil defaults are omitted here; the inline logic in EnsureDB
@@ -284,7 +272,6 @@ local CHAR_DEFAULTS = {
     showCurrency          = true,
     showChangeWeekBtn     = true,
     showIlvlRefBtn        = true,
-    showCharPickerBtn     = true,
     showScaleSlider       = true,
     showOpacitySlider     = true,
     hideUpdateNotice      = false,
@@ -312,7 +299,7 @@ local function SetupAddonDB()
             uiOpacityPct  = 65,
             minimap       = {},  -- LibDBIcon position/hide state (account-wide)
             charClasses   = {},  -- [profileKey] = classToken (e.g. "WARRIOR")
-            hiddenChars   = {},  -- [profileKey] = true (hidden from char picker dropdown)
+            localeOverride = "",  -- persisted locale override ("" = auto)
             -- Per-character data, each keyed by "CharName - Realm".
             -- Holds checked items, collapsed sections, preferences, snapshot, etc.
             chars = {},
@@ -370,7 +357,7 @@ local function MigrateProfileDataToGlobalChars()
     end
     -- Preferences
     for _, k in ipairs({ "hideCompletedSections", "showGreatVault", "showCurrency",
-                         "showChangeWeekBtn", "showIlvlRefBtn", "showCharPickerBtn", "debug" }) do
+                         "showChangeWeekBtn", "showIlvlRefBtn", "debug" }) do
         if oldProf[k] ~= nil then cdb[k] = oldProf[k] end
     end
 
@@ -385,7 +372,6 @@ local function MigrateProfileDataToGlobalChars()
     oldProf.showCurrency      = nil
     oldProf.showChangeWeekBtn = nil
     oldProf.showIlvlRefBtn    = nil
-    oldProf.showCharPickerBtn = nil
     oldProf.debug             = nil
 end
 
@@ -442,6 +428,14 @@ end
 -- Initialize AceDB and minimap icon on addon load
 function Addon:OnInitialize()
     SetupAddonDB()
+    -- Restore persisted locale override only if the localization companion is
+    -- already loaded at this point. If it loads later, OnAddonLoaded handles it.
+    if self.IsLocalizationCompanionLoaded and self:IsLocalizationCompanionLoaded() then
+        local savedLocale = Addon.db and Addon.db.global and Addon.db.global.localeOverride
+        if type(savedLocale) == "string" and savedLocale ~= "" and savedLocale ~= "auto" then
+            self._sessionLocaleOverride = savedLocale
+        end
+    end
     if self.ApplyLocaleOverride then
         self:ApplyLocaleOverride()
     end
@@ -500,6 +494,14 @@ end
 function Addon:OnAddonLoaded(_, loadedName)
     if loadedName ~= LOCALIZATION_ADDON_NAME then return end
 
+    -- Companion just loaded: restore any saved locale override now that it is available.
+    do
+        local savedLocale = self.db and self.db.global and self.db.global.localeOverride
+        if type(savedLocale) == "string" and savedLocale ~= "" and savedLocale ~= "auto" then
+            self._sessionLocaleOverride = savedLocale
+        end
+    end
+
     -- Refresh strings/data now that locale addon is in memory.
     if self.ApplyLocaleOverride then
         self._dataSig = ""
@@ -552,10 +554,8 @@ function Addon:EnsureDB()
     if not self.db then
         SetupAddonDB()
     end
-    -- All per-character data lives in db.global.chars[key].  When viewing
-    -- another character (_viewingChar is set) return their data; otherwise
-    -- return the logged-in character's data.
-    local key   = self._viewingChar or self:GetCurrentProfileKey()
+    -- All per-character data lives in db.global.chars[key].
+    local key   = self:GetCurrentProfileKey()
     local chars = self.db.global.chars
     if not chars[key] then chars[key] = {} end
     local cdb = chars[key]
@@ -637,15 +637,20 @@ function Addon:PruneObsoleteSavedState()
     end
 end
 
--- Pick the best locale code to use (session override first, else client locale).
--- If the requested locale has no registered strings/data, fall back to enUS.
+-- Pick the best locale code to use.
+-- If the localization companion is loaded, check for a saved override first.
+-- Without the companion, always use the WoW client language.
 function Addon:GetEffectiveLocaleCode()
-    local override = tostring(self._sessionLocaleOverride or "auto")
+    local companionLoaded = self.IsLocalizationCompanionLoaded and self:IsLocalizationCompanionLoaded()
 
     local code
-    if override ~= "auto" and override ~= "" then
-        code = override
-    else
+    if companionLoaded then
+        local override = tostring(self._sessionLocaleOverride or "auto")
+        if override ~= "auto" and override ~= "" then
+            code = override
+        end
+    end
+    if not code then
         code = (GetLocale and GetLocale()) or "enUS"
     end
 
@@ -674,6 +679,25 @@ function Addon:ApplyLocaleOverride()
     end
 
     local selected = self:GetEffectiveLocaleCode()
+
+    -- Resize the frame based on the effective locale so translated labels fit.
+    -- enUS uses the baseline width; all other locales get extra room.
+    local isEnUS = (selected == "enUS")
+    local wantFrameW    = isEnUS and 520 or 570
+    local wantTextW     = isEnUS and 358 or 408
+    local wantGVLabelW  = isEnUS and 60  or 78
+    if self.UI then
+        self.UI.frameW       = wantFrameW
+        self.UI.itemTextWidth = wantTextW
+    end
+    if self.GV_LAYOUT then
+        self.GV_LAYOUT.LABEL_W = wantGVLabelW
+        self.GV_LAYOUT.GRID_X  = wantGVLabelW + (self.GV_LAYOUT.LABEL_GAP or 5)
+    end
+    local mf = self._mainFrame
+    if mf and mf.GetHeight then
+        mf:SetWidth(wantFrameW)
+    end
 
     Wipe(self.L)
 
@@ -707,12 +731,17 @@ function Addon:ApplyLocaleOverride()
     end
 end
 
--- Set a session-only locale override (does not persist to SavedVariables).
+-- Set a locale override and persist it to SavedVariables so it survives /reload.
 function Addon:SetLocaleOverride(value)
     value = tostring(value or "auto")
     if value == "" then value = "auto" end
 
-    -- Session-only: do not persist to SavedVariables.
+    -- Persist to SavedVariables.
+    local gdb = self.db and self.db.global
+    if gdb then
+        gdb.localeOverride = (value == "auto") and "" or value
+    end
+
     if value == "auto" then
         self._sessionLocaleOverride = nil
     else
@@ -1766,10 +1795,6 @@ function Addon:CreateFrame()
         if Addon._gearPopup and Addon._gearPopup.IsShown and Addon._gearPopup:IsShown() then
             Addon._gearPopup:Hide()
         end
-        if Addon._hiddenCharsPicker and Addon._hiddenCharsPicker.IsShown and Addon._hiddenCharsPicker:IsShown() then
-            Addon._hiddenCharsPicker:Hide()
-        end
-        if Addon._cpClose then Addon._cpClose() end
     end)
     -- Record this character's class the first time the list is opened so the
     -- character picker can colour-code entries. Intentionally deferred from
@@ -1969,102 +1994,6 @@ function Addon:ToggleCommand(input)
         return
     end
 
-    if cmd == "locale" or cmd == "lang" then
-        if not self.SetLocaleOverride then
-            self:Print("Locale override is not available in this build.")
-            return
-        end
-
-        -- Locale overrides are intended to work with the optional localization companion addon.
-        -- If it's not installed, the command would appear to do nothing, so explain why.
-        if self.IsLocalizationCompanionLoaded and self.HasNonEnUSLocaleTables
-            and (not self:IsLocalizationCompanionLoaded())
-            and (not self:HasNonEnUSLocaleTables()) then
-            self:Print("Locale overrides require the optional companion addon 'LariasWeeklyChecklist_Localization' to be installed.")
-            return
-        end
-
-        if arg:lower() == "status" or arg == "?" then
-            local client = (GetLocale and GetLocale()) or ""
-            local reg = GetLocaleRegistry()
-            local strings = reg and reg.strings
-            local data = reg and reg.data
-            local function HasTable(t, key)
-                return type(t) == "table" and type(t[key]) == "table"
-            end
-            local override = tostring(self._sessionLocaleOverride or "auto")
-            local effective = (self.GetEffectiveLocaleCode and self:GetEffectiveLocaleCode()) or ""
-
-            self:Print(("Locale status: client=%s override=%s effective=%s"):format(tostring(client), tostring(override), tostring(effective)))
-            self:Print(("Locale status: strings.esMX=%s data.esMX=%s strings.enUS=%s data.enUS=%s"):format(
-                tostring(HasTable(strings, "esMX")),
-                tostring(HasTable(data, "esMX")),
-                tostring(HasTable(strings, "enUS")),
-                tostring(HasTable(data, "enUS"))
-            ))
-            return
-        end
-
-        if arg == "" then
-            -- List available locales dynamically from the registry.
-            local reg2     = GetLocaleRegistry()
-            local strings2 = reg2 and reg2.strings or {}
-            local data2    = reg2 and reg2.data    or {}
-            local seen2, list2 = {}, {}
-            for k in pairs(strings2) do if not seen2[k] then seen2[k]=true; tinsert(list2,k) end end
-            for k in pairs(data2)   do if not seen2[k] then seen2[k]=true; tinsert(list2,k) end end
-            table.sort(list2)
-            local available = (#list2 > 0) and table.concat(list2, "|") or "enUS"
-            self:Print("Available locales: auto|" .. available)
-            return
-        end
-
-        -- Normalize casing: do a case-insensitive match against all registered locales
-        -- plus the special "auto" token.
-        local raw   = arg
-        local lower = raw:lower()
-        local value
-
-        if lower == "auto" then
-            value = "auto"
-        else
-            -- Scan registry for a case-insensitive match.
-            local reg2    = GetLocaleRegistry()
-            local strings2 = reg2 and reg2.strings or {}
-            local data2    = reg2 and reg2.data    or {}
-            for k in pairs(strings2) do
-                if k:lower() == lower then value = k; break end
-            end
-            if not value then
-                for k in pairs(data2) do
-                    if k:lower() == lower then value = k; break end
-                end
-            end
-        end
-
-        if not value then
-            -- Build a sorted list of available locale codes from the registry.
-            local reg2    = GetLocaleRegistry()
-            local strings2 = reg2 and reg2.strings or {}
-            local data2    = reg2 and reg2.data    or {}
-            local seen2, list2 = {}, {}
-            for k in pairs(strings2) do if not seen2[k] then seen2[k]=true; tinsert(list2,k) end end
-            for k in pairs(data2)   do if not seen2[k] then seen2[k]=true; tinsert(list2,k) end end
-            table.sort(list2)
-            local available = (#list2 > 0) and table.concat(list2, "|")
-                              or "enUS"
-            self:Print((L.SLASH_LOCALE_NOT_FOUND
-                or "Unknown locale '%s'. Available: auto|%s"):format(tostring(raw), available))
-            return
-        end
-
-        self:SetLocaleOverride(value)
-        local effective = (self.GetEffectiveLocaleCode and self:GetEffectiveLocaleCode()) or ""
-        self:Print((L.SLASH_LOCALE_SET_FMT or "Locale override set to %s (effective: %s)"):format(tostring(value), tostring(effective)))
-        return
-    end
-
     -- Unknown args: show help.
     self:Print(L.SLASH_USAGE_TOGGLE or "Usage: /larias or /lcl to toggle the checklist")
-    self:Print(L.SLASH_USAGE_LOCALE or "Usage: /larias locale auto|enUS|esMX")
 end

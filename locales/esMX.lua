@@ -1,7 +1,7 @@
 --[[
 Spanish (esMX) strings for Larias's Weekly Checklist
+-- Always loaded so the locale-override feature works regardless of client language.
 ]]
-if GetLocale() ~= "esMX" and not _G["LARIASWEEKLYCHECKLIST_LOAD_ALL_LOCALES"] then return end
 
 local LOCALE = "esMX"
 local LOCALE_REGISTRY_KEY = "LARIASWEEKLYCHECKLIST_LOCALE_REGISTRY"
@@ -31,7 +31,8 @@ local STRINGS = {
     OPTIONS_HIDE_GREAT_VAULT = "Ocultar Gran Cámara",
     OPTIONS_HIDE_CURRENCY = "Ocultar moneda",
 
-    HIDE_COMPLETED_WEEKS = "Ocultar semanas completadas",
+    OPTIONS_HIDE_COMPLETED_TASKS = "Ocultar tareas completadas", -- ⚠️ UNVERIFIED
+    HIDE_FINISHED_WEEKS = "Ocultar semanas completadas",
     OPTIONS_HIDE_CHANGE_WEEK_BTN = "Ocultar botón Cambiar semana",
     OPTIONS_HIDE_ILVL_REF_BTN = "Ocultar ventana emergente de Niveles de objeto",
     OPTIONS_HIDDEN_CHARS_TITLE = "Personajes ocultos:",
@@ -44,6 +45,7 @@ local STRINGS = {
     OPTIONS_HIDE_SLIDERS        = "Ocultar controles deslizantes",
     OPTIONS_HIDE_OPACITY_SLIDER = "Ocultar control de opacidad",
     OPTIONS_HIDE_UPDATE_NOTICE  = "Ocultar advertencias de actualización", -- ⚠️ UNVERIFIED
+    OPTIONS_DISABLE_UPGRADE_WARN = "Desactivar advertencias de mejora", -- ⚠️ UNVERIFIED
     OPTIONS_HIDE_MINIMAP_BTN    = "Ocultar botón del minimapa", -- ⚠️ UNVERIFIED
     -- Color picker swatch labels (gear popup)
     COLOR_PICKER_BG             = "Fondo", -- ⚠️ UNVERIFIED
@@ -156,10 +158,6 @@ local STRINGS = {
 
     -- Slash commands
     SLASH_USAGE_TOGGLE = "Uso: /larias o /lcl para mostrar/ocultar la lista",
-
-    SLASH_USAGE_LOCALE = "Uso: /larias locale auto|enUS|deDE|esES|esMX|frFR|itIT|ptBR|ruRU",
-    SLASH_LOCALE_SET_FMT = "Idioma configurado a %s (efectivo: %s)",
-    SLASH_LOCALE_NOT_FOUND = "Idioma desconocido '%s'. Disponible: auto|%s", -- ⚠️ UNVERIFIED
 }
 
 for key, value in pairs(STRINGS) do

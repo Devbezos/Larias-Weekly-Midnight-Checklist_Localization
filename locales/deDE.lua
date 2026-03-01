@@ -1,7 +1,7 @@
 --[[
 German (deDE) strings for Larias's Weekly Checklist
+-- Always loaded so the locale-override feature works regardless of client language.
 ]]
-if GetLocale() ~= "deDE" and not _G["LARIASWEEKLYCHECKLIST_LOAD_ALL_LOCALES"] then return end
 
 local LOCALE = "deDE"
 local LOCALE_REGISTRY_KEY = "LARIASWEEKLYCHECKLIST_LOCALE_REGISTRY"
@@ -31,7 +31,8 @@ local STRINGS = {
     OPTIONS_HIDE_GREAT_VAULT = "Große Schatzkammer ausblenden",
     OPTIONS_HIDE_CURRENCY = "Währung ausblenden",
 
-    HIDE_COMPLETED_WEEKS = "Abgeschlossene Wochen ausblenden",
+    OPTIONS_HIDE_COMPLETED_TASKS = "Abgeschlossene Aufgaben ausblenden", -- ⚠️ UNVERIFIED
+    HIDE_FINISHED_WEEKS = "Abgeschlossene Wochen ausblenden",
     OPTIONS_HIDE_CHANGE_WEEK_BTN = "Schaltfläche 'Woche wechseln' ausblenden",
     OPTIONS_HIDE_ILVL_REF_BTN = "Gegenstandsstufen-Popup ausblenden",
     OPTIONS_HIDDEN_CHARS_TITLE = "Versteckte Charaktere:",
@@ -44,6 +45,7 @@ local STRINGS = {
     OPTIONS_HIDE_SLIDERS        = "Regler ausblenden",
     OPTIONS_HIDE_OPACITY_SLIDER = "Deckkraftregler ausblenden",
     OPTIONS_HIDE_UPDATE_NOTICE  = "Update-Warnungen ausblenden", -- ⚠️ UNVERIFIED
+    OPTIONS_DISABLE_UPGRADE_WARN = "Upgrade-Warnungen deaktivieren", -- ⚠️ UNVERIFIED
     OPTIONS_HIDE_MINIMAP_BTN    = "Minimap-Symbol ausblenden", -- ⚠️ UNVERIFIED
     -- Color picker swatch labels (gear popup)
     COLOR_PICKER_BG             = "Hintergrund", -- ⚠️ UNVERIFIED
@@ -156,9 +158,6 @@ local STRINGS = {
 
     -- Slash commands
     SLASH_USAGE_TOGGLE = "Verwendung: /larias oder /lcl zum Ein-/Ausblenden",
-    SLASH_USAGE_LOCALE = "Verwendung: /larias locale auto|enUS|deDE|esES|esMX|frFR|itIT|ptBR|ruRU",
-    SLASH_LOCALE_SET_FMT = "Sprache gesetzt auf %s (aktiv: %s)",
-    SLASH_LOCALE_NOT_FOUND = "Unbekannte Sprache '%s'. Verfügbar: auto|%s", -- ⚠️ UNVERIFIED
 }
 
 for key, value in pairs(STRINGS) do

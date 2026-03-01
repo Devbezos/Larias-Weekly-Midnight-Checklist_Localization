@@ -1,7 +1,7 @@
 --[[
 Italian (itIT) strings for Larias's Weekly Checklist
+-- Always loaded so the locale-override feature works regardless of client language.
 ]]
-if GetLocale() ~= "itIT" and not _G["LARIASWEEKLYCHECKLIST_LOAD_ALL_LOCALES"] then return end
 
 local LOCALE = "itIT"
 local LOCALE_REGISTRY_KEY = "LARIASWEEKLYCHECKLIST_LOCALE_REGISTRY"
@@ -31,7 +31,8 @@ local STRINGS = {
     OPTIONS_HIDE_GREAT_VAULT = "Nascondi Grande Forziere",
     OPTIONS_HIDE_CURRENCY = "Nascondi valuta",
 
-    HIDE_COMPLETED_WEEKS = "Nascondi settimane completate",
+    OPTIONS_HIDE_COMPLETED_TASKS = "Nascondi attività completate", -- ⚠️ UNVERIFIED
+    HIDE_FINISHED_WEEKS = "Nascondi settimane completate",
     OPTIONS_HIDE_CHANGE_WEEK_BTN = "Nascondi pulsante Cambia settimana",
     OPTIONS_HIDE_ILVL_REF_BTN = "Nascondi il popup dei Livelli degli oggetti",
     OPTIONS_HIDDEN_CHARS_TITLE = "Personaggi nascosti:",
@@ -44,6 +45,7 @@ local STRINGS = {
     OPTIONS_HIDE_SLIDERS        = "Nascondi cursori",
     OPTIONS_HIDE_OPACITY_SLIDER = "Nascondi cursore di opacità",
     OPTIONS_HIDE_UPDATE_NOTICE  = "Nascondi avvertimenti di aggiornamento", -- ⚠️ UNVERIFIED
+    OPTIONS_DISABLE_UPGRADE_WARN = "Disabilita avvisi di potenziamento", -- ⚠️ UNVERIFIED
     OPTIONS_HIDE_MINIMAP_BTN    = "Nascondi pulsante minimappa", -- ⚠️ UNVERIFIED
     -- Color picker swatch labels (gear popup)
     COLOR_PICKER_BG             = "Sfondo", -- ⚠️ UNVERIFIED
@@ -155,9 +157,6 @@ local STRINGS = {
 
     -- Slash commands
     SLASH_USAGE_TOGGLE = "Utilizzo: /larias o /lcl per mostrare/nascondere la lista",
-    SLASH_USAGE_LOCALE = "Utilizzo: /larias locale auto|enUS|deDE|esES|esMX|frFR|itIT|ptBR|ruRU",
-    SLASH_LOCALE_SET_FMT = "Lingua impostata su %s (effettiva: %s)",
-    SLASH_LOCALE_NOT_FOUND = "Lingua sconosciuta '%s'. Disponibili: auto|%s", -- ⚠️ UNVERIFIED
 }
 
 for key, value in pairs(STRINGS) do
