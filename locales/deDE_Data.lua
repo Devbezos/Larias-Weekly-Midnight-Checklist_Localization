@@ -32,15 +32,15 @@ local DATASET = {
         title = "Früher Zugang - 26. Feb. bis 2. März - Pay to Win",
         items = {
             { id = "log_on_to_each_character_you_plan_on_leveling_so_they_start_accumulating_rested_xp", text = "Mit jedem Charakter einloggen, den du leveln möchtest, damit er mit dem Ansammeln ausgeruhter EP beginnt." }, -- ⚠️ UNVERIFIED: ausgeruhte EP (Rested XP)
-            { id = "level_characters_warmode_on_to_90_dmf_opens_sunday_for_10_more_exp_no_longer_gives_renown", text = "Charaktere im Kriegsmodus auf Level 90 bringen – JdD öffnet Sonntag für +10 % XP. GIBT KEIN ANSEHEN MEHR" },
-            { id = "if_available_complete_the_weekly_saltheril_s_soiree_in_eversong_woods_not_available_in_early_access", text = "Falls verfügbar: Wöchentliches Saltheril-Fest im Immergrünen Wald abschließen. - NOT AVAILABLE IN EARLY ACCESS" },
-            { id = "if_available_complete_the_weekly_abundance_event_in_zul_aman_bugged_in_early_access_dont_do", text = "Falls verfügbar: Wöchentliches Überfluss-Ereignis in Zul'Aman abschließen. - BUGGED IN EARLY ACCESS - DON'T DO" },
-            { id = "if_available_complete_the_weekly_legends_of_the_haranir_event_in_harandar", text = "Falls verfügbar: Wöchentliches Legenden der Haranir-Ereignis in Harandar abschließen." },
-            { id = "if_available_complete_the_weekly_stormarion_assault_in_the_voidstorm_available_in_early_access", text = "Falls verfügbar: Wöchentlichen Sturmarion-Angriff im Nichtsturm abschließen. - AVAILABLE IN EARLY ACCESS" },
+            { id = "level_characters_warmode_on_to_90_dmf_opens_sunday_for_10_more_exp", text = "Charaktere im Kriegsmodus auf Level 90 bringen – JdD öffnet Sonntag für +10 % XP." },
+            { id = "complete_the_weekly_stormarion_assault_in_the_voidstorm_it_is_available_in_early_access", text = "Wöchentlichen Sturmarion-Angriff im Nichtsturm abschließen. (Im Frühen Zugang verfügbar)" }, -- ⚠️ UNVERIFIED
             { id = "optional_kill_each_rare_once_in_each_zone_for_renown_these_are_a_weekly_lockout_for_each_rare", text = "(Optional) Jeden seltenen Gegner einmal pro Zone für Ansehen töten. Wöchentlicher Lockout pro Seltenem." },
             { id = "hunt_down_each_region_s_treasures_for_free_renown_see_doc_for_guide", text = "Schätze jeder Region für kostenloses Ansehen aufspüren. Dokument für Guide lesen." }, -- ⚠️ UNVERIFIED: Midnight Regionsschätze
             { id = "complete_4x_prey_on_normal_difficulty_for_renown", text = "4x Beute auf Normaler Schwierigkeit für Ansehen abschließen." },
-            { id = "complete_side_quest_chains_for_renown_can_be_done_on_alts_to_level_at_same_time_new_darkmoon_faire_no_longer_gives_a_renown_buff", text = "Nebenquestketten für Ansehen abschließen. (Kann auf Alts gleichzeitig beim Leveln erledigt werden). NEU: DER JAHRMARKT DES DUNKELMONDES GEWÄHRT KEINEN ANSEHEN-BUFF MEHR!" },
+            { id = "complete_the_midnight_lore_hunter_achievement_for_renown_see_doc_for_guide", text = "Midnight-Loreschützer-Errungenschaft für Ansehen abschließen – Guide im Dokument lesen" }, -- ⚠️ UNVERIFIED
+            { id = "complete_the_highest_peaks_achievement_for_renown_see_doc_for_guide", text = "Die-höchsten-Gipfel-Errungenschaft für Ansehen abschließen – Guide im Dokument lesen" }, -- ⚠️ UNVERIFIED
+            { id = "complete_side_quest_chains_for_renown_can_be_done_on_alts_to_level_at_same_time_dmf_buff_does_not_give_renown", text = "Nebenquestketten für Ansehen abschließen. (Kann auf Alts gleichzeitig beim Leveln erledigt werden). JdD-Buff gewährt kein Ansehen." },
+            { id = "note_only_the_singularity_champion_renown_trinket_is_available_in_early_access_the_others_will_become_available_either_monday_after_the_official_launch_or_after_each_region_s_weekly_reset", text = "Hinweis: Nur das Champion-Ansehen-Schmuckstück der Singularität ist im Frühen Zugang verfügbar – die anderen werden entweder am Montag nach dem offiziellen Release oder nach dem wöchentlichen Reset jeder Region freigeschaltet." }, -- ⚠️ UNVERIFIED
         },
     },
     {
@@ -88,7 +88,7 @@ local DATASET = {
         items = {
             { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Keine Wappen ausgeben, bis es angewiesen wird" },
             { id = "do_lfr_for_tier_pieces_check_guide_for_why", text = "LFR für Tier-Teile machen (Guide lesen warum)" },
-            { id = "complete_a_world_tour_of_m0_dungeons_rewards_champ_ilvl", text = "Welttour der M0-Dungeons abschließen – Champion-Gs" },
+            { id = "optional_complete_a_world_tour_of_m0_dungeons_rewards_champ_ilvl", text = "(Optional?) Welttour der M0-Dungeons abschließen – Champion-Gs" }, -- ⚠️ UNVERIFIED
             { id = "complete_4x_nightmare_prey_for_champion_gear_and_renown", text = "4x Albtraum-Beute für Champion-Ausrüstung und Ansehen abschließen." },
             { id = "kill_world_boss_for_champ_2_6_250_ilvl_item", text = "Weltboss töten für Champion 2/6 250-Gs-Item" },
             { id = "if_available_complete_pvp_quest_for_guaranteed_hero_neck_ring", text = "Falls verfügbar: PvP-Quest für garantierten Helden-Hals/-Ring abschließen" },

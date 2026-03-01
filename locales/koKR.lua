@@ -34,7 +34,6 @@ local STRINGS = {
     HIDE_COMPLETED_WEEKS = "완료된 주 숨기기",
     OPTIONS_HIDE_CHANGE_WEEK_BTN = "주 변경 버튼 숨기기",
     OPTIONS_HIDE_ILVL_REF_BTN = "아이템 레벨 팝업 숨기기",
-    OPTIONS_HIDE_CHAR_SELECT = "캐릭터 선택 숨기기",
     OPTIONS_HIDDEN_CHARS_TITLE = "숨겨진 캐릭터:",
     OPTIONS_HIDDEN_CHARS_NONE = "없음",
     RESET_BUTTON = "목록 초기화",
@@ -53,6 +52,7 @@ local STRINGS = {
 
     -- Status banner
     STATUS_UPDATE_AVAILABLE_FMT = "업데이트 가능합니다! 현재 버전: %s, 최신 버전: %s.", -- ⚠️ UNVERIFIED
+    STATUS_SHEET_UPDATE_FMT     = "스프레드시트 업데이트 감지됨 – %d 버전 뒤처짐", -- ⚠️ UNVERIFIED
     STATUS_NO_TRANSLATION_FMT   = "%s에 대한 번역이 없습니다. 기여를 고려해 주세요!", -- ⚠️ UNVERIFIED
     STATUS_TRANSLATION_NOTICE   = "영어가 가장 최신 언어입니다. 체크리스트가 약간 구버전일 수 있습니다.", -- ⚠️ UNVERIFIED
     UI_OPACITY_LABEL            = "불투명도", -- ⚠️ UNVERIFIED
@@ -106,8 +106,6 @@ local STRINGS = {
 	TAB_LIST = "목록",
 	TAB_OPTIONS = "설정",
 	CHANGE_WEEK_BUTTON = "주 변경",
-	CHAR_PICKER_BUTTON = "프로필 변경", -- ⚠️ UNVERIFIED
-	CHAR_PICKER_TOOLTIP_REMOVE = "캐릭터를 제거하려면 설정 메뉴를 사용하세요.", -- ⚠️ UNVERIFIED
 	ILVLREF_BUTTON = "아이템 레벨 참조 표",
 
 	-- Item level reference popup

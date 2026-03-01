@@ -34,7 +34,6 @@ local STRINGS = {
     HIDE_COMPLETED_WEEKS = "Abgeschlossene Wochen ausblenden",
     OPTIONS_HIDE_CHANGE_WEEK_BTN = "Schaltfläche 'Woche wechseln' ausblenden",
     OPTIONS_HIDE_ILVL_REF_BTN = "Gegenstandsstufen-Popup ausblenden",
-    OPTIONS_HIDE_CHAR_SELECT = "Charakterauswahl ausblenden",
     OPTIONS_HIDDEN_CHARS_TITLE = "Versteckte Charaktere:",
     OPTIONS_HIDDEN_CHARS_NONE = "Keine",
     RESET_BUTTON = "Zurücksetzen",
@@ -52,6 +51,7 @@ local STRINGS = {
     COLOR_PICKER_HDR            = "Kopfzeile", -- ⚠️ UNVERIFIED
     -- Status banner
     STATUS_UPDATE_AVAILABLE_FMT = "Update verfügbar! Du hast %s, neueste Version ist %s.", -- ⚠️ UNVERIFIED
+    STATUS_SHEET_UPDATE_FMT     = "Tabellen-Update erkannt – Du hast %d Version(en) Rückstand", -- ⚠️ UNVERIFIED
     STATUS_NO_TRANSLATION_FMT   = "Keine Übersetzung für %s verfügbar. Trage gerne bei!", -- ⚠️ UNVERIFIED
     STATUS_TRANSLATION_NOTICE   = "Englisch ist die aktuellste Sprache. Deine Checkliste könnte leicht veraltet sein.", -- ⚠️ UNVERIFIED
     UI_OPACITY_LABEL            = "Deckkraft",
@@ -106,8 +106,6 @@ local STRINGS = {
     -- Main window
     TAB_OPTIONS = "Optionen",
     CHANGE_WEEK_BUTTON = "Woche wechseln",
-    CHAR_PICKER_BUTTON = "Profil wechseln",
-    CHAR_PICKER_TOOLTIP_REMOVE = "Um einen Charakter zu entfernen, verwende das Optionsmenü.",
     ILVLREF_BUTTON = "Gegenstandsstufen anzeigen",
 
     -- Item level reference popup

@@ -34,15 +34,15 @@ local DATASET = {
         title = "Acesso Antecipado - 26 fev. a 2 mar. - Pay to Win",
         items = {
             { id = "log_on_to_each_character_you_plan_on_leveling_so_they_start_accumulating_rested_xp", text = "Entre com cada personagem que planeja nivelar para que comecem a acumular EXP descansada." }, -- ⚠️ UNVERIFIED: EXP descansada (Rested XP)
-            { id = "level_characters_warmode_on_to_90_dmf_opens_sunday_for_10_more_exp_no_longer_gives_renown", text = "Suba personagens com Modo Guerra ativado ao nível 90 – a FLN abre no domingo com +10% de EXP. NÃO DÁ MAIS RENOME" },
-            { id = "if_available_complete_the_weekly_saltheril_s_soiree_in_eversong_woods_not_available_in_early_access", text = "Se disponível, complete a Soirée de Saltheril semanal em Bosques da Canção Eterna. - NOT AVAILABLE IN EARLY ACCESS" },
-            { id = "if_available_complete_the_weekly_abundance_event_in_zul_aman_bugged_in_early_access_dont_do", text = "Se disponível, complete o Evento de Abundância semanal em Zul'Aman. - BUGGED IN EARLY ACCESS - DON'T DO" },
-            { id = "if_available_complete_the_weekly_legends_of_the_haranir_event_in_harandar", text = "Se disponível, complete o evento semanal Lendas dos Haranir em Harandar." },
-            { id = "if_available_complete_the_weekly_stormarion_assault_in_the_voidstorm_available_in_early_access", text = "Se disponível, complete o Assalto de Stormarion semanal na Voragem do Vázio. - AVAILABLE IN EARLY ACCESS" },
+            { id = "level_characters_warmode_on_to_90_dmf_opens_sunday_for_10_more_exp", text = "Suba personagens com Modo Guerra ativado ao nível 90 – a FLN abre no domingo com +10% de EXP." },
+            { id = "complete_the_weekly_stormarion_assault_in_the_voidstorm_it_is_available_in_early_access", text = "Complete o Assalto de Stormarion semanal na Tempestade do Vazio. (Disponível no Acesso Antecipado)" }, -- ⚠️ UNVERIFIED
             { id = "optional_kill_each_rare_once_in_each_zone_for_renown_these_are_a_weekly_lockout_for_each_rare", text = "(Opcional) Mate cada raro uma vez em cada zona para renome. Cada raro tem bloqueio semanal." },
             { id = "hunt_down_each_region_s_treasures_for_free_renown_see_doc_for_guide", text = "Procure os tesouros de cada região para renome gratuito. Veja o documento para o guia." }, -- ⚠️ UNVERIFIED: tesouros de cada região (Midnight regional treasures)
             { id = "complete_4x_prey_on_normal_difficulty_for_renown", text = "Complete a Presa 4 vezes na dificuldade normal para obter renome." },
-            { id = "complete_side_quest_chains_for_renown_can_be_done_on_alts_to_level_at_same_time_new_darkmoon_faire_no_longer_gives_a_renown_buff", text = "Complete cadeias de missões secundárias para renome. (Pode ser feito em alts enquanto lvla). NOVIDADE: A FEIRA DA LUA NEGRA NÃO DÁ MAIS BÔNUS DE RENOME!" },
+            { id = "complete_the_midnight_lore_hunter_achievement_for_renown_see_doc_for_guide", text = "Complete a conquista Caçador de Lore do Midnight para renome - veja o documento para o guia" }, -- ⚠️ UNVERIFIED
+            { id = "complete_the_highest_peaks_achievement_for_renown_see_doc_for_guide", text = "Complete a conquista Os Picos Mais Altos para renome - veja o documento para o guia" }, -- ⚠️ UNVERIFIED
+            { id = "complete_side_quest_chains_for_renown_can_be_done_on_alts_to_level_at_same_time_dmf_buff_does_not_give_renown", text = "Complete cadeias de missões secundárias para renome. (Pode ser feito em alts enquanto lvla). O buff da FLN não dá renome." },
+            { id = "note_only_the_singularity_champion_renown_trinket_is_available_in_early_access_the_others_will_become_available_either_monday_after_the_official_launch_or_after_each_region_s_weekly_reset", text = "Nota: Apenas o acessório campeão de renome de A Singularidade está disponível no acesso antecipado - os outros ficarão disponíveis na segunda-feira após o lançamento oficial ou após o reinício semanal de cada região." }, -- ⚠️ UNVERIFIED
         },
     },
     {
@@ -90,7 +90,7 @@ local DATASET = {
         items = {
             { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Não gaste nenhum Brasão até receber instruções" },
             { id = "do_lfr_for_tier_pieces_check_guide_for_why", text = "Faça o LFR para peças de conjunto (veja o guia para entender o porquê)" },
-            { id = "complete_a_world_tour_of_m0_dungeons_rewards_champ_ilvl", text = "Complete um tour mundial das masmorras M0 - recompensa nível de item campeão" },
+            { id = "optional_complete_a_world_tour_of_m0_dungeons_rewards_champ_ilvl", text = "(Opcional?) Complete um tour mundial das masmorras M0 - recompensa nível de item campeão" }, -- ⚠️ UNVERIFIED
             { id = "complete_4x_nightmare_prey_for_champion_gear_and_renown", text = "Complete a Presa Pesadelo 4 vezes para equipamento campeão e renome." },
             { id = "kill_world_boss_for_champ_2_6_250_ilvl_item", text = "Mate o chefe mundial para um item campeão 2/6 nível 250" },
             { id = "if_available_complete_pvp_quest_for_guaranteed_hero_neck_ring", text = "Se disponível, complete a missão de JcJ para colar/anel herói garantido" },

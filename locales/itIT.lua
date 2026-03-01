@@ -34,7 +34,6 @@ local STRINGS = {
     HIDE_COMPLETED_WEEKS = "Nascondi settimane completate",
     OPTIONS_HIDE_CHANGE_WEEK_BTN = "Nascondi pulsante Cambia settimana",
     OPTIONS_HIDE_ILVL_REF_BTN = "Nascondi il popup dei Livelli degli oggetti",
-    OPTIONS_HIDE_CHAR_SELECT = "Nascondi selezione personaggio",
     OPTIONS_HIDDEN_CHARS_TITLE = "Personaggi nascosti:",
     OPTIONS_HIDDEN_CHARS_NONE = "Nessuno",
     RESET_BUTTON = "Reimposta",
@@ -106,8 +105,6 @@ local STRINGS = {
     -- Main window
     TAB_OPTIONS = "Opzioni",
     CHANGE_WEEK_BUTTON = "Cambia settimana",
-    CHAR_PICKER_BUTTON = "Cambia profilo",
-    CHAR_PICKER_TOOLTIP_REMOVE = "Per rimuovere un personaggio, usa il menu Opzioni.",
     ILVLREF_BUTTON = "Vedi livelli oggetto",
 
     -- Item level reference popup

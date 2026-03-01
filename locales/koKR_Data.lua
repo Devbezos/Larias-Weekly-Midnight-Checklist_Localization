@@ -32,15 +32,15 @@ local DATASET = {
         title = "얼리 억세스 - 2월 26일부터 3월 2일 까지 - 페이투윈 ㄷㄷ",
         items = {
             { id = "log_on_to_each_character_you_plan_on_leveling_so_they_start_accumulating_rested_xp", text = "레벨업할 각 캐릭터에 로그인하여 휴식 경험치 누적을 시작하게 하세요." }, -- ⚠️ UNVERIFIED: 휴식 경험치 (Rested XP)
-            { id = "level_characters_warmode_on_to_90_dmf_opens_sunday_for_10_more_exp_no_longer_gives_renown", text = "전쟁 모드를 켜고 90까지 레벨업 - 일요일부터 다크문으로 10% 경험치 버프. 더 이상 영예를 주지 않음" },
-            { id = "if_available_complete_the_weekly_saltheril_s_soiree_in_eversong_woods_not_available_in_early_access", text = "가능하다면, Eversong Woods에서 주간 Saltheril's Soiree 완료 - NOT AVAILABLE IN EARLY ACCESS" },
-            { id = "if_available_complete_the_weekly_abundance_event_in_zul_aman_bugged_in_early_access_dont_do", text = "가능하다면, 줄아만에서 주간 풍요 이벤트 완료 - BUGGED IN EARLY ACCESS - DON'T DO" },
-            { id = "if_available_complete_the_weekly_legends_of_the_haranir_event_in_harandar", text = "가능하다면, 하란다르에서 주간 하라니르의 전설 이벤트 완료" },
-            { id = "if_available_complete_the_weekly_stormarion_assault_in_the_voidstorm_available_in_early_access", text = "가능하다면, 공허폭풍에서 주간 Stormarion Assault 완료 - AVAILABLE IN EARLY ACCESS" },
+            { id = "level_characters_warmode_on_to_90_dmf_opens_sunday_for_10_more_exp", text = "전쟁 모드를 켜고 90까지 레벨업 - 일요일부터 다크문으로 10% 경험치 버프." },
+            { id = "complete_the_weekly_stormarion_assault_in_the_voidstorm_it_is_available_in_early_access", text = "공허폭풍에서 주간 Stormarion Assault 완료. (얼리 억세스에서 이용 가능)" }, -- ⚠️ UNVERIFIED
             { id = "optional_kill_each_rare_once_in_each_zone_for_renown_these_are_a_weekly_lockout_for_each_rare", text = "(선택) 영예를 위해 모든 희귀몹을 한번씩 잡기. 희귀몹마다 주1회만 평판 지급" },
             { id = "hunt_down_each_region_s_treasures_for_free_renown_see_doc_for_guide", text = "각 지역의 보물을 찾아 무료 영예 획득. 가이드는 문서 참조." }, -- ⚠️ UNVERIFIED: 각 지역의 보물 (Midnight regional treasures)
-            { id = "complete_4x_prey_on_normal_difficulty_for_renown", text = "영예를 위해 4x 사낥감을 일반 난이도로 완료" },
-            { id = "complete_side_quest_chains_for_renown_can_be_done_on_alts_to_level_at_same_time_new_darkmoon_faire_no_longer_gives_a_renown_buff", text = "영예 획득을 위해 사이드 쿠스트 진행 (부캐들 레벨업 하면서 진행 가능). 신규: 다크문 페어가 더 이상 영예 버프를 제공하지 않습니다!" },
+            { id = "complete_4x_prey_on_normal_difficulty_for_renown", text = "영예를 위해 4x 사냥감을 일반 난이도로 완료" },
+            { id = "complete_the_midnight_lore_hunter_achievement_for_renown_see_doc_for_guide", text = "영예를 위해 미드나이트 로어 사냥꾼 업적 달성 - 가이드는 문서 참조" }, -- ⚠️ UNVERIFIED
+            { id = "complete_the_highest_peaks_achievement_for_renown_see_doc_for_guide", text = "영예를 위해 가장 높은 봉우리 업적 달성 - 가이드는 문서 참조" }, -- ⚠️ UNVERIFIED
+            { id = "complete_side_quest_chains_for_renown_can_be_done_on_alts_to_level_at_same_time_dmf_buff_does_not_give_renown", text = "영예 획득을 위해 사이드 퀘스트 진행 (부캐들 레벨업 하면서 진행 가능). 다크문 페어 버프는 영예를 주지 않습니다." },
+            { id = "note_only_the_singularity_champion_renown_trinket_is_available_in_early_access_the_others_will_become_available_either_monday_after_the_official_launch_or_after_each_region_s_weekly_reset", text = "참고: 얼리 억세스에서는 특이점 챔피언 영예 장신구만 이용 가능합니다. 나머지는 공식 출시 후 월요일 또는 각 지역 주간 리셋 후 이용 가능합니다." }, -- ⚠️ UNVERIFIED
         },
     },
     {
@@ -88,7 +88,7 @@ local DATASET = {
         items = {
             { id = "do_not_spend_any_crests_until_told_to_do_so", text = "언급하기 전까지는 절대 문장을 소모하지 말 것" },
             { id = "do_lfr_for_tier_pieces_check_guide_for_why", text = "티어 획득을 위해 공찾 돌기 (이유는 문서 참조)" },
-            { id = "complete_a_world_tour_of_m0_dungeons_rewards_champ_ilvl", text = "깡신런 완료 - 보상 챔피언 246 장비" },
+            { id = "optional_complete_a_world_tour_of_m0_dungeons_rewards_champ_ilvl", text = "(선택?) 깡신런 완료 - 보상 챔피언 246 장비" }, -- ⚠️ UNVERIFIED
             { id = "complete_4x_nightmare_prey_for_champion_gear_and_renown", text = "챔피언 장비 및 영예를 위해 4x 사냥감을 악몽 난이도로 완료" },
             { id = "kill_world_boss_for_champ_2_6_250_ilvl_item", text = "필드보스 킬 - 챔피언 250 장비" },
             { id = "if_available_complete_pvp_quest_for_guaranteed_hero_neck_ring", text = "가능하다면, PVP퀘스트 완료해서 영웅 목걸이/반지 확정 획득." },

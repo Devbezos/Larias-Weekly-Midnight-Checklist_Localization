@@ -34,15 +34,15 @@ local DATASET = {
         title = "Accesso anticipato - dal 26 feb. al 2 mar. - Pay to Win",
         items = {
             { id = "log_on_to_each_character_you_plan_on_leveling_so_they_start_accumulating_rested_xp", text = "Accedi a ogni personaggio che intendi livellare in modo che inizi ad accumulare EP di riposo." }, -- ⚠️ UNVERIFIED: EP di riposo (Rested XP)
-            { id = "level_characters_warmode_on_to_90_dmf_opens_sunday_for_10_more_exp_no_longer_gives_renown", text = "Porta i personaggi in Modalità Guerra al livello 90 – la FLO apre domenica per +10% di esperienza. NON Dà PIÙ REPUTAZIONE" },
-            { id = "if_available_complete_the_weekly_saltheril_s_soiree_in_eversong_woods_not_available_in_early_access", text = "Se disponibile, completa la Serata di Saltheril settimanale nel Bosco dei Canti Eterni. - NOT AVAILABLE IN EARLY ACCESS" },
-            { id = "if_available_complete_the_weekly_abundance_event_in_zul_aman_bugged_in_early_access_dont_do", text = "Se disponibile, completa l'Evento dell'abbondanza settimanale a Zul'Aman. - BUGGED IN EARLY ACCESS - DON'T DO" },
-            { id = "if_available_complete_the_weekly_legends_of_the_haranir_event_in_harandar", text = "Se disponibile, completa l'evento Leggende degli Haranir settimanale a Harandar." },
-            { id = "if_available_complete_the_weekly_stormarion_assault_in_the_voidstorm_available_in_early_access", text = "Se disponibile, completa l'Assalto di Stormarion settimanale nella Tempesta del Vuoto. - AVAILABLE IN EARLY ACCESS" },
+            { id = "level_characters_warmode_on_to_90_dmf_opens_sunday_for_10_more_exp", text = "Porta i personaggi in Modalità Guerra al livello 90 – la FLO apre domenica per +10% di esperienza." },
+            { id = "complete_the_weekly_stormarion_assault_in_the_voidstorm_it_is_available_in_early_access", text = "Completa l'Assalto di Stormarion settimanale nella Tempesta del Vuoto. (Disponibile nell'accesso anticipato)" }, -- ⚠️ UNVERIFIED
             { id = "optional_kill_each_rare_once_in_each_zone_for_renown_these_are_a_weekly_lockout_for_each_rare", text = "(Facoltativo) Uccidi ogni raro una volta per zona per reputazione. Ogni raro ha un limite settimanale." },
             { id = "hunt_down_each_region_s_treasures_for_free_renown_see_doc_for_guide", text = "Cerca i tesori di ogni regione per reputazione gratuita. Vedi doc per la guida." }, -- ⚠️ UNVERIFIED: tesori di ogni regione (Midnight regional treasures)
             { id = "complete_4x_prey_on_normal_difficulty_for_renown", text = "Completa 4 volte la Preda in difficoltà normale per reputazione." },
-            { id = "complete_side_quest_chains_for_renown_can_be_done_on_alts_to_level_at_same_time_new_darkmoon_faire_no_longer_gives_a_renown_buff", text = "Completa le catene di missioni secondarie per la reputazione. (Può essere fatto sugli alt mentre si livella). NOVITÀ: LA FIERA DI LUNOSCURA NON DÀ PIÙ IL BONUS REPUTAZIONE!" },
+            { id = "complete_the_midnight_lore_hunter_achievement_for_renown_see_doc_for_guide", text = "Completa l'impresa Cacciatore di Lore di Midnight per reputazione - vedi doc per la guida" }, -- ⚠️ UNVERIFIED
+            { id = "complete_the_highest_peaks_achievement_for_renown_see_doc_for_guide", text = "Completa l'impresa Le Vette più Alte per reputazione - vedi doc per la guida" }, -- ⚠️ UNVERIFIED
+            { id = "complete_side_quest_chains_for_renown_can_be_done_on_alts_to_level_at_same_time_dmf_buff_does_not_give_renown", text = "Completa le catene di missioni secondarie per la reputazione. (Può essere fatto sugli alt mentre si livella). Il buff della FLO non dà reputazione." },
+            { id = "note_only_the_singularity_champion_renown_trinket_is_available_in_early_access_the_others_will_become_available_either_monday_after_the_official_launch_or_after_each_region_s_weekly_reset", text = "Nota: solo il ciondolo campione della Singolarità è disponibile nell'accesso anticipato - gli altri saranno disponibili il lunedì dopo il lancio ufficiale o dopo il reset settimanale di ogni regione." }, -- ⚠️ UNVERIFIED
         },
     },
     {
@@ -90,7 +90,7 @@ local DATASET = {
         items = {
             { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Non spendere nessun Emblema finché non ti viene detto" },
             { id = "do_lfr_for_tier_pieces_check_guide_for_why", text = "Fai il LFR per i pezzi tier (controlla la guida per sapere perché)" },
-            { id = "complete_a_world_tour_of_m0_dungeons_rewards_champ_ilvl", text = "Completa un tour mondiale dei dungeon M0 - ricompensa livello oggetto campione" },
+            { id = "optional_complete_a_world_tour_of_m0_dungeons_rewards_champ_ilvl", text = "(Facoltativo?) Completa un tour mondiale dei dungeon M0 - ricompensa livello oggetto campione" }, -- ⚠️ UNVERIFIED
             { id = "complete_4x_nightmare_prey_for_champion_gear_and_renown", text = "Completa 4 volte la Preda da Incubo per equipaggiamento campione e reputazione." },
             { id = "kill_world_boss_for_champ_2_6_250_ilvl_item", text = "Uccidi il boss mondiale per un oggetto campione 2/6 livello 250" },
             { id = "if_available_complete_pvp_quest_for_guaranteed_hero_neck_ring", text = "Se disponibile, completa la missione JcJ per collana/anello eroe garantito" },

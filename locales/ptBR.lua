@@ -34,7 +34,6 @@ local STRINGS = {
     HIDE_COMPLETED_WEEKS = "Ocultar semanas concluídas",
     OPTIONS_HIDE_CHANGE_WEEK_BTN = "Ocultar botão Mudar semana",
     OPTIONS_HIDE_ILVL_REF_BTN = "Ocultar pop-up de Níveis de item",
-    OPTIONS_HIDE_CHAR_SELECT = "Ocultar seleção de personagem",
     OPTIONS_HIDDEN_CHARS_TITLE = "Personagens ocultos:",
     OPTIONS_HIDDEN_CHARS_NONE = "Nenhum",
     RESET_BUTTON = "Redefinir",
@@ -52,6 +51,7 @@ local STRINGS = {
     COLOR_PICKER_HDR            = "Cabeçalho", -- ⚠️ UNVERIFIED
     -- Status banner
     STATUS_UPDATE_AVAILABLE_FMT = "Atualização disponível! Você tem %s, a mais recente é %s.", -- ⚠️ UNVERIFIED
+    STATUS_SHEET_UPDATE_FMT     = "Atualização da planilha detectada – você está %d versão/versões atrás", -- ⚠️ UNVERIFIED
     STATUS_NO_TRANSLATION_FMT   = "Nenhuma tradução disponível para %s. Considere contribuir!", -- ⚠️ UNVERIFIED
     STATUS_TRANSLATION_NOTICE   = "O inglês é o idioma mais atualizado. Sua lista pode estar ligeiramente desatualizada.", -- ⚠️ UNVERIFIED
     UI_OPACITY_LABEL            = "Opacidade",
@@ -106,8 +106,6 @@ local STRINGS = {
     -- Main window
     TAB_OPTIONS = "Opções",
     CHANGE_WEEK_BUTTON = "Mudar semana",
-    CHAR_PICKER_BUTTON = "Trocar perfil",
-    CHAR_PICKER_TOOLTIP_REMOVE = "Para remover um personagem, use o menu de Opções.",
     ILVLREF_BUTTON = "Ver níveis de item",
 
     -- Item level reference popup

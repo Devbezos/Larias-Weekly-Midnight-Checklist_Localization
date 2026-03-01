@@ -52,6 +52,7 @@ local STRINGS = {
     COLOR_PICKER_HDR            = "Заголовок", -- ⚠️ UNVERIFIED
     -- Status banner
     STATUS_UPDATE_AVAILABLE_FMT = "Доступно обновление! У вас %s, новейшая версия — %s.", -- ⚠️ UNVERIFIED
+    STATUS_SHEET_UPDATE_FMT     = "Обнаружено обновление таблицы — вы отстаёте на %d версию/версии", -- ⚠️ UNVERIFIED
     STATUS_NO_TRANSLATION_FMT   = "Перевод для %s недоступен. Рассмотрите возможность внести вклад!", -- ⚠️ UNVERIFIED
     STATUS_TRANSLATION_NOTICE   = "Английский язык наиболее актуален. Ваш список может немного устареть.", -- ⚠️ UNVERIFIED
     UI_OPACITY_LABEL            = "Прозрачность",
@@ -106,8 +107,6 @@ local STRINGS = {
     -- Main window
     TAB_OPTIONS = "Настройки",
     CHANGE_WEEK_BUTTON = "Сменить неделю",
-    CHAR_PICKER_BUTTON = "Сменить профиль",
-    CHAR_PICKER_TOOLTIP_REMOVE = "Чтобы удалить персонажа, используйте меню настроек.",
     ILVLREF_BUTTON = "Уровни предметов",
 
     -- Item level reference popup
