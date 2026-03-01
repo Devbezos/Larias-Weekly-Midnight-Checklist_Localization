@@ -680,25 +680,6 @@ function Addon:ApplyLocaleOverride()
 
     local selected = self:GetEffectiveLocaleCode()
 
-    -- Resize the frame based on the effective locale so translated labels fit.
-    -- enUS uses the baseline width; all other locales get extra room.
-    local isEnUS = (selected == "enUS")
-    local wantFrameW    = isEnUS and 520 or 570
-    local wantTextW     = isEnUS and 358 or 408
-    local wantGVLabelW  = isEnUS and 60  or 78
-    if self.UI then
-        self.UI.frameW       = wantFrameW
-        self.UI.itemTextWidth = wantTextW
-    end
-    if self.GV_LAYOUT then
-        self.GV_LAYOUT.LABEL_W = wantGVLabelW
-        self.GV_LAYOUT.GRID_X  = wantGVLabelW + (self.GV_LAYOUT.LABEL_GAP or 5)
-    end
-    local mf = self._mainFrame
-    if mf and mf.GetHeight then
-        mf:SetWidth(wantFrameW)
-    end
-
     Wipe(self.L)
 
     local fallback = strings.enUS
@@ -1466,6 +1447,12 @@ local function OnCheckboxClick(selfBtn)
     end
 
     LayoutFrom(sectionFrame._index or 1)
+
+    -- After hide/relayout, update the change-week button label to reflect
+    -- whatever section is now visible at the top of the scroll view.
+    if Addon._refreshChangeWeekLabel then
+        Addon._refreshChangeWeekLabel()
+    end
 
     if Addon.UpdateCompletionEasterEgg then
         Addon:UpdateCompletionEasterEgg(database)
