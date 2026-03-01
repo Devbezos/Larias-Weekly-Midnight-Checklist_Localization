@@ -34,15 +34,15 @@ local DATASET = {
         title = "Accès anticipé - 26 fév. au 2 mars - Pay to Win",
         items = {
             { id = "log_on_to_each_character_you_plan_on_leveling_so_they_start_accumulating_rested_xp", text = "Connectez-vous sur chaque personnage que vous prévoyez de monter pour qu'ils commencent à accumuler de l'XP reposée." }, -- ⚠️ UNVERIFIED: XP reposée (Rested XP)
-            { id = "level_characters_warmode_on_to_90_dmf_opens_sunday_for_10_more_exp_no_longer_gives_renown", text = "Montez vos personnages en Mode Guerre au niveau 90 – la FLN ouvre dimanche pour +10 % d'XP. NE DONNE PLUS DE RENOM" },
-            { id = "if_available_complete_the_weekly_saltheril_s_soiree_in_eversong_woods_not_available_in_early_access", text = "Si disponible, complétez la Soirée de Saltheril hebdo dans les Bois des Chants éternels. - NOT AVAILABLE IN EARLY ACCESS" },
-            { id = "if_available_complete_the_weekly_abundance_event_in_zul_aman_bugged_in_early_access_dont_do", text = "Si disponible, complétez l'Événement d'abondance hebdo dans Zul'Aman. - BUGGED IN EARLY ACCESS - DON'T DO" },
-            { id = "if_available_complete_the_weekly_legends_of_the_haranir_event_in_harandar", text = "Si disponible, complétez l'événement Légendes des Haranir hebdo à Harandar." },
-            { id = "if_available_complete_the_weekly_stormarion_assault_in_the_voidstorm_available_in_early_access", text = "Si disponible, complétez l'Assaut de Stormarion hebdo dans la Tempête du néant. - AVAILABLE IN EARLY ACCESS" },
+            { id = "level_characters_warmode_on_to_90_dmf_opens_sunday_for_10_more_exp", text = "Montez vos personnages en Mode Guerre au niveau 90 – la FLN ouvre dimanche pour +10 % d'XP." },
+            { id = "complete_the_weekly_stormarion_assault_in_the_voidstorm_it_is_available_in_early_access", text = "Complétez l'Assaut de Stormarion hebdo dans la Tempête du néant. (Disponible en accès anticipé)" }, -- ⚠️ UNVERIFIED
             { id = "optional_kill_each_rare_once_in_each_zone_for_renown_these_are_a_weekly_lockout_for_each_rare", text = "(Optionnel) Tuez chaque créature rare une fois par zone pour de la renommée. Chaque rare a un blocage hebdomadaire." },
             { id = "hunt_down_each_region_s_treasures_for_free_renown_see_doc_for_guide", text = "Cherchez les trésors de chaque région pour de la renommée gratuite. Voir doc pour le guide." }, -- ⚠️ UNVERIFIED: trésors de chaque région (Midnight regional treasures)
             { id = "complete_4x_prey_on_normal_difficulty_for_renown", text = "Complétez 4 fois la Traque en difficulté normale pour de la renommée." },
-            { id = "complete_side_quest_chains_for_renown_can_be_done_on_alts_to_level_at_same_time_new_darkmoon_faire_no_longer_gives_a_renown_buff", text = "Complétez les chaînes de quêtes secondaires pour la renommée. (Peut être fait sur les alts en levant en même temps). NOUVEAU : LA FOIRE DE LA LUNE NOIRE NE DONNE PLUS DE BONUS DE RENOM !" },
+            { id = "complete_the_midnight_lore_hunter_achievement_for_renown_see_doc_for_guide", text = "Complétez le haut fait Chasseur de Lore de Midnight pour de la renommée - voir doc pour le guide" }, -- ⚠️ UNVERIFIED
+            { id = "complete_the_highest_peaks_achievement_for_renown_see_doc_for_guide", text = "Complétez le haut fait Les Sommets les Plus Hauts pour de la renommée - voir doc pour le guide" }, -- ⚠️ UNVERIFIED
+            { id = "complete_side_quest_chains_for_renown_can_be_done_on_alts_to_level_at_same_time_dmf_buff_does_not_give_renown", text = "Complétez les chaînes de quêtes secondaires pour la renommée. (Peut être fait sur les alts en levant en même temps). Le buff de la FLN ne donne pas de renommée." },
+            { id = "note_only_the_singularity_champion_renown_trinket_is_available_in_early_access_the_others_will_become_available_either_monday_after_the_official_launch_or_after_each_region_s_weekly_reset", text = "Note : Seule la babiole champion de La Singularité est disponible en accès anticipé - les autres seront disponibles le lundi après le lancement officiel ou après la réinitialisation hebdomadaire de chaque région." }, -- ⚠️ UNVERIFIED
         },
     },
     {
@@ -90,7 +90,7 @@ local DATASET = {
         items = {
             { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Ne dépensez aucun Écu avant d'en recevoir l'instruction" },
             { id = "do_lfr_for_tier_pieces_check_guide_for_why", text = "Faites le LFR pour les pièces de palier (consultez le guide pour savoir pourquoi)" },
-            { id = "complete_a_world_tour_of_m0_dungeons_rewards_champ_ilvl", text = "Effectuez un tour mondial des donjons M0 – récompense niv. obj. champion" },
+            { id = "optional_complete_a_world_tour_of_m0_dungeons_rewards_champ_ilvl", text = "(Optionnel?) Effectuez un tour mondial des donjons M0 – récompense niv. obj. champion" }, -- ⚠️ UNVERIFIED
             { id = "complete_4x_nightmare_prey_for_champion_gear_and_renown", text = "Complétez 4 fois la Traque de cauchemar pour équipement champion et renommée." },
             { id = "kill_world_boss_for_champ_2_6_250_ilvl_item", text = "Tuez le boss mondial pour un objet champion 2/6 niv. 250" },
             { id = "if_available_complete_pvp_quest_for_guaranteed_hero_neck_ring", text = "Si disponible, complétez la quête JcJ pour un collier/anneau héroïque garanti" },
