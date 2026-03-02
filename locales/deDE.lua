@@ -159,6 +159,27 @@ local STRINGS = {
     SLASH_USAGE_LOCALE = "Verwendung: /larias locale auto|enUS|deDE|esES|esMX|frFR|itIT|ptBR|ruRU",
     SLASH_LOCALE_SET_FMT = "Sprache gesetzt auf %s (aktiv: %s)",
     SLASH_LOCALE_NOT_FOUND = "Unbekannte Sprache '%s'. Verfügbar: auto|%s", -- ⚠️ UNVERIFIED
+
+    -- ── Auto-translated (review with native speaker) ──────────────────────
+    OPTIONS_HIDE_COMPLETED_TASKS = "Erledigte Aufgaben ausblenden",
+    HIDE_FINISHED_WEEKS = "Abgeschlossene Wochen ausblenden",
+    OPTIONS_DISABLE_UPGRADE_WARN = "Upgrade-Warnungen ausblenden",
+    SETTINGS_SECTION_ACTIONS = "Aktionen",
+    SETTINGS_SECTION_DISPLAY = "Anzeige",
+    SETTINGS_SECTION_COLORS = "Farben",
+    SETTINGS_SECTION_LANGUAGE = "Sprache",
+    SETTINGS_SECTION_SLIDERS = "Skalierung & Transparenz",
+    SETTINGS_COLOR_RESET = "Zurücksetzen",
+    SETTINGS_COLOR_BACKGROUND = "Hintergrund",
+    SETTINGS_COLOR_LIST_TEXT = "Listentext",
+    SETTINGS_COLOR_HEADER_TEXT = "Kopfzeilentext",
+    SETTINGS_LANGUAGE_AUTO = "Automatisch (Client-Standard)",
+    UPGRADE_WARN_MSG = "Ein 1/6-%s-Gegenstand aufzuwerten ist eine Verschwendung von %d Wappen.\nWerte stattdessen einen 5/6-%s-Gegenstand auf", -- ⚠️ UNVERIFIED
+    UPGRADE_WARN_DISABLE_BTN = "Upgrade-Warnung ausblenden",
+    UPGRADE_WARN_DISABLE_TOOLTIP = "Weitere Informationen findest du in Larias Leitfaden.",
+    ALL_WEEKS_COMPLETE = "Abgeschlossen!",
+    CHAR_PICKER_BUTTON = "Profil wechseln",
+    CHAR_PICKER_TOOLTIP_REMOVE = "Um einen Charakter zu entfernen, verwende das Optionsmenü.",
 }
 
 for key, value in pairs(STRINGS) do

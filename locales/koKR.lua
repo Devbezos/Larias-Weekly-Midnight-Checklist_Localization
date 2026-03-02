@@ -159,6 +159,27 @@ local STRINGS = {
 	SLASH_USAGE_LOCALE = "사용법: /larias locale auto|enUS|deDE|esES|esMX|frFR|itIT|ptBR|ruRU|koKR",
 	SLASH_LOCALE_SET_FMT = "언어가 %s로 할당 되었습니다. (effective: %s)",
 	SLASH_LOCALE_NOT_FOUND = "알 수 없는 언어 '%s'. 사용 가능: auto|%s", -- ⚠️ UNVERIFIED
+
+    -- ── Auto-translated (review with native speaker) ──────────────────────
+    OPTIONS_HIDE_COMPLETED_TASKS = "완료한 작업 숨기기",
+    HIDE_FINISHED_WEEKS = "완료한 주 숨기기",
+    OPTIONS_DISABLE_UPGRADE_WARN = "업그레이드 경고 숨기기",
+    SETTINGS_SECTION_ACTIONS = "동작",
+    SETTINGS_SECTION_DISPLAY = "표시",
+    SETTINGS_SECTION_COLORS = "색상",
+    SETTINGS_SECTION_LANGUAGE = "언어",
+    SETTINGS_SECTION_SLIDERS = "크기 및 투명도",
+    SETTINGS_COLOR_RESET = "초기화",
+    SETTINGS_COLOR_BACKGROUND = "배경",
+    SETTINGS_COLOR_LIST_TEXT = "목록 텍스트",
+    SETTINGS_COLOR_HEADER_TEXT = "제목 텍스트",
+    SETTINGS_LANGUAGE_AUTO = "자동 (클라이언트 기본값)",
+    UPGRADE_WARN_MSG = "1/6 %s 아이템 강화는 %d개 문장 낭비입니다.\n5/6 %s 아이템을 강화하세요", -- ⚠️ UNVERIFIED
+    UPGRADE_WARN_DISABLE_BTN = "업그레이드 경고 숨기기",
+    UPGRADE_WARN_DISABLE_TOOLTIP = "자세한 정보는 Laria의 가이드를 확인하세요.",
+    ALL_WEEKS_COMPLETE = "완료!",
+    CHAR_PICKER_BUTTON = "프로필 전환",
+    CHAR_PICKER_TOOLTIP_REMOVE = "캐릭터를 제거하려면 옵션 메뉴를 사용하세요.",
 }
 
 for key, value in pairs(STRINGS) do

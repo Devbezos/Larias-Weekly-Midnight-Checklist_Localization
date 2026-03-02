@@ -1,5 +1,5 @@
 --[[
-Portuguese-Brazil (ptBR) checklist data for Larias's Weekly Checklist
+Portuguese (Brazil) (ptBR) checklist data for Larias's Weekly Checklist
 
 NOTE: IDs are kept identical to the enUS dataset so completion tracking stays consistent
 across locales.
@@ -17,169 +17,168 @@ if type(reg) ~= "table" then
 end
 if type(reg.data) ~= "table" then reg.data = {} end
 
--- ⚠️ TERMOS MIDNIGHT NÃO VERIFICADOS – Verificar no jogo antes de publicar:
---   Modo de Guerra (Warmode), FLN = Feira da Lua Negra (DMF),
---   Soirée de Saltheril (Saltheril's Soiree), Floresta dos Cantos Eternos (Eversong Woods),
---   Evento da abundância (Abundance Event), Lendas dos Haranir (Legends of the Haranir),
---   Harandar, Assalto de Stormarion (Stormarion Assault), Tempestade do Vazio (Voidstorm),
---   A Singularidade (The Singularity), Pedra-Rúnica Rachada (Cracked Keystone),
---   chaves do cofre (Coffer keys),
---   EXP descansada (Rested XP) ⚠️ NOVO NÃO VERIFICADO,
---   tesouros de cada região (regional treasures – nova mecânica Midnight) ⚠️ NOVO NÃO VERIFICADO,
---   Imersão Abundante (Bountiful Delve) ⚠️ VERIFICAR O TERMO NO JOGO
 local DATASET = {
 
     {
-        id = "early_access_feb_26_through_mar_2_pay_to_win",
+        id = "e225d803",
         title = "Acesso Antecipado - 26 fev. a 2 mar. - Pay to Win",
         items = {
-            { id = "log_on_to_each_character_you_plan_on_leveling_so_they_start_accumulating_rested_xp", text = "Entre com cada personagem que planeja nivelar para que comecem a acumular EXP descansada." }, -- ⚠️ UNVERIFIED: EXP descansada (Rested XP)
-            { id = "level_characters_warmode_on_to_90_dmf_opens_sunday_for_10_more_exp", text = "Suba personagens com Modo Guerra ativado ao nível 90 – a FLN abre no domingo com +10% de EXP." },
-            { id = "complete_the_weekly_stormarion_assault_in_the_voidstorm_it_is_available_in_early_access", text = "Complete o Assalto de Stormarion semanal na Tempestade do Vazio. (Disponível no Acesso Antecipado)" }, -- ⚠️ UNVERIFIED
-            { id = "optional_kill_each_rare_once_in_each_zone_for_renown_these_are_a_weekly_lockout_for_each_rare", text = "(Opcional) Mate cada raro uma vez em cada zona para renome. Cada raro tem bloqueio semanal." },
-            { id = "hunt_down_each_region_s_treasures_for_free_renown_see_doc_for_guide", text = "Procure os tesouros de cada região para renome gratuito. Veja o documento para o guia." }, -- ⚠️ UNVERIFIED: tesouros de cada região (Midnight regional treasures)
-            { id = "complete_4x_prey_on_normal_difficulty_for_renown", text = "Complete a Presa 4 vezes na dificuldade normal para obter renome." },
-            { id = "complete_the_midnight_lore_hunter_achievement_for_renown_see_doc_for_guide", text = "Complete a conquista Caçador de Lore do Midnight para renome - veja o documento para o guia" }, -- ⚠️ UNVERIFIED
-            { id = "complete_the_highest_peaks_achievement_for_renown_see_doc_for_guide", text = "Complete a conquista Os Picos Mais Altos para renome - veja o documento para o guia" }, -- ⚠️ UNVERIFIED
-            { id = "complete_side_quest_chains_for_renown_can_be_done_on_alts_to_level_at_same_time_dmf_buff_does_not_give_renown", text = "Complete cadeias de missões secundárias para renome. (Pode ser feito em alts enquanto lvla). O buff da FLN não dá renome." },
-            { id = "note_only_the_singularity_champion_renown_trinket_is_available_in_early_access_the_others_will_become_available_either_monday_after_the_official_launch_or_after_each_region_s_weekly_reset", text = "Nota: Apenas o acessório campeão de renome de A Singularidade está disponível no acesso antecipado - os outros ficarão disponíveis na segunda-feira após o lançamento oficial ou após o reinício semanal de cada região." }, -- ⚠️ UNVERIFIED
+            { id = "f4b92a82", text = "Entre com cada personagem que planeja nivelar para que comecem a acumular EXP descansada." }, -- ⚠️ UNVERIFIED
+            { id = "825bfe20", text = "Suba personagens com Modo Guerra ativado ao nível 90 – a FLN abre no domingo com +10% de EXP." },
+            { id = "50f90465", text = "Complete o Assalto de Stormarion semanal na Tempestade do Vazio. (Disponível no Acesso Antecipado)" }, -- ⚠️ UNVERIFIED
+            { id = "7644d082", text = "(Opcional) Mate cada raro uma vez em cada zona para renome. Cada raro tem bloqueio semanal." },
+            { id = "6892e5d5", text = "Procure os tesouros de cada região para renome gratuito. Veja o documento para o guia." }, -- ⚠️ UNVERIFIED
+            { id = "f466c57b", text = "Complete a Presa 4 vezes na dificuldade normal para obter renome." },
+            { id = "35bc0cfd", text = "(Opcional) Mate cada raro uma vez em cada zona para renome. Cada raro tem bloqueio semanal." },
+            { id = "2687fe6c", text = "Complete a conquista Os Picos Mais Altos para renome - veja o documento para o guia" }, -- ⚠️ UNVERIFIED
+            { id = "91e7ee6c", text = "Complete cadeias de missões secundárias para renome. (Pode ser feito em alts enquanto lvla). O buff da FLN não dá renome." },
+            { id = "4e99ff6e", text = "Nota: Apenas o acessório campeão de renome de A Singularidade está disponível no acesso antecipado - os outros ficarão disponíveis na segunda-feira após o lançamento oficial ou após o reinício semanal de cada região." }, -- ⚠️ UNVERIFIED
         },
     },
+
     {
-        id = "pre_season_week_1_march_3_m0_s",
+        id = "50281d6f",
         title = "Pré-temporada Semana 1 - 3 de março - M0",
         items = {
-                        { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Não gaste nenhum Brasão até receber instruções" },
-            { id = "raise_the_singularity_renown_to_rank_7_for_1_6_champion_trinket_available_in_early_access_comes_from_quest_from_the_renown_vendor_not_purchased", text = "Eleve o renome com A Singularidade ao grau 7 para o acessório campeão 1/6 - available in early access - comes from quest from the renown vendor (not purchased)" },
-            { id = "raise_hara_ti_renown_to_rank_8_for_1_6_champion_belt_not_available_in_early_access_comes_from_quest_from_the_renown_vendor_not_purchased", text = "Eleve o renome com Hara'ti ao grau 8 para o cinturão campeão 1/6 - not available in early access? - comes from quest from the renown vendor (not purchased)" },
-            { id = "raise_silvermoon_renown_to_rank_9_for_1_6_champion_helm_not_available_in_early_access_comes_from_quest_from_the_renown_vendor_not_purchased", text = "Eleve o renome com Lua de Prata ao grau 9 para o elmo campeão 1/6 - NOT available in early access - comes from quest from the renown vendor (not purchased)" },
-            { id = "raise_amani_tribe_renown_to_rank_9_for_1_6_champion_necklace_not_available_in_early_access_comes_from_quest_from_the_renown_vendor_not_purchased", text = "Eleve o renome com a Tribo Amani ao grau 9 para o colar campeão 1/6 - not available in early access? - comes from quest from the renown vendor (not purchased)" },
-            { id = "complete_the_weekly_saltheril_s_soiree_in_eversong_woods", text = "Complete a Soirée de Saltheril semanal em Bosques da Canção Eterna." },
-            { id = "complete_the_weekly_abundance_event_in_zul_aman", text = "Complete o Evento de Abundância semanal em Zul'Aman." },
-            { id = "complete_the_weekly_legends_of_the_haranir_event_in_harandar", text = "Complete o evento semanal Lendas dos Haranir em Harandar." },
-            { id = "complete_the_weekly_stormarion_assault_in_the_voidstorm", text = "Complete o Assalto de Stormarion semanal na Voragem do Vázio." },
-            { id = "optional_kill_each_rare_once_in_each_zone_for_renown_these_are_a_weekly_lockout_for_each_rare", text = "(Opcional) Mate cada raro uma vez em cada zona para renome. Cada raro tem bloqueio semanal." },
-            { id = "if_not_done_hunt_down_each_region_s_treasures_for_free_renown_see_doc_for_guide", text = "Se ainda não feito, procure os tesouros de cada região para renome gratuito. Veja o documento para o guia." }, -- ⚠️ UNVERIFIED: tesouros de cada região (Midnight regional treasures)
-            { id = "unlock_delves_through_tier_8_11_if_available", text = "Desbloqueie Imersões até o nível 8 (11 se disponível)" },
-            { id = "optional_complete_4x_normal_prey_for_adventurer_gear_and_renown", text = "(Opcional) Complete a Presa normal 4 vezes para equipamento aventureiro e renome." },
-            { id = "complete_4x_hard_prey_for_veteran_gear_and_renown", text = "Complete a Presa difícil 4 vezes para equipamento veteranário e renome." },
-            { id = "complete_a_world_tour_of_m0_dungeons_rewards_vet_ilvl_do_not_upgrade_yet", text = "Complete um tour mundial das masmorras M0 - recompensa nível de item veteranário - não melhore ainda" },
+            { id = "c3de7d35", text = "Não gaste nenhum Brasão até receber instruções" },
+            { id = "fe628d60", text = "Eleve o renome com A Singularidade ao grau 7 para o acessório campeão 1/6 - available in early access - comes from quest from the renown vendor (not purchased)" },
+            { id = "9b594c78", text = "Eleve o renome com Hara'ti ao grau 8 para o cinturão campeão 1/6 - not available in early access? - comes from quest from the renown vendor (not purchased)" },
+            { id = "6c01e9d5", text = "Eleve o renome com Lua de Prata ao grau 9 para o elmo campeão 1/6 - NOT available in early access - comes from quest from the renown vendor (not purchased)" },
+            { id = "484f13d6", text = "Eleve o renome com a Tribo Amani ao grau 9 para o colar campeão 1/6 - not available in early access? - comes from quest from the renown vendor (not purchased)" },
+            { id = "e326ed96", text = "Complete a Soiree de Saltheril semanal em Bosques da Canção Eterna." },
+            { id = "da2fa0ef", text = "Complete o Evento de Abundância semanal em Zul'Aman." },
+            { id = "dbc8384b", text = "Complete o evento semanal Lendas dos Haranir em Harandar." },
+            { id = "9ad64245", text = "Complete o Assalto de Stormarion semanal na Voragem do Vázio." },
+            { id = "35bc0cfd", text = "(Opcional) Mate cada raro uma vez em cada zona para renome. Cada raro tem bloqueio semanal." },
+            { id = "d47e5b93", text = "Se ainda não feito, procure os tesouros de cada região para renome gratuito. Veja o documento para o guia." }, -- ⚠️ UNVERIFIED
+            { id = "346bdd7e", text = "Desbloqueie Imersões até o nível 8 (11 se disponível)" },
+            { id = "91b50b0a", text = "(Opcional) Complete a Presa normal 4 vezes para equipamento aventureiro e renome." },
+            { id = "e0029ef7", text = "Complete a Presa difícil 4 vezes para equipamento veteranário e renome." },
+            { id = "a7ee4829", text = "Complete um tour mundial das masmorras M0 - recompensa nível de item veteranário - não melhore ainda" },
         },
     },
+
     {
-        id = "pre_season_week_2_march_10_m0_s",
+        id = "ff1f5a67",
         title = "Pré-temporada Semana 2 - 10 de março - M0",
         items = {
-            { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Não gaste nenhum Brasão até receber instruções" },
-            { id = "if_not_completed_continue_to_raise_renown_for_champion_pieces", text = "Se não concluído, continue elevando o renome para peças campeã" },
-            { id = "complete_the_weekly_saltheril_s_soiree_in_eversong_woods", text = "Complete a Soiree de Saltheril semanal em Bosques da Canção Eterna." },
-            { id = "complete_the_weekly_abundance_event_in_zul_aman", text = "Complete o Evento de Abundância semanal em Zul'Aman." },
-            { id = "complete_the_weekly_legends_of_the_haranir_event_in_harandar", text = "Complete o evento semanal Lendas dos Haranir em Harandar." },
-            { id = "complete_the_weekly_stormarion_assault_in_the_voidstorm", text = "Complete o Assalto de Stormarion semanal na Voragem do Vázio." },
-            { id = "optional_kill_each_rare_once_in_each_zone_for_renown_these_are_a_weekly_lockout_for_each_rare", text = "(Opcional) Mate cada raro uma vez em cada zona para renome. Cada raro tem bloqueio semanal." },
-            { id = "unlock_delves_through_tier_8_11_if_available_if_not_done_yet", text = "Desbloqueie Imersões até o nível 8 (11 se disponível), se ainda não feito" },
-            { id = "optional_complete_4x_normal_prey_for_adventurer_gear_and_renown", text = "(Opcional) Complete a Presa normal 4 vezes para equipamento aventureiro e renome." },
-            { id = "complete_4x_hard_prey_for_veteran_gear_and_renown", text = "Complete a Presa difícil 4 vezes para equipamento veteranário e renome." },
-            { id = "complete_a_world_tour_of_m0_dungeons_rewards_vet_ilvl_do_not_upgrade_yet", text = "Complete um tour mundial das masmorras M0 - recompensa nível de item veteranário - não melhore ainda" },
-            { id = "if_you_raid_tuesday_the_17th_craft_see_doc_for_more_info", text = "Se for raidy na terça dia 17, crie itens. Veja o documento para mais informações." },
+            { id = "c3de7d35", text = "Não gaste nenhum Brasão até receber instruções" },
+            { id = "75c5fe6e", text = "Se não concluído, continue elevando o renome para peças campeã" },
+            { id = "e326ed96", text = "Complete a Soiree de Saltheril semanal em Bosques da Canção Eterna." },
+            { id = "da2fa0ef", text = "Complete o Evento de Abundância semanal em Zul'Aman." },
+            { id = "dbc8384b", text = "Complete o evento semanal Lendas dos Haranir em Harandar." },
+            { id = "9ad64245", text = "Complete o Assalto de Stormarion semanal na Voragem do Vázio." },
+            { id = "35bc0cfd", text = "(Opcional) Mate cada raro uma vez em cada zona para renome. Cada raro tem bloqueio semanal." },
+            { id = "072e6955", text = "Desbloqueie Imersões até o nível 8 (11 se disponível), se ainda não feito" },
+            { id = "91b50b0a", text = "(Opcional) Complete a Presa normal 4 vezes para equipamento aventureiro e renome." },
+            { id = "e0029ef7", text = "Complete a Presa difícil 4 vezes para equipamento veteranário e renome." },
+            { id = "a7ee4829", text = "Complete um tour mundial das masmorras M0 - recompensa nível de item veteranário - não melhore ainda" },
+            { id = "c33e5c84", text = "Se for raidy na terça dia 17, crie itens. Veja o documento para mais informações." },
         },
     },
+
     {
-        id = "season_1_week_1_mar_17_heroic_week",
+        id = "33a3fcba",
         title = "Semana 1 da Temporada 1 - 17 de março - Semana heróica",
         items = {
-            { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Não gaste nenhum Brasão até receber instruções" },
-            { id = "do_lfr_for_tier_pieces_check_guide_for_why", text = "Faça o LFR para peças de conjunto (veja o guia para entender o porquê)" },
-            { id = "optional_complete_a_world_tour_of_m0_dungeons_rewards_champ_ilvl", text = "(Opcional?) Complete um tour mundial das masmorras M0 - recompensa nível de item campeão" }, -- ⚠️ UNVERIFIED
-            { id = "complete_4x_nightmare_prey_for_champion_gear_and_renown", text = "Complete a Presa Pesadelo 4 vezes para equipamento campeão e renome." },
-            { id = "kill_world_boss_for_champ_2_6_250_ilvl_item", text = "Mate o chefe mundial para um item campeão 2/6 nível 250" },
-            { id = "if_available_complete_pvp_quest_for_guaranteed_hero_neck_ring", text = "Se disponível, complete a missão de JcJ para colar/anel herói garantido" },
-            { id = "do_t8_bountiful_delves_with_coffer_keys_use_map_on_t8_delve", text = "Faça Imersões Abundantes T8 com chaves do cofre, use o mapa nas Imersões T8+" },
-            { id = "before_raid_craft_2x_246_ilvl_pieces_2x_embellishments_on_weak_slots_use_160_vet_crests", text = "Antes da raid: crie 2 peças nível 246, 2 ornamentos nos slots fracos, use 160 Brasões veteranários" },
-            { id = "before_raid_spend_all_adventurer_veteran_and_champion_crests_upgrading_anything", text = "Antes da raid: gaste todos os Brasões aventureiros, veteranários e campeões melhorando qualquer coisa" },
-            { id = "track_crests_0_100_heroic_0_100_mythic", text = "Acompanhe os Brasões: 0/100 Heróico, 0/100 Mítico" },
+            { id = "c3de7d35", text = "Não gaste nenhum Brasão até receber instruções" },
+            { id = "5b379666", text = "Faça o LFR para peças de conjunto (veja o guia para entender o porquê)" },
+            { id = "dd71541a", text = "(Opcional?) Complete um tour mundial das masmorras M0 - recompensa nível de item campeão" }, -- ⚠️ UNVERIFIED
+            { id = "123747cb", text = "Complete a Presa Pesadelo 4 vezes para equipamento campeão e renome." },
+            { id = "dc0e2686", text = "Mate o chefe mundial para um item campeão 2/6 nível 250" },
+            { id = "3e0dfde7", text = "Se disponível, complete a missão de JcJ para colar/anel herói garantido" },
+            { id = "fdfd56bc", text = "Faça Imersões Abundantes T8 com chaves do cofre, use o mapa nas Imersões T8+" },
+            { id = "eff76e73", text = "Antes da raid: crie 2 peças nível 246, 2 ornamentos nos slots fracos, use 160 Brasões veteranários" },
+            { id = "2af0bfb5", text = "Antes da raid: gaste todos os Brasões aventureiros, veteranários e campeões melhorando qualquer coisa" },
+            { id = "5768e0fe", text = "Acompanhe os Brasões: 0/100 Heróico, 0/100 Mítico" },
         },
     },
+
     {
-        id = "week_2_mar_24_mythic_week_m_opens_take_off_work_giganerds",
+        id = "d2de9d43",
         title = "Semana 2 - 24 de março - Semana mítica, M+ abre, tirem férias nerds",
         items = {
-            { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Não gaste nenhum Brasão até receber instruções" },
-            { id = "1h_crafted_note_check_guide_check_craft_path_info_very_important", text = "Nota sobre arma 1M criada, veja o guia, verifique o caminho de criação (MUITO IMPORTANTE!)" },
-            { id = "do_lfr_for_tier_pieces_check_guide_for_why", text = "Faça o LFR para peças de conjunto (veja o guia para entender o porquê)" },
-            { id = "optional_kill_world_boss_for_champ_2_6_250_ilvl_item", text = "(Opcional) Mate o chefe mundial para um item campeão 2/6 nível 250" },
-            { id = "optional_complete_4x_nightmare_prey_for_champion_gear_and_renown", text = "(Opcional) Complete a Presa Pesadelo 4 vezes para equipamento campeão e renome." },
-            { id = "do_at_least_one_t11_bountiful_delve_to_get_cracked_keystone_quest", text = "Faça pelo menos uma Imersão Abundante de nível 11 para obter a missão da Pedra-Rúnica Rachada" }, -- ⚠️ UNVERIFIED: Imersão Abundante (Bountiful Delve)
-            { id = "continue_to_spend_all_adventurer_veteran_and_champion_crests_upgrading_anything", text = "Continue gastando todos os Brasões aventureiros, veteranários e campeões melhorando qualquer coisa" },
-            { id = "farm_10s_for_266_gear_in_every_slot", text = "Farme +10s para equipamento nível 266 em todos os slots" },
-            { id = "before_mythic_raid_upgrade_11x_3_6_hero_items_once_each", text = "Antes da raid mítica: melhore 11 itens herói 3/6 uma vez cada" },
-            { id = "mythic_if_you_re_lucky_and_got_a_myth_track_item_skip_to_next_week_s_upgrade_advice_for_it", text = "Mítico: se tiver sorte e obteve um item da trilha mítica, pule para o conselho de melhoria da próxima semana." },
-            { id = "track_crests_220_220_heroic_0_220_mythic_never_hold_mythic_crests", text = "Acompanhe os Brasões: 220/220 Heróico, 0/220 Mítico – nunca acumule Brasões Míticos" },
-            { id = "ending_item_level_4x266_11x269", text = "Nível de item final: 4x266, 11x269" },
+            { id = "c3de7d35", text = "Não gaste nenhum Brasão até receber instruções" },
+            { id = "7e42a12d", text = "Nota sobre arma 1M criada, veja o guia, verifique o caminho de criação (MUITO IMPORTANTE!)" },
+            { id = "5b379666", text = "Faça o LFR para peças de conjunto (veja o guia para entender o porquê)" },
+            { id = "16cf341e", text = "(Opcional) Mate o chefe mundial para um item campeão 2/6 nível 250" },
+            { id = "3ccf0a1f", text = "(Opcional) Complete a Presa Pesadelo 4 vezes para equipamento campeão e renome." },
+            { id = "26d0b610", text = "Faça pelo menos uma Imersão Abundante de nível 11 para obter a missão da Pedra-Rúnica Rachada" }, -- ⚠️ UNVERIFIED
+            { id = "286f219c", text = "Continue gastando todos os Brasões aventureiros, veteranários e campeões melhorando qualquer coisa" },
+            { id = "74924a7b", text = "Farme +10s para equipamento nível 266 em todos os slots" },
+            { id = "eb45e64d", text = "Antes da raid mítica: melhore 11 itens herói 3/6 uma vez cada" },
+            { id = "cbfb6966", text = "Mítico: se tiver sorte e obteve um item da trilha mítica, pule para o conselho de melhoria da próxima semana." },
+            { id = "0e855644", text = "Acompanhe os Brasões: 220/220 Heróico, 0/220 Mítico – nunca acumule Brasões Míticos" },
+            { id = "721f006f", text = "Nível de item final: 4x266, 11x269" },
         },
     },
+
     {
-        id = "week_3_mar_31_final_raid_opens",
+        id = "b0abc363",
         title = "Semana 3 - 31 de março - Raid final abre",
         items = {
-            { id = "open_vault_272_myth_item_upgrade_after_crafting", text = "Abra o Grande Cofre (item mítico 272+) - melhore após criar" },
-            { id = "craft_items_see_guide_for_2_paths_to_pick", text = "Crie itens – consulte o guia para 2 caminhos a escolher" },
-            { id = "if_no_4p_do_lfr_for_tier_pieces_check_guide_for_why", text = "Sem bônus 4 peças: faça o LFR para peças de conjunto (veja o guia)" },
-            { id = "farm_10s_for_vault_crests", text = "Farme +10s para o Grande Cofre + Brasões" },
-            { id = "heroic_upgrade_2_of_your_4_6_269_items_to_6_6_276_for_80_heroic_crests", text = "Heróico: melhore 2 dos seus itens 269 4/6 para 276 6/6 por 80 Brasões Heróicos" },
-            { id = "mythic_if_your_vault_item_was_1_6_upgrade_its_heroic_counterpart_first_to_6_6_heroic_for_20_heroic_crests_upgrade_your_1_6_272_myth_track_item_to_6_6_289_for_80_myth_crests", text = "Mítico: se seu item do Grande Cofre era 1/6, melhore primeiro o equivalente heróico para 6/6 por 20 Brasões Heróicos. Depois melhore seu item da trilha mítica 272 1/6 para 6/6 289 por 80 Brasões Míticos." },
-            { id = "if_you_got_a_2nd_myth_track_item_skip_to_next_week_s_upgrade_advice_for_it", text = "Se obteve um 2º item da trilha mítica, pule para o conselho de melhoria da próxima semana." },
-            { id = "track_crests_320_320_heroic_160_320_mythic_never_hold_mythic_crests", text = "Acompanhe os Brasões: 320/320 Heróico, 160/320 Mítico – nunca acumule Brasões Míticos" },
-            { id = "ending_item_level_3x266_8x269_2x276h_1x285_crafted_1x289", text = "Nível de item final: 3x266, 8x269, 2x276h, 1x285(criado), 1x289" },
+            { id = "1fbc825e", text = "Abra o Grande Cofre (item mítico 272+) - melhore após criar" },
+            { id = "fb8255a7", text = "Crie itens – consulte o guia para 2 caminhos a escolher" },
+            { id = "8226c872", text = "Sem bônus 4 peças: faça o LFR para peças de conjunto (veja o guia)" },
+            { id = "1db5f946", text = "Farme +10s para o Grande Cofre + Brasões" },
+            { id = "c316485a", text = "Heróico: melhore 2 dos seus itens 269 4/6 para 276 6/6 por 80 Brasões Heróicos" },
+            { id = "2568bd36", text = "Mítico: se seu item do Grande Cofre era 1/6, melhore primeiro o equivalente heróico para 6/6 por 20 Brasões Heróicos. Depois melhore seu item da trilha mítica 272 1/6 para 6/6 289 por 80 Brasões Míticos." },
+            { id = "484da4b0", text = "Se obteve um 2º item da trilha mítica, pule para o conselho de melhoria da próxima semana." },
+            { id = "0ecf8e89", text = "Acompanhe os Brasões: 320/320 Heróico, 160/320 Mítico – nunca acumule Brasões Míticos" },
+            { id = "02884180", text = "Nível de item final: 3x266, 8x269, 2x276h, 1x285(criado), 1x289" },
         },
     },
+
     {
-        id = "week_4_apr_7",
+        id = "572003ec",
         title = "Semana 4 - 7 de abr.",
         items = {
-            { id = "open_vault_272_myth_item", text = "Abra o Grande Cofre (item mítico 272+)" },
-            { id = "farm_10s_for_vault_crests", text = "Farme +10s para o Grande Cofre + Brasões" },
-            { id = "heroic_upgrade_2_of_your_4_6_269_items_to_6_6_276_for_80_heroic_crests", text = "Heróico: melhore 2 dos seus itens 269 4/6 para 276 6/6 por 80 Brasões Heróicos" },
-            { id = "mythic_if_your_vault_item_was_1_6_upgrade_its_heroic_counterpart_first_to_6_6_heroic_for_20_heroic_crests_upgrade_your_1_6_272_myth_track_item_to_6_6_289_for_80_myth_crests", text = "Mítico: se seu item do Grande Cofre era 1/6, melhore primeiro o equivalente heróico para 6/6 por 20 Brasões Heróicos. Depois melhore seu item da trilha mítica 272 1/6 para 6/6 289 por 80 Brasões Míticos." },
-            { id = "mythic_upgrade_your_raid_drop_from_2_6_275_myth_track_to_6_6_289_for_80_myth_crests", text = "Mítico: melhore seu item da raid 2/6 275 da trilha mítica para 6/6 289 por 80 Brasões Míticos." },
-            { id = "track_crests_420_400_heroic_320_420_mythic_never_hold_mythic_crests", text = "Acompanhe os Brasões: 420/400 Heróico, 320/420 Mítico – nunca acumule Brasões Míticos" },
-            { id = "ending_item_level_2x266_5x269_4x276h_1x285_crafted_3x289", text = "Nível de item final: 2x266, 5x269, 4x276h, 1x285(criado), 3x289" },
+            { id = "9375e497", text = "Abra o Grande Cofre (item mítico 272+)" },
+            { id = "1db5f946", text = "Farme +10s para o Grande Cofre + Brasões" },
+            { id = "c316485a", text = "Heróico: melhore 2 dos seus itens 269 4/6 para 276 6/6 por 80 Brasões Heróicos" },
+            { id = "2568bd36", text = "Mítico: se seu item do Grande Cofre era 1/6, melhore primeiro o equivalente heróico para 6/6 por 20 Brasões Heróicos. Depois melhore seu item da trilha mítica 272 1/6 para 6/6 289 por 80 Brasões Míticos." },
+            { id = "0ccf5c83", text = "Mítico: melhore seu item da raid 2/6 275 da trilha mítica para 6/6 289 por 80 Brasões Míticos." },
+            { id = "299f3284", text = "Acompanhe os Brasões: 420/400 Heróico, 320/420 Mítico – nunca acumule Brasões Míticos" },
+            { id = "8b8cde46", text = "Nível de item final: 2x266, 5x269, 4x276h, 1x285(criado), 3x289" },
         },
     },
+
     {
-        id = "week_5_apr_14",
+        id = "239053b5",
         title = "Semana 5 - 14 de abr.",
         items = {
-            { id = "open_vault_272_myth_item", text = "Abra o Grande Cofre (item mítico 272+)" },
-            { id = "farm_10s_for_vault_crests", text = "Farme +10s para o Grande Cofre + Brasões" },
-            { id = "craft_next_item_see_doc_for_more_info", text = "Crie o próximo item (consulte o documento para mais informações)" },
-            { id = "heroic_upgrade_2_of_your_4_6_269_items_to_6_6_276_for_80_heroic_crests", text = "Heróico: melhore 2 dos seus itens 269 4/6 para 276 6/6 por 80 Brasões Heróicos" },
-            { id = "mythic_if_your_vault_item_was_1_6_upgrade_its_heroic_counterpart_first_to_6_6_heroic_for_20_heroic_crests_upgrade_your_1_6_272_myth_track_item_to_6_6_289_for_80_myth_crests", text = "Mítico: se seu item do Grande Cofre era 1/6, melhore primeiro o equivalente heróico para 6/6 por 20 Brasões Heróicos. Depois melhore seu item da trilha mítica 272 1/6 para 6/6 289 por 80 Brasões Míticos." },
-            { id = "track_crests_520_520_heroic_480_520_mythic_never_hold_mythic_crests", text = "Acompanhe os Brasões: 520/520 Heróico, 480/520 Mítico – nunca acumule Brasões Míticos" },
-            { id = "ending_item_level_1x266_2x269_6x276h_2x285_crafted_4x289", text = "Nível de item final: 1x266, 2x269, 6x276h, 2x285(criado), 4x289" },
+            { id = "9375e497", text = "Abra o Grande Cofre (item mítico 272+)" },
+            { id = "1db5f946", text = "Farme +10s para o Grande Cofre + Brasões" },
+            { id = "11e426da", text = "Crie o próximo item (consulte o documento para mais informações)" },
+            { id = "c316485a", text = "Heróico: melhore 2 dos seus itens 269 4/6 para 276 6/6 por 80 Brasões Heróicos" },
+            { id = "2568bd36", text = "Mítico: se seu item do Grande Cofre era 1/6, melhore primeiro o equivalente heróico para 6/6 por 20 Brasões Heróicos. Depois melhore seu item da trilha mítica 272 1/6 para 6/6 289 por 80 Brasões Míticos." },
+            { id = "8d74c3e1", text = "Acompanhe os Brasões: 520/520 Heróico, 480/520 Mítico – nunca acumule Brasões Míticos" },
+            { id = "4f04ba4e", text = "Nível de item final: 1x266, 2x269, 6x276h, 2x285(criado), 4x289" },
         },
     },
+
     {
-        id = "week_6_apr_21_done_with_heroic_crests",
+        id = "6a36daa1",
         title = "Semana 6 - 21 de abr. - Terminados os Brasões Heróicos",
         items = {
-            { id = "open_vault_272_myth_item", text = "Abra o Grande Cofre (item mítico 272+)" },
-            { id = "farm_10s_for_vault_crests", text = "Farme +10s para o Grande Cofre + Brasões" },
-            { id = "heroic_upgrade_your_last_4_6_269_item_to_6_6_276_for_40_heroic_crests", text = "Heróico: melhore seu último item 269 4/6 para 276 6/6 por 40 Brasões Heróicos" },
-            { id = "mythic_if_your_vault_item_was_1_6_upgrade_its_heroic_counterpart_first_to_6_6_heroic_for_20_heroic_crests_upgrade_your_1_6_272_myth_track_item_to_6_6_289_for_80_myth_crests", text = "Mítico: se seu item do Grande Cofre era 1/6, melhore primeiro o equivalente heróico para 6/6 por 20 Brasões Heróicos. Depois melhore seu item da trilha mítica 272 1/6 para 6/6 289 por 80 Brasões Míticos." },
-            { id = "mythic_upgrade_your_raid_drop_from_2_6_275_myth_track_to_6_6_289_for_80_myth_crests", text = "Mítico: melhore seu item da raid 2/6 275 da trilha mítica para 6/6 289 por 80 Brasões Míticos." },
-            { id = "track_crests_560_620_heroic_620_620_mythic_never_hold_mythic_crests", text = "Acompanhe os Brasões: 560/620 Heróico, 620/620 Mítico – nunca acumule Brasões Míticos" },
-            { id = "ending_item_level_7x276h_2x285_crafted_1x_285_5x289", text = "Nível de item final: 7x276h, 2x285(criado), 1x285, 5x289" },
+            { id = "9375e497", text = "Abra o Grande Cofre (item mítico 272+)" },
+            { id = "1db5f946", text = "Farme +10s para o Grande Cofre + Brasões" },
+            { id = "c35cf0b6", text = "Heróico: melhore seu último item 269 4/6 para 276 6/6 por 40 Brasões Heróicos" },
+            { id = "2568bd36", text = "Mítico: se seu item do Grande Cofre era 1/6, melhore primeiro o equivalente heróico para 6/6 por 20 Brasões Heróicos. Depois melhore seu item da trilha mítica 272 1/6 para 6/6 289 por 80 Brasões Míticos." },
+            { id = "0ccf5c83", text = "Mítico: melhore seu item da raid 2/6 275 da trilha mítica para 6/6 289 por 80 Brasões Míticos." },
+            { id = "4510d1aa", text = "Acompanhe os Brasões: 560/620 Heróico, 620/620 Mítico – nunca acumule Brasões Míticos" },
+            { id = "67f84375", text = "Nível de item final: 7x276h, 2x285(criado), 1x285, 5x289" },
         },
     },
+
     {
-        id = "week_7_apr_28",
+        id = "fd1bf82c",
         title = "Semana 7 - 28 de abr.+",
         items = {
-            { id = "do_not_craft_if_you_can_get_vault_items_higher_than_1_6", text = "Não crie se puder obter itens do Grande Cofre acima de 1/6" },
-            { id = "upgrade_mythic_items_as_you_get_them_preferring_to_jump_them_to_289_for_the_4_jump", text = "Melhore itens míticos conforme os obtiver, preferindo pular para 289 pelo bônus de +4" },
-            { id = "plan_for_possible_1h_crafted_oh_swap", text = "Planeje uma possível troca para 1M + mão secundária criada" },
-            { id = "enjoy_blizzard_s_much_better_upgrade_system", text = "Aproveite o sistema de melhoria muito melhor da Blizzard!" },
+            { id = "f9978f0e", text = "Não crie se puder obter itens do Grande Cofre acima de 1/6" },
+            { id = "66e83cc1", text = "Melhore itens míticos conforme os obtiver, preferindo pular para 289 pelo bônus de +4" },
+            { id = "a90c240c", text = "Planeje uma possível troca para 1M + mão secundária criada" },
+            { id = "10aac768", text = "Aproveite o sistema de melhoria muito melhor da Blizzard!" },
         },
     },
 }

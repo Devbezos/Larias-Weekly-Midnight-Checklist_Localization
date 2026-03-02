@@ -158,6 +158,27 @@ local STRINGS = {
     SLASH_USAGE_LOCALE = "Utilizzo: /larias locale auto|enUS|deDE|esES|esMX|frFR|itIT|ptBR|ruRU",
     SLASH_LOCALE_SET_FMT = "Lingua impostata su %s (effettiva: %s)",
     SLASH_LOCALE_NOT_FOUND = "Lingua sconosciuta '%s'. Disponibili: auto|%s", -- ⚠️ UNVERIFIED
+
+    -- ── Auto-translated (review with native speaker) ──────────────────────
+    OPTIONS_HIDE_COMPLETED_TASKS = "Nascondi attività completate",
+    HIDE_FINISHED_WEEKS = "Nascondi settimane completate",
+    OPTIONS_DISABLE_UPGRADE_WARN = "Nascondi avvisi di potenziamento",
+    SETTINGS_SECTION_ACTIONS = "Azioni",
+    SETTINGS_SECTION_DISPLAY = "Visualizzazione",
+    SETTINGS_SECTION_COLORS = "Colori",
+    SETTINGS_SECTION_LANGUAGE = "Lingua",
+    SETTINGS_SECTION_SLIDERS = "Scala e opacità",
+    SETTINGS_COLOR_RESET = "Ripristina",
+    SETTINGS_COLOR_BACKGROUND = "Sfondo",
+    SETTINGS_COLOR_LIST_TEXT = "Testo elenco",
+    SETTINGS_COLOR_HEADER_TEXT = "Testo intestazione",
+    SETTINGS_LANGUAGE_AUTO = "Auto (predefinito client)",
+    UPGRADE_WARN_MSG = "Potenziare un oggetto %s 1/6 è uno spreco di %d Emblemi.\nDovresti invece potenziare un oggetto %s 5/6", -- ⚠️ UNVERIFIED
+    UPGRADE_WARN_DISABLE_BTN = "Nascondi avviso di potenziamento",
+    UPGRADE_WARN_DISABLE_TOOLTIP = "Consulta la guida di Laria per maggiori informazioni.",
+    ALL_WEEKS_COMPLETE = "Completato!",
+    CHAR_PICKER_BUTTON = "Cambia profilo",
+    CHAR_PICKER_TOOLTIP_REMOVE = "Per rimuovere un personaggio, usa il menu Opzioni.",
 }
 
 for key, value in pairs(STRINGS) do

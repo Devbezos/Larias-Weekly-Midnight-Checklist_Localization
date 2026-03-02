@@ -17,172 +17,170 @@ if type(reg) ~= "table" then
 end
 if type(reg.data) ~= "table" then reg.data = {} end
 
--- ⚠️ TERMINI MIDNIGHT NON VERIFICATI – Verifica in gioco prima di pubblicare:
---   Modalità Guerra (Warmode), FLN = Fiera di Lunoscura (DMF),
---   Serata di Saltheril (Saltheril's Soiree), Bosco dei Canti Eterni (Eversong Woods),
---   Evento dell'abbondanza (Abundance Event), Leggende degli Haranir (Legends of the Haranir),
---   Harandar, Assalto di Stormarion (Stormarion Assault), Tempesta del Vuoto (Voidstorm),
---   La Singolarità (The Singularity), Pietra Runica Incrinata (Cracked Keystone),
---   chiavi della cassa (Coffer keys),
---   EP di riposo (Rested XP) ⚠️ NUOVO NON VERIFICATO,
---   tesori di ogni regione (regional treasures – nuova meccanica Midnight) ⚠️ NUOVO NON VERIFICATO,
---   Scorribanda generosa (Bountiful Delve) ⚠️ VERIFICARE IL TERMINE IN GIOCO
 local DATASET = {
 
     {
-        id = "early_access_feb_26_through_mar_2_pay_to_win",
+        id = "e225d803",
         title = "Accesso anticipato - dal 26 feb. al 2 mar. - Pay to Win",
         items = {
-            { id = "log_on_to_each_character_you_plan_on_leveling_so_they_start_accumulating_rested_xp", text = "Accedi a ogni personaggio che intendi livellare in modo che inizi ad accumulare EP di riposo." }, -- ⚠️ UNVERIFIED: EP di riposo (Rested XP)
-            { id = "level_characters_warmode_on_to_90_dmf_opens_sunday_for_10_more_exp", text = "Porta i personaggi in Modalità Guerra al livello 90 – la FLO apre domenica per +10% di esperienza." },
-            { id = "complete_the_weekly_stormarion_assault_in_the_voidstorm_it_is_available_in_early_access", text = "Completa l'Assalto di Stormarion settimanale nella Tempesta del Vuoto. (Disponibile nell'accesso anticipato)" }, -- ⚠️ UNVERIFIED
-            { id = "optional_kill_each_rare_once_in_each_zone_for_renown_these_are_a_weekly_lockout_for_each_rare", text = "(Facoltativo) Uccidi ogni raro una volta per zona per reputazione. Ogni raro ha un limite settimanale." },
-            { id = "hunt_down_each_region_s_treasures_for_free_renown_see_doc_for_guide", text = "Cerca i tesori di ogni regione per reputazione gratuita. Vedi doc per la guida." }, -- ⚠️ UNVERIFIED: tesori di ogni regione (Midnight regional treasures)
-            { id = "complete_4x_prey_on_normal_difficulty_for_renown", text = "Completa 4 volte la Preda in difficoltà normale per reputazione." },
-            { id = "complete_the_midnight_lore_hunter_achievement_for_renown_see_doc_for_guide", text = "Completa l'impresa Cacciatore di Lore di Midnight per reputazione - vedi doc per la guida" }, -- ⚠️ UNVERIFIED
-            { id = "complete_the_highest_peaks_achievement_for_renown_see_doc_for_guide", text = "Completa l'impresa Le Vette più Alte per reputazione - vedi doc per la guida" }, -- ⚠️ UNVERIFIED
-            { id = "complete_side_quest_chains_for_renown_can_be_done_on_alts_to_level_at_same_time_dmf_buff_does_not_give_renown", text = "Completa le catene di missioni secondarie per la reputazione. (Può essere fatto sugli alt mentre si livella). Il buff della FLO non dà reputazione." },
-            { id = "note_only_the_singularity_champion_renown_trinket_is_available_in_early_access_the_others_will_become_available_either_monday_after_the_official_launch_or_after_each_region_s_weekly_reset", text = "Nota: solo il ciondolo campione della Singolarità è disponibile nell'accesso anticipato - gli altri saranno disponibili il lunedì dopo il lancio ufficiale o dopo il reset settimanale di ogni regione." }, -- ⚠️ UNVERIFIED
+            { id = "f4b92a82", text = "Accedi a ogni personaggio che intendi livellare in modo che inizi ad accumulare EP di riposo." }, -- ⚠️ UNVERIFIED
+            { id = "825bfe20", text = "Porta i personaggi in Modalità Guerra al livello 90 – la FLO apre domenica per +10% di esperienza." },
+            { id = "50f90465", text = "Completa l'Assalto di Stormarion settimanale nella Tempesta del Vuoto. (Disponibile nell'accesso anticipato)" }, -- ⚠️ UNVERIFIED
+            { id = "7644d082", text = "(Facoltativo) Uccidi ogni raro una volta per zona per reputazione. Ogni raro ha un limite settimanale." },
+            { id = "6892e5d5", text = "Cerca i tesori di ogni regione per reputazione gratuita. Vedi doc per la guida." }, -- ⚠️ UNVERIFIED
+            { id = "f466c57b", text = "Completa 4 volte la Preda in difficoltà normale per reputazione." },
+            { id = "35bc0cfd", text = "(Facoltativo) Uccidi ogni raro una volta per zona per reputazione. Ogni raro ha un limite settimanale." },
+            { id = "2687fe6c", text = "Completa l'impresa Le Vette più Alte per reputazione - vedi doc per la guida" }, -- ⚠️ UNVERIFIED
+            { id = "91e7ee6c", text = "Completa le catene di missioni secondarie per la reputazione. (Può essere fatto sugli alt mentre si livella). Il buff della FLO non dà reputazione." },
+            { id = "4e99ff6e", text = "Nota: solo il ciondolo campione della Singolarità è disponibile nell'accesso anticipato - gli altri saranno disponibili il lunedì dopo il lancio ufficiale o dopo il reset settimanale di ogni regione." }, -- ⚠️ UNVERIFIED
         },
     },
+
     {
-        id = "pre_season_week_1_march_3_m0_s",
+        id = "50281d6f",
         title = "Pre-stagione settimana 1 - 3 marzo - M0",
         items = {
-                        { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Non spendere nessun Emblema finché non ti viene detto" },
-            { id = "raise_the_singularity_renown_to_rank_7_for_1_6_champion_trinket_available_in_early_access_comes_from_quest_from_the_renown_vendor_not_purchased", text = "Porta la reputazione con La Singolarità al grado 7 per il ciondolo campione 1/6 - available in early access - comes from quest from the renown vendor (not purchased)" },
-            { id = "raise_hara_ti_renown_to_rank_8_for_1_6_champion_belt_not_available_in_early_access_comes_from_quest_from_the_renown_vendor_not_purchased", text = "Porta la reputazione con Hara'ti al grado 8 per la cintura campione 1/6 - not available in early access? - comes from quest from the renown vendor (not purchased)" },
-            { id = "raise_silvermoon_renown_to_rank_9_for_1_6_champion_helm_not_available_in_early_access_comes_from_quest_from_the_renown_vendor_not_purchased", text = "Porta la reputazione con Lunargento al grado 9 per l'elmo campione 1/6 - NOT available in early access - comes from quest from the renown vendor (not purchased)" },
-            { id = "raise_amani_tribe_renown_to_rank_9_for_1_6_champion_necklace_not_available_in_early_access_comes_from_quest_from_the_renown_vendor_not_purchased", text = "Porta la reputazione con la Tribù Amani al grado 9 per la collana campione 1/6 - not available in early access? - comes from quest from the renown vendor (not purchased)" },
-            { id = "complete_the_weekly_saltheril_s_soiree_in_eversong_woods", text = "Completa la Serata di Saltheril settimanale nel Bosco dei Canti Eterni." },
-            { id = "complete_the_weekly_abundance_event_in_zul_aman", text = "Completa l'Evento dell'abbondanza settimanale a Zul'Aman." },
-            { id = "complete_the_weekly_legends_of_the_haranir_event_in_harandar", text = "Completa l'evento Leggende degli Haranir settimanale a Harandar." },
-            { id = "complete_the_weekly_stormarion_assault_in_the_voidstorm", text = "Completa l'Assalto di Stormarion settimanale nella Tempesta del Vuoto." },
-            { id = "optional_kill_each_rare_once_in_each_zone_for_renown_these_are_a_weekly_lockout_for_each_rare", text = "(Facoltativo) Uccidi ogni raro una volta per zona per reputazione. Ogni raro ha un limite settimanale." },
-            { id = "if_not_done_hunt_down_each_region_s_treasures_for_free_renown_see_doc_for_guide", text = "Se non ancora fatto, cerca i tesori di ogni regione per reputazione gratuita. Vedi doc per la guida." }, -- ⚠️ UNVERIFIED: tesori di ogni regione (Midnight regional treasures)
-            { id = "unlock_delves_through_tier_8_11_if_available", text = "Sblocca le Scorribande fino al livello 8 (11 se disponibile)" },
-            { id = "optional_complete_4x_normal_prey_for_adventurer_gear_and_renown", text = "(Facoltativo) Completa 4 volte la Preda normale per equipaggiamento esploratore e reputazione." },
-            { id = "complete_4x_hard_prey_for_veteran_gear_and_renown", text = "Completa 4 volte la Preda difficile per equipaggiamento veterano e reputazione." },
-            { id = "complete_a_world_tour_of_m0_dungeons_rewards_vet_ilvl_do_not_upgrade_yet", text = "Completa un tour mondiale dei dungeon M0 - ricompensa livello oggetto veterano - non potenziare ancora" },
+            { id = "c3de7d35", text = "Non spendere nessun Emblema finché non ti viene detto" },
+            { id = "fe628d60", text = "Porta la reputazione con La Singolarità al grado 7 per il ciondolo campione 1/6 - available in early access - comes from quest from the renown vendor (not purchased)" },
+            { id = "9b594c78", text = "Porta la reputazione con Hara'ti al grado 8 per la cintura campione 1/6 - not available in early access? - comes from quest from the renown vendor (not purchased)" },
+            { id = "6c01e9d5", text = "Porta la reputazione con Lunargento al grado 9 per l'elmo campione 1/6 - NOT available in early access - comes from quest from the renown vendor (not purchased)" },
+            { id = "484f13d6", text = "Porta la reputazione con la Tribù Amani al grado 9 per la collana campione 1/6 - not available in early access? - comes from quest from the renown vendor (not purchased)" },
+            { id = "e326ed96", text = "Completa la Serata di Saltheril settimanale nel Bosco dei Canti Eterni." },
+            { id = "da2fa0ef", text = "Completa l'Evento dell'abbondanza settimanale a Zul'Aman." },
+            { id = "dbc8384b", text = "Completa l'evento Leggende degli Haranir settimanale a Harandar." },
+            { id = "9ad64245", text = "Completa l'Assalto di Stormarion settimanale nella Tempesta del Vuoto." },
+            { id = "35bc0cfd", text = "(Facoltativo) Uccidi ogni raro una volta per zona per reputazione. Ogni raro ha un limite settimanale." },
+            { id = "d47e5b93", text = "Se non ancora fatto, cerca i tesori di ogni regione per reputazione gratuita. Vedi doc per la guida." }, -- ⚠️ UNVERIFIED
+            { id = "346bdd7e", text = "Sblocca le Scorribande fino al livello 8 (11 se disponibile)" },
+            { id = "91b50b0a", text = "(Facoltativo) Completa 4 volte la Preda normale per equipaggiamento esploratore e reputazione." },
+            { id = "e0029ef7", text = "Completa 4 volte la Preda difficile per equipaggiamento veterano e reputazione." },
+            { id = "a7ee4829", text = "Completa un tour mondiale dei dungeon M0 - ricompensa livello oggetto veterano - non potenziare ancora" },
         },
     },
+
     {
-        id = "pre_season_week_2_march_10_m0_s",
+        id = "ff1f5a67",
         title = "Pre-stagione settimana 2 - 10 marzo - M0",
         items = {
-            { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Non spendere nessun Emblema finché non ti viene detto" },
-            { id = "if_not_completed_continue_to_raise_renown_for_champion_pieces", text = "Se non completato, continua ad aumentare la reputazione per i pezzi campione" },
-            { id = "complete_the_weekly_saltheril_s_soiree_in_eversong_woods", text = "Completa la Serata di Saltheril settimanale nel Bosco dei Canti Eterni." },
-            { id = "complete_the_weekly_abundance_event_in_zul_aman", text = "Completa l'Evento dell'abbondanza settimanale a Zul'Aman." },
-            { id = "complete_the_weekly_legends_of_the_haranir_event_in_harandar", text = "Completa l'evento Leggende degli Haranir settimanale a Harandar." },
-            { id = "complete_the_weekly_stormarion_assault_in_the_voidstorm", text = "Completa l'Assalto di Stormarion settimanale nella Tempesta del Vuoto." },
-            { id = "optional_kill_each_rare_once_in_each_zone_for_renown_these_are_a_weekly_lockout_for_each_rare", text = "(Facoltativo) Uccidi ogni raro una volta per zona per reputazione. Ogni raro ha un limite settimanale." },
-            { id = "unlock_delves_through_tier_8_11_if_available_if_not_done_yet", text = "Sblocca le Scorribande fino al livello 8 (11 se disponibile), se non ancora fatto" },
-            { id = "optional_complete_4x_normal_prey_for_adventurer_gear_and_renown", text = "(Facoltativo) Completa 4 volte la Preda normale per equipaggiamento esploratore e reputazione." },
-            { id = "complete_4x_hard_prey_for_veteran_gear_and_renown", text = "Completa 4 volte la Preda difficile per equipaggiamento veterano e reputazione." },
-            { id = "complete_a_world_tour_of_m0_dungeons_rewards_vet_ilvl_do_not_upgrade_yet", text = "Completa un tour mondiale dei dungeon M0 - ricompensa livello oggetto veterano - non potenziare ancora" },
-            { id = "if_you_raid_tuesday_the_17th_craft_see_doc_for_more_info", text = "Se radi martedì 17, crafta. Consulta il documento per ulteriori informazioni." },
+            { id = "c3de7d35", text = "Non spendere nessun Emblema finché non ti viene detto" },
+            { id = "75c5fe6e", text = "Se non completato, continua ad aumentare la reputazione per i pezzi campione" },
+            { id = "e326ed96", text = "Completa la Serata di Saltheril settimanale nel Bosco dei Canti Eterni." },
+            { id = "da2fa0ef", text = "Completa l'Evento dell'abbondanza settimanale a Zul'Aman." },
+            { id = "dbc8384b", text = "Completa l'evento Leggende degli Haranir settimanale a Harandar." },
+            { id = "9ad64245", text = "Completa l'Assalto di Stormarion settimanale nella Tempesta del Vuoto." },
+            { id = "35bc0cfd", text = "(Facoltativo) Uccidi ogni raro una volta per zona per reputazione. Ogni raro ha un limite settimanale." },
+            { id = "072e6955", text = "Sblocca le Scorribande fino al livello 8 (11 se disponibile), se non ancora fatto" },
+            { id = "91b50b0a", text = "(Facoltativo) Completa 4 volte la Preda normale per equipaggiamento esploratore e reputazione." },
+            { id = "e0029ef7", text = "Completa 4 volte la Preda difficile per equipaggiamento veterano e reputazione." },
+            { id = "a7ee4829", text = "Completa un tour mondiale dei dungeon M0 - ricompensa livello oggetto veterano - non potenziare ancora" },
+            { id = "c33e5c84", text = "Se radi martedì 17, crafta. Consulta il documento per ulteriori informazioni." },
         },
     },
+
     {
-        id = "season_1_week_1_mar_17_heroic_week",
+        id = "33a3fcba",
         title = "Stagione 1 settimana 1 - 17 marzo - Settimana eroica",
         items = {
-            { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Non spendere nessun Emblema finché non ti viene detto" },
-            { id = "do_lfr_for_tier_pieces_check_guide_for_why", text = "Fai il LFR per i pezzi tier (controlla la guida per sapere perché)" },
-            { id = "optional_complete_a_world_tour_of_m0_dungeons_rewards_champ_ilvl", text = "(Facoltativo?) Completa un tour mondiale dei dungeon M0 - ricompensa livello oggetto campione" }, -- ⚠️ UNVERIFIED
-            { id = "complete_4x_nightmare_prey_for_champion_gear_and_renown", text = "Completa 4 volte la Preda da Incubo per equipaggiamento campione e reputazione." },
-            { id = "kill_world_boss_for_champ_2_6_250_ilvl_item", text = "Uccidi il boss mondiale per un oggetto campione 2/6 livello 250" },
-            { id = "if_available_complete_pvp_quest_for_guaranteed_hero_neck_ring", text = "Se disponibile, completa la missione JcJ per collana/anello eroe garantito" },
-            { id = "do_t8_bountiful_delves_with_coffer_keys_use_map_on_t8_delve", text = "Fai Scorribande generose T8 con chiavi del forziere, usa la mappa nelle Scorribande T8+" },
-            { id = "before_raid_craft_2x_246_ilvl_pieces_2x_embellishments_on_weak_slots_use_160_vet_crests", text = "Prima del raid: crafta 2 pezzi liv. 246, 2 ornamenti negli slot deboli, usa 160 emblemi veterano" },
-            { id = "before_raid_spend_all_adventurer_veteran_and_champion_crests_upgrading_anything", text = "Prima del raid: spendi tutti gli Emblemi esploratore, veterano e campione potenziando tutto" },
-            { id = "track_crests_0_100_heroic_0_100_mythic", text = "Tieni traccia degli emblemi: 0/100 Eroico, 0/100 Mitico" },
+            { id = "c3de7d35", text = "Non spendere nessun Emblema finché non ti viene detto" },
+            { id = "5b379666", text = "Fai il LFR per i pezzi tier (controlla la guida per sapere perché)" },
+            { id = "dd71541a", text = "(Facoltativo?) Completa un tour mondiale dei dungeon M0 - ricompensa livello oggetto campione" }, -- ⚠️ UNVERIFIED
+            { id = "123747cb", text = "Completa 4 volte la Preda da Incubo per equipaggiamento campione e reputazione." },
+            { id = "dc0e2686", text = "Uccidi il boss mondiale per un oggetto campione 2/6 livello 250" },
+            { id = "3e0dfde7", text = "Se disponibile, completa la missione JcJ per collana/anello eroe garantito" },
+            { id = "fdfd56bc", text = "Fai Scorribande generose T8 con chiavi del forziere, usa la mappa nelle Scorribande T8+" },
+            { id = "eff76e73", text = "Prima del raid: crafta 2 pezzi liv. 246, 2 ornamenti negli slot deboli, usa 160 emblemi veterano" },
+            { id = "2af0bfb5", text = "Prima del raid: spendi tutti gli Emblemi esploratore, veterano e campione potenziando tutto" },
+            { id = "5768e0fe", text = "Tieni traccia degli emblemi: 0/100 Eroico, 0/100 Mitico" },
         },
     },
+
     {
-        id = "week_2_mar_24_mythic_week_m_opens_take_off_work_giganerds",
+        id = "d2de9d43",
         title = "Settimana 2 - 24 marzo - Settimana mitica, M+ apre, prendetevi ferie nerd",
         items = {
-            { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Non spendere nessun Emblema finché non ti viene detto" },
-            { id = "1h_crafted_note_check_guide_check_craft_path_info_very_important", text = "Nota sull'arma 1M craftata, controlla la guida, verifica il percorso di crafting (MOLTO IMPORTANTE!)" },
-            { id = "do_lfr_for_tier_pieces_check_guide_for_why", text = "Fai il LFR per i pezzi tier (controlla la guida per sapere perché)" },
-            { id = "optional_kill_world_boss_for_champ_2_6_250_ilvl_item", text = "(Facoltativo) Uccidi il boss mondiale per un oggetto campione 2/6 livello 250" },
-            { id = "optional_complete_4x_nightmare_prey_for_champion_gear_and_renown", text = "(Facoltativo) Completa 4 volte la Preda da Incubo per equipaggiamento campione e reputazione." },
-            { id = "do_at_least_one_t11_bountiful_delve_to_get_cracked_keystone_quest", text = "Fai almeno una Scorribanda generosa di livello 11 per ottenere la missione della Pietra Runica Incrinata" }, -- ⚠️ UNVERIFIED: Scorribanda generosa (Bountiful Delve)
-            { id = "continue_to_spend_all_adventurer_veteran_and_champion_crests_upgrading_anything", text = "Continua a spendere tutti gli Emblemi esploratore, veterano e campione potenziando tutto" },
-            { id = "farm_10s_for_266_gear_in_every_slot", text = "Farma i +10 per equipaggiamento liv. 266 in ogni slot" },
-            { id = "before_mythic_raid_upgrade_11x_3_6_hero_items_once_each", text = "Prima del raid mitico: potenzia 11 oggetti eroe 3/6 una volta ciascuno" },
-            { id = "mythic_if_you_re_lucky_and_got_a_myth_track_item_skip_to_next_week_s_upgrade_advice_for_it", text = "Mitico: se hai un oggetto del percorso mitico, passa ai consigli di potenziamento della settimana successiva." },
-            { id = "track_crests_220_220_heroic_0_220_mythic_never_hold_mythic_crests", text = "Tieni traccia degli emblemi: 220/220 Eroico, 0/220 Mitico – non accumulare mai Emblemi Mitici" },
-            { id = "ending_item_level_4x266_11x269", text = "Livello oggetto finale: 4x266, 11x269" },
+            { id = "c3de7d35", text = "Non spendere nessun Emblema finché non ti viene detto" },
+            { id = "7e42a12d", text = "Nota sull'arma 1M craftata, controlla la guida, verifica il percorso di crafting (MOLTO IMPORTANTE!)" },
+            { id = "5b379666", text = "Fai il LFR per i pezzi tier (controlla la guida per sapere perché)" },
+            { id = "16cf341e", text = "(Facoltativo) Uccidi il boss mondiale per un oggetto campione 2/6 livello 250" },
+            { id = "3ccf0a1f", text = "(Facoltativo) Completa 4 volte la Preda da Incubo per equipaggiamento campione e reputazione." },
+            { id = "26d0b610", text = "Fai almeno una Scorribanda generosa di livello 11 per ottenere la missione della Pietra Runica Incrinata" }, -- ⚠️ UNVERIFIED
+            { id = "286f219c", text = "Continua a spendere tutti gli Emblemi esploratore, veterano e campione potenziando tutto" },
+            { id = "74924a7b", text = "Farma i +10 per equipaggiamento liv. 266 in ogni slot" },
+            { id = "eb45e64d", text = "Prima del raid mitico: potenzia 11 oggetti eroe 3/6 una volta ciascuno" },
+            { id = "cbfb6966", text = "Mitico: se hai un oggetto del percorso mitico, passa ai consigli di potenziamento della settimana successiva." },
+            { id = "0e855644", text = "Tieni traccia degli emblemi: 220/220 Eroico, 0/220 Mitico – non accumulare mai Emblemi Mitici" },
+            { id = "721f006f", text = "Livello oggetto finale: 4x266, 11x269" },
         },
     },
+
     {
-        id = "week_3_mar_31_final_raid_opens",
+        id = "b0abc363",
         title = "Settimana 3 - 31 marzo - Apre il raid finale",
         items = {
-            { id = "open_vault_272_myth_item_upgrade_after_crafting", text = "Apri il Grande Forziere (oggetto mitico 272+) - potenzia dopo il crafting" },
-            { id = "craft_items_see_guide_for_2_paths_to_pick", text = "Crea oggetti – consulta la guida per 2 percorsi da scegliere" },
-            { id = "if_no_4p_do_lfr_for_tier_pieces_check_guide_for_why", text = "Senza bonus 4 pezzi: fai il LFR per i pezzi tier (controlla la guida)" },
-            { id = "farm_10s_for_vault_crests", text = "Farma i +10 per il Grande Forziere + emblemi" },
-            { id = "heroic_upgrade_2_of_your_4_6_269_items_to_6_6_276_for_80_heroic_crests", text = "Eroico: potenzia 2 dei tuoi oggetti 269 4/6 a 276 6/6 per 80 emblemi eroici" },
-            { id = "mythic_if_your_vault_item_was_1_6_upgrade_its_heroic_counterpart_first_to_6_6_heroic_for_20_heroic_crests_upgrade_your_1_6_272_myth_track_item_to_6_6_289_for_80_myth_crests", text = "Mitico: se il tuo oggetto del Grande Forziere era 1/6, potenzia prima la controparte eroica a 6/6 per 20 emblemi eroici. Poi potenzia il tuo oggetto del percorso mitico 272 1/6 a 6/6 289 per 80 emblemi mitici." },
-            { id = "if_you_got_a_2nd_myth_track_item_skip_to_next_week_s_upgrade_advice_for_it", text = "Se hai un 2° oggetto del percorso mitico, passa ai consigli di potenziamento della settimana successiva." },
-            { id = "track_crests_320_320_heroic_160_320_mythic_never_hold_mythic_crests", text = "Tieni traccia degli emblemi: 320/320 Eroico, 160/320 Mitico – non accumulare mai Emblemi Mitici" },
-            { id = "ending_item_level_3x266_8x269_2x276h_1x285_crafted_1x289", text = "Livello oggetto finale: 3x266, 8x269, 2x276h, 1x285(craftato), 1x289" },
+            { id = "1fbc825e", text = "Apri il Grande Forziere (oggetto mitico 272+) - potenzia dopo il crafting" },
+            { id = "fb8255a7", text = "Crea oggetti – consulta la guida per 2 percorsi da scegliere" },
+            { id = "8226c872", text = "Senza bonus 4 pezzi: fai il LFR per i pezzi tier (controlla la guida)" },
+            { id = "1db5f946", text = "Farma i +10 per il Grande Forziere + emblemi" },
+            { id = "c316485a", text = "Eroico: potenzia 2 dei tuoi oggetti 269 4/6 a 276 6/6 per 80 emblemi eroici" },
+            { id = "2568bd36", text = "Mitico: se il tuo oggetto del Grande Forziere era 1/6, potenzia prima la controparte eroica a 6/6 per 20 emblemi eroici. Poi potenzia il tuo oggetto del percorso mitico 272 1/6 a 6/6 289 per 80 emblemi mitici." },
+            { id = "484da4b0", text = "Se hai un 2° oggetto del percorso mitico, passa ai consigli di potenziamento della settimana successiva." },
+            { id = "0ecf8e89", text = "Tieni traccia degli emblemi: 320/320 Eroico, 160/320 Mitico – non accumulare mai Emblemi Mitici" },
+            { id = "02884180", text = "Livello oggetto finale: 3x266, 8x269, 2x276h, 1x285(craftato), 1x289" },
         },
     },
+
     {
-        id = "week_4_apr_7",
+        id = "572003ec",
         title = "Settimana 4 - 7 apr.",
         items = {
-            { id = "open_vault_272_myth_item", text = "Apri il Grande Forziere (oggetto mitico 272+)" },
-            { id = "farm_10s_for_vault_crests", text = "Farma i +10 per il Grande Forziere + emblemi" },
-            { id = "heroic_upgrade_2_of_your_4_6_269_items_to_6_6_276_for_80_heroic_crests", text = "Eroico: potenzia 2 dei tuoi oggetti 269 4/6 a 276 6/6 per 80 emblemi eroici" },
-            { id = "mythic_if_your_vault_item_was_1_6_upgrade_its_heroic_counterpart_first_to_6_6_heroic_for_20_heroic_crests_upgrade_your_1_6_272_myth_track_item_to_6_6_289_for_80_myth_crests", text = "Mitico: se il tuo oggetto del Grande Forziere era 1/6, potenzia prima la controparte eroica a 6/6 per 20 emblemi eroici. Poi potenzia il tuo oggetto del percorso mitico 272 1/6 a 6/6 289 per 80 emblemi mitici." },
-            { id = "mythic_upgrade_your_raid_drop_from_2_6_275_myth_track_to_6_6_289_for_80_myth_crests", text = "Mitico: potenzia il tuo bottino del raid 2/6 275 del percorso mitico a 6/6 289 per 80 emblemi mitici." },
-            { id = "track_crests_420_400_heroic_320_420_mythic_never_hold_mythic_crests", text = "Tieni traccia degli emblemi: 420/400 Eroico, 320/420 Mitico – non accumulare mai Emblemi Mitici" },
-            { id = "ending_item_level_2x266_5x269_4x276h_1x285_crafted_3x289", text = "Livello oggetto finale: 2x266, 5x269, 4x276h, 1x285(craftato), 3x289" },
+            { id = "9375e497", text = "Apri il Grande Forziere (oggetto mitico 272+)" },
+            { id = "1db5f946", text = "Farma i +10 per il Grande Forziere + emblemi" },
+            { id = "c316485a", text = "Eroico: potenzia 2 dei tuoi oggetti 269 4/6 a 276 6/6 per 80 emblemi eroici" },
+            { id = "2568bd36", text = "Mitico: se il tuo oggetto del Grande Forziere era 1/6, potenzia prima la controparte eroica a 6/6 per 20 emblemi eroici. Poi potenzia il tuo oggetto del percorso mitico 272 1/6 a 6/6 289 per 80 emblemi mitici." },
+            { id = "0ccf5c83", text = "Mitico: potenzia il tuo bottino del raid 2/6 275 del percorso mitico a 6/6 289 per 80 emblemi mitici." },
+            { id = "299f3284", text = "Tieni traccia degli emblemi: 420/400 Eroico, 320/420 Mitico – non accumulare mai Emblemi Mitici" },
+            { id = "8b8cde46", text = "Livello oggetto finale: 2x266, 5x269, 4x276h, 1x285(craftato), 3x289" },
         },
     },
+
     {
-        id = "week_5_apr_14",
+        id = "239053b5",
         title = "Settimana 5 - 14 apr.",
         items = {
-            { id = "open_vault_272_myth_item", text = "Apri il Grande Forziere (oggetto mitico 272+)" },
-            { id = "farm_10s_for_vault_crests", text = "Farma i +10 per il Grande Forziere + emblemi" },
-            { id = "craft_next_item_see_doc_for_more_info", text = "Crea il prossimo oggetto (consulta il documento per ulteriori informazioni)" },
-            { id = "heroic_upgrade_2_of_your_4_6_269_items_to_6_6_276_for_80_heroic_crests", text = "Eroico: potenzia 2 dei tuoi oggetti 269 4/6 a 276 6/6 per 80 emblemi eroici" },
-            { id = "mythic_if_your_vault_item_was_1_6_upgrade_its_heroic_counterpart_first_to_6_6_heroic_for_20_heroic_crests_upgrade_your_1_6_272_myth_track_item_to_6_6_289_for_80_myth_crests", text = "Mitico: se il tuo oggetto del Grande Forziere era 1/6, potenzia prima la controparte eroica a 6/6 per 20 emblemi eroici. Poi potenzia il tuo oggetto del percorso mitico 272 1/6 a 6/6 289 per 80 emblemi mitici." },
-            { id = "track_crests_520_520_heroic_480_520_mythic_never_hold_mythic_crests", text = "Tieni traccia degli emblemi: 520/520 Eroico, 480/520 Mitico – non accumulare mai Emblemi Mitici" },
-            { id = "ending_item_level_1x266_2x269_6x276h_2x285_crafted_4x289", text = "Livello oggetto finale: 1x266, 2x269, 6x276h, 2x285(craftato), 4x289" },
+            { id = "9375e497", text = "Apri il Grande Forziere (oggetto mitico 272+)" },
+            { id = "1db5f946", text = "Farma i +10 per il Grande Forziere + emblemi" },
+            { id = "11e426da", text = "Crea il prossimo oggetto (consulta il documento per ulteriori informazioni)" },
+            { id = "c316485a", text = "Eroico: potenzia 2 dei tuoi oggetti 269 4/6 a 276 6/6 per 80 emblemi eroici" },
+            { id = "2568bd36", text = "Mitico: se il tuo oggetto del Grande Forziere era 1/6, potenzia prima la controparte eroica a 6/6 per 20 emblemi eroici. Poi potenzia il tuo oggetto del percorso mitico 272 1/6 a 6/6 289 per 80 emblemi mitici." },
+            { id = "8d74c3e1", text = "Tieni traccia degli emblemi: 520/520 Eroico, 480/520 Mitico – non accumulare mai Emblemi Mitici" },
+            { id = "4f04ba4e", text = "Livello oggetto finale: 1x266, 2x269, 6x276h, 2x285(craftato), 4x289" },
         },
     },
+
     {
-        id = "week_6_apr_21_done_with_heroic_crests",
+        id = "6a36daa1",
         title = "Settimana 6 - 21 apr. - Finiti gli emblemi eroici",
         items = {
-            { id = "open_vault_272_myth_item", text = "Apri il Grande Forziere (oggetto mitico 272+)" },
-            { id = "farm_10s_for_vault_crests", text = "Farma i +10 per il Grande Forziere + emblemi" },
-            { id = "heroic_upgrade_your_last_4_6_269_item_to_6_6_276_for_40_heroic_crests", text = "Eroico: potenzia il tuo ultimo oggetto 269 4/6 a 276 6/6 per 40 emblemi eroici" },
-            { id = "mythic_if_your_vault_item_was_1_6_upgrade_its_heroic_counterpart_first_to_6_6_heroic_for_20_heroic_crests_upgrade_your_1_6_272_myth_track_item_to_6_6_289_for_80_myth_crests", text = "Mitico: se il tuo oggetto del Grande Forziere era 1/6, potenzia prima la controparte eroica a 6/6 per 20 emblemi eroici. Poi potenzia il tuo oggetto del percorso mitico 272 1/6 a 6/6 289 per 80 emblemi mitici." },
-            { id = "mythic_upgrade_your_raid_drop_from_2_6_275_myth_track_to_6_6_289_for_80_myth_crests", text = "Mitico: potenzia il tuo bottino del raid 2/6 275 del percorso mitico a 6/6 289 per 80 emblemi mitici." },
-            { id = "track_crests_560_620_heroic_620_620_mythic_never_hold_mythic_crests", text = "Tieni traccia degli emblemi: 560/620 Eroico, 620/620 Mitico – non accumulare mai Emblemi Mitici" },
-            { id = "ending_item_level_7x276h_2x285_crafted_1x_285_5x289", text = "Livello oggetto finale: 7x276h, 2x285(craftato), 1x285, 5x289" },
+            { id = "9375e497", text = "Apri il Grande Forziere (oggetto mitico 272+)" },
+            { id = "1db5f946", text = "Farma i +10 per il Grande Forziere + emblemi" },
+            { id = "c35cf0b6", text = "Eroico: potenzia il tuo ultimo oggetto 269 4/6 a 276 6/6 per 40 emblemi eroici" },
+            { id = "2568bd36", text = "Mitico: se il tuo oggetto del Grande Forziere era 1/6, potenzia prima la controparte eroica a 6/6 per 20 emblemi eroici. Poi potenzia il tuo oggetto del percorso mitico 272 1/6 a 6/6 289 per 80 emblemi mitici." },
+            { id = "0ccf5c83", text = "Mitico: potenzia il tuo bottino del raid 2/6 275 del percorso mitico a 6/6 289 per 80 emblemi mitici." },
+            { id = "4510d1aa", text = "Tieni traccia degli emblemi: 560/620 Eroico, 620/620 Mitico – non accumulare mai Emblemi Mitici" },
+            { id = "67f84375", text = "Livello oggetto finale: 7x276h, 2x285(craftato), 1x285, 5x289" },
         },
     },
+
     {
-        id = "week_7_apr_28",
+        id = "fd1bf82c",
         title = "Settimana 7 - 28 apr.+",
         items = {
-            { id = "do_not_craft_if_you_can_get_vault_items_higher_than_1_6", text = "Non craftare se puoi ottenere oggetti dal Grande Forziere superiori a 1/6" },
-            { id = "upgrade_mythic_items_as_you_get_them_preferring_to_jump_them_to_289_for_the_4_jump", text = "Potenzia gli oggetti mitici man mano che li ottieni, preferendo il salto a 289 per il +4" },
-            { id = "plan_for_possible_1h_crafted_oh_swap", text = "Pianifica un possibile scambio a 1M + mano secondaria craftata" },
-            { id = "enjoy_blizzard_s_much_better_upgrade_system", text = "Goditi il sistema di potenziamento molto migliore di Blizzard!" },
+            { id = "f9978f0e", text = "Non craftare se puoi ottenere oggetti dal Grande Forziere superiori a 1/6" },
+            { id = "66e83cc1", text = "Potenzia gli oggetti mitici man mano che li ottieni, preferendo il salto a 289 per il +4" },
+            { id = "a90c240c", text = "Pianifica un possibile scambio a 1M + mano secondaria craftata" },
+            { id = "10aac768", text = "Goditi il sistema di potenziamento molto migliore di Blizzard!" },
         },
     },
 }
 
 reg.data[LOCALE] = DATASET
-

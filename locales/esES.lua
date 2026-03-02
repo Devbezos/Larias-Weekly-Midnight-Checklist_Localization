@@ -159,6 +159,27 @@ local STRINGS = {
     SLASH_USAGE_LOCALE = "Uso: /larias locale auto|enUS|deDE|esES|esMX|frFR|itIT|ptBR|ruRU",
     SLASH_LOCALE_SET_FMT = "Idioma configurado a %s (efectivo: %s)",
     SLASH_LOCALE_NOT_FOUND = "Idioma desconocido '%s'. Disponible: auto|%s", -- ⚠️ UNVERIFIED
+
+    -- ── Auto-translated (review with native speaker) ──────────────────────
+    OPTIONS_HIDE_COMPLETED_TASKS = "Ocultar tareas terminadas",
+    HIDE_FINISHED_WEEKS = "Ocultar semanas terminadas",
+    OPTIONS_DISABLE_UPGRADE_WARN = "Ocultar advertencias de mejora",
+    SETTINGS_SECTION_ACTIONS = "Acciones",
+    SETTINGS_SECTION_DISPLAY = "Visualización",
+    SETTINGS_SECTION_COLORS = "Colores",
+    SETTINGS_SECTION_LANGUAGE = "Idioma",
+    SETTINGS_SECTION_SLIDERS = "Escala y opacidad",
+    SETTINGS_COLOR_RESET = "Restablecer",
+    SETTINGS_COLOR_BACKGROUND = "Fondo",
+    SETTINGS_COLOR_LIST_TEXT = "Texto de lista",
+    SETTINGS_COLOR_HEADER_TEXT = "Texto de encabezado",
+    SETTINGS_LANGUAGE_AUTO = "Automático (predeterminado del cliente)",
+    UPGRADE_WARN_MSG = "Mejorar un objeto %s 1/6 es un desperdicio de %d blasones.\nDeberías mejorar un objeto %s 5/6 en su lugar", -- ⚠️ UNVERIFIED
+    UPGRADE_WARN_DISABLE_BTN = "Ocultar advertencia de mejora",
+    UPGRADE_WARN_DISABLE_TOOLTIP = "Consulta la guía de Laria para más información.",
+    ALL_WEEKS_COMPLETE = "¡Terminado!",
+    CHAR_PICKER_BUTTON = "Cambiar perfil",
+    CHAR_PICKER_TOOLTIP_REMOVE = "Para eliminar un personaje, usa el menú de opciones.",
 }
 
 for key, value in pairs(STRINGS) do

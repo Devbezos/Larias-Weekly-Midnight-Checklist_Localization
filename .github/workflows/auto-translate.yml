@@ -18,12 +18,17 @@ on:
         required: false
         default: "claude-sonnet-4-5"
 
+  # Fired by the main addon repo whenever enUS_Data.lua changes.
+  repository_dispatch:
+    types: [enUS-data-updated]
+
 concurrency:
   group: auto-translate-${{ github.ref }}
   cancel-in-progress: true
 
 permissions:
   contents: write
+  pull-requests: write
 
 # ─── Job ─────────────────────────────────────────────────────────────────────
 jobs:
@@ -31,6 +36,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # ── 0. Resolve inputs (works for both workflow_dispatch and repository_dispatch) ──
+      - name: Resolve run parameters
+        id: params
+        run: |
+          # workflow_dispatch populates inputs.*; repository_dispatch uses client_payload.*
+          LOCALE="${{ inputs.locale || github.event.client_payload.locale }}"
+          MODEL="${{ inputs.model || github.event.client_payload.model }}"
+          DRY_RUN="${{ inputs.dry_run || github.event.client_payload.dry_run }}"
+          echo "locale=${LOCALE:-}"                >> "$GITHUB_OUTPUT"
+          echo "model=${MODEL:-claude-sonnet-4-5}" >> "$GITHUB_OUTPUT"
+          echo "dry_run=${DRY_RUN:-false}"         >> "$GITHUB_OUTPUT"
+
       # ── 1. Checkout locales repo ────────────────────────────────────────────
       - name: Checkout locales repo
         uses: actions/checkout@v4
@@ -59,9 +76,12 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
-          ARGS="--enus _main-addon/Locales/enUS.lua --model ${{ inputs.model || 'claude-sonnet-4-5' }}"
-          if [ -n "${{ inputs.locale }}" ]; then
-            ARGS="$ARGS --locale ${{ inputs.locale }}"
+          ARGS="--enus _main-addon/Locales/enUS.lua --model ${{ steps.params.outputs.model }}"
+          if [ -n "${{ steps.params.outputs.locale }}" ]; then
+            ARGS="$ARGS --locale ${{ steps.params.outputs.locale }}"
+          fi
+          if [ "${{ steps.params.outputs.dry_run }}" = "true" ]; then
+            ARGS="$ARGS --dry-run"
           fi
           python scripts/auto_translate.py $ARGS
 
@@ -70,15 +90,19 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
-          ARGS="--enus _main-addon/Locales/enUS_Data.lua --model ${{ inputs.model || 'claude-sonnet-4-5' }}"
-          if [ -n "${{ inputs.locale }}" ]; then
-            ARGS="$ARGS --locale ${{ inputs.locale }}"
+          ARGS="--enus _main-addon/Locales/enUS_Data.lua --model ${{ steps.params.outputs.model }}"
+          if [ -n "${{ steps.params.outputs.locale }}" ]; then
+            ARGS="$ARGS --locale ${{ steps.params.outputs.locale }}"
+          fi
+          if [ "${{ steps.params.outputs.dry_run }}" = "true" ]; then
+            ARGS="$ARGS --dry-run"
           fi
           python scripts/auto_translate_data.py $ARGS
 
-      # ── 6. Commit & push (skipped on dry run) ──────────────────────────────
-      - name: Commit and push translations
-        if: ${{ inputs.dry_run != true }}
+      # ── 6. Commit to a new branch ───────────────────────────────────────────
+      - name: Commit translations to branch
+        if: steps.params.outputs.dry_run != 'true'
+        id: branch
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -86,13 +110,35 @@ jobs:
           git add locales/
           if git diff --cached --quiet; then
             echo "No locale changes to commit."
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
 
-          LOCALE_LABEL="${{ inputs.locale }}"
-          if [ -z "$LOCALE_LABEL" ]; then
-            LOCALE_LABEL="all locales"
-          fi
+          LOCALE_LABEL="${{ steps.params.outputs.locale }}"
+          if [ -z "$LOCALE_LABEL" ]; then LOCALE_LABEL="all-locales"; fi
 
-          git commit -m "Auto-translate ${LOCALE_LABEL} – generated with AI translator, unverified terms flagged"
-          git push
+          TIMESTAMP=$(date -u +%Y%m%d-%H%M%S)
+          BRANCH="auto-translate/${LOCALE_LABEL}-${TIMESTAMP}"
+          git checkout -b "$BRANCH"
+          git commit -m "Auto-translate ${LOCALE_LABEL} – AI-generated, unverified terms flagged"
+          git push origin "$BRANCH"
+          echo "has_changes=true" >> "$GITHUB_OUTPUT"
+          echo "branch=$BRANCH"   >> "$GITHUB_OUTPUT"
+
+      # ── 7. Open Pull Request ────────────────────────────────────────────────
+      - name: Open Pull Request
+        if: steps.branch.outputs.has_changes == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          LOCALE_LABEL="${{ steps.params.outputs.locale }}"
+          if [ -z "$LOCALE_LABEL" ]; then LOCALE_LABEL="all locales"; fi
+          DATE=$(date -u +%Y-%m-%d)
+
+          gh pr create \
+            --title "Auto-translate ${LOCALE_LABEL} – ${DATE}" \
+            --body "Automated translation pass triggered by a change to \`enUS_Data.lua\`.
+
+All new entries are flagged with ⚠️ UNVERIFIED for native speaker review before merging." \
+            --base "${{ github.event.repository.default_branch }}" \
+            --head "${{ steps.branch.outputs.branch }}"

@@ -149,10 +149,14 @@ jobs:
           fi
           {
             echo "## [$VERSION] ($DATE)"
-            # Human commits only — filter out all automated bot messages.
+            # Human commits only — filter out automated bot messages and
+            # squash-merged PR/branch titles (subjects that look like paths
+            # or end with a GitHub PR number like "(#12)").
             if [ -n "${PREV_STABLE:-}" ]; then
               git log "${PREV_STABLE}..HEAD" --pretty=format:"- %s" --no-merges \
                 | grep -v -iE "^- (post-release:|alpha release:|auto-update|release v)" \
+                | grep -v -E "\(#[0-9]+\)$" \
+                | grep -v -E "^- [A-Za-z]+/[^[:space:]]" \
                 || true
             fi
             if [ -n "${CHANGED_LOCALES:-}" ]; then

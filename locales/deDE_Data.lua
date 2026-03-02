@@ -17,170 +17,170 @@ if type(reg) ~= "table" then
 end
 if type(reg.data) ~= "table" then reg.data = {} end
 
--- ⚠️ UNVERIFIED MIDNIGHT TERMS – Verify these in-game before shipping:
---   Kriegsmodus (Warmode), Jahrmarkt des Dunkelmondes (DMF abbr. "JdD"),
---   Saltheril-Fest (Saltheril's Soiree), Immergrüner Wald (Eversong Woods),
---   Überfluss-Ereignis (Abundance Event), Legenden der Haranir,
---   Harandar, Sturmarion-Angriff (Stormarion Assault),
---   Nichtsturm (Voidstorm), Die Singularität (The Singularity),
---   Zerbrochener Schlussstein (Cracked Keystone), Truhen-Schlüssel (Coffer keys),
---   ausgeruhte EP (Rested XP), Regionsschätze (regional treasures – new Midnight mechanic)
 local DATASET = {
 
     {
-        id = "early_access_feb_26_through_mar_2_pay_to_win",
+        id = "e225d803",
         title = "Früher Zugang - 26. Feb. bis 2. März - Pay to Win",
         items = {
-            { id = "log_on_to_each_character_you_plan_on_leveling_so_they_start_accumulating_rested_xp", text = "Mit jedem Charakter einloggen, den du leveln möchtest, damit er mit dem Ansammeln ausgeruhter EP beginnt." }, -- ⚠️ UNVERIFIED: ausgeruhte EP (Rested XP)
-            { id = "level_characters_warmode_on_to_90_dmf_opens_sunday_for_10_more_exp", text = "Charaktere im Kriegsmodus auf Level 90 bringen – JdD öffnet Sonntag für +10 % XP." },
-            { id = "complete_the_weekly_stormarion_assault_in_the_voidstorm_it_is_available_in_early_access", text = "Wöchentlichen Sturmarion-Angriff im Nichtsturm abschließen. (Im Frühen Zugang verfügbar)" }, -- ⚠️ UNVERIFIED
-            { id = "optional_kill_each_rare_once_in_each_zone_for_renown_these_are_a_weekly_lockout_for_each_rare", text = "(Optional) Jeden seltenen Gegner einmal pro Zone für Ansehen töten. Wöchentlicher Lockout pro Seltenem." },
-            { id = "hunt_down_each_region_s_treasures_for_free_renown_see_doc_for_guide", text = "Schätze jeder Region für kostenloses Ansehen aufspüren. Dokument für Guide lesen." }, -- ⚠️ UNVERIFIED: Midnight Regionsschätze
-            { id = "complete_4x_prey_on_normal_difficulty_for_renown", text = "4x Beute auf Normaler Schwierigkeit für Ansehen abschließen." },
-            { id = "complete_the_midnight_lore_hunter_achievement_for_renown_see_doc_for_guide", text = "Midnight-Loreschützer-Errungenschaft für Ansehen abschließen – Guide im Dokument lesen" }, -- ⚠️ UNVERIFIED
-            { id = "complete_the_highest_peaks_achievement_for_renown_see_doc_for_guide", text = "Die-höchsten-Gipfel-Errungenschaft für Ansehen abschließen – Guide im Dokument lesen" }, -- ⚠️ UNVERIFIED
-            { id = "complete_side_quest_chains_for_renown_can_be_done_on_alts_to_level_at_same_time_dmf_buff_does_not_give_renown", text = "Nebenquestketten für Ansehen abschließen. (Kann auf Alts gleichzeitig beim Leveln erledigt werden). JdD-Buff gewährt kein Ansehen." },
-            { id = "note_only_the_singularity_champion_renown_trinket_is_available_in_early_access_the_others_will_become_available_either_monday_after_the_official_launch_or_after_each_region_s_weekly_reset", text = "Hinweis: Nur das Champion-Ansehen-Schmuckstück der Singularität ist im Frühen Zugang verfügbar – die anderen werden entweder am Montag nach dem offiziellen Release oder nach dem wöchentlichen Reset jeder Region freigeschaltet." }, -- ⚠️ UNVERIFIED
+            { id = "f4b92a82", text = "Mit jedem Charakter einloggen, den du leveln möchtest, damit er mit dem Ansammeln ausgeruhter EP beginnt." }, -- ⚠️ UNVERIFIED
+            { id = "825bfe20", text = "Charaktere im Kriegsmodus auf Level 90 bringen – JdD öffnet Sonntag für +10 % XP." },
+            { id = "50f90465", text = "Wöchentlichen Sturmarion-Angriff im Nichtsturm abschließen. (Im Frühen Zugang verfügbar)" }, -- ⚠️ UNVERIFIED
+            { id = "7644d082", text = "(Optional) Jeden seltenen Gegner einmal pro Zone für Ansehen töten. Wöchentlicher Lockout pro Seltenem." },
+            { id = "6892e5d5", text = "Schätze jeder Region für kostenloses Ansehen aufspüren. Dokument für Guide lesen." }, -- ⚠️ UNVERIFIED
+            { id = "f466c57b", text = "4x Beute auf Normaler Schwierigkeit für Ansehen abschließen." },
+            { id = "35bc0cfd", text = "(Optional) Jeden seltenen Gegner einmal pro Zone für Ansehen töten. Wöchentlicher Lockout pro Seltenem." },
+            { id = "2687fe6c", text = "Die-höchsten-Gipfel-Errungenschaft für Ansehen abschließen – Guide im Dokument lesen" }, -- ⚠️ UNVERIFIED
+            { id = "91e7ee6c", text = "Nebenquestketten für Ansehen abschließen. (Kann auf Alts gleichzeitig beim Leveln erledigt werden). JdD-Buff gewährt kein Ansehen." },
+            { id = "4e99ff6e", text = "Hinweis: Nur das Champion-Ansehen-Schmuckstück der Singularität ist im Frühen Zugang verfügbar – die anderen werden entweder am Montag nach dem offiziellen Release oder nach dem wöchentlichen Reset jeder Region freigeschaltet." }, -- ⚠️ UNVERIFIED
         },
     },
+
     {
-        id = "pre_season_week_1_march_3_m0_s",
+        id = "50281d6f",
         title = "Vorsaison Woche 1 - 3. März - M0s",
         items = {
-            { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Keine Wappen ausgeben, bis es angewiesen wird" },
-            { id = "raise_the_singularity_renown_to_rank_7_for_1_6_champion_trinket_available_in_early_access_comes_from_quest_from_the_renown_vendor_not_purchased", text = "Ansehen bei 'Die Singularität' auf Rang 7 erhöhen für 1/6-Champion-Schmuckstück - available in early access - comes from quest from the renown vendor (not purchased)" },
-            { id = "raise_hara_ti_renown_to_rank_8_for_1_6_champion_belt_not_available_in_early_access_comes_from_quest_from_the_renown_vendor_not_purchased", text = "Ansehen bei Hara'ti auf Rang 8 erhöhen für 1/6-Champion-Gürtel - not available in early access? - comes from quest from the renown vendor (not purchased)" },
-            { id = "raise_silvermoon_renown_to_rank_9_for_1_6_champion_helm_not_available_in_early_access_comes_from_quest_from_the_renown_vendor_not_purchased", text = "Ansehen bei Silbermond auf Rang 9 erhöhen für 1/6-Champion-Helm - NOT available in early access - comes from quest from the renown vendor (not purchased)" },
-            { id = "raise_amani_tribe_renown_to_rank_9_for_1_6_champion_necklace_not_available_in_early_access_comes_from_quest_from_the_renown_vendor_not_purchased", text = "Ansehen beim Amani-Stamm auf Rang 9 erhöhen für 1/6-Champion-Halskette - not available in early access? - comes from quest from the renown vendor (not purchased)" },
-            { id = "complete_the_weekly_saltheril_s_soiree_in_eversong_woods", text = "Wöchentliches Saltheril-Fest im Immergrünen Wald abschließen." },
-            { id = "complete_the_weekly_abundance_event_in_zul_aman", text = "Wöchentliches Überfluss-Ereignis in Zul'Aman abschließen." },
-            { id = "complete_the_weekly_legends_of_the_haranir_event_in_harandar", text = "Wöchentliches Legenden der Haranir-Ereignis in Harandar abschließen." },
-            { id = "complete_the_weekly_stormarion_assault_in_the_voidstorm", text = "Wöchentlichen Sturmarion-Angriff im Nichtsturm abschließen." },
-            { id = "optional_kill_each_rare_once_in_each_zone_for_renown_these_are_a_weekly_lockout_for_each_rare", text = "(Optional) Jeden seltenen Gegner einmal pro Zone für Ansehen töten. Wöchentlicher Lockout pro Seltenem." },
-            { id = "if_not_done_hunt_down_each_region_s_treasures_for_free_renown_see_doc_for_guide", text = "Falls noch nicht erledigt, Schätze jeder Region für kostenloses Ansehen aufspüren. Dokument für Guide lesen." }, -- ⚠️ UNVERIFIED: Midnight Regionsschätze
-            { id = "unlock_delves_through_tier_8_11_if_available", text = "Tiefen bis Stufe 8 freischalten (11 falls verfügbar)" },
-            { id = "optional_complete_4x_normal_prey_for_adventurer_gear_and_renown", text = "(Optional) 4x Normale Beute für Abenteurer-Ausrüstung und Ansehen abschließen." },
-            { id = "complete_4x_hard_prey_for_veteran_gear_and_renown", text = "4x Schwere Beute für Veteran-Ausrüstung und Ansehen abschließen." },
-            { id = "complete_a_world_tour_of_m0_dungeons_rewards_vet_ilvl_do_not_upgrade_yet", text = "Welttour der M0-Dungeons abschließen – Veteran-Gs – noch nicht aufwerten" },
+            { id = "c3de7d35", text = "Keine Wappen ausgeben, bis es angewiesen wird" },
+            { id = "fe628d60", text = "Ansehen bei 'Die Singularität' auf Rang 7 erhöhen für 1/6-Champion-Schmuckstück - available in early access - comes from quest from the renown vendor (not purchased)" },
+            { id = "9b594c78", text = "Ansehen bei Hara'ti auf Rang 8 erhöhen für 1/6-Champion-Gürtel - not available in early access? - comes from quest from the renown vendor (not purchased)" },
+            { id = "6c01e9d5", text = "Ansehen bei Silbermond auf Rang 9 erhöhen für 1/6-Champion-Helm - NOT available in early access - comes from quest from the renown vendor (not purchased)" },
+            { id = "484f13d6", text = "Ansehen beim Amani-Stamm auf Rang 9 erhöhen für 1/6-Champion-Halskette - not available in early access? - comes from quest from the renown vendor (not purchased)" },
+            { id = "e326ed96", text = "Wöchentliches Saltheril-Fest im Immergrünen Wald abschließen." },
+            { id = "da2fa0ef", text = "Wöchentliches Überfluss-Ereignis in Zul'Aman abschließen." },
+            { id = "dbc8384b", text = "Wöchentliches Legenden der Haranir-Ereignis in Harandar abschließen." },
+            { id = "9ad64245", text = "Wöchentlichen Sturmarion-Angriff im Nichtsturm abschließen." },
+            { id = "35bc0cfd", text = "(Optional) Jeden seltenen Gegner einmal pro Zone für Ansehen töten. Wöchentlicher Lockout pro Seltenem." },
+            { id = "d47e5b93", text = "Falls noch nicht erledigt, Schätze jeder Region für kostenloses Ansehen aufspüren. Dokument für Guide lesen." }, -- ⚠️ UNVERIFIED
+            { id = "346bdd7e", text = "Tiefen bis Stufe 8 freischalten (11 falls verfügbar)" },
+            { id = "91b50b0a", text = "(Optional) 4x Normale Beute für Abenteurer-Ausrüstung und Ansehen abschließen." },
+            { id = "e0029ef7", text = "4x Schwere Beute für Veteran-Ausrüstung und Ansehen abschließen." },
+            { id = "a7ee4829", text = "Welttour der M0-Dungeons abschließen – Veteran-Gs – noch nicht aufwerten" },
         },
     },
+
     {
-        id = "pre_season_week_2_march_10_m0_s",
+        id = "ff1f5a67",
         title = "Vorsaison Woche 2 - 10. März - M0s",
         items = {
-            { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Keine Wappen ausgeben, bis es angewiesen wird" },
-            { id = "if_not_completed_continue_to_raise_renown_for_champion_pieces", text = "Falls nicht abgeschlossen: weiter Ansehen für Champion-Teile erhöhen" },
-            { id = "complete_the_weekly_saltheril_s_soiree_in_eversong_woods", text = "Wöchentliches Saltheril-Fest im Immergrünen Wald abschließen." },
-            { id = "complete_the_weekly_abundance_event_in_zul_aman", text = "Wöchentliches Überfluss-Ereignis in Zul'Aman abschließen." },
-            { id = "complete_the_weekly_legends_of_the_haranir_event_in_harandar", text = "Wöchentliches Legenden der Haranir-Ereignis in Harandar abschließen." },
-            { id = "complete_the_weekly_stormarion_assault_in_the_voidstorm", text = "Wöchentlichen Sturmarion-Angriff im Nichtsturm abschließen." },
-            { id = "optional_kill_each_rare_once_in_each_zone_for_renown_these_are_a_weekly_lockout_for_each_rare", text = "(Optional) Jeden seltenen Gegner einmal pro Zone für Ansehen töten. Wöchentlicher Lockout pro Seltenem." },
-            { id = "unlock_delves_through_tier_8_11_if_available_if_not_done_yet", text = "Tiefen bis Stufe 8 freischalten (11 falls verfügbar), falls noch nicht erledigt" },
-            { id = "optional_complete_4x_normal_prey_for_adventurer_gear_and_renown", text = "(Optional) 4x Normale Beute für Abenteurer-Ausrüstung und Ansehen abschließen." },
-            { id = "complete_4x_hard_prey_for_veteran_gear_and_renown", text = "4x Schwere Beute für Veteran-Ausrüstung und Ansehen abschließen." },
-            { id = "complete_a_world_tour_of_m0_dungeons_rewards_vet_ilvl_do_not_upgrade_yet", text = "Welttour der M0-Dungeons abschließen – Veteran-Gs – noch nicht aufwerten" },
-            { id = "if_you_raid_tuesday_the_17th_craft_see_doc_for_more_info", text = "Falls du Dienstag den 17. raidest, craften. Dokument für mehr Infos lesen." },
+            { id = "c3de7d35", text = "Keine Wappen ausgeben, bis es angewiesen wird" },
+            { id = "75c5fe6e", text = "Falls nicht abgeschlossen: weiter Ansehen für Champion-Teile erhöhen" },
+            { id = "e326ed96", text = "Wöchentliches Saltheril-Fest im Immergrünen Wald abschließen." },
+            { id = "da2fa0ef", text = "Wöchentliches Überfluss-Ereignis in Zul'Aman abschließen." },
+            { id = "dbc8384b", text = "Wöchentliches Legenden der Haranir-Ereignis in Harandar abschließen." },
+            { id = "9ad64245", text = "Wöchentlichen Sturmarion-Angriff im Nichtsturm abschließen." },
+            { id = "35bc0cfd", text = "(Optional) Jeden seltenen Gegner einmal pro Zone für Ansehen töten. Wöchentlicher Lockout pro Seltenem." },
+            { id = "072e6955", text = "Tiefen bis Stufe 8 freischalten (11 falls verfügbar), falls noch nicht erledigt" },
+            { id = "91b50b0a", text = "(Optional) 4x Normale Beute für Abenteurer-Ausrüstung und Ansehen abschließen." },
+            { id = "e0029ef7", text = "4x Schwere Beute für Veteran-Ausrüstung und Ansehen abschließen." },
+            { id = "a7ee4829", text = "Welttour der M0-Dungeons abschließen – Veteran-Gs – noch nicht aufwerten" },
+            { id = "c33e5c84", text = "Falls du Dienstag den 17. raidest, craften. Dokument für mehr Infos lesen." },
         },
     },
+
     {
-        id = "season_1_week_1_mar_17_heroic_week",
+        id = "33a3fcba",
         title = "Saison 1 Woche 1 - 17. März - Heroisch-Woche",
         items = {
-            { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Keine Wappen ausgeben, bis es angewiesen wird" },
-            { id = "do_lfr_for_tier_pieces_check_guide_for_why", text = "LFR für Tier-Teile machen (Guide lesen warum)" },
-            { id = "optional_complete_a_world_tour_of_m0_dungeons_rewards_champ_ilvl", text = "(Optional?) Welttour der M0-Dungeons abschließen – Champion-Gs" }, -- ⚠️ UNVERIFIED
-            { id = "complete_4x_nightmare_prey_for_champion_gear_and_renown", text = "4x Albtraum-Beute für Champion-Ausrüstung und Ansehen abschließen." },
-            { id = "kill_world_boss_for_champ_2_6_250_ilvl_item", text = "Weltboss töten für Champion 2/6 250-Gs-Item" },
-            { id = "if_available_complete_pvp_quest_for_guaranteed_hero_neck_ring", text = "Falls verfügbar: PvP-Quest für garantierten Helden-Hals/-Ring abschließen" },
-            { id = "do_t8_bountiful_delves_with_coffer_keys_use_map_on_t8_delve", text = "T8-Üppige Tiefen mit Truhen-Schlüsseln machen, Karte bei T8+-Tiefen nutzen" },
-            { id = "before_raid_craft_2x_246_ilvl_pieces_2x_embellishments_on_weak_slots_use_160_vet_crests", text = "Vor dem Schlachtzug: 2x 246-Gs-Teile craften, 2x Verzierungen in schwache Slots, 160 Veteran-Wappen nutzen" },
-            { id = "before_raid_spend_all_adventurer_veteran_and_champion_crests_upgrading_anything", text = "Vor dem Schlachtzug: alle Abenteurer-, Veteran- und Champion-Wappen für Upgrades ausgeben" },
-            { id = "track_crests_0_100_heroic_0_100_mythic", text = "Wappen tracken: 0/100 Heroisch, 0/100 Mythisch" },
+            { id = "c3de7d35", text = "Keine Wappen ausgeben, bis es angewiesen wird" },
+            { id = "5b379666", text = "LFR für Tier-Teile machen (Guide lesen warum)" },
+            { id = "dd71541a", text = "(Optional?) Welttour der M0-Dungeons abschließen – Champion-Gs" }, -- ⚠️ UNVERIFIED
+            { id = "123747cb", text = "4x Albtraum-Beute für Champion-Ausrüstung und Ansehen abschließen." },
+            { id = "dc0e2686", text = "Weltboss töten für Champion 2/6 250-Gs-Item" },
+            { id = "3e0dfde7", text = "Falls verfügbar: PvP-Quest für garantierten Helden-Hals/-Ring abschließen" },
+            { id = "fdfd56bc", text = "T8-Üppige Tiefen mit Truhen-Schlüsseln machen, Karte bei T8+-Tiefen nutzen" },
+            { id = "eff76e73", text = "Vor dem Schlachtzug: 2x 246-Gs-Teile craften, 2x Verzierungen in schwache Slots, 160 Veteran-Wappen nutzen" },
+            { id = "2af0bfb5", text = "Vor dem Schlachtzug: alle Abenteurer-, Veteran- und Champion-Wappen für Upgrades ausgeben" },
+            { id = "5768e0fe", text = "Wappen tracken: 0/100 Heroisch, 0/100 Mythisch" },
         },
     },
+
     {
-        id = "week_2_mar_24_mythic_week_m_opens_take_off_work_giganerds",
+        id = "d2de9d43",
         title = "Woche 2 - 24. März - Mythisch-Woche, M+ öffnet, nehmt Urlaub Nerds",
         items = {
-            { id = "do_not_spend_any_crests_until_told_to_do_so", text = "Keine Wappen ausgeben, bis es angewiesen wird" },
-            { id = "1h_crafted_note_check_guide_check_craft_path_info_very_important", text = "1H-Craft-Hinweis, Guide lesen, Craftpfad-Info prüfen (SEHR WICHTIG!)" },
-            { id = "do_lfr_for_tier_pieces_check_guide_for_why", text = "LFR für Tier-Teile machen (Guide lesen warum)" },
-            { id = "optional_kill_world_boss_for_champ_2_6_250_ilvl_item", text = "(Optional) Weltboss töten für Champion 2/6 250-Gs-Item" },
-            { id = "optional_complete_4x_nightmare_prey_for_champion_gear_and_renown", text = "(Optional) 4x Albtraum-Beute für Champion-Ausrüstung und Ansehen abschließen." },
-            { id = "do_at_least_one_t11_bountiful_delve_to_get_cracked_keystone_quest", text = "Mindestens eine T11-Üppige Tiefe für den Zerbrochener-Schlussstein-Quest machen" }, -- ⚠️ UNVERIFIED: Bountiful Delve term
-            { id = "continue_to_spend_all_adventurer_veteran_and_champion_crests_upgrading_anything", text = "Weiterhin alle Abenteurer-, Veteran- und Champion-Wappen für Upgrades ausgeben" },
-            { id = "farm_10s_for_266_gear_in_every_slot", text = "+10er farmen für 266-Ausrüstung in jedem Slot" },
-            { id = "before_mythic_raid_upgrade_11x_3_6_hero_items_once_each", text = "Vor dem Mythisch-Schlachtzug: 11x 3/6-Heldenteile je einmal aufwerten" },
-            { id = "mythic_if_you_re_lucky_and_got_a_myth_track_item_skip_to_next_week_s_upgrade_advice_for_it", text = "Mythisch: Falls du ein Mythen-Spur-Item hast, Upgrade-Tipps der nächsten Woche dafür nutzen." },
-            { id = "track_crests_220_220_heroic_0_220_mythic_never_hold_mythic_crests", text = "Wappen tracken: 220/220 Heroisch, 0/220 Mythisch – Mythen-Wappen nie horten" },
-            { id = "ending_item_level_4x266_11x269", text = "Abschluss-Gs: 4x266, 11x269" },
+            { id = "c3de7d35", text = "Keine Wappen ausgeben, bis es angewiesen wird" },
+            { id = "7e42a12d", text = "1H-Craft-Hinweis, Guide lesen, Craftpfad-Info prüfen (SEHR WICHTIG!)" },
+            { id = "5b379666", text = "LFR für Tier-Teile machen (Guide lesen warum)" },
+            { id = "16cf341e", text = "(Optional) Weltboss töten für Champion 2/6 250-Gs-Item" },
+            { id = "3ccf0a1f", text = "(Optional) 4x Albtraum-Beute für Champion-Ausrüstung und Ansehen abschließen." },
+            { id = "26d0b610", text = "Mindestens eine T11-Üppige Tiefe für den Zerbrochener-Schlussstein-Quest machen" }, -- ⚠️ UNVERIFIED
+            { id = "286f219c", text = "Weiterhin alle Abenteurer-, Veteran- und Champion-Wappen für Upgrades ausgeben" },
+            { id = "74924a7b", text = "+10er farmen für 266-Ausrüstung in jedem Slot" },
+            { id = "eb45e64d", text = "Vor dem Mythisch-Schlachtzug: 11x 3/6-Heldenteile je einmal aufwerten" },
+            { id = "cbfb6966", text = "Mythisch: Falls du ein Mythen-Spur-Item hast, Upgrade-Tipps der nächsten Woche dafür nutzen." },
+            { id = "0e855644", text = "Wappen tracken: 220/220 Heroisch, 0/220 Mythisch – Mythen-Wappen nie horten" },
+            { id = "721f006f", text = "Abschluss-Gs: 4x266, 11x269" },
         },
     },
+
     {
-        id = "week_3_mar_31_final_raid_opens",
+        id = "b0abc363",
         title = "Woche 3 - 31. März - Letzter Schlachtzug öffnet",
         items = {
-            { id = "open_vault_272_myth_item_upgrade_after_crafting", text = "Große Schatzkammer öffnen (272+ Mythisch-Item) – nach dem Craften aufwerten" },
-            { id = "craft_items_see_guide_for_2_paths_to_pick", text = "Items craften – Guide für 2 auswählbare Pfade lesen" },
-            { id = "if_no_4p_do_lfr_for_tier_pieces_check_guide_for_why", text = "Falls kein 4p: LFR für Tier-Teile machen (Guide lesen warum)" },
-            { id = "farm_10s_for_vault_crests", text = "+10er farmen für Große Schatzkammer + Wappen" },
-            { id = "heroic_upgrade_2_of_your_4_6_269_items_to_6_6_276_for_80_heroic_crests", text = "Heroisch: 2 deiner 4/6-269-Items auf 6/6 276 für 80 Heroisch-Wappen aufwerten" },
-            { id = "mythic_if_your_vault_item_was_1_6_upgrade_its_heroic_counterpart_first_to_6_6_heroic_for_20_heroic_crests_upgrade_your_1_6_272_myth_track_item_to_6_6_289_for_80_myth_crests", text = "Mythisch: Falls Item der Großen Schatzkammer 1/6 war, erst Heroisch-Gegenstück auf 6/6 für 20 Heroisch-Wappen. Dann 1/6 272 Mythen-Spur auf 6/6 289 für 80 Mythen-Wappen." },
-            { id = "if_you_got_a_2nd_myth_track_item_skip_to_next_week_s_upgrade_advice_for_it", text = "Falls 2. Mythen-Spur-Item: Upgrade-Tipps der nächsten Woche dafür nutzen." },
-            { id = "track_crests_320_320_heroic_160_320_mythic_never_hold_mythic_crests", text = "Wappen tracken: 320/320 Heroisch, 160/320 Mythisch – Mythen-Wappen nie horten" },
-            { id = "ending_item_level_3x266_8x269_2x276h_1x285_crafted_1x289", text = "Abschluss-Gs: 3x266, 8x269, 2x276h, 1x285(gecraftet), 1x289" },
+            { id = "1fbc825e", text = "Große Schatzkammer öffnen (272+ Mythisch-Item) – nach dem Craften aufwerten" },
+            { id = "fb8255a7", text = "Items craften – Guide für 2 auswählbare Pfade lesen" },
+            { id = "8226c872", text = "Falls kein 4p: LFR für Tier-Teile machen (Guide lesen warum)" },
+            { id = "1db5f946", text = "+10er farmen für Große Schatzkammer + Wappen" },
+            { id = "c316485a", text = "Heroisch: 2 deiner 4/6-269-Items auf 6/6 276 für 80 Heroisch-Wappen aufwerten" },
+            { id = "2568bd36", text = "Mythisch: Falls Item der Großen Schatzkammer 1/6 war, erst Heroisch-Gegenstück auf 6/6 für 20 Heroisch-Wappen. Dann 1/6 272 Mythen-Spur auf 6/6 289 für 80 Mythen-Wappen." },
+            { id = "484da4b0", text = "Falls 2. Mythen-Spur-Item: Upgrade-Tipps der nächsten Woche dafür nutzen." },
+            { id = "0ecf8e89", text = "Wappen tracken: 320/320 Heroisch, 160/320 Mythisch – Mythen-Wappen nie horten" },
+            { id = "02884180", text = "Abschluss-Gs: 3x266, 8x269, 2x276h, 1x285(gecraftet), 1x289" },
         },
     },
+
     {
-        id = "week_4_apr_7",
+        id = "572003ec",
         title = "Woche 4 - 7. Apr.",
         items = {
-            { id = "open_vault_272_myth_item", text = "Große Schatzkammer öffnen (272+ Mythisch-Item)" },
-            { id = "farm_10s_for_vault_crests", text = "+10er farmen für Große Schatzkammer + Wappen" },
-            { id = "heroic_upgrade_2_of_your_4_6_269_items_to_6_6_276_for_80_heroic_crests", text = "Heroisch: 2 deiner 4/6-269-Items auf 6/6 276 für 80 Heroisch-Wappen aufwerten" },
-            { id = "mythic_if_your_vault_item_was_1_6_upgrade_its_heroic_counterpart_first_to_6_6_heroic_for_20_heroic_crests_upgrade_your_1_6_272_myth_track_item_to_6_6_289_for_80_myth_crests", text = "Mythisch: Falls Item der Großen Schatzkammer 1/6 war, erst Heroisch-Gegenstück auf 6/6 für 20 Heroisch-Wappen. Dann 1/6 272 Mythen-Spur auf 6/6 289 für 80 Mythen-Wappen." },
-            { id = "mythic_upgrade_your_raid_drop_from_2_6_275_myth_track_to_6_6_289_for_80_myth_crests", text = "Mythisch: Schlachtzug-Drop 2/6 275 Mythen-Spur auf 6/6 289 für 80 Mythen-Wappen aufwerten." },
-            { id = "track_crests_420_400_heroic_320_420_mythic_never_hold_mythic_crests", text = "Wappen tracken: 420/400 Heroisch, 320/420 Mythisch – Mythen-Wappen nie horten" },
-            { id = "ending_item_level_2x266_5x269_4x276h_1x285_crafted_3x289", text = "Abschluss-Gs: 2x266, 5x269, 4x276h, 1x285(gecraftet), 3x289" },
+            { id = "9375e497", text = "Große Schatzkammer öffnen (272+ Mythisch-Item)" },
+            { id = "1db5f946", text = "+10er farmen für Große Schatzkammer + Wappen" },
+            { id = "c316485a", text = "Heroisch: 2 deiner 4/6-269-Items auf 6/6 276 für 80 Heroisch-Wappen aufwerten" },
+            { id = "2568bd36", text = "Mythisch: Falls Item der Großen Schatzkammer 1/6 war, erst Heroisch-Gegenstück auf 6/6 für 20 Heroisch-Wappen. Dann 1/6 272 Mythen-Spur auf 6/6 289 für 80 Mythen-Wappen." },
+            { id = "0ccf5c83", text = "Mythisch: Schlachtzug-Drop 2/6 275 Mythen-Spur auf 6/6 289 für 80 Mythen-Wappen aufwerten." },
+            { id = "299f3284", text = "Wappen tracken: 420/400 Heroisch, 320/420 Mythisch – Mythen-Wappen nie horten" },
+            { id = "8b8cde46", text = "Abschluss-Gs: 2x266, 5x269, 4x276h, 1x285(gecraftet), 3x289" },
         },
     },
+
     {
-        id = "week_5_apr_14",
+        id = "239053b5",
         title = "Woche 5 - 14. Apr.",
         items = {
-            { id = "open_vault_272_myth_item", text = "Große Schatzkammer öffnen (272+ Mythisch-Item)" },
-            { id = "farm_10s_for_vault_crests", text = "+10er farmen für Große Schatzkammer + Wappen" },
-            { id = "craft_next_item_see_doc_for_more_info", text = "Nächstes Item craften (Dokument für mehr Infos lesen)" },
-            { id = "heroic_upgrade_2_of_your_4_6_269_items_to_6_6_276_for_80_heroic_crests", text = "Heroisch: 2 deiner 4/6-269-Items auf 6/6 276 für 80 Heroisch-Wappen aufwerten" },
-            { id = "mythic_if_your_vault_item_was_1_6_upgrade_its_heroic_counterpart_first_to_6_6_heroic_for_20_heroic_crests_upgrade_your_1_6_272_myth_track_item_to_6_6_289_for_80_myth_crests", text = "Mythisch: Falls Item der Großen Schatzkammer 1/6 war, erst Heroisch-Gegenstück auf 6/6 für 20 Heroisch-Wappen. Dann 1/6 272 Mythen-Spur auf 6/6 289 für 80 Mythen-Wappen." },
-            { id = "track_crests_520_520_heroic_480_520_mythic_never_hold_mythic_crests", text = "Wappen tracken: 520/520 Heroisch, 480/520 Mythisch – Mythen-Wappen nie horten" },
-            { id = "ending_item_level_1x266_2x269_6x276h_2x285_crafted_4x289", text = "Abschluss-Gs: 1x266, 2x269, 6x276h, 2x285(gecraftet), 4x289" },
+            { id = "9375e497", text = "Große Schatzkammer öffnen (272+ Mythisch-Item)" },
+            { id = "1db5f946", text = "+10er farmen für Große Schatzkammer + Wappen" },
+            { id = "11e426da", text = "Nächstes Item craften (Dokument für mehr Infos lesen)" },
+            { id = "c316485a", text = "Heroisch: 2 deiner 4/6-269-Items auf 6/6 276 für 80 Heroisch-Wappen aufwerten" },
+            { id = "2568bd36", text = "Mythisch: Falls Item der Großen Schatzkammer 1/6 war, erst Heroisch-Gegenstück auf 6/6 für 20 Heroisch-Wappen. Dann 1/6 272 Mythen-Spur auf 6/6 289 für 80 Mythen-Wappen." },
+            { id = "8d74c3e1", text = "Wappen tracken: 520/520 Heroisch, 480/520 Mythisch – Mythen-Wappen nie horten" },
+            { id = "4f04ba4e", text = "Abschluss-Gs: 1x266, 2x269, 6x276h, 2x285(gecraftet), 4x289" },
         },
     },
+
     {
-        id = "week_6_apr_21_done_with_heroic_crests",
+        id = "6a36daa1",
         title = "Woche 6 - 21. Apr. - Fertig mit Heroisch-Wappen",
         items = {
-            { id = "open_vault_272_myth_item", text = "Große Schatzkammer öffnen (272+ Mythisch-Item)" },
-            { id = "farm_10s_for_vault_crests", text = "+10er farmen für Große Schatzkammer + Wappen" },
-            { id = "heroic_upgrade_your_last_4_6_269_item_to_6_6_276_for_40_heroic_crests", text = "Heroisch: Letztes 4/6-269-Item auf 6/6 276 für 40 Heroisch-Wappen aufwerten" },
-            { id = "mythic_if_your_vault_item_was_1_6_upgrade_its_heroic_counterpart_first_to_6_6_heroic_for_20_heroic_crests_upgrade_your_1_6_272_myth_track_item_to_6_6_289_for_80_myth_crests", text = "Mythisch: Falls Item der Großen Schatzkammer 1/6 war, erst Heroisch-Gegenstück auf 6/6 für 20 Heroisch-Wappen. Dann 1/6 272 Mythen-Spur auf 6/6 289 für 80 Mythen-Wappen." },
-            { id = "mythic_upgrade_your_raid_drop_from_2_6_275_myth_track_to_6_6_289_for_80_myth_crests", text = "Mythisch: Schlachtzug-Drop 2/6 275 Mythen-Spur auf 6/6 289 für 80 Mythen-Wappen aufwerten." },
-            { id = "track_crests_560_620_heroic_620_620_mythic_never_hold_mythic_crests", text = "Wappen tracken: 560/620 Heroisch, 620/620 Mythisch – Mythen-Wappen nie horten" },
-            { id = "ending_item_level_7x276h_2x285_crafted_1x_285_5x289", text = "Abschluss-Gs: 7x276h, 2x285(gecraftet), 1x285, 5x289" },
+            { id = "9375e497", text = "Große Schatzkammer öffnen (272+ Mythisch-Item)" },
+            { id = "1db5f946", text = "+10er farmen für Große Schatzkammer + Wappen" },
+            { id = "c35cf0b6", text = "Heroisch: Letztes 4/6-269-Item auf 6/6 276 für 40 Heroisch-Wappen aufwerten" },
+            { id = "2568bd36", text = "Mythisch: Falls Item der Großen Schatzkammer 1/6 war, erst Heroisch-Gegenstück auf 6/6 für 20 Heroisch-Wappen. Dann 1/6 272 Mythen-Spur auf 6/6 289 für 80 Mythen-Wappen." },
+            { id = "0ccf5c83", text = "Mythisch: Schlachtzug-Drop 2/6 275 Mythen-Spur auf 6/6 289 für 80 Mythen-Wappen aufwerten." },
+            { id = "4510d1aa", text = "Wappen tracken: 560/620 Heroisch, 620/620 Mythisch – Mythen-Wappen nie horten" },
+            { id = "67f84375", text = "Abschluss-Gs: 7x276h, 2x285(gecraftet), 1x285, 5x289" },
         },
     },
+
     {
-        id = "week_7_apr_28",
+        id = "fd1bf82c",
         title = "Woche 7 - 28. Apr.+",
         items = {
-            { id = "do_not_craft_if_you_can_get_vault_items_higher_than_1_6", text = "Nicht craften wenn Items der Großen Schatzkammer besser als 1/6 möglich" },
-            { id = "upgrade_mythic_items_as_you_get_them_preferring_to_jump_them_to_289_for_the_4_jump", text = "Mythisch-Items sofort aufwerten, bevorzugt auf 289 für den +4-Sprung" },
-            { id = "plan_for_possible_1h_crafted_oh_swap", text = "Möglichen 1H + gecrafteten Nebenwaffenwechsel planen" },
-            { id = "enjoy_blizzard_s_much_better_upgrade_system", text = "Blizzards viel besseres Upgrade-System genießen!" },
+            { id = "f9978f0e", text = "Nicht craften wenn Items der Großen Schatzkammer besser als 1/6 möglich" },
+            { id = "66e83cc1", text = "Mythisch-Items sofort aufwerten, bevorzugt auf 289 für den +4-Sprung" },
+            { id = "a90c240c", text = "Möglichen 1H + gecrafteten Nebenwaffenwechsel planen" },
+            { id = "10aac768", text = "Blizzards viel besseres Upgrade-System genießen!" },
         },
     },
 }
 
 reg.data[LOCALE] = DATASET
-

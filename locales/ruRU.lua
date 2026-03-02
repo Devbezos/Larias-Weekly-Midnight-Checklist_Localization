@@ -158,6 +158,27 @@ local STRINGS = {
     SLASH_USAGE_LOCALE = "Использование: /larias locale auto|enUS|deDE|esES|esMX|frFR|itIT|ptBR|ruRU",
     SLASH_LOCALE_SET_FMT = "Язык установлен на %s (активный: %s)",
     SLASH_LOCALE_NOT_FOUND = "Неизвестный язык '%s'. Доступны: auto|%s", -- ⚠️ UNVERIFIED
+
+    -- ── Auto-translated (review with native speaker) ──────────────────────
+    OPTIONS_HIDE_COMPLETED_TASKS = "Скрыть завершённые задачи",
+    HIDE_FINISHED_WEEKS = "Скрыть завершённые недели",
+    OPTIONS_DISABLE_UPGRADE_WARN = "Скрыть предупреждения об улучшении",
+    SETTINGS_SECTION_ACTIONS = "Действия",
+    SETTINGS_SECTION_DISPLAY = "Отображение",
+    SETTINGS_SECTION_COLORS = "Цвета",
+    SETTINGS_SECTION_LANGUAGE = "Язык",
+    SETTINGS_SECTION_SLIDERS = "Масштаб и прозрачность",
+    SETTINGS_COLOR_RESET = "Сброс",
+    SETTINGS_COLOR_BACKGROUND = "Фон",
+    SETTINGS_COLOR_LIST_TEXT = "Текст списка",
+    SETTINGS_COLOR_HEADER_TEXT = "Текст заголовка",
+    SETTINGS_LANGUAGE_AUTO = "Авто (по умолчанию)",
+    UPGRADE_WARN_MSG = "Улучшение предмета %s 1/6 — это трата %d гербов.\nВместо этого улучшите предмет %s 5/6", -- ⚠️ UNVERIFIED
+    UPGRADE_WARN_DISABLE_BTN = "Скрыть предупреждение об улучшении",
+    UPGRADE_WARN_DISABLE_TOOLTIP = "Проверьте руководство Laria для дополнительной информации.",
+    ALL_WEEKS_COMPLETE = "Завершено!",
+    CHAR_PICKER_BUTTON = "Сменить профиль",
+    CHAR_PICKER_TOOLTIP_REMOVE = "Чтобы удалить персонажа, используйте меню настроек.",
 }
 
 for key, value in pairs(STRINGS) do
