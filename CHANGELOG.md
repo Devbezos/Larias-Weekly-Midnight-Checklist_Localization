@@ -1,3 +1,13 @@
+## [2.1.5] (2026-03-02)
+- updates
+- fix: remove broken 'translate string files' step from workflow
+- Update esMX_Data.lua
+- refactor: glossary as post-processing pass; remove context from Claude prompts
+- fix: normalize CRLF + positional fallback; translate 11 new items from v2.1.2
+- Update publish-stable.yml
+- Updated locales: deDE esES esMX frFR itIT koKR ptBR ruRU
+- Updated interface versions: 120001, 120000, 110207
+
 ## [2.1.4] (2026-03-02)
 - fix scripts
 - Update auto-translate.yml
