@@ -75,6 +75,7 @@ jobs:
       - name: Translate string files
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PYTHONUNBUFFERED: "1"
         run: |
           ARGS="--enus _main-addon/Locales/enUS.lua --model ${{ steps.params.outputs.model }}"
           if [ -n "${{ steps.params.outputs.locale }}" ]; then
@@ -83,12 +84,13 @@ jobs:
           if [ "${{ steps.params.outputs.dry_run }}" = "true" ]; then
             ARGS="$ARGS --dry-run"
           fi
-          python scripts/auto_translate.py $ARGS
+          python -u scripts/auto_translate.py $ARGS
 
       # ── 5. Translate data files (enUS_Data.lua -> *_Data.lua) ──────────────
       - name: Translate data files
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PYTHONUNBUFFERED: "1"
         run: |
           ARGS="--enus _main-addon/Locales/enUS_Data.lua --model ${{ steps.params.outputs.model }}"
           if [ -n "${{ steps.params.outputs.locale }}" ]; then
@@ -97,7 +99,7 @@ jobs:
           if [ "${{ steps.params.outputs.dry_run }}" = "true" ]; then
             ARGS="$ARGS --dry-run"
           fi
-          python scripts/auto_translate_data.py $ARGS
+          python -u scripts/auto_translate_data.py $ARGS
 
       # ── 6. Commit to a new branch ───────────────────────────────────────────
       - name: Commit translations to branch

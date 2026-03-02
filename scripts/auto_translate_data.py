@@ -126,69 +126,70 @@ def parse_enus(text: str) -> list:
     return sections
 
 
-def parse_locale_positional(text: str) -> list:
+def parse_locale_by_id(text: str) -> dict:
     """
-    Parse a locale _Data.lua → ordered list of section dicts using POSITION only.
-    IDs are discarded (they may be old slugs); only translated text matters.
+    Parse a locale _Data.lua that already contains hash IDs (post-migration).
     Returns:
-      [ {"title": str, "title_unverified": bool,
-         "items": [{"text": str, "unverified": bool}]}, ... ]
+      { section_id: { "title": str, "title_unverified": bool,
+                      "items": { item_id: {"text": str, "unverified": bool} } } }
+    Only entries whose IDs are present are returned; positional drift is impossible.
     """
-    sections = []
+    result = {}
     for sm in _SEC_BLOCK_RE.finditer(text):
-        raw_title    = sm.group(2)
-        # The title line is the second line of the match (index 1 when split by \n)
-        match_lines  = sm.group(0).split("\n")
-        title_line   = next((l for l in match_lines if 'title' in l), "")
-        title_unver  = "⚠️" in title_line
+        sec_id      = sm.group(1)
+        raw_title   = sm.group(2)
+        match_lines = sm.group(0).split("\n")
+        title_line  = next((l for l in match_lines if "title" in l), "")
+        title_unver = "⚠️" in title_line
 
         items_block = sm.group(3)
-        items       = []
+        items = {}
         for im in _ITEM_RE.finditer(items_block):
+            item_id   = im.group(1)
+            item_text = im.group(2)
             line_start = items_block.rfind("\n", 0, im.start()) + 1
             line_end   = items_block.find("\n", im.end())
             full_line  = items_block[line_start: line_end if line_end != -1 else len(items_block)]
-            items.append({
-                "text":       im.group(2),
+            items[item_id] = {
+                "text":       item_text,
                 "unverified": "⚠️" in full_line,
-            })
-        sections.append({
+            }
+        result[sec_id] = {
             "title":            raw_title,
             "title_unverified": title_unver,
             "items":            items,
-        })
-    return sections
+        }
+    return result
 
 
 # ---------------------------------------------------------------------------
 # Batch builder
 # ---------------------------------------------------------------------------
 
-def build_batch(enus_sections: list, locale_sections_map: dict) -> dict:
+def build_batch(enus_sections: list, locale_map: dict) -> dict:
     """
-    Compare each locale's positional translations against the English master.
+    Compare each locale's ID-keyed translations against the English master.
     Returns a batch dict:
       { "deDE": {"entries": [{id, field, english}, ...]}, ... }
-    Only entries that are missing or still showing English text are included.
+    Only entries that are genuinely missing or still show English text are included.
+    ID-based lookup eliminates false positives caused by positional drift.
     """
     batch = {}
-    for locale, loc_sections in locale_sections_map.items():
+    for locale, by_id in locale_map.items():
         entries = []
-        for si, sec in enumerate(enus_sections):
-            loc_sec = loc_sections[si] if si < len(loc_sections) else None
+        for sec in enus_sections:
+            sid     = sec["id"]
+            loc_sec = by_id.get(sid)
 
-            # Section title
+            # Section title: send only if missing or identical to English
             loc_title = loc_sec["title"] if loc_sec else None
             if loc_title is None or loc_title == sec["title"]:
-                entries.append({"id": sec["id"], "field": "title", "english": sec["title"]})
+                entries.append({"id": sid, "field": "title", "english": sec["title"]})
 
-            # Items
-            for ii, item in enumerate(sec["items"]):
-                loc_text = (
-                    loc_sec["items"][ii]["text"]
-                    if loc_sec and ii < len(loc_sec["items"])
-                    else None
-                )
+            # Items: send only if missing or identical to English
+            for item in sec["items"]:
+                loc_item = loc_sec["items"].get(item["id"]) if loc_sec else None
+                loc_text = loc_item["text"] if loc_item else None
                 if loc_text is None or loc_text == item["text"]:
                     entries.append({"id": item["id"], "field": "text", "english": item["text"]})
 
@@ -201,32 +202,32 @@ def build_batch(enus_sections: list, locale_sections_map: dict) -> dict:
 # Translation map builder (positional → by-id)
 # ---------------------------------------------------------------------------
 
-def build_translation_map(enus_sections: list, locale_sections_map: dict) -> dict:
+def build_translation_map(enus_sections: list, locale_map: dict) -> dict:
     """
     Returns: { locale: { hash_id: {"translated": str, "unverified": bool} } }
-    Populated from existing locale translations (position-matched).
+    Populated from existing locale translations using ID-based lookup.
+    Only entries whose text differs from English are considered translated.
     """
     result = {}
-    for locale, loc_sections in locale_sections_map.items():
+    for locale, by_id in locale_map.items():
         tmap = {}
-        for si, sec in enumerate(enus_sections):
-            loc_sec = loc_sections[si] if si < len(loc_sections) else None
+        for sec in enus_sections:
+            sid     = sec["id"]
+            loc_sec = by_id.get(sid)
             if not loc_sec:
                 continue
 
-            # Section title – carry over only if translated
+            # Section title – carry over only if translated (differs from English)
             if loc_sec["title"] and loc_sec["title"] != sec["title"]:
-                tmap[sec["id"]] = {
+                tmap[sid] = {
                     "translated": loc_sec["title"],
                     "unverified": loc_sec.get("title_unverified", False),
                 }
 
-            # Items
-            for ii, item in enumerate(sec["items"]):
-                if ii >= len(loc_sec["items"]):
-                    break
-                loc_item = loc_sec["items"][ii]
-                if loc_item["text"] and loc_item["text"] != item["text"]:
+            # Items – carry over only if translated (differs from English)
+            for item in sec["items"]:
+                loc_item = loc_sec["items"].get(item["id"])
+                if loc_item and loc_item["text"] and loc_item["text"] != item["text"]:
                     tmap[item["id"]] = {
                         "translated": loc_item["text"],
                         "unverified": loc_item.get("unverified", False),
@@ -491,24 +492,31 @@ def main():
 
     targets = [args.locale] if args.locale else SUPPORTED_LOCALES
 
-    # ── Parse existing locale files ──────────────────────────────────────────
-    locale_sections_map = {}
+    # ── Parse existing locale files (ID-based) ──────────────────────────────
+    enus_sec_ids = {s["id"] for s in enus_sections}
+    locale_map   = {}  # { locale: { sec_id: { title, items: { item_id: ... } } } }
     for locale in targets:
         lua_path = LOCALES_DIR / f"{locale}_Data.lua"
         if lua_path.exists():
-            locale_sections_map[locale] = parse_locale_positional(
-                lua_path.read_text(encoding="utf-8")
-            )
-            print(f"  [{locale}] parsed {len(locale_sections_map[locale])} sections (positional)")
+            by_id = parse_locale_by_id(lua_path.read_text(encoding="utf-8"))
+            # Sanity-check: warn if no section IDs match enUS (likely a legacy file)
+            matched = sum(1 for sid in by_id if sid in enus_sec_ids)
+            if by_id and matched == 0:
+                print(f"  [{locale}] WARNING: no section IDs matched enUS – "
+                      f"file may use legacy slug IDs. All entries will be re-translated.")
+            else:
+                print(f"  [{locale}] parsed {len(by_id)} sections by ID "
+                      f"({matched}/{len(by_id)} match enUS)")
+            locale_map[locale] = by_id
         else:
-            locale_sections_map[locale] = []
-            print(f"  [{locale}] not found \u2013 will translate from scratch")
+            locale_map[locale] = {}
+            print(f"  [{locale}] not found – will translate from scratch")
 
-    # ── Build translation maps (existing translations by position\u2192id) ────────
-    tmaps = build_translation_map(enus_sections, locale_sections_map)
+    # ── Build translation maps (existing translations keyed by hash ID) ──────
+    tmaps = build_translation_map(enus_sections, locale_map)
 
-    # ── Build batch (entries still needing translation) ──────────────────────
-    batch = build_batch(enus_sections, locale_sections_map)
+    # ── Build batch (only entries missing or still showing English) ──────────
+    batch = build_batch(enus_sections, locale_map)
 
     # ── --save-batch: dump JSON and exit ─────────────────────────────────────
     if args.save_batch:
