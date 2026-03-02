@@ -23,7 +23,7 @@ local DATASET = {
         id = "e225d803",
         title = "Acceso anticipado - 26 feb. al 2 mar. - Paga para ganar",
         items = {
-            { id = "f4b92a82", text = "Inicia sesión en cada personaje que planeas subir de nivel para que empiecen a acumular EXP de descanso." }, -- ⚠️ UNVERIFIED
+            { id = "f4b92a82", text = "Inicia sesión con cada personaje que planees subir de nivel para que empiecen a acumular experiencia de descanso." },
             { id = "825bfe20", text = "Sube personajes en Modo de Guerra a nivel 90 – la FLN abre el domingo para +10 % de exp." },
             { id = "50f90465", text = "Completa el Asalto de Stormarion semanal en la Tormenta del vacío. (Disponible en acceso anticipado)" }, -- ⚠️ UNVERIFIED
             { id = "7644d082", text = "(Opcional) Mata cada élite raro una vez en cada zona para reputación. Tienen un bloqueo semanal por raro." },
