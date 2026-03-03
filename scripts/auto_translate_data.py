@@ -131,11 +131,11 @@ def parse_enus(text: str) -> list:
     sections = []
     for sm in _SEC_BLOCK_RE.finditer(text):
         sec_id      = sm.group(1)
-        sec_title   = sm.group(2)
+        sec_title   = lua_unescape(sm.group(2))
         items_block = sm.group(3)
         items = []
         for im in _ITEM_RE.finditer(items_block):
-            items.append({"id": im.group(1), "text": im.group(2)})
+            items.append({"id": im.group(1), "text": lua_unescape(im.group(2))})
         sections.append({"id": sec_id, "title": sec_title, "items": items})
     return sections
 
@@ -161,7 +161,7 @@ def parse_locale_by_id(text: str) -> dict:
         items = {}
         for im in _ITEM_RE.finditer(items_block):
             item_id   = im.group(1)
-            item_text = im.group(2)
+            item_text = lua_unescape(im.group(2))
             line_start = items_block.rfind("\n", 0, im.start()) + 1
             line_end   = items_block.find("\n", im.end())
             full_line  = items_block[line_start: line_end if line_end != -1 else len(items_block)]
@@ -170,7 +170,7 @@ def parse_locale_by_id(text: str) -> dict:
                 "unverified": "⚠️" in full_line,
             }
         result[sec_id] = {
-            "title":            raw_title,
+            "title":            lua_unescape(raw_title),
             "title_unverified": title_unver,
             "items":            items,
         }
@@ -220,7 +220,7 @@ def parse_locale_positional(text: str, enus_sections: list) -> dict:
             if j >= len(enus_sections[i]["items"]):
                 break
             enitem_id = enus_sections[i]["items"][j]["id"]
-            item_text = im.group(1) if use_legacy else im.group(2)
+            item_text = lua_unescape(im.group(1) if use_legacy else im.group(2))
             line_start = items_block.rfind("\n", 0, im.start()) + 1
             line_end   = items_block.find("\n", im.end())
             full_line  = items_block[line_start: line_end if line_end != -1 else len(items_block)]
@@ -230,7 +230,7 @@ def parse_locale_positional(text: str, enus_sections: list) -> dict:
             }
 
         result[enid] = {
-            "title":            raw_title,
+            "title":            lua_unescape(raw_title),
             "title_unverified": title_unver,
             "items":            items,
         }
@@ -313,16 +313,19 @@ def build_translation_map(enus_sections: list, locale_map: dict) -> dict:
             # Section title – carry over only if translated (differs from English)
             if loc_sec["title"] and loc_sec["title"] != sec["title"]:
                 tmap[sid] = {
-                    "translated": loc_sec["title"],
+                    "translated": fully_unescape(loc_sec["title"]),
                     "unverified": loc_sec.get("title_unverified", False),
                 }
 
-            # Items – carry over only if translated (differs from English)
+            # Items – carry over only if translated (differs from English).
+            # Apply fully_unescape to recover from any depth of accumulated
+            # double-escaping (e.g. Claude returning Lua-escaped quotes).
             for item in sec["items"]:
                 loc_item = loc_sec["items"].get(item["id"])
                 if loc_item and loc_item["text"] and loc_item["text"] != item["text"]:
+                    clean_text = fully_unescape(loc_item["text"])
                     tmap[item["id"]] = {
-                        "translated": loc_item["text"],
+                        "translated": clean_text,
                         "unverified": loc_item.get("unverified", False),
                     }
         result[locale] = tmap
@@ -348,8 +351,7 @@ You are translating a World of Warcraft addon's weekly checklist data into {LOCA
 • Each element: {{"id": "<id>", "translated": "<translation>", "unverified": <true|false>}}
 • Set "unverified": true if you are not 100% certain about any WoW-specific term in that line.
 • Preserve ALL % format specifiers (%s, %d, \\n) verbatim.
-• Write literal UTF-8 characters — NEVER \\uXXXX escape sequences.
-• ALL-CAPS STATUS MARKERS at end of strings (e.g. "- NOT AVAILABLE IN EARLY ACCESS") must be
+• Write literal UTF-8 characters — NEVER \\uXXXX escape sequences.• Return PLAIN TEXT strings — do NOT use Lua escape sequences like \" or \\ in translated values.• ALL-CAPS STATUS MARKERS at end of strings (e.g. "- NOT AVAILABLE IN EARLY ACCESS") must be
   translated into {locale_code} and remain ALL-CAPS at the end of the string.
 • Output exactly the same number of elements as the input, in the same order.
 
@@ -388,8 +390,10 @@ def call_claude(locale_code: str, entries: list, client, model: str) -> dict:
     out = {}
     for item in results:
         if isinstance(item, dict) and "id" in item and "translated" in item:
+            # Claude sometimes returns Lua-escaped quotes (\" instead of ").
+            # Strip that extra layer so lua_escape() doesn't double-escape them.
             out[item["id"]] = {
-                "translated": item["translated"],
+                "translated": fully_unescape(str(item["translated"])),
                 "unverified": bool(item.get("unverified", False)),
             }
     return out
@@ -404,7 +408,48 @@ _LUA_ESCAPE_RE = re.compile(r'([\\"])')
 
 def lua_escape(s: str) -> str:
     """Escape backslashes and double-quotes for a Lua double-quoted string."""
-    return s.replace("\\", "\\\\").replace('"', '\\"')
+    s = s.replace("\\", "\\\\").replace('"', '\\"')
+    s = s.replace("\r\n", "\\n").replace("\r", "\\n").replace("\n", "\\n")
+    return s
+
+
+def lua_unescape(s: str) -> str:
+    """Decode Lua double-quoted string escapes back to plain text.
+    Must process backslashes before quotes to avoid double-processing."""
+    result = []
+    i = 0
+    while i < len(s):
+        if s[i] == '\\' and i + 1 < len(s):
+            nxt = s[i + 1]
+            if nxt == '\\':
+                result.append('\\')
+                i += 2
+            elif nxt == '"':
+                result.append('"')
+                i += 2
+            elif nxt == 'n':
+                result.append('\n')
+                i += 2
+            elif nxt == 't':
+                result.append('\t')
+                i += 2
+            else:
+                result.append(s[i])
+                i += 1
+        else:
+            result.append(s[i])
+            i += 1
+    return ''.join(result)
+
+
+def fully_unescape(s: str) -> str:
+    """Apply lua_unescape repeatedly until the result stops changing.
+    Needed to recover from accumulated double-escaping (e.g. \\\\\\\" -> \\\\\\" -> \\\" -> \")."""
+    while True:
+        r = lua_unescape(s)
+        if r == s:
+            return r
+        s = r
 
 
 LOCALE_NATIVE = {
@@ -628,12 +673,12 @@ def main():
         for locale, items in raw_batch.items():
             if isinstance(items, list):
                 pre_translated[locale] = {
-                    i["id"]: {"translated": i["translated"], "unverified": i.get("unverified", False)}
+                    i["id"]: {"translated": lua_unescape(str(i["translated"])), "unverified": i.get("unverified", False)}
                     for i in items
                 }
             elif isinstance(items, dict) and "entries" in items:
                 pre_translated[locale] = {
-                    i["id"]: {"translated": i.get("translated", i.get("english", "")),
+                    i["id"]: {"translated": lua_unescape(str(i.get("translated", i.get("english", "")))),
                                "unverified": i.get("unverified", False)}
                     for i in items["entries"]
                 }
