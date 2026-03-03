@@ -45,6 +45,16 @@ local STRINGS = {
     OPTIONS_HIDE_OPACITY_SLIDER = "Nascondi cursore di opacità",
     OPTIONS_HIDE_UPDATE_NOTICE  = "Nascondi avvertimenti di aggiornamento", -- ⚠️ UNVERIFIED
     OPTIONS_HIDE_MINIMAP_BTN    = "Nascondi pulsante minimappa", -- ⚠️ UNVERIFIED
+    -- Options checkbox tooltips
+    OPTIONS_TOOLTIP_HIDE_COMPLETED_TASKS = "Nasconde le singole attività completate da tutte le settimane.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_FINISHED_WEEKS  = "Nasconde intere sezioni settimanali quando tutti i compiti sono completati.\n|cffaaaaaa(Attivo solo quando Nascondi attività finite è disabilitato.)|r", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_GREAT_VAULT     = "Nasconde il pannello di avanzamento del Grande Forziere.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_CURRENCY        = "Nasconde il pannello di tracciamento valuta.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_CHANGE_WEEK_BTN = "Nasconde il pulsante Cambia settimana nell'intestazione.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_ILVL_REF_BTN    = "Nasconde il pulsante popup di riferimento livello oggetto nell'intestazione.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_UPDATE_NOTICE   = "Nasconde il banner mostrato quando è disponibile una nuova versione del foglio.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_DISABLE_UPGRADE_WARN = "Nasconde l'avviso popup quando si potenzia un oggetto 1/6 invece di 5/6.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_MINIMAP_BTN     = "Nasconde il pulsante minimappa.\nPuoi ancora aprire la checklist con /larias.", -- ⚠️ UNVERIFIED
     -- Color picker swatch labels (gear popup)
     COLOR_PICKER_BG             = "Sfondo", -- ⚠️ UNVERIFIED
     COLOR_PICKER_TEXT           = "Testo", -- ⚠️ UNVERIFIED
@@ -91,7 +101,8 @@ local STRINGS = {
         [3347] = "Mito",
     },
     TRACKING_NO_ID = "Nessun ID",
-    TRACKING_TRADE_UP_SUFFIX = " Potenzia)",
+    TRACKING_TRADE_UP_SUFFIX = " Convertire)",
+    TRACKING_CONVERT_TOOLTIP = "Numero di emblemi che guadagnerai convertendo gli emblemi precedenti",
 
     TRACKING_CATALYST_LABEL = "Catalizzatore:",
 

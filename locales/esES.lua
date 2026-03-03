@@ -45,6 +45,16 @@ local STRINGS = {
     OPTIONS_HIDE_OPACITY_SLIDER = "Ocultar control de opacidad",
     OPTIONS_HIDE_UPDATE_NOTICE  = "Ocultar advertencias de actualización", -- ⚠️ UNVERIFIED
     OPTIONS_HIDE_MINIMAP_BTN    = "Ocultar botón del minimapa", -- ⚠️ UNVERIFIED
+    -- Options checkbox tooltips
+    OPTIONS_TOOLTIP_HIDE_COMPLETED_TASKS = "Oculta las tareas individuales marcadas de todas las semanas.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_FINISHED_WEEKS  = "Oculta secciones de semana enteras cuando todas las tareas están completadas.\n|cffaaaaaa(Solo activo cuando Ocultar tareas finalizadas está desactivado.)|r", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_GREAT_VAULT     = "Oculta el panel de progreso de la Gran Cámara Acorazada.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_CURRENCY        = "Oculta el panel de seguimiento de moneda.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_CHANGE_WEEK_BTN = "Oculta el botón Cambiar semana en el encabezado.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_ILVL_REF_BTN    = "Oculta el botón emergente de referencia de nivel de objeto en el encabezado.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_UPDATE_NOTICE   = "Oculta el banner que aparece cuando hay una nueva versión de la hoja de cálculo.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_DISABLE_UPGRADE_WARN = "Oculta el aviso emergente al mejorar un objeto 1/6 en lugar de 5/6.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_MINIMAP_BTN     = "Oculta el botón del minimapa.\nAún puedes abrir la lista con /larias.", -- ⚠️ UNVERIFIED
     -- Color picker swatch labels (gear popup)
     COLOR_PICKER_BG             = "Fondo", -- ⚠️ UNVERIFIED
     COLOR_PICKER_TEXT           = "Texto", -- ⚠️ UNVERIFIED
@@ -92,7 +102,8 @@ local STRINGS = {
         [3347] = "Mito",
     },
     TRACKING_NO_ID = "Sin ID",
-    TRACKING_TRADE_UP_SUFFIX = " Mejorar)",
+    TRACKING_TRADE_UP_SUFFIX = " Convertir)",
+    TRACKING_CONVERT_TOOLTIP = "Número de blasones que ganarás al convertir blasones anteriores",
 
     TRACKING_CATALYST_LABEL = "Catalizador:",
 

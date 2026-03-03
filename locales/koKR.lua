@@ -45,6 +45,16 @@ local STRINGS = {
     OPTIONS_HIDE_OPACITY_SLIDER = "불투명도 슬라이더 숨기기", -- ⚠️ UNVERIFIED
     OPTIONS_HIDE_UPDATE_NOTICE  = "업데이트 경고 숨기기", -- ⚠️ UNVERIFIED
     OPTIONS_HIDE_MINIMAP_BTN    = "미니맵 버튼 숨기기", -- ⚠️ UNVERIFIED
+    -- Options checkbox tooltips
+    OPTIONS_TOOLTIP_HIDE_COMPLETED_TASKS = "모든 주차에서 완료된 개별 할 일을 숨깁니다.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_FINISHED_WEEKS  = "모든 할 일이 완료된 주차 섹션 전체를 숨깁니다.\n|cffaaaaaa(완료된 할 일 숨기기가 꺼져 있을 때만 활성화됩니다.)|r", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_GREAT_VAULT     = "위대한 금고 진행 추적 패널을 숨깁니다.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_CURRENCY        = "통화 추적기 패널을 숨깁니다.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_CHANGE_WEEK_BTN = "헤더의 주차 변경 버튼을 숨깁니다.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_ILVL_REF_BTN    = "헤더의 아이템 레벨 참조 팝업 버튼을 숨깁니다.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_UPDATE_NOTICE   = "새 스프레드시트 버전이 출시될 때 표시되는 배너를 숨깁니다.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_DISABLE_UPGRADE_WARN = "1/6 대신 5/6 아이템을 업그레이드할 때 표시되는 팝업 경고를 숨깁니다.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_MINIMAP_BTN     = "미니맵 버튼을 숨깁니다.\n/larias로 체크리스트를 열 수 있습니다.", -- ⚠️ UNVERIFIED
     -- Color picker swatch labels (gear popup)
     COLOR_PICKER_BG             = "배경", -- ⚠️ UNVERIFIED
     COLOR_PICKER_TEXT           = "텍스트", -- ⚠️ UNVERIFIED
@@ -91,8 +101,8 @@ local STRINGS = {
 		[3347] = "신화",
 	},
 	TRACKING_NO_ID = "ID없음",
-	TRACKING_TRADE_UP_SUFFIX = " 교환)",
-
+     TRACKING_TRADE_UP_SUFFIX = " 변환)",
+     TRACKING_CONVERT_TOOLTIP = "이전 문장을 변환하여 얻을 문장의 수",
 	TRACKING_CATALYST_LABEL = "촉매:",
 
 	TRACKING_INF = "무제한",

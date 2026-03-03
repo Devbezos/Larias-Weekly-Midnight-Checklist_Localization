@@ -45,6 +45,16 @@ local STRINGS = {
     OPTIONS_HIDE_OPACITY_SLIDER = "Ocultar controle de opacidade",
     OPTIONS_HIDE_UPDATE_NOTICE  = "Ocultar alertas de atualização", -- ⚠️ UNVERIFIED
     OPTIONS_HIDE_MINIMAP_BTN    = "Ocultar botão do minimapa", -- ⚠️ UNVERIFIED
+    -- Options checkbox tooltips
+    OPTIONS_TOOLTIP_HIDE_COMPLETED_TASKS = "Oculta tarefas individuais marcadas de todas as semanas.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_FINISHED_WEEKS  = "Oculta seções semanais inteiras quando todas as tarefas estão concluídas.\n|cffaaaaaa(Ativo apenas quando Ocultar tarefas concluídas está desabilitado.)|r", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_GREAT_VAULT     = "Oculta o painel de progresso do Grande Cofre.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_CURRENCY        = "Oculta o painel de rastreamento de moeda.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_CHANGE_WEEK_BTN = "Oculta o botão Trocar semana no cabeçalho.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_ILVL_REF_BTN    = "Oculta o botão popup de referência de nível de item no cabeçalho.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_UPDATE_NOTICE   = "Oculta o banner exibido quando uma nova versão da planilha está disponível.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_DISABLE_UPGRADE_WARN = "Oculta o aviso popup ao aprimorar um item 1/6 em vez de 5/6.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_MINIMAP_BTN     = "Oculta o botão do minimapa.\nVocê ainda pode abrir a lista com /larias.", -- ⚠️ UNVERIFIED
     -- Color picker swatch labels (gear popup)
     COLOR_PICKER_BG             = "Fundo", -- ⚠️ UNVERIFIED
     COLOR_PICKER_TEXT           = "Texto", -- ⚠️ UNVERIFIED
@@ -92,7 +102,8 @@ local STRINGS = {
         [3347] = "Mítico",
     },
     TRACKING_NO_ID = "Sem ID",
-    TRACKING_TRADE_UP_SUFFIX = " Melhorar)",
+    TRACKING_TRADE_UP_SUFFIX = " Converter)",
+    TRACKING_CONVERT_TOOLTIP = "Número de brasões que você ganhará ao converter brasões anteriores",
 
     TRACKING_CATALYST_LABEL = "Catalisador:",
 

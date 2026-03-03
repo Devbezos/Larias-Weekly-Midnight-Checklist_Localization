@@ -45,6 +45,16 @@ local STRINGS = {
     OPTIONS_HIDE_OPACITY_SLIDER = "Masquer le curseur d'opacité",
     OPTIONS_HIDE_UPDATE_NOTICE  = "Masquer les avertissements de mise à jour", -- ⚠️ UNVERIFIED
     OPTIONS_HIDE_MINIMAP_BTN    = "Masquer l'icône du Minimap", -- ⚠️ UNVERIFIED
+    -- Options checkbox tooltips
+    OPTIONS_TOOLTIP_HIDE_COMPLETED_TASKS = "Masque les tâches individuelles cochées de toutes les semaines.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_FINISHED_WEEKS  = "Masque des sections de semaine entières quand toutes les tâches sont terminées.\n|cffaaaaaa(Uniquement actif quand Masquer les tâches terminées est désactivé.)|r", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_GREAT_VAULT     = "Masque le panneau de progression de la Grande Chambre Forte.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_CURRENCY        = "Masque le panneau de suivi des devises.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_CHANGE_WEEK_BTN = "Masque le bouton Changer de semaine dans l'en-tête.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_ILVL_REF_BTN    = "Masque le bouton de référence du niveau d'objet dans l'en-tête.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_UPDATE_NOTICE   = "Masque la bannière affichée lorsqu'une nouvelle version du tableur est disponible.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_DISABLE_UPGRADE_WARN = "Masque l'avertissement affiché quand on améliore un objet 1/6 au lieu d'un 5/6.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_MINIMAP_BTN     = "Masque le bouton de la minicarte.\nVous pouvez toujours ouvrir la liste avec /larias.", -- ⚠️ UNVERIFIED
     -- Color picker swatch labels (gear popup)
     COLOR_PICKER_BG             = "Fond", -- ⚠️ UNVERIFIED
     COLOR_PICKER_TEXT           = "Texte", -- ⚠️ UNVERIFIED
@@ -92,7 +102,8 @@ local STRINGS = {
         [3347] = "Mythique",
     },
     TRACKING_NO_ID = "Aucun ID",
-    TRACKING_TRADE_UP_SUFFIX = " Améliorer)",
+    TRACKING_TRADE_UP_SUFFIX = " Convertir)",
+    TRACKING_CONVERT_TOOLTIP = "Nombre d'écus que vous gagnerez en convertissant des écus précédents",
 
     TRACKING_CATALYST_LABEL = "Catalyseur :",
 

@@ -45,6 +45,16 @@ local STRINGS = {
     OPTIONS_HIDE_OPACITY_SLIDER = "Deckkraftregler ausblenden",
     OPTIONS_HIDE_UPDATE_NOTICE  = "Update-Warnungen ausblenden", -- ⚠️ UNVERIFIED
     OPTIONS_HIDE_MINIMAP_BTN    = "Minimap-Symbol ausblenden", -- ⚠️ UNVERIFIED
+    -- Options checkbox tooltips
+    OPTIONS_TOOLTIP_HIDE_COMPLETED_TASKS = "Blendet einzelne abgehakte Aufgaben aus allen Wochen aus.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_FINISHED_WEEKS  = "Blendet ganze Wochenabschnitte aus, sobald alle Aufgaben erledigt sind.\n|cffaaaaaa(Nur aktiv, wenn 'Fertige Aufgaben ausblenden' deaktiviert ist.)|r", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_GREAT_VAULT     = "Blendet das Große-Schatzkammer-Fortschrittspanel aus.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_CURRENCY        = "Blendet das Währungs-Tracker-Panel aus.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_CHANGE_WEEK_BTN = "Blendet den Woche-wechseln-Knopf in der Kopfzeile aus.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_ILVL_REF_BTN    = "Blendet den Gegenstandslevel-Referenz-Popup-Knopf in der Kopfzeile aus.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_UPDATE_NOTICE   = "Blendet das Banner aus, wenn eine neue Tabellenversion verfügbar ist.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_DISABLE_UPGRADE_WARN = "Blendet die Popup-Warnung aus, die beim Aufwerten eines 1/6- statt 5/6-Gegenstands erscheint.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_MINIMAP_BTN     = "Blendet den Minimap-Knopf aus.\nDu kannst das Fenster weiterhin mit /larias öffnen.", -- ⚠️ UNVERIFIED
     -- Color picker swatch labels (gear popup)
     COLOR_PICKER_BG             = "Hintergrund", -- ⚠️ UNVERIFIED
     COLOR_PICKER_TEXT           = "Text", -- ⚠️ UNVERIFIED
@@ -92,7 +102,8 @@ local STRINGS = {
         [3347] = "Mythen",
     },
     TRACKING_NO_ID = "Keine ID",
-    TRACKING_TRADE_UP_SUFFIX = " Aufwerten)",
+    TRACKING_TRADE_UP_SUFFIX = " Umwandeln)",
+    TRACKING_CONVERT_TOOLTIP = "Anzahl der Wappen, die du durch das Umwandeln vorheriger Wappen erhältst",
 
     TRACKING_CATALYST_LABEL = "Katalysator:",
 

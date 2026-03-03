@@ -46,6 +46,16 @@ local STRINGS = {
     OPTIONS_HIDE_OPACITY_SLIDER = "Скрыть ползунок прозрачности",
     OPTIONS_HIDE_UPDATE_NOTICE  = "Скрыть предупреждения об обновлениях", -- ⚠️ UNVERIFIED
     OPTIONS_HIDE_MINIMAP_BTN    = "Скрыть кнопку миникарты", -- ⚠️ UNVERIFIED
+    -- Options checkbox tooltips
+    OPTIONS_TOOLTIP_HIDE_COMPLETED_TASKS = "Скрывает отдельные выполненные задания во всех неделях.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_FINISHED_WEEKS  = "Скрывает целые секции недели, когда все задания выполнены.\n|cffaaaaaa(Активно только когда «Скрыть выполненные задания» отключено.)|r", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_GREAT_VAULT     = "Скрывает панель прогресса Великого тайника.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_CURRENCY        = "Скрывает панель отслеживания валюты.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_CHANGE_WEEK_BTN = "Скрывает кнопку смены недели в заголовке.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_ILVL_REF_BTN    = "Скрывает кнопку всплывающего окна с уровнями предметов в заголовке.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_UPDATE_NOTICE   = "Скрывает баннер, отображаемый при выходе новой версии таблицы.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_DISABLE_UPGRADE_WARN = "Скрывает всплывающее предупреждение при улучшении предмета 1/6 вместо 5/6.", -- ⚠️ UNVERIFIED
+    OPTIONS_TOOLTIP_HIDE_MINIMAP_BTN     = "Скрывает кнопку миникарты.\nВы по-прежнему можете открыть чеклист командой /larias.", -- ⚠️ UNVERIFIED
     -- Color picker swatch labels (gear popup)
     COLOR_PICKER_BG             = "Фон", -- ⚠️ UNVERIFIED
     COLOR_PICKER_TEXT           = "Текст", -- ⚠️ UNVERIFIED
@@ -93,7 +103,8 @@ local STRINGS = {
         [3347] = "Эпохи",
     },
     TRACKING_NO_ID = "Нет ID",
-    TRACKING_TRADE_UP_SUFFIX = " Улучшить)",
+    TRACKING_TRADE_UP_SUFFIX = " Конвертировать)",
+    TRACKING_CONVERT_TOOLTIP = "Количество гербов, которые вы получите при конвертации предыдущих гербов",
 
     TRACKING_CATALYST_LABEL = "Катализатор:",
 
