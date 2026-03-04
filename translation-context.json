@@ -76,7 +76,39 @@
     "Prey": "Охота"
   },
   "koKR": {
-    "Crests": "제장",
+    "Bountiful Delves": "풍요로운 구렁",
+    "Delves": "구렁",
+    "Great Vault": "위대한 금고",
+    "Crests": "문장",
+    "Sparks": "불꽃",
+    "Catalyst": "촉매",
+    "Prey": "사냥감",
+    "Raid": "레이드",
+    "Dungeon": "던전",
+    "LFR": "공찾",
+    "Mythic": "신화",
+    "Heroic": "영웅",
+    "Normal": "일반",
+    "Champion": "챔피언",
+    "Veteran": "노련가",
+    "Adventurer": "모험가",
     "Map Drop": "은혜 보상"
+  },
+  "zhCN": {
+    "Bountiful Delves": "丰裕地下堡",
+    "Delves": "地下堡",
+    "Great Vault": "宏伟宝库",
+    "Crests": "纹章",
+    "Sparks": "火花",
+    "Catalyst": "化生台",
+    "Prey": "猎物",
+    "Raid": "团队副本",
+    "Dungeon": "地下城",
+    "LFR": "随机团队",
+    "Mythic": "史诗",
+    "Heroic": "英雄",
+    "Normal": "普通",
+    "Eversong Woods": "晴风村",
+    "Silvermoon": "银月城"
   }
 }
