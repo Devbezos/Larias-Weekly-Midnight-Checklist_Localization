@@ -1,3 +1,10 @@
+## [2.1.9] (2026-03-04)
+- add simplified chinese to python scripts
+- Add zhCN locale, fix locale guards/keys, add TAB_LIST to all locales
+- Update translation-context.json
+- Updated locales: deDE esES esMX frFR itIT koKR ptBR ruRU zhCN
+- Updated interface versions: 120001, 120000, 110207
+
 ## [2.1.8] (2026-03-04)
 - Updated locales: deDE esES esMX frFR itIT koKR ptBR ruRU
 - Updated interface versions: 120001, 120000, 110207
