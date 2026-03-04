@@ -32,7 +32,7 @@ local DATASET = {
             { id = "8bf4f442", text = "Schließe den Erfolg Mitternachts-Geschichtsjäger für Ruhm ab - siehe Dokument für Anleitung" }, -- ⚠️ UNVERIFIED
             { id = "c886190c", text = "Schließe den Erfolg Höchste Gipfel für Ruhm ab - siehe Dokument für Anleitung" },
             { id = "f9b8eb01", text = "Schließe Nebenquestreihen für Ruhm ab. (kann auf Twinks erledigt werden, um gleichzeitig zu leveln). DMF-Buff gibt keinen Ruhm." },
-            { id = "11425027", text = "Hinweis: Nur das Singularitäts- UND Eversong-Champion-Ruhm-Trinket sind im Early Access verfügbar - die anderen werden entweder am Montag nach dem offiziellen Start oder nach dem wöchentlichen Reset jeder Region verfügbar." },
+            { id = "4aa4b47d", text = "Hinweis: Nur die Champion-Gegenstände von Singularität UND Immersang sind im Early Access verfügbar - die anderen werden entweder am Montag nach dem offiziellen Start oder nach dem wöchentlichen Reset jeder Region verfügbar." },
             { id = "ba1890e4", text = "Schließe die wöchentliche Saltheril's Soiree in den Immersangwäldern ab. Vergiss nicht, die Ruhmquest für den Championhelm zu holen, wenn du den Ruhm hast" }, -- ⚠️ UNVERIFIED
         },
     },
@@ -41,23 +41,23 @@ local DATASET = {
         id = "50281d6f",
         title = "Vorsaison Woche 1 - 3. März - M0s",
         items = {
-            { id = "c3de7d35", text = "Keine Wappen ausgeben, bis es angewiesen wird" },
+            { id = "727109d8", text = "Gib keine Wappen aus, bis es dir gesagt wird. Siehe Anleitung, warum wir Wappen zurückhalten." },
+            { id = "5a2e9ede", text = "NICHT HERSTELLEN" },
             { id = "c06ee1a3", text = "Wenn du auf einem Twink bist und einige dieser Quests nicht siehst, gehe zu Soridormi im Gasthaus von Silbermond und wähle \"Ich habe den Leerensturm gestoppt\", um die Kampagne zu überspringen." },
-            { id = "6b199064", text = "Erhöhe den Ruhm der Singularität auf Rang 7 für 1/6 Champions-Trinket - im Early Access verfügbar - kommt von einer Quest vom Ruhmhändler (nicht gekauft)" }, -- ⚠️ UNVERIFIED
-            { id = "2a9b4f4c", text = "Erhöhe den Ruhm von Hara'ti auf Rang 8 für 1/6 Champions-Gürtel - NICHT IM EARLY ACCESS VERFÜGBAR - kommt von einer Quest vom Ruhmhändler (nicht gekauft)" }, -- ⚠️ UNVERIFIED
-            { id = "d9a7e304", text = "Erhöhe den Silbermond-Ruhm auf Rang 9 für 1/6 Championhelm - verfügbar im Early Access - kommt von einer Quest vom Ruhmhändler (nicht gekauft)" }, -- ⚠️ UNVERIFIED
-            { id = "6ba4afc1", text = "Erhöhe den Ruhm des Amani-Stamms auf Rang 9 für 1/6 Champions-Halskette - NICHT IM EARLY ACCESS VERFÜGBAR - kommt von einer Quest vom Ruhmhändler (nicht gekauft)" },
+            { id = "44fbfe51", text = "Erhöhe den Ruf der Singularität auf Rang 7 für 1/6 Champion-Schmuckstück - kommt von einer Quest vom Rufhändler (nicht gekauft)" },
+            { id = "02ceff50", text = "Erhöhe den Ruf der Hara'ti auf Rang 8 für 1/6 Champion-Gürtel - kommt von einer Quest vom Rufhändler (nicht gekauft)" },
+            { id = "cdea3773", text = "Erhöhe den Ruf von Silbermond auf Rang 9 für 1/6 Champion-Helm - kommt von einer Quest vom Rufhändler (nicht gekauft)" },
+            { id = "19687ed0", text = "Erhöhe den Ruf des Amani-Stammes auf Rang 9 für 1/6 Champion-Halskette - kommt von einer Quest vom Rufhändler (nicht gekauft)" },
             { id = "101e78a9", text = "Schließe die wöchentliche Dungeonquest von Halduron Hellfittich für 1000 Ruhm ab" },
             { id = "0c3b8835", text = "Schließe die wöchentliche Weltereignisquest für Gipfeltruhe von Lady Liadrin ab - kann wöchentliche Ereignisquest annehmen und mit den untenstehenden Ereignissen erledigen" },
             { id = "879d3833", text = "Schließe die wöchentliche Welttour-Quest von Lorthremar für Funken ab, indem du die untenstehenden Quests erledigst" }, -- ⚠️ UNVERIFIED
-            { id = "9f3c8578", text = "Schließe die wöchentliche Behausungsquest von Vaeli für ?? ab" }, -- ⚠️ UNVERIFIED
             { id = "e326ed96", text = "Wöchentliches Saltheril-Fest im Immergrünen Wald abschließen." },
             { id = "da2fa0ef", text = "Wöchentliches Überfluss-Ereignis in Zul'Aman abschließen." },
             { id = "dbc8384b", text = "Wöchentliches Legenden der Haranir-Ereignis in Harandar abschließen." },
             { id = "9ad64245", text = "Wöchentlichen Sturmarion-Angriff im Nichtsturm abschließen." },
             { id = "35bc0cfd", text = "(Optional) Töte jeden seltenen Gegner einmal in jeder Zone für Ruhm. Diese haben eine wöchentliche Sperre für jeden seltenen Gegner." },
             { id = "1b42ce30", text = "Falls noch nicht erledigt, jage die Schätze jeder Region, Geschichtsjäger und hohe Gipfel für kostenlosen Ruhm. Siehe Dokument für Anleitung" },
-            { id = "346bdd7e", text = "Tiefen bis Stufe 8 freischalten (11 falls verfügbar)" },
+            { id = "a892ac44", text = "Schalte Tiefen bis Stufe 8 frei" },
             { id = "9bc44f02", text = "Schließe 2x Schwere Beute für Veteranen-Ausrüstung auf jedem Charakter ab - falls nur ein Charakter, mache 4x auf einem Charakter für Ruhm" }, -- ⚠️ UNVERIFIED
             { id = "a7ee4829", text = "Welttour der M0-Dungeons abschließen – Veteran-Gs – noch nicht aufwerten" },
         },
@@ -67,18 +67,17 @@ local DATASET = {
         id = "ff1f5a67",
         title = "Vorsaison Woche 2 - 10. März - M0s",
         items = {
-            { id = "c3de7d35", text = "Keine Wappen ausgeben, bis es angewiesen wird" },
+            { id = "727109d8", text = "Gib keine Wappen aus, bis es dir gesagt wird. Siehe Anleitung, warum wir Wappen zurückhalten." },
+            { id = "5a2e9ede", text = "NICHT HERSTELLEN" },
             { id = "75c5fe6e", text = "Falls nicht abgeschlossen: weiter Ansehen für Champion-Teile erhöhen" },
             { id = "101e78a9", text = "Schließe die wöchentliche Dungeonquest von Halduron Hellfittich für 1000 Ruhm ab" },
             { id = "0c3b8835", text = "Schließe die wöchentliche Weltereignisquest für Gipfeltruhe von Lady Liadrin ab - kann wöchentliche Ereignisquest annehmen und mit den untenstehenden Ereignissen erledigen" },
-            { id = "879d3833", text = "Schließe die wöchentliche Welttour-Quest von Lorthremar für Funken ab, indem du die untenstehenden Quests erledigst" }, -- ⚠️ UNVERIFIED
-            { id = "9f3c8578", text = "Schließe die wöchentliche Behausungsquest von Vaeli für ?? ab" }, -- ⚠️ UNVERIFIED
             { id = "e326ed96", text = "Wöchentliches Saltheril-Fest im Immergrünen Wald abschließen." },
             { id = "da2fa0ef", text = "Wöchentliches Überfluss-Ereignis in Zul'Aman abschließen." },
             { id = "dbc8384b", text = "Wöchentliches Legenden der Haranir-Ereignis in Harandar abschließen." },
             { id = "9ad64245", text = "Wöchentlichen Sturmarion-Angriff im Nichtsturm abschließen." },
             { id = "35bc0cfd", text = "(Optional) Töte jeden seltenen Gegner einmal in jeder Zone für Ruhm. Diese haben eine wöchentliche Sperre für jeden seltenen Gegner." },
-            { id = "072e6955", text = "Tiefen bis Stufe 8 freischalten (11 falls verfügbar), falls noch nicht erledigt" },
+            { id = "23cb93ed", text = "Schalte Tiefen bis Stufe 8 frei, falls noch nicht geschehen" },
             { id = "9bc44f02", text = "Schließe 2x Schwere Beute für Veteranen-Ausrüstung auf jedem Charakter ab - falls nur ein Charakter, mache 4x auf einem Charakter für Ruhm" }, -- ⚠️ UNVERIFIED
             { id = "a7ee4829", text = "Welttour der M0-Dungeons abschließen – Veteran-Gs – noch nicht aufwerten" },
             { id = "c33e5c84", text = "Falls du Dienstag den 17. raidest, craften. Dokument für mehr Infos lesen." },
@@ -89,15 +88,15 @@ local DATASET = {
         id = "33a3fcba",
         title = "Saison 1 Woche 1 - 17. März - Heroisch-Woche",
         items = {
-            { id = "c3de7d35", text = "Keine Wappen ausgeben, bis es angewiesen wird" },
+            { id = "727109d8", text = "Gib keine Wappen aus, bis es dir gesagt wird. Siehe Anleitung, warum wir Wappen zurückhalten." },
             { id = "5b379666", text = "LFR für Tier-Teile machen (Guide lesen warum)" },
             { id = "879d3833", text = "Schließe die wöchentliche Welttour-Quest von Lorthremar für Funken ab, indem du die untenstehenden Quests erledigst" }, -- ⚠️ UNVERIFIED
-            { id = "9f3c8578", text = "Schließe die wöchentliche Behausungsquest von Vaeli für ?? ab" }, -- ⚠️ UNVERIFIED
+            { id = "9686fde4", text = "Schließe die wöchentliche Hausquest von Vaeli für ?Heldenwappen? ab (wird aktualisiert, wenn es live geht)" }, -- ⚠️ UNVERIFIED
             { id = "952916cd", text = "(Optional) Schließe eine Welttour von M0-Dungeons ab - belohnt Champion-Gegenstandsstufe" },
             { id = "22842538", text = "Schließe 2x Albtraum-Beute für Champion-Ausrüstung auf jedem Charakter ab" }, -- ⚠️ UNVERIFIED
             { id = "dc0e2686", text = "Weltboss töten für Champion 2/6 250-Gs-Item" },
             { id = "3e0dfde7", text = "Falls verfügbar: PvP-Quest für garantierten Helden-Hals/-Ring abschließen" },
-            { id = "fdfd56bc", text = "T8-Üppige Tiefen mit Truhen-Schlüsseln machen, Karte bei T8+-Tiefen nutzen" },
+            { id = "b6846065", text = "Mache S8 oder höhere ertragreiche Tiefen, benutze Karte auf S8+ Tiefe - während du dies tust, schalte S11 Tiefen frei" },
             { id = "eff76e73", text = "Vor dem Schlachtzug: 2x 246-Gs-Teile craften, 2x Verzierungen in schwache Slots, 160 Veteran-Wappen nutzen" },
             { id = "2af0bfb5", text = "Vor dem Schlachtzug: alle Abenteurer-, Veteran- und Champion-Wappen für Upgrades ausgeben" },
             { id = "5768e0fe", text = "Wappen tracken: 0/100 Heroisch, 0/100 Mythisch" },
@@ -108,7 +107,7 @@ local DATASET = {
         id = "d2de9d43",
         title = "Woche 2 - 24. März - Mythisch-Woche, M+ öffnet, nehmt Urlaub Nerds",
         items = {
-            { id = "c3de7d35", text = "Keine Wappen ausgeben, bis es angewiesen wird" },
+            { id = "727109d8", text = "Gib keine Wappen aus, bis es dir gesagt wird. Siehe Anleitung, warum wir Wappen zurückhalten." },
             { id = "7e42a12d", text = "1H-Craft-Hinweis, Guide lesen, Craftpfad-Info prüfen (SEHR WICHTIG!)" },
             { id = "5b379666", text = "LFR für Tier-Teile machen (Guide lesen warum)" },
             { id = "16cf341e", text = "(Optional) Weltboss töten für Champion 2/6 250-Gs-Item" },

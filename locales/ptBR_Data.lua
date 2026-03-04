@@ -32,7 +32,7 @@ local DATASET = {
             { id = "8bf4f442", text = "Complete a conquista Caçador de Tradições de Midnight para renome - veja o doc para guia" }, -- ⚠️ UNVERIFIED
             { id = "c886190c", text = "Complete a conquista Picos Mais Altos para renome - veja o doc para guia" },
             { id = "f9b8eb01", text = "Complete cadeias de missões secundárias para renome. (pode ser feito em personagens alternativos para upar ao mesmo tempo). O bônus da FDL não dá renome." },
-            { id = "11425027", text = "Nota: Apenas os troféus de renome de campeão da Singularidade E de Canção Eterna estão disponíveis no acesso antecipado - os outros ficarão disponíveis na segunda-feira após o lançamento oficial ou após a reinicialização semanal de cada região." },
+            { id = "4aa4b47d", text = "Nota: Apenas os itens de campeão da Singularidade E Canção Eterna estão disponíveis no acesso antecipado - os outros ficarão disponíveis na segunda-feira após o lançamento oficial ou após a reinicialização semanal de cada região." },
             { id = "ba1890e4", text = "Complete o Soirée de Saltheril semanal em Floresta de Perpetuma. Não esqueça de pegar a missão de renome para o elmo de campeão se você tiver o renome" },
         },
     },
@@ -41,23 +41,23 @@ local DATASET = {
         id = "50281d6f",
         title = "Pré-temporada Semana 1 - 3 de março - M0",
         items = {
-            { id = "c3de7d35", text = "Não gaste nenhum Brasão até receber instruções" },
+            { id = "727109d8", text = "Não gaste nenhum Emblema até ser instruído a fazê-lo. Veja o guia para entender por que guardamos emblemas." },
+            { id = "5a2e9ede", text = "NÃO FABRICAR" },
             { id = "c06ee1a3", text = "Se você está em um personagem alternativo e não vê algumas dessas missões, vá até Soridormi na Estalagem de Lua Prateada e escolha \"Eu Detive a Tempestade Etérea\" para pular a campanha." }, -- ⚠️ UNVERIFIED
-            { id = "6b199064", text = "Aumente o renome da Singularidade para posto 7 para 1/6 berloque de campeão - disponível no acesso antecipado - vem de missão do vendedor de renome (não é comprado)" },
-            { id = "2a9b4f4c", text = "Aumente o renome de Hara'ti para posto 8 para 1/6 cinto de campeão - NÃO DISPONÍVEL NO ACESSO ANTECIPADO - vem de missão do vendedor de renome (não é comprado)" },
-            { id = "d9a7e304", text = "Aumente o renome de Luaprata para rank 9 para 1/6 do elmo de campeão - disponível no acesso antecipado - vem da missão do vendedor de renome (não é comprado)" },
-            { id = "6ba4afc1", text = "Aumente o renome da Tribo Amani para posto 9 para 1/6 colar de campeão - NÃO DISPONÍVEL NO ACESSO ANTECIPADO - vem de missão do vendedor de renome (não é comprado)" },
+            { id = "44fbfe51", text = "Eleve o renome da Singularidade ao nível 7 para obter o berloque de campeão 1/6 - obtido através de missão do vendedor de renome (não é comprado)" },
+            { id = "02ceff50", text = "Eleve o renome dos Hara'ti ao nível 8 para obter o cinto de campeão 1/6 - obtido através de missão do vendedor de renome (não é comprado)" },
+            { id = "cdea3773", text = "Eleve o renome de Luaprata ao nível 9 para obter o elmo de campeão 1/6 - obtido através de missão do vendedor de renome (não é comprado)" },
+            { id = "19687ed0", text = "Eleve o renome da Tribo Amani ao nível 9 para obter o colar de campeão 1/6 - obtido através de missão do vendedor de renome (não é comprado)" },
             { id = "101e78a9", text = "Complete a missão semanal de masmorra de Halduron Asa Brilhante para 1000 de renome" },
             { id = "0c3b8835", text = "Complete a missão semanal de evento mundial para baú de pináculo de Lady Liadrin - pode pegar a missão de evento semanal e fazê-la com os eventos abaixo" },
             { id = "879d3833", text = "Complete a missão semanal de tour mundial de Lorthremar para centelha fazendo as missões abaixo" }, -- ⚠️ UNVERIFIED
-            { id = "9f3c8578", text = "Complete a missão semanal de moradia de Vaeli para ??" }, -- ⚠️ UNVERIFIED
             { id = "e326ed96", text = "Complete a Soiree de Saltheril semanal em Bosques da Canção Eterna." },
             { id = "da2fa0ef", text = "Complete o Evento de Abundância semanal em Zul'Aman." },
             { id = "dbc8384b", text = "Complete o evento semanal Lendas dos Haranir em Harandar." },
             { id = "9ad64245", text = "Complete o Assalto de Stormarion semanal na Voragem do Vázio." },
             { id = "35bc0cfd", text = "(Opcional) Mate cada raro uma vez em cada zona para renome. Estes têm bloqueio semanal para cada raro." },
             { id = "1b42ce30", text = "Se não foi feito, procure os tesouros de cada região, caçador de tradições e picos altos para Renome grátis. Veja o doc para guia" },
-            { id = "346bdd7e", text = "Desbloqueie Imersões até o nível 8 (11 se disponível)" },
+            { id = "a892ac44", text = "Desbloqueie Escavações até o nível 8" },
             { id = "9bc44f02", text = "Complete 2x Presa Difícil para equipamento Veterano em cada personagem - se tiver apenas um personagem, faça 4x em um personagem para renome" }, -- ⚠️ UNVERIFIED
             { id = "a7ee4829", text = "Complete um tour mundial das masmorras M0 - recompensa nível de item veteranário - não melhore ainda" },
         },
@@ -67,18 +67,17 @@ local DATASET = {
         id = "ff1f5a67",
         title = "Pré-temporada Semana 2 - 10 de março - M0",
         items = {
-            { id = "c3de7d35", text = "Não gaste nenhum Brasão até receber instruções" },
+            { id = "727109d8", text = "Não gaste nenhum Emblema até ser instruído a fazê-lo. Veja o guia para entender por que guardamos emblemas." },
+            { id = "5a2e9ede", text = "NÃO FABRICAR" },
             { id = "75c5fe6e", text = "Se não concluído, continue elevando o renome para peças campeã" },
             { id = "101e78a9", text = "Complete a missão semanal de masmorra de Halduron Asa Brilhante para 1000 de renome" },
             { id = "0c3b8835", text = "Complete a missão semanal de evento mundial para baú de pináculo de Lady Liadrin - pode pegar a missão de evento semanal e fazê-la com os eventos abaixo" },
-            { id = "879d3833", text = "Complete a missão semanal de tour mundial de Lorthremar para centelha fazendo as missões abaixo" }, -- ⚠️ UNVERIFIED
-            { id = "9f3c8578", text = "Complete a missão semanal de moradia de Vaeli para ??" }, -- ⚠️ UNVERIFIED
             { id = "e326ed96", text = "Complete a Soiree de Saltheril semanal em Bosques da Canção Eterna." },
             { id = "da2fa0ef", text = "Complete o Evento de Abundância semanal em Zul'Aman." },
             { id = "dbc8384b", text = "Complete o evento semanal Lendas dos Haranir em Harandar." },
             { id = "9ad64245", text = "Complete o Assalto de Stormarion semanal na Voragem do Vázio." },
             { id = "35bc0cfd", text = "(Opcional) Mate cada raro uma vez em cada zona para renome. Estes têm bloqueio semanal para cada raro." },
-            { id = "072e6955", text = "Desbloqueie Imersões até o nível 8 (11 se disponível), se ainda não feito" },
+            { id = "23cb93ed", text = "Desbloqueie Escavações até o nível 8 se ainda não tiver feito" },
             { id = "9bc44f02", text = "Complete 2x Presa Difícil para equipamento Veterano em cada personagem - se tiver apenas um personagem, faça 4x em um personagem para renome" }, -- ⚠️ UNVERIFIED
             { id = "a7ee4829", text = "Complete um tour mundial das masmorras M0 - recompensa nível de item veteranário - não melhore ainda" },
             { id = "c33e5c84", text = "Se for raidy na terça dia 17, crie itens. Veja o documento para mais informações." },
@@ -89,15 +88,15 @@ local DATASET = {
         id = "33a3fcba",
         title = "Semana 1 da Temporada 1 - 17 de março - Semana heróica",
         items = {
-            { id = "c3de7d35", text = "Não gaste nenhum Brasão até receber instruções" },
+            { id = "727109d8", text = "Não gaste nenhum Emblema até ser instruído a fazê-lo. Veja o guia para entender por que guardamos emblemas." },
             { id = "5b379666", text = "Faça o LFR para peças de conjunto (veja o guia para entender o porquê)" },
             { id = "879d3833", text = "Complete a missão semanal de tour mundial de Lorthremar para centelha fazendo as missões abaixo" }, -- ⚠️ UNVERIFIED
-            { id = "9f3c8578", text = "Complete a missão semanal de moradia de Vaeli para ??" }, -- ⚠️ UNVERIFIED
+            { id = "9686fde4", text = "Complete a missão semanal de habitação da Vaeli para obter ?emblemas de herói? (será atualizado quando for lançado)" }, -- ⚠️ UNVERIFIED
             { id = "952916cd", text = "(Opcional) Complete um Tour Mundial de masmorras M0 - recompensa nível de item de campeão" },
             { id = "22842538", text = "Complete 2x Presa Pesadelo para equipamento de Campeão em cada personagem" }, -- ⚠️ UNVERIFIED
             { id = "dc0e2686", text = "Mate o chefe mundial para um item campeão 2/6 nível 250" },
             { id = "3e0dfde7", text = "Se disponível, complete a missão de JcJ para colar/anel herói garantido" },
-            { id = "fdfd56bc", text = "Faça Imersões Abundantes T8 com chaves do cofre, use o mapa nas Imersões T8+" },
+            { id = "b6846065", text = "Faça escavações abundantes de n8 ou superior, use mapa em escavação n8+ - enquanto faz isso, desbloqueie escavações n11" },
             { id = "eff76e73", text = "Antes da raid: crie 2 peças nível 246, 2 ornamentos nos slots fracos, use 160 Brasões veteranários" },
             { id = "2af0bfb5", text = "Antes da raid: gaste todos os Brasões aventureiros, veteranários e campeões melhorando qualquer coisa" },
             { id = "5768e0fe", text = "Acompanhe os Brasões: 0/100 Heróico, 0/100 Mítico" },
@@ -108,7 +107,7 @@ local DATASET = {
         id = "d2de9d43",
         title = "Semana 2 - 24 de março - Semana mítica, M+ abre, tirem férias nerds",
         items = {
-            { id = "c3de7d35", text = "Não gaste nenhum Brasão até receber instruções" },
+            { id = "727109d8", text = "Não gaste nenhum Emblema até ser instruído a fazê-lo. Veja o guia para entender por que guardamos emblemas." },
             { id = "7e42a12d", text = "Nota sobre arma 1M criada, veja o guia, verifique o caminho de criação (MUITO IMPORTANTE!)" },
             { id = "5b379666", text = "Faça o LFR para peças de conjunto (veja o guia para entender o porquê)" },
             { id = "16cf341e", text = "(Opcional) Mate o chefe mundial para um item campeão 2/6 nível 250" },

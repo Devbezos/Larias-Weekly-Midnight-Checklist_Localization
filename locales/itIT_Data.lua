@@ -32,7 +32,7 @@ local DATASET = {
             { id = "8bf4f442", text = "Completa l'impresa Cacciatore delle Leggende di Midnight per rinomanza - vedi la documentazione per la guida" }, -- ⚠️ UNVERIFIED
             { id = "c886190c", text = "Completa l'impresa Vette Più Alte per rinomanza - vedi la documentazione per la guida" }, -- ⚠️ UNVERIFIED
             { id = "f9b8eb01", text = "Completa le catene di missioni secondarie per rinomanza. (può essere fatto con gli alt per livellare contemporaneamente). Il buff della FdL non dà rinomanza." }, -- ⚠️ UNVERIFIED
-            { id = "11425027", text = "Nota: Solo i monili della fama dei campioni Singolarità E Cantoeterna sono disponibili nell'accesso anticipato - gli altri diventeranno disponibili lunedì dopo il lancio ufficiale o dopo il reset settimanale di ogni regione." }, -- ⚠️ UNVERIFIED
+            { id = "4aa4b47d", text = "Nota: Solo gli oggetti campione di Singularity E Eversong sono disponibili nell'accesso anticipato - gli altri diventeranno disponibili lunedì dopo il lancio ufficiale o dopo il reset settimanale di ogni regione." },
             { id = "ba1890e4", text = "Completa il Ricevimento di Saltheril settimanale nei Boschi di Cantaluna. Non dimenticare di prendere la missione di fama per l'elmo del campione se hai la fama necessaria" },
         },
     },
@@ -41,23 +41,23 @@ local DATASET = {
         id = "50281d6f",
         title = "Pre-stagione settimana 1 - 3 marzo - M0",
         items = {
-            { id = "c3de7d35", text = "Non spendere nessun Emblema finché non ti viene detto" },
+            { id = "727109d8", text = "Non spendere alcuna Cresta finché non ti viene detto di farlo. Vedi la guida per capire perché conserviamo le creste." },
+            { id = "5a2e9ede", text = "NON CRAFTARE" },
             { id = "c06ee1a3", text = "Se sei su un alt e non vedi alcune di queste missioni, vai da Soridormi nella Locanda di Lunargenta e scegli \"Ho Fermato la Tempesta del Vuoto\" per saltare la campagna." }, -- ⚠️ UNVERIFIED
-            { id = "6b199064", text = "Porta la fama della Singolarità al rango 7 per il monile del campione 1/6 - disponibile nell'accesso anticipato - ottenuto da una missione del venditore di fama (non acquistato)" },
-            { id = "2a9b4f4c", text = "Porta la fama di Hara'ti al rango 8 per la cintura del campione 1/6 - NON DISPONIBILE NELL'ACCESSO ANTICIPATO - ottenuta da una missione del venditore di fama (non acquistata)" },
-            { id = "d9a7e304", text = "Aumenta la fama di Lunargenta al rango 9 per l'elmo del campione 1/6 - disponibile nell'accesso anticipato - proviene dalla missione del venditore di fama (non acquistato)" },
-            { id = "6ba4afc1", text = "Porta la fama della Tribù Amani al rango 9 per la collana del campione 1/6 - NON DISPONIBILE NELL'ACCESSO ANTICIPATO - ottenuta da una missione del venditore di fama (non acquistata)" },
+            { id = "44fbfe51", text = "Porta la reputazione di The Singularity al rango 7 per il gingillo campione 1/6 - proviene dalla missione del venditore di reputazione (non acquistato)" },
+            { id = "02ceff50", text = "Porta la reputazione di Hara'ti al rango 8 per la cintura campione 1/6 - proviene dalla missione del venditore di reputazione (non acquistato)" },
+            { id = "cdea3773", text = "Porta la reputazione di Silvermoon al rango 9 per l'elmo campione 1/6 - proviene dalla missione del venditore di reputazione (non acquistato)" },
+            { id = "19687ed0", text = "Porta la reputazione di Tribù Amani al rango 9 per la collana campione 1/6 - proviene dalla missione del venditore di reputazione (non acquistato)" },
             { id = "101e78a9", text = "Completa la missione settimanale del dungeon da Halduron Ali Lucenti per 1000 rinomanza" }, -- ⚠️ UNVERIFIED
             { id = "0c3b8835", text = "Completa la missione settimanale dell'evento mondiale per una cassa apice da Lady Liadrin - puoi prendere la missione dell'evento settimanale e farla con gli eventi sotto" },
             { id = "879d3833", text = "Completa la missione settimanale del giro del mondo da Lorthremar per una scintilla facendo le missioni sotto" }, -- ⚠️ UNVERIFIED
-            { id = "9f3c8578", text = "Completa la missione settimanale delle abitazioni da Vaeli per ??" }, -- ⚠️ UNVERIFIED
             { id = "e326ed96", text = "Completa la Serata di Saltheril settimanale nel Bosco dei Canti Eterni." },
             { id = "da2fa0ef", text = "Completa l'Evento dell'abbondanza settimanale a Zul'Aman." },
             { id = "dbc8384b", text = "Completa l'evento Leggende degli Haranir settimanale a Harandar." },
             { id = "9ad64245", text = "Completa l'Assalto di Stormarion settimanale nella Tempesta del Vuoto." },
             { id = "35bc0cfd", text = "(Opzionale) Uccidi ogni raro una volta in ogni zona per rinomanza. Questi hanno un blocco settimanale per ogni raro." },
             { id = "1b42ce30", text = "Se non fatto, cerca i tesori di ogni regione, il cacciatore delle leggende e le vette alte per Rinomanza gratuita. Vedi la documentazione per la guida" }, -- ⚠️ UNVERIFIED
-            { id = "346bdd7e", text = "Sblocca le Scorribande fino al livello 8 (11 se disponibile)" },
+            { id = "a892ac44", text = "Sblocca le Spedizioni fino al livello 8" },
             { id = "9bc44f02", text = "Completa 2x Preda Difficile per equipaggiamento Veterano su ogni personaggio - se solo un personaggio, fai 4x su un personaggio per rinomanza" }, -- ⚠️ UNVERIFIED
             { id = "a7ee4829", text = "Completa un tour mondiale dei dungeon M0 - ricompensa livello oggetto veterano - non potenziare ancora" },
         },
@@ -67,18 +67,17 @@ local DATASET = {
         id = "ff1f5a67",
         title = "Pre-stagione settimana 2 - 10 marzo - M0",
         items = {
-            { id = "c3de7d35", text = "Non spendere nessun Emblema finché non ti viene detto" },
+            { id = "727109d8", text = "Non spendere alcuna Cresta finché non ti viene detto di farlo. Vedi la guida per capire perché conserviamo le creste." },
+            { id = "5a2e9ede", text = "NON CRAFTARE" },
             { id = "75c5fe6e", text = "Se non completato, continua ad aumentare la reputazione per i pezzi campione" },
             { id = "101e78a9", text = "Completa la missione settimanale del dungeon da Halduron Ali Lucenti per 1000 rinomanza" }, -- ⚠️ UNVERIFIED
             { id = "0c3b8835", text = "Completa la missione settimanale dell'evento mondiale per una cassa apice da Lady Liadrin - puoi prendere la missione dell'evento settimanale e farla con gli eventi sotto" },
-            { id = "879d3833", text = "Completa la missione settimanale del giro del mondo da Lorthremar per una scintilla facendo le missioni sotto" }, -- ⚠️ UNVERIFIED
-            { id = "9f3c8578", text = "Completa la missione settimanale delle abitazioni da Vaeli per ??" }, -- ⚠️ UNVERIFIED
             { id = "e326ed96", text = "Completa la Serata di Saltheril settimanale nel Bosco dei Canti Eterni." },
             { id = "da2fa0ef", text = "Completa l'Evento dell'abbondanza settimanale a Zul'Aman." },
             { id = "dbc8384b", text = "Completa l'evento Leggende degli Haranir settimanale a Harandar." },
             { id = "9ad64245", text = "Completa l'Assalto di Stormarion settimanale nella Tempesta del Vuoto." },
             { id = "35bc0cfd", text = "(Opzionale) Uccidi ogni raro una volta in ogni zona per rinomanza. Questi hanno un blocco settimanale per ogni raro." },
-            { id = "072e6955", text = "Sblocca le Scorribande fino al livello 8 (11 se disponibile), se non ancora fatto" },
+            { id = "23cb93ed", text = "Sblocca le Spedizioni fino al livello 8 se non ancora fatto" },
             { id = "9bc44f02", text = "Completa 2x Preda Difficile per equipaggiamento Veterano su ogni personaggio - se solo un personaggio, fai 4x su un personaggio per rinomanza" }, -- ⚠️ UNVERIFIED
             { id = "a7ee4829", text = "Completa un tour mondiale dei dungeon M0 - ricompensa livello oggetto veterano - non potenziare ancora" },
             { id = "c33e5c84", text = "Se radi martedì 17, crafta. Consulta il documento per ulteriori informazioni." },
@@ -89,15 +88,15 @@ local DATASET = {
         id = "33a3fcba",
         title = "Stagione 1 settimana 1 - 17 marzo - Settimana eroica",
         items = {
-            { id = "c3de7d35", text = "Non spendere nessun Emblema finché non ti viene detto" },
+            { id = "727109d8", text = "Non spendere alcuna Cresta finché non ti viene detto di farlo. Vedi la guida per capire perché conserviamo le creste." },
             { id = "5b379666", text = "Fai il LFR per i pezzi tier (controlla la guida per sapere perché)" },
             { id = "879d3833", text = "Completa la missione settimanale del giro del mondo da Lorthremar per una scintilla facendo le missioni sotto" }, -- ⚠️ UNVERIFIED
-            { id = "9f3c8578", text = "Completa la missione settimanale delle abitazioni da Vaeli per ??" }, -- ⚠️ UNVERIFIED
+            { id = "9686fde4", text = "Completa la missione settimanale dell'abitazione da Vaeli per ?creste eroe? (sarà aggiornato quando sarà disponibile)" }, -- ⚠️ UNVERIFIED
             { id = "952916cd", text = "(Opzionale) Completa un Giro del Mondo di dungeon M0 - ricompensa ilvl campione" }, -- ⚠️ UNVERIFIED
             { id = "22842538", text = "Completa 2x Preda Incubo per equipaggiamento Campione su ogni personaggio" }, -- ⚠️ UNVERIFIED
             { id = "dc0e2686", text = "Uccidi il boss mondiale per un oggetto campione 2/6 livello 250" },
             { id = "3e0dfde7", text = "Se disponibile, completa la missione JcJ per collana/anello eroe garantito" },
-            { id = "fdfd56bc", text = "Fai Scorribande generose T8 con chiavi del forziere, usa la mappa nelle Scorribande T8+" },
+            { id = "b6846065", text = "Fai spedizioni fruttuose di livello 8 o superiore, usa la mappa su spedizioni di livello 8+ - mentre fai questo, sblocca le spedizioni di livello 11" },
             { id = "eff76e73", text = "Prima del raid: crafta 2 pezzi liv. 246, 2 ornamenti negli slot deboli, usa 160 emblemi veterano" },
             { id = "2af0bfb5", text = "Prima del raid: spendi tutti gli Emblemi esploratore, veterano e campione potenziando tutto" },
             { id = "5768e0fe", text = "Tieni traccia degli emblemi: 0/100 Eroico, 0/100 Mitico" },
@@ -108,7 +107,7 @@ local DATASET = {
         id = "d2de9d43",
         title = "Settimana 2 - 24 marzo - Settimana mitica, M+ apre, prendetevi ferie nerd",
         items = {
-            { id = "c3de7d35", text = "Non spendere nessun Emblema finché non ti viene detto" },
+            { id = "727109d8", text = "Non spendere alcuna Cresta finché non ti viene detto di farlo. Vedi la guida per capire perché conserviamo le creste." },
             { id = "7e42a12d", text = "Nota sull'arma 1M craftata, controlla la guida, verifica il percorso di crafting (MOLTO IMPORTANTE!)" },
             { id = "5b379666", text = "Fai il LFR per i pezzi tier (controlla la guida per sapere perché)" },
             { id = "16cf341e", text = "(Facoltativo) Uccidi il boss mondiale per un oggetto campione 2/6 livello 250" },
