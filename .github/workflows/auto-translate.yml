@@ -28,7 +28,7 @@ concurrency:
 
 permissions:
   contents: write
-  pull-requests: write
+  actions: write
 
 # ─── Job ─────────────────────────────────────────────────────────────────────
 jobs:
@@ -86,10 +86,10 @@ jobs:
           fi
           python -u scripts/auto_translate_data.py $ARGS
 
-      # ── 6. Commit to a new branch ───────────────────────────────────────────
-      - name: Commit translations to branch
+      # ── 6. Commit directly to master ───────────────────────────────────────
+      - name: Commit translations to master
         if: steps.params.outputs.dry_run != 'true'
-        id: branch
+        id: commit
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -104,28 +104,15 @@ jobs:
           LOCALE_LABEL="${{ steps.params.outputs.locale }}"
           if [ -z "$LOCALE_LABEL" ]; then LOCALE_LABEL="all-locales"; fi
 
-          TIMESTAMP=$(date -u +%Y%m%d-%H%M%S)
-          BRANCH="auto-translate/${LOCALE_LABEL}-${TIMESTAMP}"
-          git checkout -b "$BRANCH"
           git commit -m "Auto-translate ${LOCALE_LABEL} – AI-generated, unverified terms flagged"
-          git push origin "$BRANCH"
+          git push origin HEAD:${{ github.event.repository.default_branch }}
           echo "has_changes=true" >> "$GITHUB_OUTPUT"
-          echo "branch=$BRANCH"   >> "$GITHUB_OUTPUT"
 
-      # ── 7. Open Pull Request ────────────────────────────────────────────────
-      - name: Open Pull Request
-        if: steps.branch.outputs.has_changes == 'true'
+      # ── 7. Trigger Publish Stable ───────────────────────────────────────────
+      - name: Trigger publish-stable workflow
+        if: steps.commit.outputs.has_changes == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          LOCALE_LABEL="${{ steps.params.outputs.locale }}"
-          if [ -z "$LOCALE_LABEL" ]; then LOCALE_LABEL="all locales"; fi
-          DATE=$(date -u +%Y-%m-%d)
-
-          BODY="Automated translation pass triggered by a change to \`enUS_Data.lua\`."$'\n\n'"All new entries are flagged with UNVERIFIED for native speaker review before merging."
-
-          gh pr create \
-            --title "Auto-translate ${LOCALE_LABEL} – ${DATE}" \
-            --body "$BODY" \
-            --base "${{ github.event.repository.default_branch }}" \
-            --head "${{ steps.branch.outputs.branch }}"
+          gh workflow run publish-stable.yml \
+            --ref ${{ github.event.repository.default_branch }}
