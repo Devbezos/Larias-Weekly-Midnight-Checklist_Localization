@@ -41,7 +41,7 @@ local DATASET = {
         id = "50281d6f",
         title = "Pré-temporada Semana 1 - 3 de março - M0",
         items = {
-            { id = "2e0fb03d", text = "Não gaste nenhum Brasão até ser instruído a fazê-lo. Confira o guia para saber por que guardamos brasões." },
+            { id = "ebe944e7", text = "Guarde 160 insígnias de Veterano para craftar 2x itens de Veterano com Embelezamentos" },
             { id = "5a2e9ede", text = "NÃO FABRICAR" },
             { id = "c06ee1a3", text = "Se você está em um personagem alternativo e não vê algumas dessas missões, vá até Soridormi na Estalagem de Lua Prateada e escolha \"Eu Detive a Tempestade Etérea\" para pular a campanha." }, -- ⚠️ UNVERIFIED
             { id = "755d27e7", text = "Eleve o renome de A Singularidade para nível 7 para um trinket campeão 1/6 - vem de uma missão do vendedor de renome" },
@@ -61,6 +61,9 @@ local DATASET = {
             { id = "d54f7430", text = "Complete 4x Presa Difícil. As primeiras 2 darão equipamento Veterano; todas as 4 darão Brasões Veteranos que você precisa para maximizar." },
             { id = "efb035ba", text = "(Opcional) Complete 2x Presa Difícil aleatória para emblemas Veteranos em cada personagem - fazendo 2x opcionais por semana alcançará o limite de emblemas Veteranos até o final da semana 2" }, -- ⚠️ UNVERIFIED
             { id = "a7ee4829", text = "Complete um tour mundial das masmorras M0 - recompensa nível de item veteranário - não melhore ainda" },
+            { id = "c60d586a", text = "Informações do Hotfix de Quinta-feira, 5 de Março: A Blizzard aplicou um hotfix que adiciona a habilidade de conquistar uma conquista que reduz o custo de aprimorar suas insígnias em 50% na sua conta assim que um personagem tiver 237 em todos os espaços. Confira o guia para mais informações." },
+            { id = "77405dc2", text = "Novo: Se você tem apenas um personagem, após completar sua primeira volta mundial de masmorras M0 você pode gastar insígnias de Aventureiro nos itens restantes." },
+            { id = "95531889", text = "Novo: Se você tem múltiplos personagens, uma vez que tenha conquistado a nova conquista, você pode aprimorar livremente em todos os outros personagens." },
         },
     },
 
@@ -68,7 +71,7 @@ local DATASET = {
         id = "ff1f5a67",
         title = "Pré-temporada Semana 2 - 10 de março - M0",
         items = {
-            { id = "2e0fb03d", text = "Não gaste nenhum Brasão até ser instruído a fazê-lo. Confira o guia para saber por que guardamos brasões." },
+            { id = "ebe944e7", text = "Guarde 160 insígnias de Veterano para craftar 2x itens de Veterano com Embelezamentos" },
             { id = "5a2e9ede", text = "NÃO FABRICAR" },
             { id = "75c5fe6e", text = "Se não concluído, continue elevando o renome para peças campeã" },
             { id = "101e78a9", text = "Complete a missão semanal de masmorra de Halduron Asa Brilhante para 1000 de renome" },
@@ -82,6 +85,7 @@ local DATASET = {
             { id = "d54f7430", text = "Complete 4x Presa Difícil. As primeiras 2 darão equipamento Veterano; todas as 4 darão Brasões Veteranos que você precisa para maximizar." },
             { id = "efb035ba", text = "(Opcional) Complete 2x Presa Difícil aleatória para emblemas Veteranos em cada personagem - fazendo 2x opcionais por semana alcançará o limite de emblemas Veteranos até o final da semana 2" }, -- ⚠️ UNVERIFIED
             { id = "a7ee4829", text = "Complete um tour mundial das masmorras M0 - recompensa nível de item veteranário - não melhore ainda" },
+            { id = "dc01eba9", text = "Se você tem alguma peça de aventureiro sobrando, você pode aprimorá-las livremente." },
             { id = "f2af7330", text = "Se você fizer raide na terça dia 17, fabrique. Confira o guia para mais informações." },
         },
     },
@@ -90,7 +94,7 @@ local DATASET = {
         id = "33a3fcba",
         title = "Semana 1 da Temporada 1 - 17 de março - Semana heróica",
         items = {
-            { id = "2e0fb03d", text = "Não gaste nenhum Brasão até ser instruído a fazê-lo. Confira o guia para saber por que guardamos brasões." },
+            { id = "36d21691", text = "Não gaste nenhuma Insígnia Heroica ou Mítica até que seja instruído a fazê-lo. Confira o guia para entender por que guardamos insígnias." },
             { id = "e66847d8", text = "Faça RFR para peças de conjunto - obter um bônus de 4 peças permitirá que cargas de catalisador sejam obtidas de todo conteúdo" },
             { id = "e0ecce24", text = "Complete a missão semanal de evento mundial para baú pináculo e centelha da Lady Liadrin" },
             { id = "9686fde4", text = "Complete a missão semanal de habitação da Vaeli para ?brasões herói? (será atualizado quando for ao ar)" },
@@ -100,7 +104,7 @@ local DATASET = {
             { id = "22842538", text = "Complete 2x Presa Pesadelo para equipamento de Campeão em cada personagem" }, -- ⚠️ UNVERIFIED
             { id = "dc0e2686", text = "Mate o chefe mundial para um item campeão 2/6 nível 250" },
             { id = "b6846065", text = "Faça escavações abundantes de n8 ou superior, use mapa em escavação n8+ - enquanto faz isso, desbloqueie escavações n11" },
-            { id = "eff76e73", text = "Antes da raid: crie 2 peças nível 246, 2 ornamentos nos slots fracos, use 160 Brasões veteranários" },
+            { id = "8c700b67", text = "Antes da raide, crafte 2x peças de nível de item 246, 2x embelezamentos em slots fracos, use 160 Insígnias Vet. Estes não precisam de Centelhas." },
             { id = "679a07b9", text = "Antes da raide, gaste todos os Brasões de Aventureiro, Veterano e Campeão melhorando qualquer coisa. Não gaste brasões Heroicos ou Míticos." },
             { id = "5768e0fe", text = "Acompanhe os Brasões: 0/100 Heróico, 0/100 Mítico" },
         },
@@ -110,7 +114,7 @@ local DATASET = {
         id = "d2de9d43",
         title = "Semana 2 - 24 de março - Semana mítica, M+ abre, tirem férias nerds",
         items = {
-            { id = "36d21691", text = "Não gaste nenhum Brasão Heroico ou Mítico até ser instruído a fazê-lo. Confira o guia para saber por que guardamos brasões." },
+            { id = "36d21691", text = "Não gaste nenhuma Insígnia Heroica ou Mítica até que seja instruído a fazê-lo. Confira o guia para entender por que guardamos insígnias." },
             { id = "e0ecce24", text = "Complete a missão semanal de evento mundial para baú pináculo e centelha da Lady Liadrin" },
             { id = "9686fde4", text = "Complete a missão semanal de habitação da Vaeli para ?brasões herói? (será atualizado quando for ao ar)" },
             { id = "4056a14a", text = "Se você não tem conjunto de 4 peças, faça RFR para peças de conjunto - obter um bônus de 4 peças permitirá que cargas de catalisador sejam obtidas de todo conteúdo" },

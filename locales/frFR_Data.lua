@@ -41,7 +41,7 @@ local DATASET = {
         id = "50281d6f",
         title = "Pré-saison semaine 1 - 3 mars - M0",
         items = {
-            { id = "2e0fb03d", text = "Ne dépensez aucune Armoirie tant qu'on ne vous le dit pas. Consultez le guide pour savoir pourquoi nous gardons les armoiries." },
+            { id = "ebe944e7", text = "Économisez 160 écussons de vétéran pour fabriquer 2 objets de vétéran avec embellissements" },
             { id = "5a2e9ede", text = "NE PAS FABRIQUER" },
             { id = "c06ee1a3", text = "Si vous êtes sur un reroll et ne voyez pas certaines de ces quêtes, allez voir Soridormi à l'auberge de Lune-d'Argent et choisissez « J'ai arrêté le Voidstorm » pour passer la campagne." }, -- ⚠️ UNVERIFIED
             { id = "755d27e7", text = "Élevez le renom de La Singularité au rang 7 pour un bijou de champion 1/6 - provient d'une quête du vendeur de renom" },
@@ -61,6 +61,9 @@ local DATASET = {
             { id = "d54f7430", text = "Complétez 4x Proie coriace. Les 2 premières donneront de l'équipement Vétéran ; les 4 donneront des Armoiries vétéran dont vous avez besoin pour plafonner." },
             { id = "efb035ba", text = "(Optionnel) Terminez 2x Proie difficile aléatoire pour obtenir des armoiries vétéran sur chaque personnage - faire 2x optionnel par semaine plafonnera les armoiries vétéran à la fin de la semaine 2" }, -- ⚠️ UNVERIFIED
             { id = "a7ee4829", text = "Effectuez un tour mondial des donjons M0 – récompense niv. obj. vétéran – n'améliorez pas encore" },
+            { id = "c60d586a", text = "Correctif du jeudi 5 mars : Blizzard a ajouté par correctif la possibilité d'obtenir un haut fait qui réduit le coût d'amélioration de vos écussons de 50% sur votre compte une fois qu'un personnage atteint 237 dans chaque emplacement. Consultez le guide pour plus d'informations." },
+            { id = "77405dc2", text = "Nouveau : Si vous n'avez qu'un seul personnage, après avoir terminé votre premier tour du monde des donjons M0, vous pouvez dépenser des écussons d'aventurier sur les objets restants." },
+            { id = "95531889", text = "Nouveau : Si vous avez plusieurs personnages, une fois que vous avez obtenu le nouveau haut fait, vous pouvez améliorer librement sur tous les autres personnages." },
         },
     },
 
@@ -68,7 +71,7 @@ local DATASET = {
         id = "ff1f5a67",
         title = "Pré-saison semaine 2 - 10 mars - M0",
         items = {
-            { id = "2e0fb03d", text = "Ne dépensez aucune Armoirie tant qu'on ne vous le dit pas. Consultez le guide pour savoir pourquoi nous gardons les armoiries." },
+            { id = "ebe944e7", text = "Économisez 160 écussons de vétéran pour fabriquer 2 objets de vétéran avec embellissements" },
             { id = "5a2e9ede", text = "NE PAS FABRIQUER" },
             { id = "75c5fe6e", text = "Si pas terminé, continuez à augmenter la renommée pour les pièces champion" },
             { id = "101e78a9", text = "Terminez la quête de donjon hebdomadaire de Halduron Brightewing pour 1000 de renom" }, -- ⚠️ UNVERIFIED
@@ -82,6 +85,7 @@ local DATASET = {
             { id = "d54f7430", text = "Complétez 4x Proie coriace. Les 2 premières donneront de l'équipement Vétéran ; les 4 donneront des Armoiries vétéran dont vous avez besoin pour plafonner." },
             { id = "efb035ba", text = "(Optionnel) Terminez 2x Proie difficile aléatoire pour obtenir des armoiries vétéran sur chaque personnage - faire 2x optionnel par semaine plafonnera les armoiries vétéran à la fin de la semaine 2" }, -- ⚠️ UNVERIFIED
             { id = "a7ee4829", text = "Effectuez un tour mondial des donjons M0 – récompense niv. obj. vétéran – n'améliorez pas encore" },
+            { id = "dc01eba9", text = "Si vous avez des pièces d'aventurier restantes, vous pouvez les améliorer librement." },
             { id = "f2af7330", text = "Si vous faites un raid le mardi 17, craftez. Consultez le guide pour plus d'informations." },
         },
     },
@@ -90,7 +94,7 @@ local DATASET = {
         id = "33a3fcba",
         title = "Saison 1 semaine 1 - 17 mars - Semaine héroïque",
         items = {
-            { id = "2e0fb03d", text = "Ne dépensez aucune Armoirie tant qu'on ne vous le dit pas. Consultez le guide pour savoir pourquoi nous gardons les armoiries." },
+            { id = "36d21691", text = "Ne dépensez aucun écusson héroïque ou mythique avant qu'on vous le dise. Consultez le guide pour comprendre pourquoi nous conservons les écussons." },
             { id = "e66847d8", text = "Faites le RDF pour des pièces de panoplie - obtenir un bonus 4 pièces permettra aux charges de catalyseur de tomber de tout le contenu" },
             { id = "e0ecce24", text = "Complétez la quête d'événement mondial hebdomadaire pour un coffre apogée et une étincelle auprès de Dame Liadrin" },
             { id = "9686fde4", text = "Complétez la quête de logement hebdomadaire de Vaeli pour ?armoiries héros? (sera mis à jour quand ce sera en ligne)" },
@@ -100,7 +104,7 @@ local DATASET = {
             { id = "22842538", text = "Terminez 2x Proie cauchemardesque pour de l'équipement Champion sur chaque personnage" }, -- ⚠️ UNVERIFIED
             { id = "dc0e2686", text = "Tuez le boss mondial pour un objet champion 2/6 niv. 250" },
             { id = "b6846065", text = "Faites des Profondeurs généreuses de palier 8 ou supérieur, utilisez la carte sur une Profondeur palier 8+ - en faisant cela, débloquez les Profondeurs palier 11" },
-            { id = "eff76e73", text = "Avant le raid : fabriquez 2 pièces niv. 246, 2 embellissements sur les emplacements faibles, utilisez 160 Écus de vétéran" },
+            { id = "8c700b67", text = "Avant le raid, fabriquez 2 pièces ilvl 246, 2 embellissements sur des emplacements faibles, utilisez 160 écussons de vét. Ceux-ci ne nécessitent pas d'étincelles." },
             { id = "679a07b9", text = "Avant le raid, dépensez toutes les Armoiries aventurier, vétéran et champion en améliorant tout. Ne dépensez pas les armoiries héroïques ou mythiques." },
             { id = "5768e0fe", text = "Suivi des Écus : 0/100 Héroïque, 0/100 Mythique" },
         },
@@ -110,7 +114,7 @@ local DATASET = {
         id = "d2de9d43",
         title = "Semaine 2 - 24 mars - Semaine mythique, M+ ouvre, prenez des congés les nerds",
         items = {
-            { id = "36d21691", text = "Ne dépensez aucune Armoirie héroïque ou mythique tant qu'on ne vous le dit pas. Consultez le guide pour savoir pourquoi nous gardons les armoiries." },
+            { id = "36d21691", text = "Ne dépensez aucun écusson héroïque ou mythique avant qu'on vous le dise. Consultez le guide pour comprendre pourquoi nous conservons les écussons." },
             { id = "e0ecce24", text = "Complétez la quête d'événement mondial hebdomadaire pour un coffre apogée et une étincelle auprès de Dame Liadrin" },
             { id = "9686fde4", text = "Complétez la quête de logement hebdomadaire de Vaeli pour ?armoiries héros? (sera mis à jour quand ce sera en ligne)" },
             { id = "4056a14a", text = "Si vous n'avez pas le bonus 4 pièces, faites le RDF pour des pièces de panoplie - obtenir un bonus 4 pièces permettra aux charges de catalyseur de tomber de tout le contenu" },

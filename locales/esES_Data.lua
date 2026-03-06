@@ -41,7 +41,7 @@ local DATASET = {
         id = "50281d6f",
         title = "Pretemporada semana 1 - 3 de marzo - M0",
         items = {
-            { id = "2e0fb03d", text = "No gastes ninguna Blasón hasta que se te indique. Consulta la guía para saber por qué guardamos los blasones." },
+            { id = "ebe944e7", text = "Guarda 160 emblemas de Veterano para fabricar 2 objetos de Veterano con Adornos" },
             { id = "5a2e9ede", text = "NO FABRICAR" },
             { id = "c06ee1a3", text = "Si estás en un alt y no ves algunas de estas misiones, ve a Soridormi en la Posada de Lunargenta y elige \"Detuve la Tormenta del Vacío\" para saltarte la campaña." }, -- ⚠️ UNVERIFIED
             { id = "755d27e7", text = "Sube el renombre de La Singularidad al rango 7 para conseguir un abalorios 1/6 de campeón - viene de una misión del vendedor de renombre" },
@@ -61,6 +61,9 @@ local DATASET = {
             { id = "d54f7430", text = "Completa 4 Presa Difícil. Las 2 primeras darán equipo de Veterano; las 4 darán Blasones de Veterano que necesitas para alcanzar el límite." },
             { id = "efb035ba", text = "(Opcional) Completa 2 Presa Difícil aleatorias para obtener blasones Veteranos en cada personaje - haciendo 2 opcionales por semana alcanzarás el límite de blasones Veteranos al final de la semana 2" }, -- ⚠️ UNVERIFIED
             { id = "a7ee4829", text = "Completa un tour mundial de mazmorras M0 – recompensa nivel de objeto veterano – no mejores todavía" },
+            { id = "c60d586a", text = "Información del parche rápido del jueves 5 de marzo: Blizzard ha implementado mediante parche rápido la capacidad de conseguir un logro que reduce el coste de mejorar tus emblemas en un 50% en tu cuenta una vez que un personaje tenga 237 en cada ranura. Consulta la guía para más información." },
+            { id = "77405dc2", text = "Nuevo: Si solo tienes un personaje, después de completar tu primera ronda mundial de mazmorras M0 puedes gastar emblemas de Aventurero en los objetos restantes." },
+            { id = "95531889", text = "Nuevo: Si tienes múltiples personajes, una vez que hayas conseguido el nuevo logro, puedes mejorar libremente en todos los demás personajes." },
         },
     },
 
@@ -68,7 +71,7 @@ local DATASET = {
         id = "ff1f5a67",
         title = "Pretemporada semana 2 - 10 de marzo - M0",
         items = {
-            { id = "2e0fb03d", text = "No gastes ninguna Blasón hasta que se te indique. Consulta la guía para saber por qué guardamos los blasones." },
+            { id = "ebe944e7", text = "Guarda 160 emblemas de Veterano para fabricar 2 objetos de Veterano con Adornos" },
             { id = "5a2e9ede", text = "NO FABRICAR" },
             { id = "75c5fe6e", text = "Si no está completo, continúa subiendo reputación para piezas de campeón" },
             { id = "101e78a9", text = "Completa la misión semanal de mazmorras de Halduron Ala Luminosa para 1000 de renombre" }, -- ⚠️ UNVERIFIED
@@ -82,6 +85,7 @@ local DATASET = {
             { id = "d54f7430", text = "Completa 4 Presa Difícil. Las 2 primeras darán equipo de Veterano; las 4 darán Blasones de Veterano que necesitas para alcanzar el límite." },
             { id = "efb035ba", text = "(Opcional) Completa 2 Presa Difícil aleatorias para obtener blasones Veteranos en cada personaje - haciendo 2 opcionales por semana alcanzarás el límite de blasones Veteranos al final de la semana 2" }, -- ⚠️ UNVERIFIED
             { id = "a7ee4829", text = "Completa un tour mundial de mazmorras M0 – recompensa nivel de objeto veterano – no mejores todavía" },
+            { id = "dc01eba9", text = "Si te quedan piezas de aventurero, deberías sentirte libre de mejorarlas." },
             { id = "f2af7330", text = "Si haces incursión el martes 17, fabrica. Consulta la guía para más información." },
         },
     },
@@ -90,7 +94,7 @@ local DATASET = {
         id = "33a3fcba",
         title = "Temporada 1 semana 1 - 17 de marzo - Semana heroica",
         items = {
-            { id = "2e0fb03d", text = "No gastes ninguna Blasón hasta que se te indique. Consulta la guía para saber por qué guardamos los blasones." },
+            { id = "36d21691", text = "No gastes ningún emblema Heroico o Mítico hasta que se te indique. Consulta la guía para saber por qué guardamos los emblemas." },
             { id = "e66847d8", text = "Haz BBR para piezas de conjunto - obtener un bonus de conjunto de 4 piezas permitirá que caigan cargas de catalizador de todo el contenido" },
             { id = "e0ecce24", text = "Completa la misión semanal del evento mundial para conseguir alijo cumbre y chispa de Lady Liadrin" },
             { id = "9686fde4", text = "Completa la misión semanal de hogar de Vaeli para ¿blasones de héroe? (se actualizará cuando esté disponible)" },
@@ -100,7 +104,7 @@ local DATASET = {
             { id = "22842538", text = "Completa 2x Presa Pesadilla para equipo de Campeón en cada personaje" }, -- ⚠️ UNVERIFIED
             { id = "dc0e2686", text = "Mata al jefe del mundo para objeto campeón 2/6 nivel 250" },
             { id = "b6846065", text = "Haz Profundidades abundantes de nivel 8 o superior, usa el mapa en Profundidades de nivel 8+ - mientras lo haces, desbloquea las Profundidades de nivel 11" },
-            { id = "eff76e73", text = "Antes de la banda: fabrica 2 piezas niv. 246, 2 adornos en huecos débiles, usa 160 blasones de veterano" },
+            { id = "8c700b67", text = "Antes de la banda, fabrica 2 piezas de nivel de objeto 246, 2 adornos en ranuras débiles, usa 160 emblemas de Vet. Estos no requieren Chispas." },
             { id = "679a07b9", text = "Antes de la incursión, gasta todos los Blasones de Aventurero, Veterano y Campeón mejorando cualquier cosa. No gastes blasones Heroicos o Míticos." },
             { id = "5768e0fe", text = "Control de blasones: 0/100 Heroicos, 0/100 Míticos" },
         },
@@ -110,7 +114,7 @@ local DATASET = {
         id = "d2de9d43",
         title = "Semana 2 - 24 de marzo - Semana mítica, M+ abre, pedid vacaciones frikis",
         items = {
-            { id = "36d21691", text = "No gastes ningún Blasón Heroico o Mítico hasta que se te indique. Consulta la guía para saber por qué guardamos los blasones." },
+            { id = "36d21691", text = "No gastes ningún emblema Heroico o Mítico hasta que se te indique. Consulta la guía para saber por qué guardamos los emblemas." },
             { id = "e0ecce24", text = "Completa la misión semanal del evento mundial para conseguir alijo cumbre y chispa de Lady Liadrin" },
             { id = "9686fde4", text = "Completa la misión semanal de hogar de Vaeli para ¿blasones de héroe? (se actualizará cuando esté disponible)" },
             { id = "4056a14a", text = "Si no tienes conjunto de 4 piezas, haz BBR para piezas de conjunto - obtener un bonus de conjunto de 4 piezas permitirá que caigan cargas de catalizador de todo el contenido" },

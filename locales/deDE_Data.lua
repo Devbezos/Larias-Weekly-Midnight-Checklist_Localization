@@ -41,7 +41,7 @@ local DATASET = {
         id = "50281d6f",
         title = "Vorsaison Woche 1 - 3. März - M0s",
         items = {
-            { id = "2e0fb03d", text = "Gib keine Wappen aus, bis du dazu aufgefordert wirst. Prüfe den Leitfaden, warum wir Wappen zurückhalten." },
+            { id = "ebe944e7", text = "Spare 160 Veteranenabzeichen für die Herstellung von 2x Veteranengegenständen mit Verzierungen" },
             { id = "5a2e9ede", text = "NICHT HERSTELLEN" },
             { id = "c06ee1a3", text = "Wenn du auf einem Twink bist und einige dieser Quests nicht siehst, gehe zu Soridormi im Gasthaus von Silbermond und wähle \"Ich habe den Leerensturm gestoppt\", um die Kampagne zu überspringen." },
             { id = "755d27e7", text = "Erhöhe den Ruhm der Singularität auf Rang 7 für ein 1/6-Champion-Schmuckstück - kommt von einer Quest vom Ruhmverkäufer" }, -- ⚠️ UNVERIFIED
@@ -61,6 +61,9 @@ local DATASET = {
             { id = "d54f7430", text = "Schließe 4x Harte Beute ab. Die ersten 2 geben Veteranen-Ausrüstung; alle 4 geben Veteranen-Wappen, die du zum Maximieren brauchst." },
             { id = "efb035ba", text = "(Optional) Schließe 2x zufällige Harte Beute für Veteranenwappen auf jedem Charakter ab - wenn du 2x optional pro Woche machst, erreichst du die Obergrenze für Veteranenwappen bis zum Ende von Woche 2" }, -- ⚠️ UNVERIFIED
             { id = "a7ee4829", text = "Welttour der M0-Dungeons abschließen – Veteran-Gs – noch nicht aufwerten" },
+            { id = "c60d586a", text = "Donnerstag, 5. März Hotfix-Info: Blizzard hat per Hotfix die Möglichkeit hinzugefügt, eine Errungenschaft zu verdienen, die die Kosten für das Aufwerten deiner Abzeichen um 50% auf deinem Account reduziert, sobald ein Charakter in jedem einzelnen Slot 237 erreicht hat. Weitere Informationen im Leitfaden." },
+            { id = "77405dc2", text = "Neu: Wenn du nur einen Charakter hast, kannst du nach Abschluss deiner ersten Welttour der M0-Dungeons Abenteurerabzeichen für verbleibende Gegenstände ausgeben." },
+            { id = "95531889", text = "Neu: Wenn du mehrere Charaktere hast, kannst du, sobald du die neue Errungenschaft erhalten hast, auf allen anderen Charakteren frei aufwerten." },
         },
     },
 
@@ -68,7 +71,7 @@ local DATASET = {
         id = "ff1f5a67",
         title = "Vorsaison Woche 2 - 10. März - M0s",
         items = {
-            { id = "2e0fb03d", text = "Gib keine Wappen aus, bis du dazu aufgefordert wirst. Prüfe den Leitfaden, warum wir Wappen zurückhalten." },
+            { id = "ebe944e7", text = "Spare 160 Veteranenabzeichen für die Herstellung von 2x Veteranengegenständen mit Verzierungen" },
             { id = "5a2e9ede", text = "NICHT HERSTELLEN" },
             { id = "75c5fe6e", text = "Falls nicht abgeschlossen: weiter Ansehen für Champion-Teile erhöhen" },
             { id = "101e78a9", text = "Schließe die wöchentliche Dungeonquest von Halduron Hellfittich für 1000 Ruhm ab" },
@@ -82,6 +85,7 @@ local DATASET = {
             { id = "d54f7430", text = "Schließe 4x Harte Beute ab. Die ersten 2 geben Veteranen-Ausrüstung; alle 4 geben Veteranen-Wappen, die du zum Maximieren brauchst." },
             { id = "efb035ba", text = "(Optional) Schließe 2x zufällige Harte Beute für Veteranenwappen auf jedem Charakter ab - wenn du 2x optional pro Woche machst, erreichst du die Obergrenze für Veteranenwappen bis zum Ende von Woche 2" }, -- ⚠️ UNVERIFIED
             { id = "a7ee4829", text = "Welttour der M0-Dungeons abschließen – Veteran-Gs – noch nicht aufwerten" },
+            { id = "dc01eba9", text = "Wenn du noch Abenteuerergegenstände übrig hast, kannst du diese gerne aufwerten." },
             { id = "f2af7330", text = "Falls du am Dienstag, den 17., raidest, stelle her. Prüfe den Leitfaden für weitere Infos." },
         },
     },
@@ -90,7 +94,7 @@ local DATASET = {
         id = "33a3fcba",
         title = "Saison 1 Woche 1 - 17. März - Heroisch-Woche",
         items = {
-            { id = "2e0fb03d", text = "Gib keine Wappen aus, bis du dazu aufgefordert wirst. Prüfe den Leitfaden, warum wir Wappen zurückhalten." },
+            { id = "36d21691", text = "Gib keine Heroischen oder Mythischen Abzeichen aus, bis du dazu aufgefordert wirst. Im Leitfaden erfährst du, warum wir Abzeichen aufheben." },
             { id = "e66847d8", text = "Mache LFR für Set-Teile - das Erhalten eines 4er-Set-Bonus ermöglicht es, dass Katalysator-Ladungen von allen Inhalten fallen" },
             { id = "e0ecce24", text = "Schließe die wöchentliche Weltereignisquest für eine Gipfel-Truhe und einen Funken von Lady Liadrin ab" },
             { id = "9686fde4", text = "Schließe die wöchentliche Behausungsquest von Vaeli für ?Helden-Wappen? ab (wird aktualisiert, wenn es live geht)" }, -- ⚠️ UNVERIFIED
@@ -100,7 +104,7 @@ local DATASET = {
             { id = "22842538", text = "Schließe 2x Albtraum-Beute für Champion-Ausrüstung auf jedem Charakter ab" }, -- ⚠️ UNVERIFIED
             { id = "dc0e2686", text = "Weltboss töten für Champion 2/6 250-Gs-Item" },
             { id = "b6846065", text = "Mache S8 oder höhere ertragreiche Tiefen, benutze Karte auf S8+ Tiefe - während du dies tust, schalte S11 Tiefen frei" },
-            { id = "eff76e73", text = "Vor dem Schlachtzug: 2x 246-Gs-Teile craften, 2x Verzierungen in schwache Slots, 160 Veteran-Wappen nutzen" },
+            { id = "8c700b67", text = "Stelle vor dem Schlachtzug 2x Gegenstände mit Gegenstandsstufe 246 her, 2x Verzierungen auf schwachen Slots, verwende 160 Vet-Abzeichen. Diese benötigen keine Funken." },
             { id = "679a07b9", text = "Gib vor dem Schlachtzug alle Abenteurer-, Veteranen- und Champion-Wappen für Aufwertungen aus. Gib keine Heroischen oder Mythischen Wappen aus." },
             { id = "5768e0fe", text = "Wappen tracken: 0/100 Heroisch, 0/100 Mythisch" },
         },
@@ -110,7 +114,7 @@ local DATASET = {
         id = "d2de9d43",
         title = "Woche 2 - 24. März - Mythisch-Woche, M+ öffnet, nehmt Urlaub Nerds",
         items = {
-            { id = "36d21691", text = "Gib keine Heroischen oder Mythischen Wappen aus, bis du dazu aufgefordert wirst. Prüfe den Leitfaden, warum wir Wappen zurückhalten." },
+            { id = "36d21691", text = "Gib keine Heroischen oder Mythischen Abzeichen aus, bis du dazu aufgefordert wirst. Im Leitfaden erfährst du, warum wir Abzeichen aufheben." },
             { id = "e0ecce24", text = "Schließe die wöchentliche Weltereignisquest für eine Gipfel-Truhe und einen Funken von Lady Liadrin ab" },
             { id = "9686fde4", text = "Schließe die wöchentliche Behausungsquest von Vaeli für ?Helden-Wappen? ab (wird aktualisiert, wenn es live geht)" }, -- ⚠️ UNVERIFIED
             { id = "4056a14a", text = "Falls du kein 4er-Set hast, mache LFR für Set-Teile - das Erhalten eines 4er-Set-Bonus ermöglicht es, dass Katalysator-Ladungen von allen Inhalten fallen" },

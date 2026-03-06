@@ -41,7 +41,7 @@ local DATASET = {
         id = "50281d6f",
         title = "Pre-stagione settimana 1 - 3 marzo - M0",
         items = {
-            { id = "2e0fb03d", text = "Non spendere Emblemi finché non ti viene detto di farlo. Controlla la guida per sapere perché conserviamo gli emblemi." },
+            { id = "ebe944e7", text = "Conserva 160 stemmi Veterano per creare 2 oggetti Veterano con Abbellimenti" },
             { id = "5a2e9ede", text = "NON CRAFTARE" },
             { id = "c06ee1a3", text = "Se sei su un alt e non vedi alcune di queste missioni, vai da Soridormi nella Locanda di Lunargenta e scegli \"Ho Fermato la Tempesta del Vuoto\" per saltare la campagna." }, -- ⚠️ UNVERIFIED
             { id = "755d27e7", text = "Porta la fama della Singolarità al rango 7 per un trinket campione 1/6 - proviene da una missione del venditore di fama" },
@@ -61,6 +61,9 @@ local DATASET = {
             { id = "d54f7430", text = "Completa 4x Preda Difficile. Le prime 2 daranno equipaggiamento Veterano; tutte e 4 daranno Emblemi Veterani necessari per raggiungere il cap." },
             { id = "efb035ba", text = "(Facoltativo) Completa 2x Preda Difficile casuali per stemmi Veterani su ogni personaggio - completando 2x facoltativi a settimana raggiungerai il massimo di stemmi Veterani entro la fine della settimana 2" }, -- ⚠️ UNVERIFIED
             { id = "a7ee4829", text = "Completa un tour mondiale dei dungeon M0 - ricompensa livello oggetto veterano - non potenziare ancora" },
+            { id = "c60d586a", text = "Informazioni Hotfix di giovedì 5 marzo: Blizzard ha aggiunto tramite hotfix la possibilità di ottenere un'impresa che riduce del 50% il costo di potenziamento degli stemmi sul tuo account una volta che un personaggio raggiunge 237 in ogni singolo slot. Controlla la guida per maggiori informazioni." },
+            { id = "77405dc2", text = "Novità: Se hai solo un personaggio, dopo aver completato il tuo primo tour mondiale dei sotterranei M0 puoi spendere stemmi Avventuriero sugli oggetti rimanenti." },
+            { id = "95531889", text = "Novità: Se hai più personaggi, una volta ottenuta la nuova impresa, puoi potenziare liberamente su tutti gli altri personaggi." },
         },
     },
 
@@ -68,7 +71,7 @@ local DATASET = {
         id = "ff1f5a67",
         title = "Pre-stagione settimana 2 - 10 marzo - M0",
         items = {
-            { id = "2e0fb03d", text = "Non spendere Emblemi finché non ti viene detto di farlo. Controlla la guida per sapere perché conserviamo gli emblemi." },
+            { id = "ebe944e7", text = "Conserva 160 stemmi Veterano per creare 2 oggetti Veterano con Abbellimenti" },
             { id = "5a2e9ede", text = "NON CRAFTARE" },
             { id = "75c5fe6e", text = "Se non completato, continua ad aumentare la reputazione per i pezzi campione" },
             { id = "101e78a9", text = "Completa la missione settimanale del dungeon da Halduron Ali Lucenti per 1000 rinomanza" }, -- ⚠️ UNVERIFIED
@@ -82,6 +85,7 @@ local DATASET = {
             { id = "d54f7430", text = "Completa 4x Preda Difficile. Le prime 2 daranno equipaggiamento Veterano; tutte e 4 daranno Emblemi Veterani necessari per raggiungere il cap." },
             { id = "efb035ba", text = "(Facoltativo) Completa 2x Preda Difficile casuali per stemmi Veterani su ogni personaggio - completando 2x facoltativi a settimana raggiungerai il massimo di stemmi Veterani entro la fine della settimana 2" }, -- ⚠️ UNVERIFIED
             { id = "a7ee4829", text = "Completa un tour mondiale dei dungeon M0 - ricompensa livello oggetto veterano - non potenziare ancora" },
+            { id = "dc01eba9", text = "Se hai ancora pezzi avventuriero, sentiti libero di potenziarli." },
             { id = "f2af7330", text = "Se fai incursione martedì 17, crea oggetti. Controlla la guida per maggiori informazioni." },
         },
     },
@@ -90,7 +94,7 @@ local DATASET = {
         id = "33a3fcba",
         title = "Stagione 1 settimana 1 - 17 marzo - Settimana eroica",
         items = {
-            { id = "2e0fb03d", text = "Non spendere Emblemi finché non ti viene detto di farlo. Controlla la guida per sapere perché conserviamo gli emblemi." },
+            { id = "36d21691", text = "Non spendere alcuno Stemma Eroico o Mitico finché non ti viene detto di farlo. Controlla la guida per capire perché conserviamo gli stemmi." },
             { id = "e66847d8", text = "Fai LFR per pezzi tier - ottenere un bonus set da 4 pezzi permetterà alle cariche del catalizzatore di droppare da tutti i contenuti" },
             { id = "e0ecce24", text = "Completa la missione settimanale dell'evento mondiale per la cassa pinnacolo e scintilla da Lady Liadrin" },
             { id = "9686fde4", text = "Completa la missione settimanale delle abitazioni da Vaeli per ?emblemi eroe? (verrà aggiornato quando sarà disponibile)" }, -- ⚠️ UNVERIFIED
@@ -100,7 +104,7 @@ local DATASET = {
             { id = "22842538", text = "Completa 2x Preda Incubo per equipaggiamento Campione su ogni personaggio" }, -- ⚠️ UNVERIFIED
             { id = "dc0e2686", text = "Uccidi il boss mondiale per un oggetto campione 2/6 livello 250" },
             { id = "b6846065", text = "Fai spedizioni fruttuose di livello 8 o superiore, usa la mappa su spedizioni di livello 8+ - mentre fai questo, sblocca le spedizioni di livello 11" },
-            { id = "eff76e73", text = "Prima del raid: crafta 2 pezzi liv. 246, 2 ornamenti negli slot deboli, usa 160 emblemi veterano" },
+            { id = "8c700b67", text = "Prima dell'incursione, crea 2 pezzi livello oggetto 246, 2 abbellimenti su slot deboli, usa 160 Stemmi Vet. Questi non richiedono Scintille." },
             { id = "679a07b9", text = "Prima dell'incursione, spendi tutti gli Emblemi Avventuriero, Veterano e Campione potenziando qualsiasi cosa. Non spendere emblemi Eroici o Mitici." },
             { id = "5768e0fe", text = "Tieni traccia degli emblemi: 0/100 Eroico, 0/100 Mitico" },
         },
@@ -110,7 +114,7 @@ local DATASET = {
         id = "d2de9d43",
         title = "Settimana 2 - 24 marzo - Settimana mitica, M+ apre, prendetevi ferie nerd",
         items = {
-            { id = "36d21691", text = "Non spendere Emblemi Eroici o Mitici finché non ti viene detto di farlo. Controlla la guida per sapere perché conserviamo gli emblemi." },
+            { id = "36d21691", text = "Non spendere alcuno Stemma Eroico o Mitico finché non ti viene detto di farlo. Controlla la guida per capire perché conserviamo gli stemmi." },
             { id = "e0ecce24", text = "Completa la missione settimanale dell'evento mondiale per la cassa pinnacolo e scintilla da Lady Liadrin" },
             { id = "9686fde4", text = "Completa la missione settimanale delle abitazioni da Vaeli per ?emblemi eroe? (verrà aggiornato quando sarà disponibile)" }, -- ⚠️ UNVERIFIED
             { id = "4056a14a", text = "Se non hai il set da 4, fai LFR per pezzi tier - ottenere un bonus set da 4 pezzi permetterà alle cariche del catalizzatore di droppare da tutti i contenuti" },
