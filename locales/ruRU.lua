@@ -200,6 +200,10 @@ local STRINGS = {
     SUPPORT_BTN_GUIDE_DOC    = "Гайд", -- ⚠️ UNVERIFIED
     SUPPORT_BTN_CHECKLIST    = "Чеклист", -- ⚠️ UNVERIFIED
     SUPPORT_BTN_DISCORD      = "Discord",
+    CLOSE                        = "Закрыть", -- ⚠️ UNVERIFIED
+    PICKER_RESET_WEEK_TOOLTIP    = "Сбросить на неделю:", -- ⚠️ UNVERIFIED
+    PICKER_GO_TO_WEEK_TOOLTIP    = "Перейти к неделе:", -- ⚠️ UNVERIFIED
+    TRACKING_CREST_AMOUNT_TOOLTIP = "Точно отслеживает сколько гербов вы можете хранить, включая сверхлимитные", -- ⚠️ UNVERIFIED
 }
 
 for key, value in pairs(STRINGS) do

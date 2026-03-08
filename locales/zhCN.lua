@@ -187,6 +187,9 @@ local STRINGS = {
 	SUPPORT_BTN_GUIDE_DOC    = "攻略文档", -- ⚠️ UNVERIFIED
 	SUPPORT_BTN_CHECKLIST    = "清单", -- ⚠️ UNVERIFIED
 	SUPPORT_BTN_DISCORD      = "Discord",
+	PICKER_RESET_WEEK_TOOLTIP    = "重置为当前周：", -- ⚠️ UNVERIFIED
+	PICKER_GO_TO_WEEK_TOOLTIP    = "前往当前周：", -- ⚠️ UNVERIFIED
+	TRACKING_CREST_AMOUNT_TOOLTIP = "精确追踪你能持有的纹章数量，包括超出上限的纹章", -- ⚠️ UNVERIFIED
 }
 
 for key, value in pairs(STRINGS) do

@@ -101,14 +101,18 @@
     "Crests": "纹章",
     "Sparks": "火花",
     "Catalyst": "化生台",
-    "Prey": "猎物",
+    "Prey": "狩猎",
     "Raid": "团队副本",
     "Dungeon": "地下城",
+    "Midnight Dungeons": "至暗之夜：地下城",
     "LFR": "随机团队",
     "Mythic": "史诗",
     "Heroic": "英雄",
     "Normal": "普通",
     "Eversong Woods": "晴风村",
-    "Silvermoon": "银月城"
+    "Silvermoon": "银月城",
+    "Hallowfall": "哈籁恩达尔",
+    "Voidstorm": "虚影风暴",
+    "Lady Liadrin": "女伯爵莉亚德琳"
   }
 }

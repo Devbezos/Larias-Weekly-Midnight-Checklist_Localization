@@ -201,6 +201,10 @@ local STRINGS = {
     SUPPORT_BTN_GUIDE_DOC    = "Guide-Dok.", -- ⚠️ UNVERIFIED
     SUPPORT_BTN_CHECKLIST    = "Checkliste", -- ⚠️ UNVERIFIED
     SUPPORT_BTN_DISCORD      = "Discord",
+    CLOSE                        = "Schließen", -- ⚠️ UNVERIFIED
+    PICKER_RESET_WEEK_TOOLTIP    = "Auf Woche zurücksetzen:", -- ⚠️ UNVERIFIED
+    PICKER_GO_TO_WEEK_TOOLTIP    = "Zur Woche:", -- ⚠️ UNVERIFIED
+    TRACKING_CREST_AMOUNT_TOOLTIP = "Verfolgt genau, wie viele Wappen du behalten kannst, einschließlich überkappter Wappen", -- ⚠️ UNVERIFIED
 }
 
 for key, value in pairs(STRINGS) do
