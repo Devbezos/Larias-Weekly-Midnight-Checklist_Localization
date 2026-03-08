@@ -199,6 +199,10 @@ local STRINGS = {
     SUPPORT_BTN_GUIDE_DOC    = "가이드", -- ⚠️ UNVERIFIED
     SUPPORT_BTN_CHECKLIST    = "체크리스트", -- ⚠️ UNVERIFIED
     SUPPORT_BTN_DISCORD      = "Discord",
+    CLOSE                        = "닫기", -- ⚠️ UNVERIFIED
+    PICKER_RESET_WEEK_TOOLTIP    = "해당 주로 초기화:", -- ⚠️ UNVERIFIED
+    PICKER_GO_TO_WEEK_TOOLTIP    = "해당 주로 이동:", -- ⚠️ UNVERIFIED
+    TRACKING_CREST_AMOUNT_TOOLTIP = "한도 초과 문장을 포함하여 보유 가능한 문장 수를 정확히 추적합니다", -- ⚠️ UNVERIFIED
 }
 
 for key, value in pairs(STRINGS) do

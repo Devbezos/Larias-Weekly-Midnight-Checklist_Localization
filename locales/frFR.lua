@@ -202,6 +202,10 @@ local STRINGS = {
     SUPPORT_BTN_GUIDE_DOC    = "Guide", -- ⚠️ UNVERIFIED
     SUPPORT_BTN_CHECKLIST    = "Liste", -- ⚠️ UNVERIFIED
     SUPPORT_BTN_DISCORD      = "Discord",
+    CLOSE                        = "Fermer", -- ⚠️ UNVERIFIED
+    PICKER_RESET_WEEK_TOOLTIP    = "Réinitialiser à la semaine :", -- ⚠️ UNVERIFIED
+    PICKER_GO_TO_WEEK_TOOLTIP    = "Aller à la semaine :", -- ⚠️ UNVERIFIED
+    TRACKING_CREST_AMOUNT_TOOLTIP = "Suit précisément le nombre d'Écus que vous pouvez conserver, y compris les Écus au-delà de la limite", -- ⚠️ UNVERIFIED
 }
 
 for key, value in pairs(STRINGS) do

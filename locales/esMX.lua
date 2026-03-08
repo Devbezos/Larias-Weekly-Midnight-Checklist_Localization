@@ -202,6 +202,10 @@ local STRINGS = {
     SUPPORT_BTN_GUIDE_DOC    = "Guía", -- ⚠️ UNVERIFIED
     SUPPORT_BTN_CHECKLIST    = "Lista", -- ⚠️ UNVERIFIED
     SUPPORT_BTN_DISCORD      = "Discord",
+    CLOSE                        = "Cerrar", -- ⚠️ UNVERIFIED
+    PICKER_RESET_WEEK_TOOLTIP    = "Restablecer a la semana:", -- ⚠️ UNVERIFIED
+    PICKER_GO_TO_WEEK_TOOLTIP    = "Ir a la semana:", -- ⚠️ UNVERIFIED
+    TRACKING_CREST_AMOUNT_TOOLTIP = "Registra con precisión cuántos blasones puedes conservar, incluidos los que superan el límite", -- ⚠️ UNVERIFIED
 }
 
 for key, value in pairs(STRINGS) do
