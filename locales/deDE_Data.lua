@@ -100,8 +100,8 @@ local DATASET = {
             { id = "791379ba", text = "Gib keine heroischen oder mythischen Wappen aus, bis es dir gesagt wird. Prüfe den Leitfaden, warum wir Wappen zurückhalten." },
             { id = "fab7aef9", text = "Fast jeder kann jetzt wahrscheinlich deinen Funken-Gegenstand herstellen. Prüfe den Leitfaden für was und wann du herstellen sollst." },
             { id = "e66847d8", text = "Mache LFR für Setteile - das Erhalten eines 4er-Setbonus ermöglicht es, dass Katalysatorladungen aus allen Inhalten droppen" },
-            { id = "b5539926", text = "Schließe die wöchentliche Weltereignis-Quest für Gipfel-Truhe und Funken von Lady Liadrin ab - Mach die Arcantina dauert 3 Minuten" }, -- ⚠️ UNVERIFIED
-            { id = "e5b5fb8c", text = "Schließe die wöchentliche Behausungsquest von Vaeli ab - Belohnung sind begrenzte Wappen, die Auswahl spielt keine Rolle." }, -- ⚠️ UNVERIFIED
+            { id = "b1a6f7eb", text = "Schließe die wöchentliche Weltereignis-Quest für Gipfel-Truhe und Funken von Lady Liadrin ab - Die Arcantina dauert 3 Minuten" }, -- ⚠️ UNVERIFIED
+            { id = "c17e68f1", text = "Schließe die wöchentliche Behausungs-Quest von Vaeli ab - Belohnung sind gedeckelte Wappen, es ist egal was du wählst, aber der größte kurzfristige Nutzen ist die Auswahl von Championwappen" }, -- ⚠️ UNVERIFIED
             { id = "1e1d846c", text = "Hinweis: die nächsten beiden Dinge sind miteinander verbunden - sie sind für ein kleines Upgrade - zwei zusätzliche Sockel für die ersten zwei Wochen." },
             { id = "50eaf609", text = "(Optional) Neu: Schließe PvP-Matches ab, um einen Questgegenstand zu erhalten, der 9x Heroldik des galaktischen Gladiators belohnt. Du wirst diese verwenden, um die unten aufgeführten Gegenstände herzustellen. Mache dies nur, wenn du die Ehre für die Sockel unten hast oder farmen wirst. Hinweis: Dies ist sehr min-maxy, es geht im Wesentlichen um 2 zusätzliche Sockel. Arena ist am schnellsten" }, -- ⚠️ UNVERIFIED
             { id = "a1884373", text = "(Optional) Neu: Kaufe 2 Fassung des Galaktischen Juweliers vom Händler für je 5000 Ehre und 3 Infundierter Heliotrop. Du wirst diese verwenden, um die hergestellten Gegenstände unten zu sockeln. Diese Gegenstände werden erst diese Woche beim Händler erscheinen. Dies ist sehr min-maxy, es ist im Wesentlichen für 2 zusätzliche Sockel." }, -- ⚠️ UNVERIFIED
@@ -111,6 +111,8 @@ local DATASET = {
             { id = "05b7e462", text = "Schließe 4x Harte Beute ab, um Albtraum-Beute freizuschalten." }, -- ⚠️ UNVERIFIED
             { id = "78aea6fe", text = "Schließe 3x Albtraumbeute ab, um Champion-Ausrüstung für jeden Charakter zu erhalten und die wöchentliche Quest für den Bossbeschwörungsgegenstand und 20 unbegrenzte Heldenwappen abzuschließen" }, -- ⚠️ UNVERIFIED
             { id = "cc5a28dd", text = "Schließe Nullaeus auf ?-Schwierigkeit für 30 unbegrenzte Helden-Wappen ab. Denk daran, gib diese nicht aus." }, -- ⚠️ UNVERIFIED
+            { id = "5c891668", text = "Schließe Nullaeus auf ??-Schwierigkeit für 30 WEITERE ungedeckelte Heldenwappen und 30 ungedeckelte Mythoswappen ab. HINWEIS: Während die Ruhmeshallen-Errungenschaft erfordert, dass du dies alleine schaffst, kannst du dies einfacher in einer Gruppe machen. Mit einem Tank + Heiler Tiefen-Begleiter, füge einfach mehr DDs zu deiner Gruppe hinzu." }, -- ⚠️ UNVERIFIED
+            { id = "f7a876a0", text = "Der Händler im Tiefen-Bereich hat eine Tasche mit 2 kostenlosen Schlüsseln, die über die Obergrenze gehen. Dies ist einmal pro Kriegsbund - stelle sicher, dass du es mit deinem Main kaufst." }, -- ⚠️ UNVERIFIED
             { id = "b6846065", text = "Mache T8 oder höhere ertragreiche Tiefen, benutze Karte auf T8+-Tiefe - während du das machst, schalte T11-Tiefen frei" },
             { id = "2f9c0f4f", text = "Nutze deinen Boss-Beschwörungsgegenstand aus der wöchentlichen Albtraum-Beute-Quest in einem Tier-8-Delve, um eine Karte zu erhalten und nutze sie dann für einen Gegenstand der Helden-Stufe." }, -- ⚠️ UNVERIFIED
             { id = "5ccc7694", text = "Töte Weltboss für Champion 3/6 253 Gegenstandsstufe Gegenstand" },
@@ -130,8 +132,8 @@ local DATASET = {
             { id = "e8cef00e", text = "Prüfe den Leitfaden für was und wann du herstellen sollst." },
             { id = "4056a14a", text = "Falls du kein 4er-Set hast, mache LFR für Set-Teile - das Erhalten eines 4er-Set-Bonus ermöglicht es, dass Katalysator-Ladungen von allen Inhalten fallen" },
             { id = "e0ecce24", text = "Schließe die wöchentliche Weltereignisquest für Gipfelcache und Funken von Lady Liadrin ab" },
-            { id = "9686fde4", text = "Schließe die wöchentliche Behausungsquest von Vaeli für ?Heldenwappen? ab (wird aktualisiert, wenn es live geht)" },
-            { id = "16cf341e", text = "(Optional) Weltboss töten für Champion 2/6 250-Gs-Item" },
+            { id = "4c264b7f", text = "Schließe die wöchentliche Behausungs-Quest von Vaeli für schnelle Heldenwappen ab" }, -- ⚠️ UNVERIFIED
+            { id = "0c60ad29", text = "(Optional) Töte den Weltboss für ein Champ 3/6 253 Gegenstandsstufe Item" }, -- ⚠️ UNVERIFIED
             { id = "4aa82ede", text = "(Optional) Schließe 2x Albtraum-Beute für Champion-Ausrüstung auf jedem Charakter ab" },
             { id = "26d0b610", text = "Mindestens eine T11-Üppige Tiefe für den Zerbrochener-Schlussstein-Quest machen" }, -- ⚠️ UNVERIFIED
             { id = "286f219c", text = "Weiterhin alle Abenteurer-, Veteran- und Champion-Wappen für Upgrades ausgeben" },

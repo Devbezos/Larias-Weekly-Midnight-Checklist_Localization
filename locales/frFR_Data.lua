@@ -100,8 +100,8 @@ local DATASET = {
             { id = "791379ba", text = "Ne dépensez aucune Crête héroïque ou mythique tant qu'on ne vous le dit pas. Consultez le Guide pour savoir pourquoi nous conservons les crêtes." },
             { id = "fab7aef9", text = "Presque tout le monde peut probablement fabriquer votre objet d'étincelle maintenant. Consultez le guide pour savoir quoi et quand fabriquer." },
             { id = "e66847d8", text = "Faites le RDR pour les pièces de set - obtenir un bonus de 4 pièces permettra aux charges de catalyseur de tomber de tout le contenu" },
-            { id = "b5539926", text = "Terminez la quête d'événement mondial hebdomadaire pour le coffre apogée et l'étincelle auprès de Dame Liadrin - Faites l'Arcantina, cela prend 3 minutes" }, -- ⚠️ UNVERIFIED
-            { id = "e5b5fb8c", text = "Terminez la quête de logement hebdomadaire de Vaeli - la récompense est des armoiries plafonnées, peu importe ce que vous choisissez." }, -- ⚠️ UNVERIFIED
+            { id = "b1a6f7eb", text = "Terminez la quête événementielle hebdomadaire pour le coffre apogée et l'étincelle auprès de Dame Liadrin - Faire l'Arcantina prend 3 minutes" }, -- ⚠️ UNVERIFIED
+            { id = "c17e68f1", text = "Terminez la quête de logement hebdomadaire auprès de Vaeli - la récompense est des armoiries plafonnées, peu importe ce que vous choisissez mais le plus grand gain à court terme est de sélectionner les Armoiries de champion" }, -- ⚠️ UNVERIFIED
             { id = "1e1d846c", text = "Note : les deux prochaines choses sont liées - elles servent pour une petite amélioration - deux sertissages supplémentaires pour les deux premières semaines." },
             { id = "50eaf609", text = "(Optionnel) Nouveau : Terminez des matchs JcJ pour obtenir un objet de quête qui récompense 9x Héraldique du gladiateur galactique. Vous les utiliserez pour fabriquer des objets ci-dessous. Ne faites ceci que si vous avez ou allez farmer l'honneur pour les châsses ci-dessous. Note : c'est très min-max, c'est essentiellement pour 2 châsses supplémentaires. L'arène est le plus rapide" }, -- ⚠️ UNVERIFIED
             { id = "a1884373", text = "(Optionnel) Nouveau : Achetez 2 Monture de joaillier galactique auprès du vendeur pour 5000 points d'honneur et 3 Héliotrope infusé chacune. Vous les utiliserez pour sertir les objets fabriqués ci-dessous. Ces objets n'apparaîtront pas chez le vendeur avant cette semaine. Ceci est très min-max, c'est essentiellement pour 2 sertissages supplémentaires." }, -- ⚠️ UNVERIFIED
@@ -111,6 +111,8 @@ local DATASET = {
             { id = "05b7e462", text = "Terminez 4x Proie difficile pour débloquer Proie cauchemardesque." }, -- ⚠️ UNVERIFIED
             { id = "78aea6fe", text = "Terminez 3x Proie cauchemardesque pour obtenir l'équipement de champion sur chaque personnage et pour terminer la quête hebdomadaire pour l'objet d'invocation de boss et 20 armoiries de héros non plafonnées" }, -- ⚠️ UNVERIFIED
             { id = "cc5a28dd", text = "Terminez Nullaeus en difficulté ? pour 30 armoiries de héros non plafonnées. N'oubliez pas de ne pas les dépenser." }, -- ⚠️ UNVERIFIED
+            { id = "5c891668", text = "Terminez Nullaeus en difficulté ?? pour 30 Armoiries de héros non plafonnées supplémentaires et 30 Armoiries de mythe non plafonnées. REMARQUE : Bien que le haut fait du Panthéon de la renommée exige que vous fassiez cela en solo, vous pouvez le faire plus facilement en groupe. Avec un compagnon de tréfonds tank + soigneur, ajoutez simplement plus de DPS à votre groupe." }, -- ⚠️ UNVERIFIED
+            { id = "f7a876a0", text = "Le vendeur dans la zone des tréfonds a un sac avec 2 clés gratuites qui dépassent le plafond. C'est une fois par confrérie - assurez-vous de l'acheter sur votre personnage principal." }, -- ⚠️ UNVERIFIED
             { id = "b6846065", text = "Faites des Tréfonds abondants de palier 8 ou supérieur, utilisez la carte sur un Tréfonds palier 8+ - pendant ce temps, débloquez les Tréfonds palier 11" },
             { id = "2f9c0f4f", text = "Utilisez votre objet d'invocation de boss de la quête hebdomadaire Proie cauchemardesque dans une Exploration de palier 8 pour obtenir une carte puis utilisez-la pour un objet de piste héroïque." }, -- ⚠️ UNVERIFIED
             { id = "5ccc7694", text = "Tuez le boss mondial pour un objet de champion 3/6 ilvl 253" }, -- ⚠️ UNVERIFIED
@@ -130,8 +132,8 @@ local DATASET = {
             { id = "e8cef00e", text = "Consultez le guide pour savoir quoi et quand fabriquer." },
             { id = "4056a14a", text = "Si vous n'avez pas le bonus 4 pièces, faites le RDF pour des pièces de panoplie - obtenir un bonus 4 pièces permettra aux charges de catalyseur de tomber de tout le contenu" },
             { id = "e0ecce24", text = "Terminez la quête d'événement mondial hebdomadaire pour un cache apogée et une étincelle auprès de Dame Liadrin" },
-            { id = "9686fde4", text = "Terminez la quête de logement hebdomadaire de Vaeli pour ?crêtes de héros? (sera mis à jour lors de la mise en ligne)" },
-            { id = "16cf341e", text = "(Optionnel) Tuez le boss mondial pour un objet champion 2/6 niv. 250" },
+            { id = "4c264b7f", text = "Terminez la quête de logement hebdomadaire auprès de Vaeli pour des armoiries de héros rapides" }, -- ⚠️ UNVERIFIED
+            { id = "0c60ad29", text = "(Optionnel) Tuez le Boss du monde pour un objet de champion 3/6 niveau d'objet 253" }, -- ⚠️ UNVERIFIED
             { id = "4aa82ede", text = "(Optionnel) Complétez 2x Proie cauchemardesque pour de l'équipement Champion sur chaque personnage" },
             { id = "26d0b610", text = "Faites au moins un Gouffre abondant T11 pour obtenir la quête de la Pierre runique fissurée" }, -- ⚠️ UNVERIFIED
             { id = "286f219c", text = "Continuez à dépenser tous les Écus d'aventure, de vétéran et de champion pour tout améliorer" },

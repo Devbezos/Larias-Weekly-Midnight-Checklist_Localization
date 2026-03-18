@@ -100,8 +100,8 @@ local DATASET = {
             { id = "791379ba", text = "Non spendere stemmi Eroici o Mitici finché non ti viene detto di farlo. Controlla la Guida per sapere perché conserviamo gli stemmi." },
             { id = "fab7aef9", text = "Quasi tutti ora possono probabilmente creare il tuo oggetto con scintilla. Controlla la Guida per cosa e quando creare." },
             { id = "e66847d8", text = "Fai LFR per pezzi del set - ottenere un bonus set da 4 pezzi permetterà alle cariche del catalizzatore di cadere da tutti i contenuti" },
-            { id = "b5539926", text = "Completa la missione settimanale dell'evento mondiale per la cassa apice e la scintilla da Lady Liadrin - Fai l'Arcantina richiede 3 minuti" }, -- ⚠️ UNVERIFIED
-            { id = "e5b5fb8c", text = "Completa la missione settimanale dell'alloggio da Vaeli - la ricompensa è stemmi limitati, non importa cosa scegli." }, -- ⚠️ UNVERIFIED
+            { id = "b1a6f7eb", text = "Completa la missione evento mondiale settimanale per la cassa apicale e la scintilla da Lady Liadrin - Fare l'Arcantina richiede 3 minuti" }, -- ⚠️ UNVERIFIED
+            { id = "c17e68f1", text = "Completa la missione abitativa settimanale da Vaeli - la ricompensa è creste limitate, non importa cosa scegli ma il maggior potenziamento a breve termine è selezionare Creste del Campione" }, -- ⚠️ UNVERIFIED
             { id = "1e1d846c", text = "Nota: le prossime due cose sono collegate - sono per un piccolo miglioramento - due incastonature aggiuntive nelle prime due settimane." },
             { id = "50eaf609", text = "(Opzionale) Nuovo: Completa partite PvP per ottenere un oggetto missione che ricompensa 9x Araldica del Gladiatore Galattico. Le userai per creare oggetti qui sotto. Fallo solo se hai o intendi farmare l'onore per le gemme qui sotto. Nota: questo è molto min-max, è essenzialmente per 2 gemme aggiuntive. L'Arena è la più veloce" }, -- ⚠️ UNVERIFIED
             { id = "a1884373", text = "(Facoltativo) Nuovo: Acquista 2 Montature del Gioielliere Galattico dal venditore per 5000 Onore e 3 Eliotropio Infuso ciascuna. Le userai per incastonare gli oggetti creati qui sotto. Questi oggetti non appariranno dal venditore fino a questa settimana. Questo è molto ottimizzato al massimo, è per 2 incastonature aggiuntive essenzialmente." },
@@ -111,6 +111,8 @@ local DATASET = {
             { id = "05b7e462", text = "Completa 4x Preda Difficile per sbloccare Preda da Incubo." }, -- ⚠️ UNVERIFIED
             { id = "78aea6fe", text = "Completa 3x Preda da Incubo per equipaggiamento Campione su ogni personaggio e per completare la missione settimanale per l'oggetto di evocazione del boss e 20 stemmi eroe non limitati" }, -- ⚠️ UNVERIFIED
             { id = "cc5a28dd", text = "Completa Nullaeus a difficoltà ? per 30 stemmi Eroe illimitati. Ricorda di non spenderli." }, -- ⚠️ UNVERIFIED
+            { id = "5c891668", text = "Completa Nullaeus in difficoltà ?? per 30 Creste dell'Eroe illimitate AGGIUNTIVE e 30 Creste Leggendarie illimitate. NOTA: Mentre l'impresa della Hall of Fame richiede di farlo in solitaria, puoi farlo più facilmente in gruppo. Con un compagno di caverna tank + guaritore, aggiungi semplicemente più DPS al tuo gruppo." }, -- ⚠️ UNVERIFIED
+            { id = "f7a876a0", text = "Il venditore nell'area delle caverne ha una borsa con 2 chiavi gratuite che vanno oltre il limite. Questo è una volta per compagnia di guerra - assicurati di acquistarla sul tuo personaggio principale." }, -- ⚠️ UNVERIFIED
             { id = "b6846065", text = "Fai ricognizioni abbondanti livello 8 o superiore, usa mappa su ricognizione livello 8+  - mentre fai questo, sblocca le ricognizioni livello 11" },
             { id = "2f9c0f4f", text = "Usa il tuo oggetto d'evocazione boss dalla missione settimanale Preda da Incubo in una Fossa di livello 8 per ottenere una mappa e poi usala per un oggetto livello Eroe." }, -- ⚠️ UNVERIFIED
             { id = "5ccc7694", text = "Uccidi il Boss Mondiale per oggetto camp 3/6 253 livl oggetto" }, -- ⚠️ UNVERIFIED
@@ -130,8 +132,8 @@ local DATASET = {
             { id = "e8cef00e", text = "Controlla la Guida per cosa e quando creare." },
             { id = "4056a14a", text = "Se non hai il set da 4, fai LFR per pezzi tier - ottenere un bonus set da 4 pezzi permetterà alle cariche del catalizzatore di droppare da tutti i contenuti" },
             { id = "e0ecce24", text = "Completa la missione settimanale dell'evento mondiale per cache culminante e scintilla da Dama Liadrin" },
-            { id = "9686fde4", text = "Completa la missione settimanale dell'abitazione da Vaeli per ?stemmi eroe? (verrà aggiornato quando sarà disponibile)" },
-            { id = "16cf341e", text = "(Facoltativo) Uccidi il boss mondiale per un oggetto campione 2/6 livello 250" },
+            { id = "4c264b7f", text = "Completa la missione abitativa settimanale da Vaeli per creste dell'eroe veloci" }, -- ⚠️ UNVERIFIED
+            { id = "0c60ad29", text = "(Opzionale) Uccidi il Boss Mondiale per oggetto 3/6 campione livello oggetto 253" }, -- ⚠️ UNVERIFIED
             { id = "4aa82ede", text = "(Opzionale) Completa 2x Preda Incubo per equipaggiamento Campione su ogni personaggio" },
             { id = "26d0b610", text = "Fai almeno una Scorribanda generosa di livello 11 per ottenere la missione della Pietra Runica Incrinata" }, -- ⚠️ UNVERIFIED
             { id = "286f219c", text = "Continua a spendere tutti gli Emblemi esploratore, veterano e campione potenziando tutto" },

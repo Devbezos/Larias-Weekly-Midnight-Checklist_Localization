@@ -100,8 +100,8 @@ local DATASET = {
             { id = "791379ba", text = "Não gaste nenhuma Insígnia Heroica ou Mítica até ser instruído a fazê-lo. Consulte o Guia para entender por que guardamos insígnias." },
             { id = "fab7aef9", text = "Quase todo mundo provavelmente pode fabricar seu item de centelha agora. Verifique o Guia para o que e quando fabricar." },
             { id = "e66847d8", text = "Faça LFR para peças de conjunto - obter o bônus de 4 peças permitirá que cargas do catalisador caiam de todo o conteúdo" },
-            { id = "b5539926", text = "Complete a missão semanal de evento mundial para baú pináculo e centelha da Lady Liadrin - Fazer a Arcantina leva 3 minutos" }, -- ⚠️ UNVERIFIED
-            { id = "e5b5fb8c", text = "Complete a missão semanal de moradia de Vaeli - a recompensa é brasões limitados, não importa o que você escolher." }, -- ⚠️ UNVERIFIED
+            { id = "b1a6f7eb", text = "Complete a missão semanal de evento mundial para baú superior e centelha da Lady Liadrin - Fazer a Arcantina leva 3 minutos" }, -- ⚠️ UNVERIFIED
+            { id = "c17e68f1", text = "Complete a missão semanal de moradia da Vaeli - a recompensa é emblemas limitados, não importa o que você escolher, mas o maior aumento a curto prazo é selecionar Emblemas do Campeão" }, -- ⚠️ UNVERIFIED
             { id = "1e1d846c", text = "Nota: as próximas duas coisas estão relacionadas - são para uma pequena melhoria - dois engastes adicionais nas primeiras duas semanas." },
             { id = "50eaf609", text = "(Opcional) Novo: Complete partidas JxJ para obter um item de missão que recompensa 9x Heráldica do Gladiador Galáctico. Você usará estes para criar itens abaixo. Faça isso apenas se você tem ou vai farmar a honra para os encaixes abaixo. Nota: isso é muito min-max, é essencialmente para 2 encaixes adicionais. Arena é o mais rápido" }, -- ⚠️ UNVERIFIED
             { id = "a1884373", text = "(Opcional) Novo: Compre 2 Cravações do Joalheiro Galáctico do vendedor por 5000 de Honra e 3 Heliotrópios Imbuídos cada. Você usará estes para engastar os itens fabricados abaixo. Estes itens não aparecerão no vendedor até esta semana. Isto é muito min-max, é essencialmente para 2 engastes adicionais." }, -- ⚠️ UNVERIFIED
@@ -111,6 +111,8 @@ local DATASET = {
             { id = "05b7e462", text = "Complete 4x Presa Difícil para desbloquear Presa Pesadelo." }, -- ⚠️ UNVERIFIED
             { id = "78aea6fe", text = "Complete 3x Presa do Pesadelo para equipamento de Campeão em cada personagem e para completar a missão semanal para item de invocação de chefe e 20 brasões de herói sem limite" }, -- ⚠️ UNVERIFIED
             { id = "cc5a28dd", text = "Complete Nullaeus na dificuldade ? para 30 brasões de Herói sem limite. Lembre-se de não gastar estes." }, -- ⚠️ UNVERIFIED
+            { id = "5c891668", text = "Complete Nullaeus na dificuldade ?? para MAIS 30 emblemas de Herói ilimitados e 30 emblemas de Mítico ilimitados. NOTA: Embora a conquista do Salão da Fama exija que você faça isso sozinho, você pode fazer isso mais facilmente em grupo. Com um companheiro de delve tanque + curandeiro, apenas continue adicionando mais DPS ao seu grupo." }, -- ⚠️ UNVERIFIED
+            { id = "f7a876a0", text = "O vendedor na área de delve tem uma bolsa com 2 chaves grátis que ultrapassam o limite. Isso é uma vez por grupo de guerra - certifique-se de comprar no seu personagem principal." }, -- ⚠️ UNVERIFIED
             { id = "b6846065", text = "Faça delves abundantes nível 8 ou superior, use mapa em delve nível 8+ - enquanto faz isso, desbloqueie delves nível 11" },
             { id = "2f9c0f4f", text = "Use seu item de invocação de chefe da missão semanal Presa Pesadelo em uma Delve nível 8 para obter um mapa e então use-o para um item de trilha Herói." }, -- ⚠️ UNVERIFIED
             { id = "5ccc7694", text = "Mate o Chefe Mundial para item 3/6 campeão nível de item 253" },
@@ -130,8 +132,8 @@ local DATASET = {
             { id = "e8cef00e", text = "Verifique o Guia para o que e quando fabricar." },
             { id = "4056a14a", text = "Se você não tem conjunto de 4 peças, faça RFR para peças de conjunto - obter um bônus de 4 peças permitirá que cargas de catalisador sejam obtidas de todo conteúdo" },
             { id = "e0ecce24", text = "Complete a missão de evento mundial semanal para baú pináculo e faísca da Lady Liadrin" },
-            { id = "9686fde4", text = "Complete a missão semanal de moradia de Vaeli para ?insígnias heroicas? (será atualizado quando for ao ar)" }, -- ⚠️ UNVERIFIED
-            { id = "16cf341e", text = "(Opcional) Mate o chefe mundial para um item campeão 2/6 nível 250" },
+            { id = "4c264b7f", text = "Complete a missão semanal de moradia da Vaeli para emblemas de herói rápidos" }, -- ⚠️ UNVERIFIED
+            { id = "0c60ad29", text = "(Opcional) Mate o Chefe Mundial para item nível 253 campeão 3/6" }, -- ⚠️ UNVERIFIED
             { id = "4aa82ede", text = "(Opcional) Complete 2x Presa de Pesadelo para equipamento Campeão em cada personagem" },
             { id = "26d0b610", text = "Faça pelo menos uma Imersão Abundante de nível 11 para obter a missão da Pedra-Rúnica Rachada" }, -- ⚠️ UNVERIFIED
             { id = "286f219c", text = "Continue gastando todos os Brasões aventureiros, veteranários e campeões melhorando qualquer coisa" },

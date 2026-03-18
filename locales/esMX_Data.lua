@@ -100,8 +100,8 @@ local DATASET = {
             { id = "791379ba", text = "No gastes ningún Emblema Heroico o Mítico hasta que se te indique. Consulta la Guía para entender por qué guardamos emblemas." },
             { id = "fab7aef9", text = "Casi todos pueden fabricar tu objeto de chispa ahora. Revisa la Guía para saber qué y cuándo fabricar." },
             { id = "e66847d8", text = "Haz LFR para piezas de conjunto - obtener un bono de 4 piezas permitirá que caigan cargas de catalizador de todo el contenido" },
-            { id = "b5539926", text = "Completa la misión semanal del evento mundial para obtener el alijo cumbre y chispa de Dama Liadrin - Haz la Arcantina que toma 3 minutos" }, -- ⚠️ UNVERIFIED
-            { id = "e5b5fb8c", text = "Completa la misión semanal de vivienda de Vaeli - la recompensa son emblemas limitados, no importa qué elijas." },
+            { id = "b1a6f7eb", text = "Completa la misión semanal del evento mundial para obtener un alijo cúspide y chispa de Dama Liadrin - Hacer la Arcantina toma 3 minutos" },
+            { id = "c17e68f1", text = "Completa la misión semanal de vivienda de Vaeli - la recompensa son blasones con tope, no importa lo que elijas pero el mayor impulso a corto plazo es seleccionar Blasones de campeón" },
             { id = "1e1d846c", text = "Nota: las siguientes dos cosas están vinculadas - son para una pequeña mejora - dos engarces adicionales para las primeras dos semanas." },
             { id = "50eaf609", text = "(Opcional) Nuevo: Completa partidas JcJ para obtener un objeto de misión que recompensa 9x Heráldica de gladiador galáctico. Usarás estos para fabricar objetos abajo. Solo haz esto si tienes o vas a farmear el honor para los engarces abajo. Nota: esto es muy min-max, es esencialmente para 2 engarces adicionales. Arena es lo más rápido" }, -- ⚠️ UNVERIFIED
             { id = "a1884373", text = "(Opcional) Nuevo: Compra 2 Engastes del joyero galáctico del vendedor por 5000 de Honor y 3 Heliotropo infundido cada uno. Usarás estos para engarazar los objetos fabricados abajo. Estos objetos no aparecerán en el vendedor hasta esta semana. Esto es muy min-maxy, es esencialmente para 2 engarces adicionales." }, -- ⚠️ UNVERIFIED
@@ -111,6 +111,8 @@ local DATASET = {
             { id = "05b7e462", text = "Completa 4x Presa difícil para desbloquear Presa de pesadilla." }, -- ⚠️ UNVERIFIED
             { id = "78aea6fe", text = "Completa 3x Presa de pesadilla para obtener equipo de campeón en cada personaje y completar la misión semanal para el objeto de invocación de jefe y 20 emblemas de héroe sin límite" },
             { id = "cc5a28dd", text = "Completa Nullaeus en dificultad ? para obtener 30 crestas de héroe sin límite. Recuerda no gastar estas." }, -- ⚠️ UNVERIFIED
+            { id = "5c891668", text = "Completa Nullaeus en dificultad ?? para obtener 30 Blasones de héroe sin tope ADICIONALES y 30 Blasones míticos sin tope. NOTA: Aunque el logro Salón de la Fama requiere que lo hagas en solitario, puedes hacerlo más fácilmente en grupo. Con un compañero de incursión tanque + sanador, solo sigue agregando más DPS a tu grupo." }, -- ⚠️ UNVERIFIED
+            { id = "f7a876a0", text = "El vendedor en el área de incursiones tiene una bolsa con 2 llaves gratis que superan el tope. Esto es una vez por grupo de guerra - asegúrate de comprarla con tu personaje principal." },
             { id = "b6846065", text = "Haz incursiones abundantes nivel 8 o superior, usa mapa en incursión nivel 8+; mientras haces esto, desbloquea incursiones nivel 11" },
             { id = "2f9c0f4f", text = "Usa tu objeto de invocación de jefe de la misión semanal Presa de pesadilla en una Profundidad nivel 8 para obtener un mapa y luego úsalo para obtener un objeto categoría de héroe." }, -- ⚠️ UNVERIFIED
             { id = "5ccc7694", text = "Mata al Jefe mundial para obtener objeto de campeón 3/6 nivel de objeto 253" }, -- ⚠️ UNVERIFIED
@@ -130,8 +132,8 @@ local DATASET = {
             { id = "e8cef00e", text = "Revisa la Guía para saber qué y cuándo fabricar." },
             { id = "4056a14a", text = "Si no tienes 4 set, haz LFR para piezas de banda - obtener una bonificación 4 set permitirá que caigan cargas de catalizador de todo el contenido" },
             { id = "e0ecce24", text = "Completa la misión de evento mundial semanal para obtener alijo cumbre y chispa de Lady Liadrin" },
-            { id = "9686fde4", text = "Completa la misión semanal de vivienda de Vaeli para ¿emblemas de héroe? (se actualizará cuando esté disponible)" },
-            { id = "16cf341e", text = "(Opcional) Mata al jefe del mundo para un objeto de campeón 2/6 ilvl 250" },
+            { id = "4c264b7f", text = "Completa la misión semanal de vivienda de Vaeli para obtener blasones de héroe rápidamente" },
+            { id = "0c60ad29", text = "(Opcional) Mata al Jefe mundial para obtener un objeto de nivel de objeto 253 campeón 3/6" },
             { id = "4aa82ede", text = "(Opcional) Completa 2x Presa Pesadilla para obtener equipo de Campeón en cada personaje" },
             { id = "26d0b610", text = "Haz al menos una Profundidad abundante T11 para conseguir la misión de Piedra rúnica agrietada" }, -- ⚠️ UNVERIFIED
             { id = "286f219c", text = "Continúa gastando todas las crestalboradas de aventurero, veterano y campeón mejorándolo todo" },
