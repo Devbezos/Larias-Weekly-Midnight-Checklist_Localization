@@ -50,7 +50,6 @@ local DATASET = {
         id = "d2de9d43",
         title = "Woche 2 - 24. März - Mythisch-Woche, M+ öffnet, nehmt Urlaub Nerds",
         items = {
-            { id = "36d21691", text = "Gib keine Heroischen oder Mythischen Abzeichen aus, bis du dazu aufgefordert wirst. Im Leitfaden erfährst du, warum wir Abzeichen aufheben." },
             { id = "e8cef00e", text = "Prüfe den Leitfaden für was und wann du herstellen sollst." },
             { id = "4056a14a", text = "Falls du kein 4er-Set hast, mache LFR für Set-Teile - das Erhalten eines 4er-Set-Bonus ermöglicht es, dass Katalysator-Ladungen von allen Inhalten fallen" },
             { id = "83fd4310", text = "Schließe die wöchentliche Weltereignis-Quest für einen Funken von Lady Liadrin ab" },
@@ -111,7 +110,6 @@ local DATASET = {
             { id = "13957611", text = "Heroisch: Verbessere die letzten deiner heroischen Gegenstände auf 6/6 276. Spare 20 Heroische Wappen für den nächsten Schritt." },
             { id = "2568bd36", text = "Mythisch: Wenn dein Gewölbe-Gegenstand 1/6 war, verbessere zuerst sein heroisches Gegenstück auf 6/6 heroisch für 20 Heroische Wappen. Verbessere deinen 1/6 272 Myth-Gegenstand auf 6/6 289 für 80 Mythische Wappen." },
             { id = "c581850d", text = "Verfolge ausgegebene Wappen: 680/680 Heroisch, 480/550 Mythisch - behalte niemals Mythische Wappen" },
-            { id = "4f04ba4e", text = "End-Gegenstandsstufe: 1x266, 2x269, 6x276h, 2x285(gefertigt), 4x289" },
         },
     },
 

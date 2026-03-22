@@ -50,7 +50,6 @@ local DATASET = {
         id = "d2de9d43",
         title = "Semana 2 - 24 de marzo - Semana mítica, abren M+, tómate el día libre giganerd",
         items = {
-            { id = "36d21691", text = "No gastes ningún blasón Heroico o Mítico hasta que se te indique. Consulta la guía sobre por qué guardamos blasones." },
             { id = "e8cef00e", text = "Revisa la Guía para saber qué y cuándo fabricar." },
             { id = "4056a14a", text = "Si no tienes 4 set, haz LFR para piezas de banda - obtener una bonificación 4 set permitirá que caigan cargas de catalizador de todo el contenido" },
             { id = "83fd4310", text = "Completa la misión semanal del evento mundial para obtener una chispa de Lady Liadrin" },
@@ -111,7 +110,6 @@ local DATASET = {
             { id = "13957611", text = "Heroico: Mejora el último de tus objetos heroicos a 6/6 de 276. Guarda 20 emblemas heroicos para el siguiente paso." },
             { id = "2568bd36", text = "Mítico: Si tu objeto de la cámara fue 1/6, mejora primero su equivalente heroico a 6/6 heroico por 20 emblemas heroicos. Mejora tu objeto mítico 1/6 de 272 a 6/6 de 289 por 80 emblemas míticos." },
             { id = "c581850d", text = "Rastrear emblemas gastados: 680/680 Heroico, 480/550 Mítico - nunca retengas emblemas míticos" },
-            { id = "4f04ba4e", text = "Nivel de objeto final: 1x266, 2x269, 6x276h, 2x285(fabricado), 4x289" },
         },
     },
 

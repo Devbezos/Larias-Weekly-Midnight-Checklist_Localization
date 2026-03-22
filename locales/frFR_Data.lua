@@ -50,7 +50,6 @@ local DATASET = {
         id = "d2de9d43",
         title = "Semaine 2 - 24 mars - Semaine mythique, M+ ouvre, prenez des congés les nerds",
         items = {
-            { id = "36d21691", text = "Ne dépensez aucun écusson héroïque ou mythique avant qu'on vous le dise. Consultez le guide pour comprendre pourquoi nous conservons les écussons." },
             { id = "e8cef00e", text = "Consultez le guide pour savoir quoi et quand fabriquer." },
             { id = "4056a14a", text = "Si vous n'avez pas le bonus 4 pièces, faites le RDF pour des pièces de panoplie - obtenir un bonus 4 pièces permettra aux charges de catalyseur de tomber de tout le contenu" },
             { id = "83fd4310", text = "Terminez la quête d'événement mondial hebdomadaire pour obtenir une étincelle auprès de Dame Liadrin" },
@@ -111,7 +110,6 @@ local DATASET = {
             { id = "13957611", text = "Héroïque : Améliorez le reste de vos objets héroïques à 6/6 276. Gardez 20 écussons héroïques pour l'étape suivante." },
             { id = "2568bd36", text = "Mythique : Si votre objet de coffre était 1/6, améliorez d'abord son équivalent héroïque à 6/6 héroïque pour 20 écussons héroïques. Améliorez votre objet de palier mythique 1/6 272 à 6/6 289 pour 80 écussons mythiques." },
             { id = "c581850d", text = "Suivre les écussons dépensés : 680/680 héroïques, 480/550 mythiques - ne jamais garder d'écussons mythiques" },
-            { id = "4f04ba4e", text = "Niveau d'objet final : 1x266, 2x269, 6x276h, 2x285(fabriqués), 4x289" },
         },
     },
 

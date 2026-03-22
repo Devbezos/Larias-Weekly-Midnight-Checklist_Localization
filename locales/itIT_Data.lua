@@ -50,7 +50,6 @@ local DATASET = {
         id = "d2de9d43",
         title = "Settimana 2 - 24 marzo - Settimana mitica, M+ apre, prendetevi ferie nerd",
         items = {
-            { id = "36d21691", text = "Non spendere alcuno Stemma Eroico o Mitico finché non ti viene detto di farlo. Controlla la guida per capire perché conserviamo gli stemmi." },
             { id = "e8cef00e", text = "Controlla la Guida per cosa e quando creare." },
             { id = "4056a14a", text = "Se non hai il set da 4, fai LFR per pezzi tier - ottenere un bonus set da 4 pezzi permetterà alle cariche del catalizzatore di droppare da tutti i contenuti" },
             { id = "83fd4310", text = "Completa la missione settimanale dell'evento mondiale per ottenere una scintilla da Lady Liadrin" },
@@ -111,7 +110,6 @@ local DATASET = {
             { id = "13957611", text = "Eroico: Potenzia gli ultimi dei tuoi oggetti eroici a 6/6 276. Conserva 20 Stemmi Eroici per il prossimo passaggio." },
             { id = "2568bd36", text = "Mitico: Se il tuo oggetto del forziere era 1/6, potenzia prima la sua controparte eroica a 6/6 eroico per 20 Stemmi Eroici. Potenzia il tuo oggetto traccia Mito 1/6 272 a 6/6 289 per 80 stemmi Mito." },
             { id = "c581850d", text = "Traccia stemmi spesi: 680/680 Eroici, 480/550 Mitici - non trattenere mai gli stemmi Mitici" },
-            { id = "4f04ba4e", text = "Livello oggetto finale: 1x266, 2x269, 6x276e, 2x285(creati), 4x289" },
         },
     },
 

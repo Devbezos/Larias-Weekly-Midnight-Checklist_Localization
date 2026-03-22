@@ -50,7 +50,6 @@ local DATASET = {
         id = "d2de9d43",
         title = "Semana 2 - 24 de março - Semana mítica, M+ abre, tirem férias nerds",
         items = {
-            { id = "36d21691", text = "Não gaste nenhuma Insígnia Heroica ou Mítica até que seja instruído a fazê-lo. Confira o guia para entender por que guardamos insígnias." },
             { id = "e8cef00e", text = "Verifique o Guia para o que e quando fabricar." },
             { id = "4056a14a", text = "Se você não tem conjunto de 4 peças, faça RFR para peças de conjunto - obter um bônus de 4 peças permitirá que cargas de catalisador sejam obtidas de todo conteúdo" },
             { id = "83fd4310", text = "Complete a missão semanal do evento mundial para fagulha da Lady Liadrin" },
@@ -111,7 +110,6 @@ local DATASET = {
             { id = "13957611", text = "Heroico: Melhore o último dos seus itens heroicos para 6/6 276. Guarde 20 Brasões Heroicos para o próximo passo." },
             { id = "2568bd36", text = "Mítico: Se seu item do cofre foi 1/6, melhore sua contraparte heroica primeiro para 6/6 heroico por 20 Brasões Heroicos. Melhore seu item trilha Mito 1/6 272 para 6/6 289 por 80 brasões de Mito." },
             { id = "c581850d", text = "Rastrear brasões gastos: 680/680 Heroico, 480/550 Mítico - nunca segure brasões Míticos" },
-            { id = "4f04ba4e", text = "Nível de item final: 1x266, 2x269, 6x276h, 2x285(fabricados), 4x289" },
         },
     },
 
