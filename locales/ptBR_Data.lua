@@ -54,10 +54,10 @@ local DATASET = {
             { id = "4056a14a", text = "Se você não tem conjunto de 4 peças, faça RFR para peças de conjunto - obter um bônus de 4 peças permitirá que cargas de catalisador sejam obtidas de todo conteúdo" },
             { id = "83fd4310", text = "Complete a missão semanal do evento mundial para fagulha da Lady Liadrin" },
             { id = "4c264b7f", text = "Complete a missão semanal de moradia da Vaeli para emblemas de herói rápidos" }, -- ⚠️ UNVERIFIED
-            { id = "260911ab", text = "(Recompensa Desconhecida em semanas repetidas) - Complete ?? Nulleaus para recompensas desconhecidas" }, -- ⚠️ UNVERIFIED
+            { id = "e8673800", text = "Sem recompensa repetível real, não há razão para fazer ?? Nulleaus após a primeira conclusão" }, -- ⚠️ UNVERIFIED
             { id = "547b880e", text = "Complete a missão semanal das 3x presas do pesadelo para obter um item que invoca um chefe de delve para conseguir um mapa e 20 brasões de Herói sem limite." }, -- ⚠️ UNVERIFIED
             { id = "73ad86e4", text = "Faça pelo menos um delve abundante t11 para obter a Missão da Pedra-chave Rachada para 20 brasões de Herói e Mito sem limite. Enquanto estiver fazendo isso, use seu item de chefe da missão das 3x Presas do pesadelo para obter um mapa e use-o neste delve" }, -- ⚠️ UNVERIFIED
-            { id = "286f219c", text = "Continue gastando todos os Brasões aventureiros, veteranários e campeões melhorando qualquer coisa" },
+            { id = "e2da3aa8", text = "Refaça sua arma de centelha para mítico assim que conseguir 80 insígnias míticas" },
             { id = "74924a7b", text = "Farme +10s para equipamento nível 266 em todos os slots" },
             { id = "591e911b", text = "Antes de entrar no Mítico, melhore os seguintes itens trilha de herói de 3/6 para 6/6 - peito, calças, elmo, 1 anel, 1 berloque. Isso deve consumir 300/320 brasões de herói. Guarde os últimos 20 brasões de Herói caso você consiga um item mito 1/6 que precise melhorar para 2/6 primeiro. Isso lhe dá o maior aumento de poder possível entrando na sua primeira semana de mítico enquanto ainda lhe dá uma oportunidade de economizar brasões em outros espaços. Esta suposição é baseada em fabricar uma 2m + 1 outro item adornado na próxima semana. Caçadores ou outros que não fabricaram armas podem considerar melhorar sua arma em vez de calças ou elmo para ganhar esse aumento de poder depois de matar o primeiro chefe no mítico se as armas não droparem." },
             { id = "cbfb6966", text = "Mítico: se tiver sorte e obteve um item da trilha mítica, pule para o conselho de melhoria da próxima semana." },
@@ -71,7 +71,7 @@ local DATASET = {
         items = {
             { id = "1fbc825e", text = "Abra o cofre (item mítico 272+) - melhore após criar" },
             { id = "83fd4310", text = "Complete a missão semanal do evento mundial para fagulha da Lady Liadrin" },
-            { id = "260911ab", text = "(Recompensa Desconhecida em semanas repetidas) - Complete ?? Nulleaus para recompensas desconhecidas" }, -- ⚠️ UNVERIFIED
+            { id = "e8673800", text = "Sem recompensa repetível real, não há razão para fazer ?? Nulleaus após a primeira conclusão" }, -- ⚠️ UNVERIFIED
             { id = "09b2b53b", text = "Complete a missão semanal das 3x presas do pesadelo para 20 brasões de Herói sem limite." }, -- ⚠️ UNVERIFIED
             { id = "1db5f946", text = "Farme +10s para cofre + brasões" },
             { id = "d0aed922", text = "Heroico: Melhore um item 3/6 266 para 6/6 276 por 60 Brasões Heroicos. Melhore 2 itens 3/6 266 para 4/6 269 por 40 Brasões Heroicos. Guarde 20 Brasões Heroicos para o próximo passo." },
@@ -87,7 +87,7 @@ local DATASET = {
         items = {
             { id = "9375e497", text = "Abra o cofre (item mito 272+)" },
             { id = "83fd4310", text = "Complete a missão semanal do evento mundial para fagulha da Lady Liadrin" },
-            { id = "260911ab", text = "(Recompensa Desconhecida em semanas repetidas) - Complete ?? Nulleaus para recompensas desconhecidas" }, -- ⚠️ UNVERIFIED
+            { id = "e8673800", text = "Sem recompensa repetível real, não há razão para fazer ?? Nulleaus após a primeira conclusão" }, -- ⚠️ UNVERIFIED
             { id = "09b2b53b", text = "Complete a missão semanal das 3x presas do pesadelo para 20 brasões de Herói sem limite." }, -- ⚠️ UNVERIFIED
             { id = "1db5f946", text = "Farme +10s para cofre + brasões" },
             { id = "6e25b0ce", text = "Heroico: Melhore 2 dos seus itens 4/6 269 para 6/6 276 por 80 Brasões Heroicos. Melhore 1 item 3/6 266 para 4/6 269 por 20 Brasões Heroicos. Guarde 20 Brasões Heroicos para o próximo passo." },
@@ -103,7 +103,7 @@ local DATASET = {
         items = {
             { id = "9375e497", text = "Abra o cofre (item mito 272+)" },
             { id = "83fd4310", text = "Complete a missão semanal do evento mundial para fagulha da Lady Liadrin" },
-            { id = "260911ab", text = "(Recompensa Desconhecida em semanas repetidas) - Complete ?? Nulleaus para recompensas desconhecidas" }, -- ⚠️ UNVERIFIED
+            { id = "e8673800", text = "Sem recompensa repetível real, não há razão para fazer ?? Nulleaus após a primeira conclusão" }, -- ⚠️ UNVERIFIED
             { id = "09b2b53b", text = "Complete a missão semanal das 3x presas do pesadelo para 20 brasões de Herói sem limite." }, -- ⚠️ UNVERIFIED
             { id = "1db5f946", text = "Farme +10s para cofre + brasões" },
             { id = "cb431e83", text = "Fabrique o próximo item (Verifique o Guia para mais informações)" },

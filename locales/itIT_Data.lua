@@ -54,10 +54,10 @@ local DATASET = {
             { id = "4056a14a", text = "Se non hai il set da 4, fai LFR per pezzi tier - ottenere un bonus set da 4 pezzi permetterà alle cariche del catalizzatore di droppare da tutti i contenuti" },
             { id = "83fd4310", text = "Completa la missione settimanale dell'evento mondiale per ottenere una scintilla da Lady Liadrin" },
             { id = "4c264b7f", text = "Completa la missione abitativa settimanale da Vaeli per creste dell'eroe veloci" }, -- ⚠️ UNVERIFIED
-            { id = "260911ab", text = "(Ricompensa Sconosciuta nelle settimane successive) - Completa ?? Nullaeus per ricompense sconosciute" },
+            { id = "e8673800", text = "Nessuna ricompensa ripetibile reale, nessun motivo per fare ?? Nulleaus dopo il primo completamento" }, -- ⚠️ UNVERIFIED
             { id = "547b880e", text = "Completa la missione settimanale 3 prede dell'incubo per ottenere un oggetto che evoca un boss della spedizione per ottenere una mappa e 20 stemmi Eroe illimitati." },
             { id = "73ad86e4", text = "Completa almeno una spedizione generosa t11 per ottenere la Missione Chiave di Volta Incrinata per 20 stemmi Eroe e Mito illimitati. Mentre la fai, usa il tuo oggetto boss dalla missione 3 prede dell'incubo per ottenere una mappa e usala in questa spedizione" },
-            { id = "286f219c", text = "Continua a spendere tutti gli Emblemi esploratore, veterano e campione potenziando tutto" },
+            { id = "e2da3aa8", text = "Ricrea la tua arma scintilla a mitico una volta ottenuti 80 stemmi mitici" },
             { id = "74924a7b", text = "Farma i +10 per equipaggiamento liv. 266 in ogni slot" },
             { id = "591e911b", text = "Prima di entrare in Mitica, potenzia i seguenti 3/6 oggetti traccia eroe a 6/6 - pettorale, pantaloni, elmo, 1 anello, 1 ninnolo. Questo dovrebbe richiedere 300/320 stemmi eroe. Conserva gli ultimi 20 stemmi Eroe nel caso ottenga un oggetto mito 1/6 che devi potenziare prima a 2/6. Questo ti dà il maggior aumento di potenza possibile entrando nella tua prima settimana di mitica pur dandoti l'opportunità di risparmiare stemmi in altri slot. Questa ipotesi si basa sulla creazione di un'arma a 2 mani + 1 altro oggetto abbellito la prossima settimana. I cacciatori o altri che non hanno creato armi potrebbero considerare di potenziare la loro arma invece di pantaloni o elmo per ottenere quell'aumento di potenza dopo aver ucciso il primo boss in mitica se le armi non cadono." },
             { id = "cbfb6966", text = "Mitico: se hai un oggetto del percorso mitico, passa ai consigli di potenziamento della settimana successiva." },
@@ -71,7 +71,7 @@ local DATASET = {
         items = {
             { id = "1fbc825e", text = "Apri cassa (oggetto mitico 272+) - potenzia dopo aver creato" },
             { id = "83fd4310", text = "Completa la missione settimanale dell'evento mondiale per ottenere una scintilla da Lady Liadrin" },
-            { id = "260911ab", text = "(Ricompensa Sconosciuta nelle settimane successive) - Completa ?? Nullaeus per ricompense sconosciute" },
+            { id = "e8673800", text = "Nessuna ricompensa ripetibile reale, nessun motivo per fare ?? Nulleaus dopo il primo completamento" }, -- ⚠️ UNVERIFIED
             { id = "09b2b53b", text = "Completa la missione settimanale 3 prede dell'incubo per 20 stemmi Eroe illimitati." },
             { id = "1db5f946", text = "Farma +10 per forziere + stemmi" },
             { id = "d0aed922", text = "Eroico: Potenzia un oggetto 3/6 266 a 6/6 276 per 60 Stemmi Eroici. Potenzia 2 oggetti 3/6 266 a 4/6 269 per 40 Stemmi Eroici. Conserva 20 Stemmi Eroici per il prossimo passaggio." },
@@ -87,7 +87,7 @@ local DATASET = {
         items = {
             { id = "9375e497", text = "Apri forziere (oggetto mito 272+)" },
             { id = "83fd4310", text = "Completa la missione settimanale dell'evento mondiale per ottenere una scintilla da Lady Liadrin" },
-            { id = "260911ab", text = "(Ricompensa Sconosciuta nelle settimane successive) - Completa ?? Nullaeus per ricompense sconosciute" },
+            { id = "e8673800", text = "Nessuna ricompensa ripetibile reale, nessun motivo per fare ?? Nulleaus dopo il primo completamento" }, -- ⚠️ UNVERIFIED
             { id = "09b2b53b", text = "Completa la missione settimanale 3 prede dell'incubo per 20 stemmi Eroe illimitati." },
             { id = "1db5f946", text = "Farma +10 per forziere + stemmi" },
             { id = "6e25b0ce", text = "Eroico: Potenzia 2 dei tuoi oggetti 4/6 269 a 6/6 276 per 80 Stemmi Eroici. Potenzia 1 oggetto 3/6 266 a 4/6 269 per 20 Stemmi Eroici. Conserva 20 Stemmi Eroici per il prossimo passaggio." },
@@ -103,7 +103,7 @@ local DATASET = {
         items = {
             { id = "9375e497", text = "Apri forziere (oggetto mito 272+)" },
             { id = "83fd4310", text = "Completa la missione settimanale dell'evento mondiale per ottenere una scintilla da Lady Liadrin" },
-            { id = "260911ab", text = "(Ricompensa Sconosciuta nelle settimane successive) - Completa ?? Nullaeus per ricompense sconosciute" },
+            { id = "e8673800", text = "Nessuna ricompensa ripetibile reale, nessun motivo per fare ?? Nulleaus dopo il primo completamento" }, -- ⚠️ UNVERIFIED
             { id = "09b2b53b", text = "Completa la missione settimanale 3 prede dell'incubo per 20 stemmi Eroe illimitati." },
             { id = "1db5f946", text = "Farma +10 per forziere + stemmi" },
             { id = "cb431e83", text = "Crea il prossimo oggetto (Controlla la Guida per maggiori informazioni)" },

@@ -54,10 +54,10 @@ local DATASET = {
             { id = "4056a14a", text = "Si vous n'avez pas le bonus 4 pièces, faites le RDF pour des pièces de panoplie - obtenir un bonus 4 pièces permettra aux charges de catalyseur de tomber de tout le contenu" },
             { id = "83fd4310", text = "Terminez la quête d'événement mondial hebdomadaire pour obtenir une étincelle auprès de Dame Liadrin" },
             { id = "4c264b7f", text = "Terminez la quête de logement hebdomadaire auprès de Vaeli pour des armoiries de héros rapides" }, -- ⚠️ UNVERIFIED
-            { id = "260911ab", text = "(Récompense inconnue les semaines suivantes) - Terminez ?? Nulleaus pour des récompenses inconnues" }, -- ⚠️ UNVERIFIED
+            { id = "e8673800", text = "Aucune récompense répétable réelle, aucune raison de faire ?? Nulleaux après la première complétion" }, -- ⚠️ UNVERIFIED
             { id = "547b880e", text = "Terminez la quête hebdomadaire des 3 proies cauchemar pour obtenir un objet qui invoque un boss de délétion afin d'obtenir une carte et 20 écussons de héros sans plafond." },
             { id = "73ad86e4", text = "Faites au moins une délétion fructueuse de niveau 11 pour obtenir la quête de la pierre fendue pour 20 écussons de héros et de mythe sans plafond. Pendant que vous la faites, utilisez votre objet de boss de la quête des 3 proies cauchemar pour obtenir une carte et utilisez-la dans cette délétion" }, -- ⚠️ UNVERIFIED
-            { id = "286f219c", text = "Continuez à dépenser tous les Écus d'aventure, de vétéran et de champion pour tout améliorer" },
+            { id = "e2da3aa8", text = "Reforgez votre arme d'étincelle en mythique une fois que vous avez 80 crêtes mythiques" },
             { id = "74924a7b", text = "Farmez les +10 pour l'équipement niv. 266 dans chaque emplacement" },
             { id = "591e911b", text = "Avant d'entrer en mythique, améliorez les 3/6 objets de palier héros suivants à 6/6 - torse, pantalon, casque, 1 anneau, 1 bijou. Cela devrait prendre 300/320 écussons de héros. Gardez les 20 derniers écussons de héros au cas où vous obtenez un objet mythique 1/6 que vous devez améliorer à 2/6 d'abord. Cela vous donne le plus grand pic de puissance possible en entrant dans votre première semaine de mythique tout en vous donnant la possibilité d'économiser des écussons dans d'autres emplacements. Cette hypothèse est basée sur la fabrication d'une arme à 2 mains + 1 autre objet enjolivé la semaine prochaine. Les chasseurs ou d'autres qui n'ont pas fabriqué d'armes pourraient envisager d'améliorer leur arme au lieu du pantalon ou du casque afin d'obtenir ce pic de puissance après avoir tué le premier boss en mythique si les armes ne tombent pas." },
             { id = "cbfb6966", text = "Mythique : si vous avez un objet de piste mythique, passez aux conseils d'amélioration de la semaine suivante." },
@@ -71,7 +71,7 @@ local DATASET = {
         items = {
             { id = "1fbc825e", text = "Ouvrez la chambre forte (objet myth 272+) - améliorez après fabrication" },
             { id = "83fd4310", text = "Terminez la quête d'événement mondial hebdomadaire pour obtenir une étincelle auprès de Dame Liadrin" },
-            { id = "260911ab", text = "(Récompense inconnue les semaines suivantes) - Terminez ?? Nulleaus pour des récompenses inconnues" }, -- ⚠️ UNVERIFIED
+            { id = "e8673800", text = "Aucune récompense répétable réelle, aucune raison de faire ?? Nulleaux après la première complétion" }, -- ⚠️ UNVERIFIED
             { id = "09b2b53b", text = "Terminez la quête hebdomadaire des 3 proies cauchemar pour 20 écussons de héros sans plafond." },
             { id = "1db5f946", text = "Farmez des +10 pour le coffre + écussons" },
             { id = "d0aed922", text = "Héroïque : Améliorez un objet 3/6 266 à 6/6 276 pour 60 écussons héroïques. Améliorez 2 objets 3/6 266 à 4/6 269 pour 40 écussons héroïques. Gardez 20 écussons héroïques pour l'étape suivante." },
@@ -87,7 +87,7 @@ local DATASET = {
         items = {
             { id = "9375e497", text = "Ouvrir le coffre (objet mythique 272+)" },
             { id = "83fd4310", text = "Terminez la quête d'événement mondial hebdomadaire pour obtenir une étincelle auprès de Dame Liadrin" },
-            { id = "260911ab", text = "(Récompense inconnue les semaines suivantes) - Terminez ?? Nulleaus pour des récompenses inconnues" }, -- ⚠️ UNVERIFIED
+            { id = "e8673800", text = "Aucune récompense répétable réelle, aucune raison de faire ?? Nulleaux après la première complétion" }, -- ⚠️ UNVERIFIED
             { id = "09b2b53b", text = "Terminez la quête hebdomadaire des 3 proies cauchemar pour 20 écussons de héros sans plafond." },
             { id = "1db5f946", text = "Farmez des +10 pour le coffre + écussons" },
             { id = "6e25b0ce", text = "Héroïque : Améliorez 2 de vos objets 4/6 269 à 6/6 276 pour 80 écussons héroïques. Améliorez 1 objet 3/6 266 à 4/6 269 pour 20 écussons héroïques. Gardez 20 écussons héroïques pour l'étape suivante." },
@@ -103,7 +103,7 @@ local DATASET = {
         items = {
             { id = "9375e497", text = "Ouvrir le coffre (objet mythique 272+)" },
             { id = "83fd4310", text = "Terminez la quête d'événement mondial hebdomadaire pour obtenir une étincelle auprès de Dame Liadrin" },
-            { id = "260911ab", text = "(Récompense inconnue les semaines suivantes) - Terminez ?? Nulleaus pour des récompenses inconnues" }, -- ⚠️ UNVERIFIED
+            { id = "e8673800", text = "Aucune récompense répétable réelle, aucune raison de faire ?? Nulleaux après la première complétion" }, -- ⚠️ UNVERIFIED
             { id = "09b2b53b", text = "Terminez la quête hebdomadaire des 3 proies cauchemar pour 20 écussons de héros sans plafond." },
             { id = "1db5f946", text = "Farmez des +10 pour le coffre + écussons" },
             { id = "cb431e83", text = "Fabriquez l'objet suivant (Consultez le guide pour plus d'infos)" },

@@ -54,10 +54,10 @@ local DATASET = {
             { id = "4056a14a", text = "Si no tienes conjunto de 4 piezas, haz BBR para piezas de conjunto - obtener un bonus de conjunto de 4 piezas permitirá que caigan cargas de catalizador de todo el contenido" },
             { id = "83fd4310", text = "Completa la misión semanal de evento mundial para obtener una chispa de Lady Liadrin" },
             { id = "4c264b7f", text = "Completa la misión semanal de vivienda de Vaeli para blasones de héroe rápidos" }, -- ⚠️ UNVERIFIED
-            { id = "260911ab", text = "(Recompensa desconocida en semanas repetidas) - Completa ?? Nulleaus para recompensas desconocidas" }, -- ⚠️ UNVERIFIED
+            { id = "e8673800", text = "No hay recompensa repetible real, no hay razón para hacer ?? Nulleaus después de la primera completación" }, -- ⚠️ UNVERIFIED
             { id = "547b880e", text = "Completa la misión semanal de 3 presas de pesadilla para obtener un objeto que invoca a un jefe de profundidad para conseguir un mapa y 20 emblemas de héroe sin límite." },
             { id = "73ad86e4", text = "Haz al menos una profundidad abundante de nivel 11 para obtener la misión de piedra angular agrietada por 20 emblemas de héroe y míticos sin límite. Mientras la haces, usa tu objeto de jefe de la misión de 3 presas de pesadilla para obtener un mapa y úsalo en esta profundidad" },
-            { id = "286f219c", text = "Continúa gastando todos los blasones de aventurero, veterano y campeón mejorándolo todo" },
+            { id = "e2da3aa8", text = "Recrea tu arma de chispa a mítica una vez que consigas 80 emblemas míticos" }, -- ⚠️ UNVERIFIED
             { id = "74924a7b", text = "Farmea +10s para equipo niv. 266 en cada hueco" },
             { id = "591e911b", text = "Antes de entrar en Mítico, mejora los siguientes 3/6 objetos de senda de héroe a 6/6 - peto, pantalones, yelmo, 1 anillo, 1 abalorio. Esto debería consumir 300/320 emblemas de héroe. Guarda los últimos 20 emblemas de héroe por si consigues un objeto mítico 1/6 que necesites mejorar primero a 2/6. Esto te da el mayor pico de poder posible al entrar en tu primera semana de mítico mientras te da la oportunidad de ahorrar emblemas en otros huecos. Esta suposición se basa en fabricar un arma de 2 manos + otro objeto con adorno la próxima semana. Los cazadores u otros que no fabricaron armas podrían considerar subir su arma en lugar de pantalones o yelmo para ganar ese pico de poder después de matar al primer jefe en mítico si las armas no caen." },
             { id = "cbfb6966", text = "Mítico: si tienes un objeto de pista mítica, pasa a los consejos de mejora de la semana siguiente." },
@@ -71,7 +71,7 @@ local DATASET = {
         items = {
             { id = "1fbc825e", text = "Abre la cámara (objeto mítico 272+) - mejora después de fabricar" },
             { id = "83fd4310", text = "Completa la misión semanal de evento mundial para obtener una chispa de Lady Liadrin" },
-            { id = "260911ab", text = "(Recompensa desconocida en semanas repetidas) - Completa ?? Nulleaus para recompensas desconocidas" }, -- ⚠️ UNVERIFIED
+            { id = "e8673800", text = "No hay recompensa repetible real, no hay razón para hacer ?? Nulleaus después de la primera completación" }, -- ⚠️ UNVERIFIED
             { id = "09b2b53b", text = "Completa la misión semanal de 3 presas de pesadilla para 20 emblemas de héroe sin límite." },
             { id = "1db5f946", text = "Farmea +10s para cámara + emblemas" },
             { id = "d0aed922", text = "Heroico: Mejora un objeto 3/6 266 a 6/6 276 por 60 emblemas heroicos. Mejora 2 objetos 3/6 266 a 4/6 269 por 40 emblemas heroicos. Guarda 20 emblemas heroicos para el siguiente paso." },
@@ -87,7 +87,7 @@ local DATASET = {
         items = {
             { id = "9375e497", text = "Abre cámara (objeto mítico 272+)" },
             { id = "83fd4310", text = "Completa la misión semanal de evento mundial para obtener una chispa de Lady Liadrin" },
-            { id = "260911ab", text = "(Recompensa desconocida en semanas repetidas) - Completa ?? Nulleaus para recompensas desconocidas" }, -- ⚠️ UNVERIFIED
+            { id = "e8673800", text = "No hay recompensa repetible real, no hay razón para hacer ?? Nulleaus después de la primera completación" }, -- ⚠️ UNVERIFIED
             { id = "09b2b53b", text = "Completa la misión semanal de 3 presas de pesadilla para 20 emblemas de héroe sin límite." },
             { id = "1db5f946", text = "Farmea +10s para cámara + emblemas" },
             { id = "6e25b0ce", text = "Heroico: Mejora 2 de tus objetos 4/6 269 a 6/6 276 por 80 emblemas heroicos. Mejora 1 objeto 3/6 266 a 4/6 269 por 20 emblemas heroicos. Guarda 20 emblemas heroicos para el siguiente paso." },
@@ -103,7 +103,7 @@ local DATASET = {
         items = {
             { id = "9375e497", text = "Abre cámara (objeto mítico 272+)" },
             { id = "83fd4310", text = "Completa la misión semanal de evento mundial para obtener una chispa de Lady Liadrin" },
-            { id = "260911ab", text = "(Recompensa desconocida en semanas repetidas) - Completa ?? Nulleaus para recompensas desconocidas" }, -- ⚠️ UNVERIFIED
+            { id = "e8673800", text = "No hay recompensa repetible real, no hay razón para hacer ?? Nulleaus después de la primera completación" }, -- ⚠️ UNVERIFIED
             { id = "09b2b53b", text = "Completa la misión semanal de 3 presas de pesadilla para 20 emblemas de héroe sin límite." },
             { id = "1db5f946", text = "Farmea +10s para cámara + emblemas" },
             { id = "cb431e83", text = "Fabrica el siguiente objeto (consulta la guía para más información)" },

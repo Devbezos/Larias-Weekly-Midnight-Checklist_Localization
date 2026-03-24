@@ -54,10 +54,10 @@ local DATASET = {
             { id = "4056a14a", text = "Falls du kein 4er-Set hast, mache LFR für Set-Teile - das Erhalten eines 4er-Set-Bonus ermöglicht es, dass Katalysator-Ladungen von allen Inhalten fallen" },
             { id = "83fd4310", text = "Schließe die wöchentliche Weltereignis-Quest für einen Funken von Lady Liadrin ab" },
             { id = "4c264b7f", text = "Schließe die wöchentliche Behausungs-Quest von Vaeli für schnelle Heldenwappen ab" }, -- ⚠️ UNVERIFIED
-            { id = "260911ab", text = "(Unbekannte Belohnung bei wiederholten Wochen) - Schließe ?? Nulleaus für unbekannte Belohnungen ab" },
+            { id = "e8673800", text = "Keine wiederholbare Belohnung, kein Grund ?? Nulleaus nach der ersten Vervollständigung zu machen" }, -- ⚠️ UNVERIFIED
             { id = "547b880e", text = "Schließe die wöchentliche Quest 3x Albtraumbeute ab, um einen Gegenstand zu erhalten, der einen Tiefenboss beschwört, um eine Karte und 20 nicht gedeckelte Heldenwappen zu erhalten." },
             { id = "73ad86e4", text = "Mache mindestens eine ertragreiche Tiefe der Stufe 11, um die Quest Rissiger Schlüsselstein für 20 nicht gedeckelte Helden- und Mythische Wappen zu erhalten. Verwende dabei deinen Boss-Gegenstand aus der Quest 3x Albtraumbeute, um eine Karte zu erhalten und verwende sie in dieser Tiefe" },
-            { id = "286f219c", text = "Weiterhin alle Abenteurer-, Veteran- und Champion-Wappen für Upgrades ausgeben" },
+            { id = "e2da3aa8", text = "Fertige deine Funkenwaffe zu Mythisch um, sobald du 80 mythische Wappen hast" },
             { id = "74924a7b", text = "+10er farmen für 266-Ausrüstung in jedem Slot" },
             { id = "591e911b", text = "Bevor du Mythisch betrittst, verbessere die folgenden 3/6 Helden-Gegenstände auf 6/6 - Brust, Hose, Helm, 1 Ring, 1 Schmuckstück. Dies sollte 300/320 Heldenwappen kosten. Spare die letzten 20 Heldenwappen für den Fall, dass du einen Myth 1/6 Gegenstand bekommst, den du zuerst auf 2/6 verbessern musst. Dies gibt dir den größtmöglichen Machtzuwachs beim Eintritt in deine erste Mythische Woche, während du immer noch die Möglichkeit hast, Wappen auf anderen Plätzen zu sparen. Diese Annahme basiert darauf, nächste Woche eine 2H + 1 weiteren verzierten Gegenstand zu fertigen. Jäger oder andere, die keine Waffen gefertigt haben, könnten in Betracht ziehen, ihre Waffe anstelle von Hose oder Helm zu verbessern, um diesen Machtzuwachs zu erhalten, nachdem sie den ersten Boss auf Mythisch getötet haben, falls die Waffen nicht droppen." },
             { id = "cbfb6966", text = "Mythisch: Falls du ein Mythen-Spur-Item hast, Upgrade-Tipps der nächsten Woche dafür nutzen." },
@@ -71,7 +71,7 @@ local DATASET = {
         items = {
             { id = "1fbc825e", text = "Öffne Truhe (272+ Mythisch-Gegenstand) - werte nach der Herstellung auf" },
             { id = "83fd4310", text = "Schließe die wöchentliche Weltereignis-Quest für einen Funken von Lady Liadrin ab" },
-            { id = "260911ab", text = "(Unbekannte Belohnung bei wiederholten Wochen) - Schließe ?? Nulleaus für unbekannte Belohnungen ab" },
+            { id = "e8673800", text = "Keine wiederholbare Belohnung, kein Grund ?? Nulleaus nach der ersten Vervollständigung zu machen" }, -- ⚠️ UNVERIFIED
             { id = "09b2b53b", text = "Schließe die wöchentliche Quest 3x Albtraumbeute für 20 nicht gedeckelte Heldenwappen ab." },
             { id = "1db5f946", text = "Farme +10er für Gewölbe + Wappen" },
             { id = "d0aed922", text = "Heroisch: Verbessere einen 3/6 266 Gegenstand auf 6/6 276 für 60 Heroische Wappen. Verbessere 2 3/6 266 Gegenstände auf 4/6 269 für 40 Heroische Wappen. Spare 20 Heroische Wappen für den nächsten Schritt." },
@@ -87,7 +87,7 @@ local DATASET = {
         items = {
             { id = "9375e497", text = "Öffne Gewölbe (272+ Myth-Gegenstand)" },
             { id = "83fd4310", text = "Schließe die wöchentliche Weltereignis-Quest für einen Funken von Lady Liadrin ab" },
-            { id = "260911ab", text = "(Unbekannte Belohnung bei wiederholten Wochen) - Schließe ?? Nulleaus für unbekannte Belohnungen ab" },
+            { id = "e8673800", text = "Keine wiederholbare Belohnung, kein Grund ?? Nulleaus nach der ersten Vervollständigung zu machen" }, -- ⚠️ UNVERIFIED
             { id = "09b2b53b", text = "Schließe die wöchentliche Quest 3x Albtraumbeute für 20 nicht gedeckelte Heldenwappen ab." },
             { id = "1db5f946", text = "Farme +10er für Gewölbe + Wappen" },
             { id = "6e25b0ce", text = "Heroisch: Verbessere 2 deiner 4/6 269 Gegenstände auf 6/6 276 für 80 Heroische Wappen. Verbessere 1 3/6 266 Gegenstand auf 4/6 269 für 20 Heroische Wappen. Spare 20 Heroische Wappen für den nächsten Schritt." },
@@ -103,7 +103,7 @@ local DATASET = {
         items = {
             { id = "9375e497", text = "Öffne Gewölbe (272+ Myth-Gegenstand)" },
             { id = "83fd4310", text = "Schließe die wöchentliche Weltereignis-Quest für einen Funken von Lady Liadrin ab" },
-            { id = "260911ab", text = "(Unbekannte Belohnung bei wiederholten Wochen) - Schließe ?? Nulleaus für unbekannte Belohnungen ab" },
+            { id = "e8673800", text = "Keine wiederholbare Belohnung, kein Grund ?? Nulleaus nach der ersten Vervollständigung zu machen" }, -- ⚠️ UNVERIFIED
             { id = "09b2b53b", text = "Schließe die wöchentliche Quest 3x Albtraumbeute für 20 nicht gedeckelte Heldenwappen ab." },
             { id = "1db5f946", text = "Farme +10er für Gewölbe + Wappen" },
             { id = "cb431e83", text = "Fertige nächsten Gegenstand (Prüfe Leitfaden für weitere Infos)" },
